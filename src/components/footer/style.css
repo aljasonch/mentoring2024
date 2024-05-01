@@ -1,0 +1,13 @@
+.background-footer
+{
+    background: linear-gradient(#832AD0 0%, #43156A 100%);
+}
+
+@font-face {
+    font-family: 'SpyAgencyHalftone';
+    src: url('../../assets/spyagencyhalf.ttf') format('truetype');
+}
+
+.font-spyagency{
+    font-family: 'SpyAgencyHalftone', sans-serif;
+}
