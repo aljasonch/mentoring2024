@@ -4,16 +4,17 @@ import './style.css'
 function Home(){
     return (
       <div className="background-mentoring">
-        <Gallery />
         <br />
 
         <br />
         <br />
         <br />
         <br />
+
         <br />
         <br />
         <br />
+        <Gallery />
         <br />
         <br />
         <br />

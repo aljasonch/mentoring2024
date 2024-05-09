@@ -18,6 +18,7 @@
     justify-content: center;
     align-content: center;
     padding: 32px;
+    padding-top: 0px;
     padding-bottom: 64px;
     gap: 32px;
 }
@@ -35,7 +36,60 @@
     border-radius: 16px;
 }
 
+@font-face {
+    font-family: 'SpyAgencyItalic';
+    src: url('../../assets/spyagencysemital.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SpyAgencyRegular';
+    src: url('../../assets/spyagency.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat800';
+    src: url('../../assets/Montserrat-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat500';
+    src: url('../../assets/Montserrat-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SpyAgencyHalftone';
+    src: url('../../assets/spyagencyhalf.ttf') format('truetype');
+}
+
+.opengallerytext{
+    font-family: 'SpyAgencyHalftone', sans-serif;
+        color: black;
+    font-size: 25px;
+}
+
+
+
+.boldcaption {
+    font-family: 'Montserrat800', sans-serif;
+    color: white;
+    margin-top: 64px;
+    font-size: 30px;
+}
+
+.captiontext {
+    font-family: 'Montserrat500', sans-serif;
+    color: white;
+    font-size: 25px;
+}
+
 .headertext {
-    font-family: 'Montserrat', sans-serif;
-    src: url('./../../assets/Montserrat-Regular.ttf');
+    font-family: 'SpyAgencyItalic', sans-serif;
+    color: white;
+    font-size: 64px;
+}
+
+.tutorialtext {
+    font-family: 'SpyAgencyRegular', sans-serif;
+    color: white;
+    font-size: 28px;
 }
