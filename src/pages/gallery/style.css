@@ -1,0 +1,41 @@
+.surround {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+}
+
+.canvas {
+    width: calc(100vw - 64px);
+    height: calc(100vh - 160px);
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+    padding: 32px;
+    padding-bottom: 64px;
+    gap: 32px;
+}
+
+.gallerybox {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 32px;
+    justify-content: center;
+    align-items: center;
+    width:  100%;
+    height: 100%;
+    border-color: white;
+    border-width: 12px;
+    border-radius: 16px;
+}
+
+.headertext {
+    font-family: 'Montserrat', sans-serif;
+    src: url('./../../assets/Montserrat-Regular.ttf');
+}

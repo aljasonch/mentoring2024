@@ -8,6 +8,7 @@ function App() {
     <div className='mx-auto'>
       <Navbar />
       <Home />
+      
       <Footer />
     </div>
   )
