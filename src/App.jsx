@@ -5,19 +5,21 @@ import Home from "./pages/home";
 import Faq from "./pages/faq/Faq";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import {Gallery} from './pages/gallery/index';
 
 
 function App() {
   return (
-      <div className="mx-auto">
-        <ScrollToTop />
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/faq" element={<Faq />} />
-        </Routes>
-        <Footer />
-      </div>
+    <div className="mx-auto">
+      <ScrollToTop />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/faq" element={<Faq />} />
+        <Route path="/gallery" element={<Gallery />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 

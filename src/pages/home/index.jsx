@@ -1,4 +1,3 @@
-import { Gallery } from '../gallery';
 import './style.css'
 
 function Home(){

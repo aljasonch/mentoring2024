@@ -1,7 +1,7 @@
 import { LoadableImage } from "./LoadableImage";
 
 /* eslint-disable react/prop-types */
-export function ExpandingClickablePhoto({ data, setstate }) {
+export function ExpandingClickablePhoto({ data, setstate, centercrop }) {
   return (
     <div
       style={{
@@ -26,7 +26,9 @@ export function ExpandingClickablePhoto({ data, setstate }) {
           justifyContent: "center",
           alignItems: "center",
         }}
-      ><LoadableImage src={data.widecover}/></div>
+      >
+        <LoadableImage src={data.widecover} centercrop={centercrop} />
+      </div>
       <div
         style={{
           position: "absolute",
@@ -46,11 +48,11 @@ export function ExpandingClickablePhoto({ data, setstate }) {
           bottom: "0px",
           left: "0px",
           padding: "16px",
-          backgroundColor: "#5D52DD",
+          backgroundColor: "rgba(127, 17, 224, 0.5)",
           width: "100%",
           height: "100%",
         }}
-        className="transition-opacity duration-500 tutorialtext ease-in-out opacity-0 hover:opacity-100"
+        className="transition-opacity duration-500 tutorialtext ease-in-out opacity-0 hover:opacity-100 cursor-pointer"
         onClick={() => {
           //console.log(data)
           setstate({
