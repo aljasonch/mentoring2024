@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-export function ExpandingClickablePhoto({ data }) {
+export function ExpandingClickablePhoto({ data, setstate }) {
   return (
     <div
       style={{
@@ -37,7 +37,9 @@ export function ExpandingClickablePhoto({ data }) {
         }}
         className="transition-opacity duration-500 tutorialtext ease-in-out opacity-0 hover:opacity-100"
         onClick={() => {
-          console.log("clicked");
+          setstate({
+            currentscreen: data.screenname
+          })
         }}
       >
         <div
@@ -45,12 +47,27 @@ export function ExpandingClickablePhoto({ data }) {
             position: "absolute",
             bottom: "0px",
             left: "0px",
-                      backgroundColor: "white",
-            padding: "16px",
+            paddingTop: "8px",
+            paddingBottom: "0px",
+            clipPath: "polygon(0 0, 83% 0, 100% 100%, 0% 100%)",
           }}
           className="opengallerytext"
         >
-          Open Gallery
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+              backgroundColor: "white",
+
+              padding: "16px",
+              paddingLeft: "10px",
+              paddingTop: "10px",
+              paddingBottom: "8px",
+              paddingRight: "48px",
+            }}
+          >
+            Open Gallery
+          </div>
         </div>
       </div>
     </div>
