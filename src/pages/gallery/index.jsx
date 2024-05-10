@@ -268,14 +268,14 @@ const data = {
     next: "stage1",
     title: "Tutorial Stage",
     widecover:
-      "https://www.googleapis.com/drive/v3/files/1YXzVyCT5ntFM6fuq3J_OQJXs7u7CVV4U?alt=media&key=AIzaSyBKvY1LGnLLeJVfwQ2EvbjSfGC8CUyKiYA",
+      "https://www.googleapis.com/drive/v3/files/1YXzVyCT5ntFM6fuq3J_OQJXs7u7CVV4U?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
     images: [
-      "https://www.googleapis.com/drive/v3/files/1Yf5qyLzC5j_4AK8_8jfTi1xsEi1Blk33?alt=media&key=AIzaSyBKvY1LGnLLeJVfwQ2EvbjSfGC8CUyKiYA",
-      "https://www.googleapis.com/drive/v3/files/1Ykxlc6-qHGZYK67lqJ_iWqyOeAWlkt0h?alt=media&key=AIzaSyBKvY1LGnLLeJVfwQ2EvbjSfGC8CUyKiYA",
-      "https://www.googleapis.com/drive/v3/files/1YzyBFo5ifGvgVyP5iQEIl-HVzuZAcTKv?alt=media&key=AIzaSyBKvY1LGnLLeJVfwQ2EvbjSfGC8CUyKiYA",
-      "https://www.googleapis.com/drive/v3/files/1YzyBFo5ifGvgVyP5iQEIl-HVzuZAcTKv?alt=media&key=AIzaSyBKvY1LGnLLeJVfwQ2EvbjSfGC8CUyKiYA",
-      "https://www.googleapis.com/drive/v3/files/1YzyBFo5ifGvgVyP5iQEIl-HVzuZAcTKv?alt=media&key=AIzaSyBKvY1LGnLLeJVfwQ2EvbjSfGC8CUyKiYA",
-      "https://www.googleapis.com/drive/v3/files/1YzyBFo5ifGvgVyP5iQEIl-HVzuZAcTKv?alt=media&key=AIzaSyBKvY1LGnLLeJVfwQ2EvbjSfGC8CUyKiYA",
+      "https://www.googleapis.com/drive/v3/files/1Yf5qyLzC5j_4AK8_8jfTi1xsEi1Blk33?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
+      "https://www.googleapis.com/drive/v3/files/1Ykxlc6-qHGZYK67lqJ_iWqyOeAWlkt0h?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
+      "https://www.googleapis.com/drive/v3/files/1YzyBFo5ifGvgVyP5iQEIl-HVzuZAcTKv?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
+      "https://www.googleapis.com/drive/v3/files/1YzyBFo5ifGvgVyP5iQEIl-HVzuZAcTKv?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
+      "https://www.googleapis.com/drive/v3/files/1YzyBFo5ifGvgVyP5iQEIl-HVzuZAcTKv?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
+      "https://www.googleapis.com/drive/v3/files/1YzyBFo5ifGvgVyP5iQEIl-HVzuZAcTKv?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
     ],
   },
   stage1: {
