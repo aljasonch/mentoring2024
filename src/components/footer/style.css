@@ -8,8 +8,17 @@
     src: url('../../assets/spyagencyhalf.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'SpyAgency';
+    src: url('../../assets/spyagency.ttf') format('truetype');
+}
+
 .font-spyagency{
     font-family: 'SpyAgencyHalftone', sans-serif;
+}
+
+.font-normal-spyagency {
+    font-family: 'SpyAgency', sans-serif;
 }
 
 .shadow-footer {
