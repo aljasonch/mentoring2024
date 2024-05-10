@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { ExpandingClickablePhoto } from "../../components/gallerycomponents/ExpandingClickablePhoto";
+import { LoadableImage } from "../../components/gallerycomponents/LoadableImage";
 import "./style.css";
 import React from "react";
 
@@ -41,9 +42,11 @@ function InternalNavBar({ state, setstate, data }) {
         style={{
           display: "flex",
           flexDirection: "column",
+          width: "100%",
+          marginBottom: "20px",
         }}
       >
-        <div className="headertext">Gallery</div>
+        <div className="headertext">{data[state["currentscreen"]].title}</div>
         <div className="captiontext">CHARACTER BUILDING MENTORING UMN 2024</div>
       </div>
       <div
@@ -88,6 +91,8 @@ function InternalNavBar({ state, setstate, data }) {
 }
 
 function ScrollablePhotoSet({ localstate, setstate, data }) {
+  //console.log(localstate);
+  let currentdata = data[localstate.currentscreen];
   return (
     <div
       style={{
@@ -105,7 +110,7 @@ function ScrollablePhotoSet({ localstate, setstate, data }) {
           width: "120px",
           height: "120px",
           borderRadius: "120px",
-          backgroundColor: "green",
+          backgroundColor: "#18E6B1",
           padding: "24px",
         }}
       >
@@ -114,7 +119,7 @@ function ScrollablePhotoSet({ localstate, setstate, data }) {
           height="100%"
           viewBox="0 0 24 24"
           width="100%"
-          fill="#e8eaed"
+          fill="#00000"
         >
           <path d="M0 0h24v24H0V0z" fill="none" opacity=".87" />
           <path d="M17.51 3.87L15.73 2.1 5.84 12l9.9 9.9 1.77-1.77L9.38 12l8.13-8.13z" />
@@ -124,29 +129,46 @@ function ScrollablePhotoSet({ localstate, setstate, data }) {
         style={{
           width: "calc(100% - 200px)",
           height: "220px",
-          backgroundColor: "green",
+          backgroundColor: "transparent",
+          gap: "20px",
           display: "flex",
           flexDirection: "row",
-          justifyContent: "center",
+          justifyContent: "start",
           padding: "24px",
           marginLeft: "10px",
           marginRight: "10px",
+          overflowY: "hidden",
+          overflowX: "scroll",
+          scrollBehavior: "smooth",
+          scrollbarGutter: "stable",
+          scrollbarColor: "#e8eaed rgba(0, 0, 0, 0)",
+          scrollbarWidth: "thin",
         }}
       >
-        <div style={{
-          border: "4px solid #e8eaed",
-          borderRadius: "8px",
-          width: "24px"
-        }}>
-          312313
-        </div>
+        {currentdata.images.map((image,index) => {
+          return (
+            <div
+              key={index}
+              style={{
+                border: "4px solid #e8eaed",
+                borderRadius: "8px",
+                aspectRatio: "1/1",
+                height: "100%",
+
+              }}
+            >
+              <LoadableImage src={image} />
+            </div>
+          );
+        })};
+
       </div>
       <div
         style={{
           width: "120px",
           height: "120px",
           borderRadius: "120px",
-          backgroundColor: "green",
+          backgroundColor: "#18E6B1",
           padding: "24px",
         }}
       >
@@ -156,7 +178,7 @@ function ScrollablePhotoSet({ localstate, setstate, data }) {
           height="100%"
           viewBox="0 0 24 24"
           width="100%"
-          fill="#e8eaed"
+          fill="#00000"
         >
           <g>
             <path d="M0,0h24v24H0V0z" fill="none" />
@@ -171,6 +193,7 @@ function ScrollablePhotoSet({ localstate, setstate, data }) {
 }
 
 const data = {
+  main: {},
   tutorial: {
     back: "main",
     screenname: "tutorial",
@@ -230,6 +253,7 @@ export function Gallery() {
   let [localstate, _setstate] = React.useState({
     selected: "tutorial",
     currentscreen: "main",
+    currentimage: 0,
   });
   let setState = (newstate) => {
     _setstate({ ...localstate, ...newstate });
@@ -284,8 +308,10 @@ export function Gallery() {
                 height: "calc(100vh - 320px)",
                 marginBottom: "58px",
             }}
-            ></div>
-            <ScrollablePhotoSet/>
+            >
+            <LoadableImage src={data[localstate.currentscreen].widecover} />
+            </div>
+            <ScrollablePhotoSet localstate={localstate} setstate={setState} data={data}/>
         </>
       )}
     </div>

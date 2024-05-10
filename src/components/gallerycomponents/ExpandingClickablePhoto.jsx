@@ -1,3 +1,5 @@
+import { LoadableImage } from "./LoadableImage";
+
 /* eslint-disable react/prop-types */
 export function ExpandingClickablePhoto({ data, setstate }) {
   return (
@@ -5,12 +7,26 @@ export function ExpandingClickablePhoto({ data, setstate }) {
       style={{
         width: "100%",
         height: "100%",
-        backgroundPosition: "center center",
-        backgroundRepeat: "no-repeat",
-        backgroundImage: `url("${data.widecover}")`,
         position: "relative",
       }}
     >
+      <div
+        style={{
+          overflow: "hidden",
+          position: "absolute",
+          left: "0",
+          right: "0",
+          marginLeft: "auto",
+          marginRight: "auto",
+          top: "0",
+          bottom: "0",
+          marginTop: "auto",
+          marginBottom: "auto",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      ><LoadableImage src={data.widecover}/></div>
       <div
         style={{
           position: "absolute",
@@ -18,7 +34,6 @@ export function ExpandingClickablePhoto({ data, setstate }) {
           left: "0px",
           padding: "16px",
           paddingBottom: "52px",
-          zIndex: "10",
           pointerEvents: "none",
         }}
         className="tutorialtext"
@@ -37,9 +52,10 @@ export function ExpandingClickablePhoto({ data, setstate }) {
         }}
         className="transition-opacity duration-500 tutorialtext ease-in-out opacity-0 hover:opacity-100"
         onClick={() => {
+          //console.log(data)
           setstate({
-            currentscreen: data.screenname
-          })
+            currentscreen: data.screenname,
+          });
         }}
       >
         <div
