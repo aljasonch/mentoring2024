@@ -6,3 +6,30 @@
     background-position: center;
     background-attachment: fixed;
 }
+
+@font-face {
+    font-family: 'SpyAgencyCond';
+    src: url('../../assets/spyagencycond.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SpyAgencyBoldItal';
+    src: url('../../assets/spyagencyboldital.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SpyAgencyGradient';
+    src: url('../../assets/spyagencyvgrad.ttf') format('truetype');
+}
+
+.font-spyagencycond {
+    font-family: 'SpyAgencyCond', sans-serif;
+}
+
+.font-spyagencybolditalic {
+    font-family: 'SpyAgencyBoldItal', sans-serif;
+}
+
+.font-spyagencygradient {
+    font-family: 'SpyAgencyGradient', sans-serif;
+}

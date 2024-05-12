@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav >
-<div className="fixed z-30 w-[100%] h-[16%] background-navbar"></div>
+
+  <div className="fixed z-30 w-[100%] h-[16%] background-navbar"></div>
       <div className="pr-24 container-2xl flex items-center m-auto fixed z-40 ">
         <div className="relative">
           <img
