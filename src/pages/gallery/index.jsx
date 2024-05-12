@@ -267,14 +267,13 @@ const data = {
     next: "stage1",
     title: "Tutorial Stage",
     widecover:
-      "https://www.googleapis.com/drive/v3/files/1YXzVyCT5ntFM6fuq3J_OQJXs7u7CVV4U?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
+      "https://www.googleapis.com/drive/v3/files/1cW5Fb82ncRNNkep9WGwv32qsPWXNvxZH?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
     images: [
-      "https://www.googleapis.com/drive/v3/files/1Yf5qyLzC5j_4AK8_8jfTi1xsEi1Blk33?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
-      "https://www.googleapis.com/drive/v3/files/1Ykxlc6-qHGZYK67lqJ_iWqyOeAWlkt0h?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
-      "https://www.googleapis.com/drive/v3/files/1YzyBFo5ifGvgVyP5iQEIl-HVzuZAcTKv?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
-      "https://www.googleapis.com/drive/v3/files/1YzyBFo5ifGvgVyP5iQEIl-HVzuZAcTKv?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
-      "https://www.googleapis.com/drive/v3/files/1YzyBFo5ifGvgVyP5iQEIl-HVzuZAcTKv?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
-      "https://www.googleapis.com/drive/v3/files/1YzyBFo5ifGvgVyP5iQEIl-HVzuZAcTKv?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
+      "https://www.googleapis.com/drive/v3/files/1cUfF_-T6ct1LrH_VGPJjq3GLS3whekU3?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
+      "https://www.googleapis.com/drive/v3/files/1cSV6RjwR2ETkg69MrVpKb76BdVGvFgW8?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
+      "https://www.googleapis.com/drive/v3/files/1cRrXIB6vD8tAV00M75DiJ6TL87iphw2F?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
+      "https://www.googleapis.com/drive/v3/files/1cGIOHBmo2a4PKARHEC9mZHKNFtQgrNfl?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
+      "https://www.googleapis.com/drive/v3/files/1cFFix4KnRP0YPXYie9rh7rTiCIEqVPPS?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
     ],
   },
   stage1: {
@@ -282,18 +281,14 @@ const data = {
     screenname: "stage1",
     next: "stage2",
     title: "Stage 1",
-    widecover: "https://via.placeholder.com/150",
+    widecover:
+      "https://www.googleapis.com/drive/v3/files/1c2OfWoypxJap1CtRpmEsdQN45PoMxjNY?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
     images: [
-      "https://via.placeholder.com/150",
-      "https://via.placeholder.com/150",
-      "https://via.placeholder.com/150",
-      "https://via.placeholder.com/150",
-      "https://via.placeholder.com/150",
-      "https://via.placeholder.com/150",
-      "https://via.placeholder.com/150",
-      "https://via.placeholder.com/150",
-      "https://via.placeholder.com/150",
-      "https://via.placeholder.com/150",
+      "https://www.googleapis.com/drive/v3/files/1bv_tpHnPYdj4Y-8ihBx1-e_4_akj7Loa?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
+      "https://www.googleapis.com/drive/v3/files/1boxEWf00Omfq4nJnviq7jt2MziDLlrU2?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
+      "https://www.googleapis.com/drive/v3/files/1bmMxo8qIErNZqbxUMR_0YBixrhWWnJ42?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
+      "https://www.googleapis.com/drive/v3/files/1bkS4PufHdQuURmx--u0Ye-BWJUXnpeGA?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
+      "https://www.googleapis.com/drive/v3/files/1bkQYCpBTDQfEfx93oQtHrAmGq1LEgMdn?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
     ],
   },
   stage2: {
@@ -301,12 +296,14 @@ const data = {
     screenname: "stage2",
     next: "stage3",
     title: "Stage 2",
-    widecover: "https://via.placeholder.com/150",
+    widecover:
+      "https://www.googleapis.com/drive/v3/files/1bfOGjcNZoRdCwoinUy3H3X1_bX_oBepK?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
     images: [
-      "https://via.placeholder.com/150",
-      "https://via.placeholder.com/150",
-      "https://via.placeholder.com/150",
-      "https://via.placeholder.com/150",
+      "https://www.googleapis.com/drive/v3/files/1bdgd01kASKflyYvETrxHFOJ6M-dyMyFy?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
+      "https://www.googleapis.com/drive/v3/files/1bZikR2nmzIXVdtIIW9dAScsXRuyplqNr?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
+      "https://www.googleapis.com/drive/v3/files/1bVYezlM_XwUuwpFWhudplj7hQOO-7Mid?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
+      "https://www.googleapis.com/drive/v3/files/1bFzVlNDr0Kkzof7NeRKtpAT_LH0ujJZy?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
+      "https://www.googleapis.com/drive/v3/files/1b8L6ArrNlJ-8V_JMy4VQ9KEYkiqhbKVf?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
     ],
   },
   stage3: {
@@ -314,12 +311,10 @@ const data = {
     screenname: "stage3",
     next: "main",
     title: "Stage 3",
-    widecover: "https://via.placeholder.com/150",
+    widecover:
+      "https://www.googleapis.com/drive/v3/files/1b2EhAA-WN4rEyBvgZC8ymHf_oCWmiEk8?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
     images: [
-      "https://via.placeholder.com/150",
-      "https://via.placeholder.com/150",
-      "https://via.placeholder.com/150",
-      "https://via.placeholder.com/150",
+      "https://www.googleapis.com/drive/v3/files/1b1UuHCrMg8zXZP6oy0LqbhtOInvKphVn?alt=media&key=AIzaSyAP_hmqJXJQVV4tO-wBPpTclXMPP7Zxfpk",
     ],
   },
 };
@@ -430,11 +425,12 @@ export function Gallery() {
           <div
             style={{
               border: "4px solid #e8eaed",
-              borderRadius: "8px",
+              borderRadius: "24px",
               width: "calc(895/1440 * 100vw)",
               marginTop: "28px",
               height: "460px",
-              marginBottom: "58px",
+                marginBottom: "58px",
+              overflow: "hidden",
             }}
           >
             <LoadableImage

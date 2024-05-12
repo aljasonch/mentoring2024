@@ -1,4 +1,5 @@
 import React from "react";
+import skeletonimage from "../../assets/SkeletonLoaderBkg.png";
 
 export function LoadableImage({ src, centercrop }) {
   const [loaded, setLoaded] = React.useState(false);
@@ -43,7 +44,25 @@ export function LoadableImage({ src, centercrop }) {
         onLoad={() => setLoaded(true)}
         loading="eager"
       />
-      {!loaded && <div>Loading...</div>}
+      {!loaded && (
+        <img
+          src={skeletonimage}
+          style={{
+            ...(centercrop
+              ? {
+                  objectFit: "cover",
+                width: "35%",
+                aspectRatio: "1/1",
+                }
+              : {
+                  width: "35%",
+                  aspectRatio: "1/1",
+                }),
+            overflow: "hidden",
+          }}
+          className="animate-pulse"
+        />
+      )}
     </div>
   );
 }

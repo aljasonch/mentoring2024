@@ -28,9 +28,9 @@
 }
 
 .sizeglobals {
-    --additionalmargin: calc(83/1440 * 100vw);
-    --buttonsize: calc(min((1/16) * 100vw + 24px, 64px));
-    --carouselmargin: calc(1/125 * (100vh + 100vw));
+    --additionalmargin: calc(144/1440 * 100vw);
+    --buttonsize: calc(max((32/1440) * 100vw + 24px, 64px));
+    --carouselmargin: calc(48/1440 * (100vh + 100vw));
     --carouselsize: calc(100vw - (var(--buttonsize) * 2) - (var(--carouselmargin) * 2) - (var(--additionalmargin) * 2) - 16px);
     margin-left: var(--additionalmargin);
     margin-right: var(--additionalmargin);
