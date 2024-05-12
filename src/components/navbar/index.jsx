@@ -5,7 +5,7 @@ import Logo from '../../assets/Logo.png'
 
 function Navbar() {
   return (
-    <nav className="pr-24 container-2xl flex items-center m-auto fixed">
+    <nav className="pr-24 container-2xl flex items-center m-auto fixed z-10">
         <div className='relative'>
           <img src={Logo} className='w-[6rem] absolute z-10 m-8 ml-[4rem] shadow-object'></img>  
           <img src={Pistol} className='w-[38.5rem] shadow-object lg:w-[30rem] xl:w-[38.5rem]'></img>
