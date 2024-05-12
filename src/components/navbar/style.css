@@ -1,8 +1,20 @@
-.shadow-nav{
-    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3), 4px 4px 15px rgba(245, 253, 255, 0.5);
+.shadow-nav {
+    box-shadow: 4px 4px 15px rgba(245, 253, 255, 0.5);
 
 }
+
 .shadow-object {
     -webkit-filter: drop-shadow(0px 13px 6px rgba(24, 35, 50, 0.5));
     filter: drop-shadow(0px 13px 6px rgba(24, 35, 50, 0.5));
 }
+
+.background-navbar {
+    background:
+    linear-gradient(285.39deg, rgba(36, 164, 145, 0.3) 3.35%, rgba(34, 188, 177, 0.3) 39.41%, rgba(2, 180, 168, 0.3) 79.68%, rgba(40, 172, 156, 0.3) 95.74%),
+    linear-gradient(180deg, rgba(159, 205, 215, 0) 36.84%, rgba(66, 184, 252, 0.5) 100%);
+background-blend-mode: overlay;
+    box-shadow: 0px 20px 50px 0px #478198 inset;
+    box-shadow: 0px 0px 10px 0px #18235099;
+}
+
+

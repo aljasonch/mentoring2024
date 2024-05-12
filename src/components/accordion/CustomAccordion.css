@@ -1,0 +1,16 @@
+.background-custom-accordion {
+  background: radial-gradient(
+        33.67% 308.15% at 72.08% 34.23%,
+        #4b67db 0%,
+        #283775 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    radial-gradient(
+        83.49% 122.97% at 14.53% 122.97%,
+        rgba(82, 107, 208, 0.2) 0%,
+        rgba(0, 0, 0, 0.2) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+  box-shadow: 0px 4px 20px 0px rgba(24, 35, 80, 0.2);
+}

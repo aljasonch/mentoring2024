@@ -98,8 +98,7 @@ function Home() {
                 <img src={Green_Line} className="absolute w-6 md:w-8 xl:w-10" />
             </div>
             <Carousel data={slides} logos={logos} />
-        </div>
-        
+        </div>     
       </div>
     </div>
   );
