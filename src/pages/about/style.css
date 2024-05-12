@@ -1,0 +1,165 @@
+.background-mentoring {
+
+    background: url(../../assets/background.png), radial-gradient(closest-side at center, #6d5FFF 0%, #5d52dd 42%, #283771 100%) ;
+    background-blend-mode: overlay;
+    background-size: 1440px 900px;
+    background-repeat: repeat;
+    background-attachment: scroll; 
+    overflow: auto; 
+}
+
+.background-atas {
+    background: url(../../assets/asset15.png) no-repeat center;
+    background-size: 900px 50px;
+    height: 100px;
+}
+
+.inner-shadow {
+    box-shadow: inset 0px 4px 50px #AFEFFF;
+  }
+
+@font-face {
+    font-family: 'SpyAgencyBoldItalic';
+    src: url('../../assets/fonts/spyagencyboldital.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SpyAgency';
+    src: url('../../assets/spyagency.ttf') format('truetype');
+}
+
+.font-spyagencybi{
+    font-family: 'SpyAgencyBoldItalic', sans-serif;
+}
+
+.font-spyagencyOri{
+    font-family: 'SpyAgency', sans-serif;
+}
+
+.DropSemua{
+    box-shadow: 0px 10px 4px rgba(24, 35, 80, 0.5), inset 0px 4px 50px #AFEFFF;
+}
+
+.container1 {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 100%; 
+  overflow: hidden; 
+}
+
+.Daco img {
+  width: 800px; 
+  margin-bottom: -100px;
+  margin-left: 1270px; 
+  transform: rotate(123deg);
+  opacity: 50%;
+  z-index: 0;
+}
+
+.container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    z-index: 1000;
+    max-width: 80%; 
+    overflow-y: auto; 
+    animation: slideUp 0.5s ease-in-out forwards;
+}
+
+.container.show {
+  bottom: 20px; 
+}
+
+@keyframes slideUp {
+  from {
+    transform: translate(-50%, 100%);
+  }
+  to {
+    transform: translate(-50%, -50%);
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-in-out forwards;
+}
+ 
+@keyframes slideDown {
+  from {
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: translate(-50%, 100%);
+  }
+}
+
+.slide-down {
+  animation: slideDown 0.5s ease-in-out forwards;
+}
+
+.yes{
+  margin-bottom: -300px;
+  z-index: 1;
+  padding-top: -10px;
+}
+
+.daco-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.card-container {
+  position: relative;
+  z-index: 1;
+}
+.logo {
+  top: 15%;
+  background-color: white;
+}
+
+.tulis {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.low {
+  z-index: -1;
+}
+
+.Daco-card {
+  position: absolute;
+  top: 250px; 
+  right: -160px; 
+  transform: rotate(128deg);
+  width: 300px;
+  opacity: 0.35;
+  z-index: -1; 
+}
+
+.Daco-card1 {
+  position: absolute;
+  top: -70px; 
+  right: 600px; 
+  transform: rotate(-400deg);
+  width: 300px;
+  opacity: 0.35;
+  z-index: -1; 
+}
+
+.inShadow{
+  box-shadow: 0px 0px 10px 7px #F5FDFF, inset 0px 20px 50px #478198 ;
+}
+
+.gradientcolor {
+  background: linear-gradient(180deg, rgba(159, 205, 215, 0) 36.84%, #B2CCDB 130%), linear-gradient(285.39deg, rgba(36, 164, 145, 0.98) 3.35%, rgba(34, 188, 177, 0.98) 39.41%, rgba(2, 180, 168, 0.98) 79.68%, rgba(40, 172, 156, 0.98) 95.74%);
+}
