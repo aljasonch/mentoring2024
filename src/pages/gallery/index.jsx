@@ -111,14 +111,15 @@ function ScrollablePhotoSet({ localstate, setstate, data }) {
         width: "calc(100vw - min(100 * 0.25, 100px))",
         height: "fit-content",
       }}
+      className="sizeglobals"
     >
       <div
         style={{
-          width: "calc((1/16) * 100vw + 24px)",
+          width: "var(--buttonsize)",
           aspectRatio: "1/1",
           borderRadius: "120px",
           backgroundColor: "#18E6B1",
-          padding: "calc(1/125 * (100vh + 100vw))",
+          padding: "calc(max(12/3227 * (100vh + 100vw),12px))",
         }}
         onClick={() => {
           setstate({
@@ -142,17 +143,15 @@ function ScrollablePhotoSet({ localstate, setstate, data }) {
       </div>
       <div
         style={{
-          width: `
-          calc(100vw - ((((1/16) * 100vw + 24px) * 2) + ((1/125 * (100vh + 100vw) * 4))))
-          `,
-          height: "calc(max(11/54 * 100vw,0px))",
+          width: `var(--carouselsize)`,
+          height: "calc(max(139/1440 * 100vw,0px))",
           backgroundColor: "transparent",
           gap: "calc(1/150 * (100vh + 100vw))",
           display: "flex",
           flexDirection: "row",
           justifyContent: "start",
-          marginLeft: "calc(1/125 * (100vh + 100vw))",
-          marginRight: "calc(1/125 * (100vh + 100vw))",
+          marginLeft: "var(--carouselmargin)",
+          marginRight: "var(--carouselmargin)",
           overflowX: "scroll",
           scrollbarWidth: "thin",
         }}
@@ -167,7 +166,7 @@ function ScrollablePhotoSet({ localstate, setstate, data }) {
                 overflow: "hidden",
                 aspectRatio: "1 / 1",
                 width: "100%",
-                minWidth: "calc(max(11/54 * 100vw,0px))",
+                minWidth: "calc(max(139/1440 * 100vw,0px))",
               }}
               onClick={() => {
                 setstate({
@@ -187,11 +186,11 @@ function ScrollablePhotoSet({ localstate, setstate, data }) {
       </div>
       <div
         style={{
-          width: "calc((1/16) * 100vw + 24px)",
+          width: "var(--buttonsize)",
           aspectRatio: "1/1",
           borderRadius: "120px",
           backgroundColor: "#18E6B1",
-          padding: "calc(1/125 * (100vh + 100vw))",
+          padding: "calc(max(12/3227 * (100vh + 100vw),12px))",
         }}
         onClick={() => {
           setstate({
@@ -351,12 +350,26 @@ export function Gallery() {
             </h4>
           </div>
           <div className="canvas">
-            <div className="gallerybox">
-              <ExpandingClickablePhoto
-                data={data.tutorial}
-                setstate={setState}
-                centercrop={true}
-              />
+            <div
+              style={{
+                width: "100%",
+                height: "100%",
+                display: "flex",
+                flexDirection: "row",
+              }}
+            >
+              <div
+                style={{
+                  width: "calc(100% - var(--width))",
+                }}
+              ></div>
+              <div className="gallerybox">
+                <ExpandingClickablePhoto
+                  data={data.tutorial}
+                  setstate={setState}
+                  centercrop={true}
+                />
+              </div>
             </div>
             <div className="gallerybox">
               <ExpandingClickablePhoto
@@ -365,12 +378,26 @@ export function Gallery() {
                 centercrop={true}
               />
             </div>
-            <div className="gallerybox">
-              <ExpandingClickablePhoto
-                data={data.stage2}
-                setstate={setState}
-                centercrop={true}
-              />
+            <div
+              style={{
+                width: "100%",
+                height: "100%",
+                display: "flex",
+                flexDirection: "row",
+              }}
+            >
+              <div
+                style={{
+                  width: "calc(100% - var(--width))",
+                }}
+              ></div>
+              <div className="gallerybox">
+                <ExpandingClickablePhoto
+                  data={data.stage2}
+                  setstate={setState}
+                  centercrop={true}
+                />
+              </div>
             </div>
             <div className="gallerybox">
               <ExpandingClickablePhoto
@@ -404,9 +431,9 @@ export function Gallery() {
             style={{
               border: "4px solid #e8eaed",
               borderRadius: "8px",
-              width: "calc(100vw - min((100vw * 50/609) * 0.8, 100px))",
+              width: "calc(895/1440 * 100vw)",
               marginTop: "28px",
-              height: "calc(100vh - 320px)",
+              height: "460px",
               marginBottom: "58px",
             }}
           >
@@ -421,13 +448,12 @@ export function Gallery() {
             localstate={localstate}
             setstate={setState}
             data={data}
-            />
-            <div style={{
-              height: "20px"
-
-            }}>
-
-            </div>
+          />
+          <div
+            style={{
+              height: "20px",
+            }}
+          ></div>
           <PillButtonGenerator
             localstate={localstate}
             setstate={setState}
