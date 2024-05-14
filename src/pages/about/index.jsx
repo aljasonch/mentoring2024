@@ -171,7 +171,7 @@ function About() {
                     <img src={Medpar} className='h-[110px]' />
                 </div>
             </div>
-            <div className='flex items-center justify-center py-6 relative z-10 mb-[-300px] z-10 pt-[-10px] '>
+            <div className='flex items-center justify-center py-6 relative z-10 mb-[-300px] pt-[-10px] '>
                 <div className='bg-white cursor-pointer p-6 rounded-full inner-shadow mx-[30px] transition-color duration-500 ease-in-out hover:bg-[#FFD4A9] hover:shadow-none DropSemua' onClick={() => { setShowCard(!showCard); setSelectedData({ title: data[8].title, description: data[8].description, image: Research }) }}>
                     <img src={Research} className='h-[110px]' />
                 </div>
