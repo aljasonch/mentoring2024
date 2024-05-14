@@ -4,8 +4,8 @@ import {
   MdOutlineKeyboardArrowRight,
 } from "react-icons/md";
 import "./Carousel.css";
-import Bintik_1 from "../../assets/Bintik_1.png";
-import Bintik_2 from "../../assets/Bintik_2.png";
+import Bintik_1 from "../../assets/Bintik_1.webp";
+import Bintik_2 from "../../assets/Bintik_2.webp";
 
 export const Carousel = ({ data, logos }) => {
   const [slide, setSlide] = useState(0);

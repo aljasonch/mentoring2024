@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
-import Logo from "../../assets/Logo.png";
-import UMN from "../../assets/UMN.png";
+import Logo from "../../assets/Logo.webp";
+import UMN from "../../assets/UMN.webp";
 
 const Footer = () => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
-import Pistol from "../../assets/Asset_14.png";
-import Logo from "../../assets/Logo.png";
+import Pistol from "../../assets/Asset_14.webp";
+import Logo from "../../assets/Logo.webp";
 import { Link } from "react-router-dom";
 
 function Navbar() {

@@ -5,13 +5,13 @@
 
 @font-face {
     font-family: 'SpyAgencyHalftone';
-    src: url('../../assets/spyagencyhalf.ttf') format('truetype');
+    src: url('../../assets/fonts/spyagencyhalf.ttf') format('truetype');
 }
 
 .font-spyagencyhalf{
 @font-face {
     font-family: 'SpyAgency';
-    src: url('../../assets/spyagency.ttf') format('truetype');
+    src: url('../../assets/fonts/spyagency.ttf') format('truetype');
 }
 }
 .font-spyagency{

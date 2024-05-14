@@ -9,17 +9,17 @@
 
 @font-face {
     font-family: 'SpyAgencyCond';
-    src: url('../../assets/spyagencycond.ttf') format('truetype');
+    src: url('../../assets/fonts/spyagencycond.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'SpyAgencyBoldItal';
-    src: url('../../assets/spyagencyboldital.ttf') format('truetype');
+    src: url('../../assets/fonts/spyagencyboldital.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'SpyAgencyGradient';
-    src: url('../../assets/spyagencyvgrad.ttf') format('truetype');
+    src: url('../../assets/fonts/spyagencyvgrad.ttf') format('truetype');
 }
 
 .font-spyagencycond {

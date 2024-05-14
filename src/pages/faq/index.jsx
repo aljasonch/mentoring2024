@@ -1,5 +1,5 @@
 import React from "react";
-import BlackDots from "../../assets/BlackDots.png";
+import BlackDots from "../../assets/BlackDots.webp";
 import Accordion, {
   AccordionItem,
 } from "../../components/accordion/CustomAccordion";
