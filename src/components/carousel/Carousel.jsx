@@ -49,7 +49,7 @@ export const Carousel = ({ data, logos }) => {
       ))}
       <MdOutlineKeyboardArrowLeft
         onClick={prevSlide}
-        className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 xl:w-20 xl:h-20 -left-[72px] md:-left-24 lg:-left-36 hover:cursor-pointer absolute rounded-full bg-[#18E6B1]"
+        className="w-8 h-8 cursor-pointer sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 xl:w-20 xl:h-20 -left-[72px] md:-left-24 lg:-left-36 hover:cursor-pointer absolute rounded-full bg-[#18E6B1]"
       />
       {data.map((item, idx) => {
         return (
@@ -73,7 +73,7 @@ export const Carousel = ({ data, logos }) => {
       })}
       <MdOutlineKeyboardArrowRight
         onClick={nextSlide}
-        className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 xl:w-20 xl:h-20 -right-[72px] md:-right-24 lg:-right-36 absolute rounded-full bg-[#18E6B1]"
+        className="w-8 h-8 cursor-pointer sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 xl:w-20 xl:h-20 -right-[72px] md:-right-24 lg:-right-36 absolute rounded-full bg-[#18E6B1]"
       />
       <span className="flex absolute mt-[360px] md:mt-[390px] lg:mt-[480px] xl:mt-[580px] cursor-pointer">
         {data.map((_, idx) => {
