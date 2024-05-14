@@ -20,36 +20,18 @@ function Faq() {
       </div>
       <div className="px-4 sm:px-0 py-10 space-y-6">
         <Accordion className="sm:max-w-2xl md:max-w-3xl lg:max-w-5xl mx-auto">
-          <AccordionItem value="1" trigger="HEADLINE">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-            quaerat quasi natus repellat maiores, optio vitae expedita commodi
-            id, sit atque, reprehenderit error numquam earum fuga! Voluptates ex
-            architecto perferendis? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Itaque quaerat quasi natus repellat maiores, optio
-            vitae expedita commodi id, sit atque, reprehenderit error numquam
-            earum fuga! Voluptates ex architecto perferendis?
+          <AccordionItem value="1" trigger="Apa itu Character Building Mentoring UMN?">
+            Character Building Mentoring adalah kegiatan tahunan yang bersifat wajib bagi Mentee (Mahasiswa Baru UMN) dengan tujuan memperkenalkan nilai-nilai 5C UMN secara mendalam.
           </AccordionItem>
         </Accordion>
         <Accordion className="sm:max-w-2xl md:max-w-3xl lg:max-w-5xl mx-auto">
-          <AccordionItem value="1" trigger="HEADLINE">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-            quaerat quasi natus repellat maiores, optio vitae expedita commodi
-            id, sit atque, reprehenderit error numquam earum fuga! Voluptates ex
-            architecto perferendis? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Itaque quaerat quasi natus repellat maiores, optio
-            vitae expedita commodi id, sit atque, reprehenderit error numquam
-            earum fuga! Voluptates ex architecto perferendis?
+          <AccordionItem value="1" trigger="Apakah Character Building Mentoring merupakan kegiatan wajib?">
+          Character Building Mentoring merupakan kegiatan wajib.
           </AccordionItem>
         </Accordion>
         <Accordion className="sm:max-w-2xl md:max-w-3xl lg:max-w-5xl mx-auto">
-          <AccordionItem value="1" trigger="HEADLINE">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-            quaerat quasi natus repellat maiores, optio vitae expedita commodi
-            id, sit atque, reprehenderit error numquam earum fuga! Voluptates ex
-            architecto perferendis? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Itaque quaerat quasi natus repellat maiores, optio
-            vitae expedita commodi id, sit atque, reprehenderit error numquam
-            earum fuga! Voluptates ex architecto perferendis?
+          <AccordionItem value="1" trigger="CBM akan dilaksanakan secara offline atau online?">
+          Offline di kampus Universitas Multimedia Nusantara.
           </AccordionItem>
         </Accordion>
       </div>
