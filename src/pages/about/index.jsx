@@ -13,7 +13,7 @@ import Visual from '../../assets/Visual_Icon.webp';
 import Website from '../../assets/Website_Icon.webp';
 import Asset from '../../assets/Asset8_1.webp';
 import Assets from '../../assets/Asset8_2.webp';
-import Daco from '../../assets/Daco.webp';
+import Daco from '../../assets/Daco_519625.webp';
 import petirkiriatas from '../../assets/petirkiriatas.webp';
 import petirkananatas from '../../assets/petirkananatas.webp';
 import theme from '../../assets/theme.webp';
@@ -156,10 +156,10 @@ function About() {
                     <div className="mt-10 mb-3 px-[40px] pb-[20px] gradientcolor container w-[750px] h-[370px] rounded-[60px] z-[-1] overflow-hidden inShadow" >
                         <h2 className='font-spyagencyOri text-white text-[30px] mt-10'>{selectedData.title}</h2>
                         <p className='text-monsserat text-white text-[25px] text-center z-10 flex flex-col justify-center items-center p-5 box-border'>{selectedData.description}</p>
-                        <div className='absolute top-64 -right-40 transform rotate-128 w-72 opacity-35 z-negative'>
+                        <div className='Daco-card'>
                             <img src={Daco} className='daco-image' />
                         </div>
-                        <div className='absolute -top-18 right-150 transform rotate-400 w-72 opacity-35 z-negative'>
+                        <div className='Daco-card1'>
                             <img src={Daco} className='daco-image' />
                         </div>
                     </div>

@@ -8,7 +8,7 @@
 }
 
 .background-atas {
-    background: url(../../assets/asset15.png) no-repeat center;
+    background: url(../../assets/asset15.webp) no-repeat center;
     background-size: 900px 50px;
     height: 100px;
 }
@@ -47,7 +47,25 @@
   opacity: 50%;
   z-index: 0;
 }
+.Daco-card {
+  position: absolute;
+  top: 250px; 
+  right: -160px; 
+  transform: rotate(128deg);
+  width: 300px;
+  opacity: 0.35;
+  z-index: -1; 
+}
 
+.Daco-card1 {
+  position: absolute;
+  top: -70px; 
+  right: 600px; 
+  transform: rotate(-400deg);
+  width: 300px;
+  opacity: 0.35;
+  z-index: -1; 
+}
 .container {
     position: fixed;
     top: 50%;
