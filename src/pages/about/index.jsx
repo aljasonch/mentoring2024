@@ -18,8 +18,18 @@ import petirkiriatas from '../../assets/petirkiriatas.webp';
 import petirkananatas from '../../assets/petirkananatas.webp';
 import theme from '../../assets/theme.webp';
 import tagline from '../../assets/tagline.webp';
-import logo from '../../assets/logoaboutus.webp';
 import zachery from '../../assets/zachery.webp';
+import z1 from '../../assets/z1.webp';
+import z2 from '../../assets/z2.webp';
+import z3 from '../../assets/z3.webp';
+import z4 from '../../assets/z4.webp';
+import z5 from '../../assets/z5.webp';
+import z6 from '../../assets/z6.webp';
+import z7 from '../../assets/z7.webp';
+import z8 from '../../assets/z8.webp';
+import z9 from '../../assets/z9.webp';
+import z10 from '../../assets/z10.webp';
+import logo from '../../assets/logoabout.webp';
 import data from './data.js';
 
 function About() {
@@ -54,51 +64,78 @@ function About() {
                     <p className='font-monsserat text-white text-3xl'>CHARACTER BUILDING MENTORING 2024</p>
                 </div>
             </div>
-            <div className='relative'>
-                <img src={theme} className='relative z-10 mt-[50px]' alt='Theme' />
-                <div className='absolute top-[100px] left-[50px] right-[700px] z-20'>
-                    <h2 className='font-spyagency text-start text-white text-6xl ml-6 mt-[5px]'>
+            <div className='relative flex justify-between mt-[50px]'>
+                <div className='flex flex-col z-20'>
+                    <h2 className='font-spyagencybi text-start text-white text-6xl ml-20 mt-[170px]'>
                         REVEAL YOUR <br />CAPABILITY <br /> WITHIN A <br />PURPOSEFUL <br />QUEST
                     </h2>
-                    <p className='font-monsserat text-start text-white text-xl mt-10 ml-6'>
+                    <p className='font-monsserat text-start text-white text-xl mt-10 ml-20'>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                     </p>
                 </div>
+                <img src={theme} className='relative z-10 mt-[50px] ml-10 mr-10 w-[700px] h-auto' alt='Theme' />
             </div>
+
+            <div className='flex mt-[50px]'>
+                <div className='flex flex-col'>
+                    <img src={z1} className='relative z-10 mb-[50px]  w-[500px] mt-[-50px]' alt='z1' />
+                    <img src={z2} className='relative z-5  w-[900px]   mt-[-150px] ' alt='z2' />
+                </div>
+                <img src={z3} className='relative z-10 ml-auto w-[500px]' alt='z3' />
+            </div>
+
             <div className='relative'>
-                <img src={tagline} className='z-10 mr-[20px] right-[700px] w-[700px] mb-[-200px] mt-[-100px]' alt='Tagline' />
+                <img src={tagline} className='z-10 mr-[20px] right-[700px] w-[700px] mb-[-200px] mt-[-30px] ml-10' alt='Tagline' />
                 <div className='absolute top-[340px] right-[50px] -translate-y-1/2 max-w-[50%] p-[20px] box-border'>
-                    <h2 className='font-spyagency text-end text-white text-6xl mt-[5px]'>
+                    <h2 className='font-spyagencybi text-end text-white text-6xl mr-10 mt-[5px]'>
                         REVEAL, <br />REFINE, <br /> RADIATE
                     </h2>
-                    <p className='font-monsserat text-end text-white text-xl mt-10'>
+                    <p className='font-monsserat text-end text-white text-xl mr-10 ml-10 mt-10'>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                     </p>
                 </div>
             </div>
-            <div className='relative'>
-                <img src={logo} className='w-full h-auto' alt='Logo' />
-                <div className='absolute top-1/2 left-16 -translate-y-1/2 max-w-[50%] p-5 box-border'>
-                    <h2 className='font-spyagency text-start text-white text-6xl mt-[5px]'>
+            <div className='flex mt-[50px]'>
+                <div className='flex flex-col'>
+                    <img src={z4} className='relative z-10 mb-[50px] w-[650px] mt-[200px]' alt='z4' />
+                    <img src={z5} className='relative z-5 w-[50px] mt-[-290px]' alt='z5' />
+                </div>
+                <div className='flex flex-col ml-auto'>
+                    <img src={z6} className='relative z-10 w-[800px] mt-[280px]' alt='z6' />
+                    <img src={z7} className='relative z-5 w-[400px] mt-[-320px] ml-auto' alt='z7' />
+                </div>
+            </div>
+            <div className='relative flex justify-between mt-[50px]'>
+                <div className='flex flex-col z-20'>
+                    <h2 className='font-spyagencybi text-start text-white text-6xl ml-20 mt-[-220px]'>
                         THE MEANING <br />BEHIND OUR <br /> LOGO
                     </h2>
-                    <p className='font-monsserat text-start text-white text-xl mt-10'>
+                    <p className='font-monsserat text-start text-white text-xl mt-10 ml-20'>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                     </p>
                 </div>
+                <img src={logo} className='relative z-10 mt-[-350px] mx-10 w-[700px] h-auto' alt='Theme' />
             </div>
+            <div className='flex mt-[50px]'>
+                <div className='flex flex-col'>
+                    <img src={z8} className='relative z-10 mb-[0px]  w-[800px] mt-[-50px]' alt='z8' />
+                    <img src={z9} className='relative z-5  w-[900px]   mt-[-150px] ' alt='z9' />
+                </div>
+                <img src={z10} className='relative z-5 ml-auto w-[500px]  mt-[-60px]' alt='z10' />
+            </div>
+
             <div className='relative'>
-                <img src={zachery} className='z-10 mr-[20px] right-[700px] w-[700px] mb-[100px] mt-[-50px]' alt='Zachery' />
+                <img src={zachery} className='z-10 mx-10 mr-[20px] right-[700px] w-[700px] mb-[-200px] mt-[10px]' alt='Tagline' />
                 <div className='absolute top-[340px] right-[50px] -translate-y-1/2 max-w-[50%] p-[20px] box-border'>
-                    <h2 className='font-spyagency text-end text-white text-6xl mt-[5px]'>
+                    <h2 className='font-spyagency text-end text-white text-6xl mx-10 mt-[5px]'>
                         MEET <br />ZACHERY
                     </h2>
-                    <p className='font-monsserat text-end text-white text-xl mt-10'>
+                    <p className='font-monsserat text-end text-white text-xl mx-10 mt-10'>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                     </p>
                 </div>
             </div>
-            <div className='flex justify-between background-atas '>
+            <div className='flex justify-between background-atas mt-[250px] '>
                 <img src={Asset} className='h-[190px] pb-5' />
                 <img src={Assets} className=' h-[190px] pb-5' />
             </div>

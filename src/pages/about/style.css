@@ -1,5 +1,5 @@
 .background-mentoring {
-    background: url(../../assets/background.png), radial-gradient(closest-side at center, #6d5FFF 0%, #5d52dd 42%, #283771 100%) ;
+    background: url(../../assets/background.webp), radial-gradient(closest-side at center, #6d5FFF 0%, #5d52dd 42%, #283771 100%) ;
     background-blend-mode: overlay;
     background-size: 1440px 900px;
     background-repeat: repeat;
@@ -47,7 +47,7 @@
   opacity: 50%;
   z-index: 0;
 }
-.Daco-card {
+.daco-card {
   position: absolute;
   top: 250px; 
   right: -160px; 
@@ -57,7 +57,7 @@
   z-index: -1; 
 }
 
-.Daco-card1 {
+.daco-card1 {
   position: absolute;
   top: -70px; 
   right: 600px; 
