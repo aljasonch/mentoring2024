@@ -193,10 +193,10 @@ function About() {
                     <div className="mt-10 mb-3 px-[40px] pb-[20px] gradientcolor container w-[750px] h-[370px] rounded-[60px] z-[-1] overflow-hidden inShadow" >
                         <h2 className='font-spyagencyOri text-white text-[30px] mt-10'>{selectedData.title}</h2>
                         <p className='text-monsserat text-white text-[25px] text-center z-10 flex flex-col justify-center items-center p-5 box-border'>{selectedData.description}</p>
-                        <div className='Daco-card'>
+                        <div className='daco-card'>
                             <img src={Daco} className='daco-image' />
                         </div>
-                        <div className='Daco-card1'>
+                        <div className='daco-card1'>
                             <img src={Daco} className='daco-image' />
                         </div>
                     </div>
