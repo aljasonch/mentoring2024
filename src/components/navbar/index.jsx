@@ -25,7 +25,7 @@ function Navbar() {
           <Link to="/">
             <div className="w-[9rem] h-[3rem]">
               <li className="text-[#2B2476] bg-white w-[7rem]  h-[2rem] skew-x-[-40deg] shadow-nav rounded-tr-2xl rounded-bl-2xl rounded-tl rounded-br transform hover:scale-[1.2] transition-transform duration-500">
-                <h1 className="text-[0.875rem]  pr-1 py-[0.3rem] font-semibold skew-x-[40deg] inline-block">
+                <h1 className="text-[0.875rem] pr-1 py-[0.3rem] font-semibold skew-x-[40deg] inline-block">
                   HOME
                 </h1>
               </li>
@@ -34,7 +34,7 @@ function Navbar() {
           <Link to="/faq">
             <div className="w-[9rem] h-[3rem]">
               <li className="text-[#2B2476] bg-white w-[7rem]  h-[2rem] skew-x-[-40deg] shadow-nav rounded-tr-2xl rounded-bl-2xl rounded-tl rounded-br transform hover:scale-[1.2] transition-transform duration-500">
-                <h1 className="text-[0.875rem]  pr-1 py-[0.3rem] font-semibold skew-x-[40deg] inline-block">
+                <h1 className="text-[0.875rem] pr-1 py-[0.3rem] font-semibold skew-x-[40deg] inline-block">
                   FAQ
                 </h1>
               </li>
@@ -43,7 +43,7 @@ function Navbar() {
           <Link to="/about">
             <div className="w-[9rem] h-[3rem]">
               <li className="text-[#2B2476] bg-white w-[7rem]  h-[2rem] skew-x-[-40deg] shadow-nav rounded-tr-2xl rounded-bl-2xl rounded-tl rounded-br transform hover:scale-[1.2] transition-transform duration-500">
-                <h1 className="text-[0.875rem]  pr-1 py-[0.3rem] font-semibold skew-x-[40deg] inline-block">
+                <h1 className="text-[0.875rem] pr-1 py-[0.3rem] font-semibold skew-x-[40deg] inline-block">
                   ABOUT US
                 </h1>
               </li>
