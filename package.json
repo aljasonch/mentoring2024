@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite --host=0.0.0.0",
     "build": "vite build",
+    "postinstall": "rm -rf node_modules package-lock.json && npm install",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
