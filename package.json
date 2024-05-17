@@ -5,6 +5,8 @@
   "type": "module",
     "scripts": {
       "dev": "vite --host=0.0.0.0",
+      "preinstall": "rm -rf node_modules",
+      "postinstall": "npm rebuild",
       "build": "vite build",
       "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
       "preview": "vite preview"
