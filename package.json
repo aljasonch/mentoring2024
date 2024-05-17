@@ -3,13 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "vite --host=0.0.0.0",
-    "preinstall": "rm -rf node_modules package-lock.json",
-    "build": "npx vite build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
-  },
+    "scripts": {
+      "dev": "vite --host=0.0.0.0",
+      "preinstall": "rm -rf node_modules package-lock.json",
+      "build": "vite build",
+      "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+      "preview": "vite preview"
+    },
   "dependencies": {
     "flowbite": "^2.3.0",
     "flowbite-react": "^0.9.0",
