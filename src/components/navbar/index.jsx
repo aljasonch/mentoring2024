@@ -7,52 +7,52 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <div>
-      <div className="fixed z-30 w-[100%] h-[16%] background-navbar"></div>
-      <div className="pr-24 container-2xl flex items-center m-auto fixed z-40">
+      <div className="fixed z-30 w-full xl:h-28 md:h-[60px] background-navbar"></div>
+      <div className="xl:pr-24 container-2xl flex items-center m-auto fixed z-40">
         <div className="relative">
           <img
             src={Logo}
-            className="w-[6rem] absolute z-10 m-8 ml-[4rem] shadow-object"
+            className="xl:w-24 absolute z-10 xl:m-8 md:m-4 md:ml-8 xl:ml-16 shadow-object md:w-12"
             alt="Logo"
           />
           <img
             src={Pistol}
-            className="w-[38.5rem] shadow-object lg:w-[30rem] xl:w-[38.5rem]"
+            className="xl:w-[34rem] md:w-[17rem] shadow-object"
             alt="Pistol"
           />
         </div>
-        <ul className="flex space-x-[6rem] ml-8 pl-4 pb-16 z-0 lg:space-x-[5rem]">
+        <ul className="flex xl:ml-8 xl:pl-4 xl:pb-16 md:pb-6 md:ml-2 z-0 xl:space-x-20 md:space-x-8">
           <Link to="/">
-            <div className="w-[9rem] h-[3rem]">
-              <li className="text-[#2B2476] bg-white w-[7rem]  h-[2rem] skew-x-[-40deg] shadow-nav rounded-tr-2xl rounded-bl-2xl rounded-tl rounded-br transform hover:scale-[1.2] transition-transform duration-500">
-                <h1 className="text-[0.875rem] pr-1 py-[0.3rem] font-semibold skew-x-[40deg] inline-block">
+            <div className="xl:w-36 xl:h-12 md:w-24 md:h-10">
+              <li className="text-[#2B2476] bg-white xl:w-28 xl:h-8 md:w-20 md:h-6 -skew-x-[40deg] shadow-nav rounded-tr-2xl rounded-bl-2xl rounded-tl rounded-br transform hover:scale-110 transition-transform duration-500">
+                <h1 className="xl:text-sm md:text-[10px] xl:pr-2 md:pr-0.5 xl:py-2 md:relative md:top-[-2.5px] font-semibold skew-x-[40deg] inline-block">
                   HOME
                 </h1>
               </li>
             </div>
           </Link>
           <Link to="/faq">
-            <div className="w-[9rem] h-[3rem]">
-              <li className="text-[#2B2476] bg-white w-[7rem]  h-[2rem] skew-x-[-40deg] shadow-nav rounded-tr-2xl rounded-bl-2xl rounded-tl rounded-br transform hover:scale-[1.2] transition-transform duration-500">
-                <h1 className="text-[0.875rem] pr-1 py-[0.3rem] font-semibold skew-x-[40deg] inline-block">
+            <div className="xl:w-36 xl:h-12 md:w-24 md:h-10">
+              <li className="text-[#2B2476] bg-white xl:w-28 xl:h-8 md:w-20 md:h-6 -skew-x-[40deg] shadow-nav rounded-tr-2xl rounded-bl-2xl rounded-tl rounded-br transform hover:scale-110 transition-transform duration-500">
+                <h1 className="xl:text-sm md:text-[10px]  xl:pr-2 md:pr-1 xl:py-2 md:relative md:top-[-2.5px]  font-semibold skew-x-[40deg] inline-block">
                   FAQ
                 </h1>
               </li>
             </div>
           </Link>
           <Link to="/about">
-            <div className="w-[9rem] h-[3rem]">
-              <li className="text-[#2B2476] bg-white w-[7rem]  h-[2rem] skew-x-[-40deg] shadow-nav rounded-tr-2xl rounded-bl-2xl rounded-tl rounded-br transform hover:scale-[1.2] transition-transform duration-500">
-                <h1 className="text-[0.875rem] pr-1 py-[0.3rem] font-semibold skew-x-[40deg] inline-block">
+            <div className="xl:w-36 xl:h-12 md:w-24 md:h-10">
+              <li className="text-[#2B2476] bg-white xl:w-28 xl:h-8 md:w-20 md:h-6 -skew-x-[40deg] shadow-nav rounded-tr-2xl rounded-bl-2xl rounded-tl rounded-br transform hover:scale-110 transition-transform duration-500">
+                <h1 className="xl:text-sm md:text-[10px]  xl:pr-1 xl:py-2 md:relative md:top-[-2.5px]  font-semibold skew-x-[40deg] inline-block">
                   ABOUT US
                 </h1>
               </li>
             </div>
           </Link>
           <Link to="/gallery">
-            <div className="w-[9rem] h-[3rem]">
-              <li className="text-[#2B2476] bg-white w-[7rem]  h-[2rem] skew-x-[-40deg] shadow-nav rounded-tr-2xl rounded-bl-2xl rounded-tl rounded-br transform hover:scale-[1.2] transition-transform duration-500">
-                <h1 className="text-[0.875rem]  pr-1 py-[0.3rem] font-semibold skew-x-[40deg] inline-block">
+            <div className="xl:w-36 xl:h-12 md:w-24 md:h-10">
+              <li className="text-[#2B2476] bg-white xl:w-28 xl:h-8 md:w-20 md:h-6 -skew-x-[40deg] shadow-nav rounded-tr-2xl rounded-bl-2xl rounded-tl rounded-br transform hover:scale-110 transition-transform duration-500">
+                <h1 className="xl:text-sm md:text-[10px]  xl:pr-1 xl:py-2 md:relative md:top-[-2.5px]  font-semibold skew-x-[40deg] inline-block">
                   GALLERY
                 </h1>
               </li>
