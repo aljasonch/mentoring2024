@@ -34,7 +34,7 @@ function Navbar() {
           <Link to="/faq">
             <div className="xl:w-36 xl:h-12 md:w-24 md:h-10">
               <li className="text-[#2B2476] bg-white xl:w-28 xl:h-8 md:w-20 md:h-6 -skew-x-[40deg] shadow-nav rounded-tr-2xl rounded-bl-2xl rounded-tl rounded-br transform hover:scale-110 transition-transform duration-500">
-                <h1 className="xl:text-sm md:text-[10px]  xl:pr-2 md:pr-1 xl:py-2 md:relative md:top-[-2.5px]  font-semibold skew-x-[40deg] inline-block">
+                <h1 className="xl:text-sm md:text-[10px] xl:pr-2 md:pr-1 xl:py-2 md:relative md:top-[-2.5px] font-semibold skew-x-[40deg] inline-block">
                   FAQ
                 </h1>
               </li>
@@ -43,7 +43,7 @@ function Navbar() {
           <Link to="/about">
             <div className="xl:w-36 xl:h-12 md:w-24 md:h-10">
               <li className="text-[#2B2476] bg-white xl:w-28 xl:h-8 md:w-20 md:h-6 -skew-x-[40deg] shadow-nav rounded-tr-2xl rounded-bl-2xl rounded-tl rounded-br transform hover:scale-110 transition-transform duration-500">
-                <h1 className="xl:text-sm md:text-[10px]  xl:pr-1 xl:py-2 md:relative md:top-[-2.5px]  font-semibold skew-x-[40deg] inline-block">
+                <h1 className="xl:text-sm md:text-[10px] xl:pr-1 xl:py-2 md:relative md:top-[-2.5px] font-semibold skew-x-[40deg] inline-block">
                   ABOUT US
                 </h1>
               </li>
@@ -52,7 +52,7 @@ function Navbar() {
           <Link to="/gallery">
             <div className="xl:w-36 xl:h-12 md:w-24 md:h-10">
               <li className="text-[#2B2476] bg-white xl:w-28 xl:h-8 md:w-20 md:h-6 -skew-x-[40deg] shadow-nav rounded-tr-2xl rounded-bl-2xl rounded-tl rounded-br transform hover:scale-110 transition-transform duration-500">
-                <h1 className="xl:text-sm md:text-[10px]  xl:pr-1 xl:py-2 md:relative md:top-[-2.5px]  font-semibold skew-x-[40deg] inline-block">
+                <h1 className="xl:text-sm md:text-[10px] xl:pr-1 xl:py-2 md:relative md:top-[-2.5px] font-semibold skew-x-[40deg] inline-block">
                   GALLERY
                 </h1>
               </li>
