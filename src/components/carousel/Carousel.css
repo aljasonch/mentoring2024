@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'SpyAgency';
+    src: url('../../assets/spyagency.ttf') format('truetype');
+}
+
+.font-spyagency {
+    font-family: 'SpyAgency', sans-serif;
+}

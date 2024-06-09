@@ -1,11 +1,11 @@
 import React from "react";
 import "./style.css";
-import Logo from "../../assets/Logo.png";
-import UMN from "../../assets/UMN.png";
+import Logo from "../../assets/Logo.webp";
+import UMN from "../../assets/UMN.webp";
 
 const Footer = () => {
   return (
-    <footer className="background-footer container-2xl">
+    <footer className="background-footer container-2xl relative">
       <div className="flex flex-col md:flex-row items-center pt-[3.563rem] px-[5rem] pb-[5.313rem]">
         <div className="items-center justify-center">
           <div className="font-normal leading-[18px] pt-4 text-[#F5FDFF] text-center md:text-start">
@@ -144,5 +144,4 @@ const Footer = () => {
     </footer>
   );
 };
-
 export default Footer;

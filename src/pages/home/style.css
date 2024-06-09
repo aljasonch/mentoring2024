@@ -1,8 +1,70 @@
 .background-mentoring {
-    background: url(../../assets/background.png), radial-gradient(closest-side at center, #6d5FFF 0%, #5d52dd 42%, #283771 100%) ;
+    background: url(../../assets/background.webp), radial-gradient(closest-side at center, #6d5FFF 0%, #5d52dd 42%, #283771 100%) ;
     background-blend-mode: overlay;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
 }
+
+@font-face {
+    font-family: 'SpyAgencyCond';
+    src: url('../../assets/fonts/spyagencycond.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SpyAgencyBoldItal';
+    src: url('../../assets/fonts/spyagencyboldital.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SpyAgencyGradient';
+    src: url('../../assets/fonts/spyagencyvgrad.ttf') format('truetype');
+}
+
+.font-spyagencycond {
+    font-family: 'SpyAgencyCond', sans-serif;
+}
+
+.font-spyagencybolditalic {
+    font-family: 'SpyAgencyBoldItal', sans-serif;
+}
+
+.font-spyagencygradient {
+    font-family: 'SpyAgencyGradient', sans-serif;
+}
+.shadow-logo-home {
+    -webkit-filter: drop-shadow(0px 13px 6px rgba(24, 35, 50, 0.5));
+    filter: drop-shadow(0px 13px 6px rgba(24, 35, 50, 0.5));
+}
+.opacity-0 {
+    opacity: 0;
+  }
+  
+  .opacity-100 {
+    opacity: 1;
+  }
+  
+  .invisible {
+    visibility: hidden;
+  }
+  
+  .visible {
+    visibility: visible;
+  }
+  
+  .translate-y-0 {
+    transform: translateY(0);
+  }
+  
+  .translate-y-10 {
+    transform: translateY(20px);
+  }
+  .scale-50 {
+    transform: scale(0.5);
+  }
+  
+  .scale-100 {
+    transform: scale(1);
+  }
+  
