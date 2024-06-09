@@ -344,7 +344,7 @@ export function Gallery() {
               SELECT YOUR EVENT
             </h4>
           </div>
-          <div className="canvas">
+          <div className="canvas grid grid-cols-2 gap-4 max-w-sm md:max-w-lg">
             <div
               style={{
                 width: "100%",
@@ -353,11 +353,6 @@ export function Gallery() {
                 flexDirection: "row",
               }}
             >
-              <div
-                style={{
-                  width: "calc(100% - var(--width))",
-                }}
-              ></div>
               <div className="gallerybox">
                 <ExpandingClickablePhoto
                   data={data.tutorial}
@@ -381,11 +376,6 @@ export function Gallery() {
                 flexDirection: "row",
               }}
             >
-              <div
-                style={{
-                  width: "calc(100% - var(--width))",
-                }}
-              ></div>
               <div className="gallerybox">
                 <ExpandingClickablePhoto
                   data={data.stage2}
@@ -429,7 +419,7 @@ export function Gallery() {
               width: "calc(895/1440 * 100vw)",
               marginTop: "28px",
               height: "460px",
-                marginBottom: "58px",
+              marginBottom: "58px",
               overflow: "hidden",
             }}
           >
