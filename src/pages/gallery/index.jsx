@@ -6,7 +6,6 @@ import React, { useEffect } from "react";
 import data from "./data";
 import { Routes, Route, useNavigate, useNavigation } from "react-router-dom";
 function InternalNavBar({ state, setstate, data }) {
-  const navigate = useNavigate();
   return (
     <>
       <div
@@ -149,15 +148,11 @@ function ScrollablePhotoSet({ localstate, setstate, data }) {
       </div>
       <div
         style={{
-          /*           width: `var(--carouselsize)`, */
           height: "calc(max(139/1440 * 100vw,64px))",
-          backgroundColor: "transparent",
           gap: "calc(1/150 * (100vh + 100vw))",
-          /*           marginLeft: "var(--carouselmargin)",
-          marginRight: "var(--carouselmargin)", */
           scrollbarWidth: "none",
         }}
-        className="overflow-x-scroll flex flex-row justify-start md:mr-5 md:ml-5 lg:mr-10 lg:ml-10 xl:mr-20 xl:ml-20 scrollbar-thumb-white scrollbar-track-white hover:scrollbar-thumb-gray-300 hover:scrollbar-track-gray-300 w-full"
+        className="overflow-x-scroll flex flex-row justify-start md:mr-5 md:ml-5 lg:mr-10 lg:ml-10 xl:mr-20 xl:ml-20 scrollbar-thumb-white scrollbar-track-white hover:scrollbar-thumb-gray-300 hover:scrollbar-track-gray-300 w-full bg-transparent"
       >
         {currentdata.images.map((image, index) => {
           return (
@@ -263,7 +258,6 @@ export function Gallery() {
     currentimage: 0,
   });
   if (window.location.hash.endsWith("photoset")) {
-    //console.log(localstate.currentscreen);
     if (localstate.currentscreen == "main") {
       _setstate({
         ...localstate,
