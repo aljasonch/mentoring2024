@@ -3,6 +3,7 @@ import { ExpandingClickablePhoto } from "../../components/gallerycomponents/Expa
 import { LoadableImage } from "../../components/gallerycomponents/LoadableImage";
 import "./style.css";
 import React, { useEffect } from "react";
+import data from "./data";
 import { Routes, Route, useNavigate, useNavigation } from "react-router-dom";
 function InternalNavBar({ state, setstate, data }) {
   const navigate = useNavigate();
@@ -254,65 +255,6 @@ function PillButtonGenerator({ localstate, setstate, data }) {
   );
 }
 
-const data = {
-  main: {},
-  tutorial: {
-    back: "main",
-    screenname: "tutorial",
-    next: "stage1",
-    title: "Tutorial Stage",
-    widecover:
-      "https://github.com/thatnerd527/verbatim/raw/main/imagecdn/DSC08819.avif",
-    images: [
-      "https://github.com/thatnerd527/verbatim/raw/main/imagecdn/DSC08819.avif",
-      "https://github.com/thatnerd527/verbatim/raw/main/imagecdn/DSC08820.avif",
-      "https://github.com/thatnerd527/verbatim/raw/main/imagecdn/DSC08821.avif",
-      "https://github.com/thatnerd527/verbatim/raw/main/imagecdn/DSC08822.avif",
-      "https://github.com/thatnerd527/verbatim/raw/main/imagecdn/DSC08823.avif",
-    ],
-  },
-  stage1: {
-    back: "tutorial",
-    screenname: "stage1",
-    next: "stage2",
-    title: "Stage 1",
-    widecover:
-      "https://github.com/thatnerd527/verbatim/raw/main/imagecdn/DSC08824.avif",
-    images: [
-      "https://github.com/thatnerd527/verbatim/raw/main/imagecdn/DSC08824.avif",
-      "https://github.com/thatnerd527/verbatim/raw/main/imagecdn/DSC08825.avif",
-      "https://github.com/thatnerd527/verbatim/raw/main/imagecdn/DSC08826.avif",
-      "https://github.com/thatnerd527/verbatim/raw/main/imagecdn/DSC08827.avif",
-      "https://github.com/thatnerd527/verbatim/raw/main/imagecdn/DSC08828.avif",
-    ],
-  },
-  stage2: {
-    back: "stage1",
-    screenname: "stage2",
-    next: "stage3",
-    title: "Stage 2",
-    widecover:
-      "https://github.com/thatnerd527/verbatim/raw/main/imagecdn/DSC08829.avif",
-    images: [
-      "https://github.com/thatnerd527/verbatim/raw/main/imagecdn/DSC08829.avif",
-      "https://github.com/thatnerd527/verbatim/raw/main/imagecdn/DSC08831.avif",
-      "https://github.com/thatnerd527/verbatim/raw/main/imagecdn/DSC08832.avif",
-      "https://github.com/thatnerd527/verbatim/raw/main/imagecdn/DSC08833.avif",
-      "https://github.com/thatnerd527/verbatim/raw/main/imagecdn/DSC08834.avif",
-    ],
-  },
-  stage3: {
-    back: "stage2",
-    screenname: "stage3",
-    next: "main",
-    title: "Stage 3",
-    widecover:
-      "https://github.com/thatnerd527/verbatim/raw/main/imagecdn/DSC08835.avif",
-    images: [
-      "https://github.com/thatnerd527/verbatim/raw/main/imagecdn/DSC08836.avif",
-    ],
-  },
-};
 
 export function Gallery() {
   let [localstate, _setstate] = React.useState({
@@ -320,13 +262,16 @@ export function Gallery() {
     currentscreen: "main",
     currentimage: 0,
   });
-  useEffect(() => {
-    if (window.location.hash.endsWith("photoset")) {
-      if (localstate.currentscreen == "main") {
-        localstate.currentscreen = "tutorial";
-      }
+  if (window.location.hash.endsWith("photoset")) {
+    //console.log(localstate.currentscreen);
+    if (localstate.currentscreen == "main") {
+      _setstate({
+        ...localstate,
+        currentscreen: "tutorial",
+      });
+      localstate.currentscreen = "tutorial";
     }
-  });
+  }
   const navigate = useNavigate();
   let setState = (newstate) => {
     _setstate({ ...localstate, ...newstate });
