@@ -46,8 +46,9 @@ function Home() {
   }, []);
 
   return (
-    <div className="background-mentoring py-32 md:py-40">
-      <div className="relative">
+    <div className="py-32 md:py-40 background-mentoring">
+
+      <div className="relative ">
             <img src={Green_Line_LancipKiri} className={`absolute w-6 md:w-8 xl:w-10 }`} />
         <div className={`font-spyagencygradient text-[#D3FFF4] text-8xl my-28 transition-all duration-1000 ${showText ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-10'}`}>
           <p className="mb-4">REVEAL YOUR </p>
@@ -72,11 +73,11 @@ function Home() {
           <div
             className="mx-auto my-12 md:my-16 w-72 md:w-[500px] lg:w-[600px] xl:w-[800px] border-8 rounded-3xl md:rounded-[30px] lg:rounded-[40px] inline-block"
             style={{ boxShadow: "0px 4px 60px 0px #F5FDFF4D" }}
-          >
+            >
             <img
               src={Foto_1}
               className="mx-auto rounded-2xl md:rounded-3xl lg:rounded-[36px]"
-            />
+              />
           </div>
           <p className="text-xs sm:text-base lg:text-lg xl:text-xl font-medium px-14 md:px-24 xl:px-72 mx-auto">
             Lorem Ipsum is simply dummy text of the printing and typesetting
