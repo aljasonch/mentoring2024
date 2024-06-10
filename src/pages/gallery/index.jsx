@@ -3,7 +3,8 @@ import { LoadableImage } from "../../components/gallerycomponents/LoadableImage"
 import "./style.css";
 import React, { useEffect } from "react";
 import data from "./data";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+
 const InternalNavBar = React.memo(({ state, setstate, data }) => {
   return (
     <>
@@ -26,14 +27,6 @@ const InternalNavBar = React.memo(({ state, setstate, data }) => {
           <path d="M17.51 3.87L15.73 2.1 5.84 12l9.9 9.9 1.77-1.77L9.38 12l8.13-8.13z" />
         </svg>
         <div className="ml-2 text-white font-medium text-lg sm:text-xl lg:text-2xl hover:underline">
-          {/* {(() => {
-            let back = data[state["currentscreen"]].back;
-            if (back === "main") {
-              return "BACK TO MAIN";
-            } else {
-              return `${data[back].title}`.toUpperCase();
-            }
-          })()} */}
           BACK
         </div>
       </div>
@@ -54,14 +47,6 @@ const InternalNavBar = React.memo(({ state, setstate, data }) => {
         className="flex flex-row items-center cursor-pointer content-end justify-end"
       >
         <div className="mr-2 text-white font-medium text-lg sm:text-xl lg:text-2xl hover:underline">
-          {/* {(() => {
-            let next = data[state["currentscreen"]].next;
-            if (next === "main") {
-              return "BACK TO MAIN";
-            } else {
-              return `${data[next].title}`.toUpperCase();
-            }
-          })()} */}
           NEXT
         </div>
         <svg
@@ -85,7 +70,6 @@ const InternalNavBar = React.memo(({ state, setstate, data }) => {
 });
 
 const ScrollablePhotoSet = React.memo(({ localstate, setstate, data }) => {
-  //console.log(localstate);
   let currentdata = data[localstate.currentscreen];
   useEffect(() => {
     let element = document.getElementById("currentimage");
@@ -144,7 +128,7 @@ const ScrollablePhotoSet = React.memo(({ localstate, setstate, data }) => {
           return (
             <div
               key={index}
-              id={index == localstate.currentimage ? "currentimage" : ""}
+              id={index === localstate.currentimage ? "currentimage" : ""}
               style={{
                 borderRadius: "8px",
                 aspectRatio: "1 / 1",
@@ -156,7 +140,7 @@ const ScrollablePhotoSet = React.memo(({ localstate, setstate, data }) => {
                 });
               }}
               className={`border-4 ${
-                localstate.currentimage == index
+                localstate.currentimage === index
                   ? "border-white"
                   : "border-transparent"
               } transition-all duration-200 ease-in-out hover:border-white cursor-pointer w-full h-full overflow-hidden`}
@@ -217,9 +201,9 @@ const PillButtonGenerator = React.memo(({ localstate, setstate, data }) => {
             key={index}
             style={{
               width:
-                localstate.currentimage == index ? "calc(32px)" : "calc(16px)",
+                localstate.currentimage === index ? "calc(32px)" : "calc(16px)",
               height: "16px",
-              borderRadius: localstate.currentimage == index ? "8px" : "16px",
+              borderRadius: localstate.currentimage === index ? "8px" : "16px",
             }}
             onClick={() => {
               setstate({
@@ -227,7 +211,7 @@ const PillButtonGenerator = React.memo(({ localstate, setstate, data }) => {
               });
             }}
             className={`cursor-pointer ${
-              localstate.currentimage == index ? "bg-white" : "bg-gray-400"
+              localstate.currentimage === index ? "bg-white" : "bg-gray-400"
             } transition-all duration-200 ease-in-out hover:bg-white`}
           ></div>
         );
@@ -237,148 +221,107 @@ const PillButtonGenerator = React.memo(({ localstate, setstate, data }) => {
 });
 
 export function Gallery() {
-  let [localstate, _setstate] = React.useState({
+  const [localstate, _setstate] = React.useState({
     selected: "tutorial",
     currentscreen: "main",
     currentimage: 0,
   });
-  if (window.location.hash.endsWith("photoset")) {
-    if (localstate.currentscreen == "main") {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  React.useEffect(() => {
+    if (location.pathname.endsWith("photoset") && localstate.currentscreen === "main") {
       _setstate({
         ...localstate,
         currentscreen: "tutorial",
       });
-      localstate.currentscreen = "tutorial";
     }
-  }
-  const navigate = useNavigate();
-  let setState = (newstate) => {
+  }, [location]);
+
+  const setState = (newstate) => {
     _setstate({ ...localstate, ...newstate });
-    if (newstate.currentscreen == "main") {
+    if (newstate.currentscreen === "main") {
       navigate("/gallery");
     } else {
-      if (!window.location.hash.endsWith("photoset")) {
-        navigate("/gallery/photoset");
-      }
+      navigate("/gallery/photoset");
     }
   };
+
   return (
     <div className="surround background-mentoring py-40">
-      {(() => {
-        if (window.location.hash.endsWith("photoset")) {
-          return (
-            <div className="w-full flex justify-center flex-col">
-              <div
-                className="flex flex-row justify-between items-center mx-auto overflow-clip"
-                style={{
-                  width: "calc(100vw - min(100vw*(17/216),85px))",
-                }}
-              >
-                <InternalNavBar
-                  state={localstate}
-                  setstate={setState}
-                  data={data}
+      {location.pathname.endsWith("photoset") ? (
+        <div className="w-full flex justify-center flex-col">
+          <div
+            className="flex flex-row justify-between items-center mx-auto overflow-clip"
+            style={{
+              width: "calc(100vw - min(100vw*(17/216),85px))",
+            }}
+          >
+            <InternalNavBar state={localstate} setstate={setState} data={data} />
+          </div>
+          <div className="w-full flex flex-col items-center justify-items-center">
+            <div
+              className="
+              flex flex-col items-center justify-center
+              2xl:w-[1100px] 2xl:h-[687px]
+              xl:w-[900px] xl:h-[562px]
+              lg:w-[700px] lg:h-[437px]
+              md:w-[500px] md:h-[312px]
+              w-full h-full
+              "
+            >
+              <div className="border-4 border-[#e8eaed] rounded-3xl mt-7 mb-16 overflow-hidden w-full">
+                <LoadableImage
+                  src={data[localstate.currentscreen].images[localstate.currentimage]}
+                  centercrop={true}
+                  loading="lazy"
                 />
               </div>
-              <div className="w-full flex flex-col items-center justify-items-center">
-                <div
-                  className="
-                  flex flex-col items-center justify-center
-                  2xl:w-[1100px] 2xl:h-[687px]
-                  xl:w-[900px] xl:h-[562px]
-                  lg:w-[700px] lg:h-[437px]
-                  md:w-[500px] md:h-[312px]
-                  w-full h-full
-          "
-                >
-                  <div className="border-4 border-[#e8eaed] rounded-3xl mt-7  mb-16 overflow-hidden w-full">
-                    <LoadableImage
-                      src={
-                        data[localstate.currentscreen].images[
-                          localstate.currentimage
-                        ]
-                      }
-                      centercrop={true}
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-              </div>
-              <ScrollablePhotoSet
-                localstate={localstate}
-                setstate={setState}
-                data={data}
-              />
-              <PillButtonGenerator
-                localstate={localstate}
-                setstate={setState}
-                data={data}
-              />
             </div>
-          );
-        } else {
-          return (
-            <>
-              <div className="px-4 sm:px-0 max-w-4xl mx-auto">
-                <h1 className="font-normal-spyagency font-normal italic text-white text-center text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
-                  GALLERY
-                </h1>
-                <h4 className="text-white font-medium text-lg sm:text-xl lg:text-2xl mt-1">
-                  CHARACTER BUILDING MENTORING UMN 2024
-                </h4>
-                <div className="h-20"></div>
-                <h4 className="text-white font-medium text-lg sm:text-xl lg:text-2xl mt-1 boldcaption">
-                  SELECT YOUR EVENT
-                </h4>
-              </div>
-              <div className="w-full flex flex-row justify-center">
-                <div
-                  className="
-            canvas grid grid-cols-2 gap-4
-            sm:max-w-full
-            pad
-            m-4
-            md:max-w-6xl
-            w-full"
-                >
-                  <div className="w-full flex h-full flex-row">
-                    <div className="gallerybox">
-                      <ExpandingClickablePhoto
-                        data={data.tutorial}
-                        setstate={setState}
-                        centercrop={true}
-                      />
-                    </div>
-                  </div>
-                  <div className="gallerybox">
-                    <ExpandingClickablePhoto
-                      data={data.stage1}
-                      setstate={setState}
-                      centercrop={true}
-                    />
-                  </div>
-                  <div className="w-full flex h-full flex-row">
-                    <div className="gallerybox">
-                      <ExpandingClickablePhoto
-                        data={data.stage2}
-                        setstate={setState}
-                        centercrop={true}
-                      />
-                    </div>
-                  </div>
-                  <div className="gallerybox">
-                    <ExpandingClickablePhoto
-                      data={data.stage3}
-                      setstate={setState}
-                      centercrop={true}
-                    />
-                  </div>
+          </div>
+          <ScrollablePhotoSet localstate={localstate} setstate={setState} data={data} />
+          <PillButtonGenerator localstate={localstate} setstate={setState} data={data} />
+        </div>
+      ) : (
+        <>
+          <div className="px-4 sm:px-0 max-w-4xl mx-auto">
+            <h1 className="font-normal-spyagency font-normal italic text-white text-center text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
+              GALLERY
+            </h1>
+            <h4 className="text-white font-medium text-lg sm:text-xl lg:text-2xl mt-1">
+              CHARACTER BUILDING MENTORING UMN 2024
+            </h4>
+            <div className="h-20"></div>
+            <h4 className="text-white font-medium text-lg sm:text-xl lg:text-2xl mt-1 boldcaption">
+              SELECT YOUR EVENT
+            </h4>
+          </div>
+          <div className="w-full flex flex-row justify-center">
+            <div className="canvas grid grid-cols-2 gap-4 sm:max-w-full pad m-4 md:max-w-6xl w-full">
+              <div className="w-full flex h-full flex-row">
+                <div className="gallerybox">
+                  <ExpandingClickablePhoto
+                    data={data.tutorial}
+                    setstate={setState}
+                    centercrop={true}
+                  />
                 </div>
               </div>
-            </>
-          );
-        }
-      })()}
+              <div className="gallerybox">
+                <ExpandingClickablePhoto data={data.stage1} setstate={setState} centercrop={true} />
+              </div>
+              <div className="w-full flex h-full flex-row">
+                <div className="gallerybox">
+                  <ExpandingClickablePhoto data={data.stage2} setstate={setState} centercrop={true} />
+                </div>
+              </div>
+              <div className="gallerybox">
+                <ExpandingClickablePhoto data={data.stage3} setstate={setState} centercrop={true} />
+              </div>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 }

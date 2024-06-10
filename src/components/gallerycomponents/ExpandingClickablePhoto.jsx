@@ -1,6 +1,5 @@
 import { LoadableImage } from "./LoadableImage";
 
-/* eslint-disable react/prop-types */
 export function ExpandingClickablePhoto({ data, setstate, centercrop }) {
   return (
     <div

@@ -4,7 +4,7 @@ import Navbar from "./components/navbar";
 import Home from "./pages/home";
 import Faq from "./pages/faq";
 import About from "./pages/about";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import {Gallery} from './pages/gallery/index';
 
