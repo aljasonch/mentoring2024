@@ -2,18 +2,14 @@
 import { ExpandingClickablePhoto } from "../../components/gallerycomponents/ExpandingClickablePhoto";
 import { LoadableImage } from "../../components/gallerycomponents/LoadableImage";
 import "./style.css";
-import React from "react";
+import React, { useEffect } from "react";
+import { Routes, Route, useNavigate, useNavigation } from "react-router-dom";
 function InternalNavBar({ state, setstate, data }) {
+  const navigate = useNavigate();
   return (
     <>
       <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "center",
-          width: "100%",
-          cursor: "pointer",
-        }}
+        className="flex flex-row items-center w-full cursor-pointer"
         onClick={() => {
           setstate({
             currentscreen: data[state["currentscreen"]].back,
@@ -36,16 +32,21 @@ function InternalNavBar({ state, setstate, data }) {
           }}
         ></div>
         <div className="text-white font-medium text-lg sm:text-xl lg:text-2xl hover:underline">
-          BACK
+          {(() => {
+            let back = data[state["currentscreen"]].back;
+            if (back === "main") {
+              return "BACK TO MAIN";
+            } else {
+              return `${data[back].title}`.toUpperCase();
+            }
+          })()}
         </div>
       </div>
       <div
         style={{
-          display: "flex",
-          flexDirection: "column",
-          width: "100%",
           marginBottom: "20px",
         }}
+        className="flex flex-col w-full"
       >
         <h1 className="headertext font-normal italic text-white text-center text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
           {data[state["currentscreen"]].title}
@@ -55,22 +56,22 @@ function InternalNavBar({ state, setstate, data }) {
         </h4>
       </div>
       <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "center",
-          alignContent: "end",
-          justifyContent: "end",
-          width: "100%",
-        }}
         onClick={() => {
           setstate({
             currentscreen: data[state["currentscreen"]].next,
           });
         }}
+        className="flex flex-row items-center w-full cursor-pointer content-end justify-end"
       >
         <div className="text-white font-medium text-lg sm:text-xl lg:text-2xl hover:underline">
-          NEXT
+          {(() => {
+            let next = data[state["currentscreen"]].next;
+            if (next === "main") {
+              return "BACK TO MAIN";
+            } else {
+              return `${data[next].title}`.toUpperCase();
+            }
+          })()}
         </div>
         <div
           style={{
@@ -100,18 +101,22 @@ function InternalNavBar({ state, setstate, data }) {
 function ScrollablePhotoSet({ localstate, setstate, data }) {
   //console.log(localstate);
   let currentdata = data[localstate.currentscreen];
+  useEffect(() => {
+    let element = document.getElementById("currentimage");
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "center",
+      });
+    }
+  });
   return (
     <div
       style={{
-        display: "flex",
-        justifyContent: "space-between",
-        justifyItems: "center",
-        alignItems: "center",
-        flexDirection: "row",
         width: "calc(100vw - min(100 * 0.25, 100px))",
-        height: "fit-content",
       }}
-      className="sizeglobals"
+      className="sizeglobals h-fit flex-row  justify-between justify-items-center flex items-center"
     >
       <div
         style={{
@@ -128,7 +133,7 @@ function ScrollablePhotoSet({ localstate, setstate, data }) {
               currentdata.images.length,
           });
         }}
-        className="cursor-pointer"
+        className="cursor-pointer mr-4"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -143,30 +148,25 @@ function ScrollablePhotoSet({ localstate, setstate, data }) {
       </div>
       <div
         style={{
-          width: `var(--carouselsize)`,
-          height: "calc(max(139/1440 * 100vw,0px))",
+          /*           width: `var(--carouselsize)`, */
+          height: "calc(max(139/1440 * 100vw,64px))",
           backgroundColor: "transparent",
           gap: "calc(1/150 * (100vh + 100vw))",
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "start",
-          marginLeft: "var(--carouselmargin)",
-          marginRight: "var(--carouselmargin)",
-          overflowX: "scroll",
-          scrollbarWidth: "thin",
+          /*           marginLeft: "var(--carouselmargin)",
+          marginRight: "var(--carouselmargin)", */
+          scrollbarWidth: "none",
         }}
+        className="overflow-x-scroll flex flex-row justify-start md:mr-5 md:ml-5 lg:mr-10 lg:ml-10 xl:mr-20 xl:ml-20 scrollbar-thumb-white scrollbar-track-white hover:scrollbar-thumb-gray-300 hover:scrollbar-track-gray-300 w-full"
       >
         {currentdata.images.map((image, index) => {
           return (
             <div
               key={index}
+              id={index == localstate.currentimage ? "currentimage" : ""}
               style={{
-                height: "100%",
                 borderRadius: "8px",
-                overflow: "hidden",
                 aspectRatio: "1 / 1",
-                width: "100%",
-                minWidth: "calc(max(139/1440 * 100vw,0px))",
+                minWidth: "calc(max(139/1440 * 100vw,64px))",
               }}
               onClick={() => {
                 setstate({
@@ -177,7 +177,7 @@ function ScrollablePhotoSet({ localstate, setstate, data }) {
                 localstate.currentimage == index
                   ? "border-white"
                   : "border-transparent"
-              } transition-all duration-200 ease-in-out hover:border-white cursor-pointer`}
+              } transition-all duration-200 ease-in-out hover:border-white cursor-pointer w-full h-full overflow-hidden`}
             >
               <LoadableImage src={image} centercrop={true} />
             </div>
@@ -198,7 +198,7 @@ function ScrollablePhotoSet({ localstate, setstate, data }) {
               (localstate.currentimage + 1) % currentdata.images.length,
           });
         }}
-        className="cursor-pointer"
+        className="cursor-pointer ml-4"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -225,13 +225,9 @@ function PillButtonGenerator({ localstate, setstate, data }) {
   return (
     <div
       style={{
-        width: "100%",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "center",
         gap: "calc(min(1/54 * 100vw, 20px))",
       }}
+      className="flex flex-row justify-center items-center w-full"
     >
       {currentscreen.images.map((image, index) => {
         return (
@@ -239,19 +235,18 @@ function PillButtonGenerator({ localstate, setstate, data }) {
             key={index}
             style={{
               width:
-                localstate.currentimage == index
-                  ? "calc(min(8/135 * 100vw, 64px))"
-                  : "calc(min(4/135 * 100vw, 32px))",
+                localstate.currentimage == index ? "calc(32px)" : "calc(16px)",
               height: "16px",
-              borderRadius: "calc(8px + min(1/135 * 100vw))",
-              backgroundColor: "white",
-              cursor: "pointer",
+              borderRadius: localstate.currentimage == index ? "8px" : "16px",
             }}
             onClick={() => {
               setstate({
                 currentimage: index,
               });
             }}
+            className={`cursor-pointer ${
+              localstate.currentimage == index ? "bg-white" : "bg-gray-400"
+            } transition-all duration-200 ease-in-out hover:bg-white`}
           ></div>
         );
       })}
@@ -325,128 +320,155 @@ export function Gallery() {
     currentscreen: "main",
     currentimage: 0,
   });
+  useEffect(() => {
+    if (window.location.hash.endsWith("photoset")) {
+      if (localstate.currentscreen == "main") {
+        localstate.currentscreen = "tutorial";
+      }
+    }
+  });
+  const navigate = useNavigate();
   let setState = (newstate) => {
     _setstate({ ...localstate, ...newstate });
+    if (newstate.currentscreen == "main") {
+      navigate("/gallery");
+    } else {
+      if (!window.location.hash.endsWith("photoset")) {
+        navigate("/gallery/photoset");
+      }
+    }
   };
   return (
     <div className="surround background-mentoring py-40">
-      {localstate.currentscreen === "main" ? (
-        <>
-          <div className="px-4 sm:px-0 max-w-4xl mx-auto">
-            <h1 className="font-normal-spyagency font-normal italic text-white text-center text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
-              GALLERY
-            </h1>
-            <h4 className="text-white font-medium text-lg sm:text-xl lg:text-2xl mt-1">
-              CHARACTER BUILDING MENTORING UMN 2024
-            </h4>
-            <div className="h-20"></div>
-            <h4 className="text-white font-medium text-lg sm:text-xl lg:text-2xl mt-1 boldcaption">
-              SELECT YOUR EVENT
-            </h4>
-          </div>
-          <div className="canvas grid grid-cols-2 gap-4 max-w-sm md:max-w-lg">
-            <div
-              style={{
-                width: "100%",
-                height: "100%",
-                display: "flex",
-                flexDirection: "row",
-              }}
-            >
-              <div className="gallerybox">
-                <ExpandingClickablePhoto
-                  data={data.tutorial}
+      {(() => {
+        if (window.location.hash.endsWith("photoset")) {
+          return (
+            <div className="w-full flex justify-center flex-col">
+              <div
+                className="flex flex-row justify-center items-center self-center overflow-clip"
+                style={{
+                  width: "calc(100vw - min(100vw*(17/216),85px))",
+                }}
+              >
+                <InternalNavBar
+                  state={localstate}
                   setstate={setState}
-                  centercrop={true}
+                  data={data}
                 />
               </div>
-            </div>
-            <div className="gallerybox">
-              <ExpandingClickablePhoto
-                data={data.stage1}
-                setstate={setState}
-                centercrop={true}
-              />
-            </div>
-            <div
-              style={{
-                width: "100%",
-                height: "100%",
-                display: "flex",
-                flexDirection: "row",
-              }}
-            >
-              <div className="gallerybox">
-                <ExpandingClickablePhoto
-                  data={data.stage2}
-                  setstate={setState}
-                  centercrop={true}
-                />
+              <div className="w-full flex flex-col items-center justify-items-center">
+                <div
+                  className="
+          flex flex-col items-center justify-items-center content-center
+          ml-4 mr-4
+          md:ml-10 md:mr-10
+          w-full
+          "
+                  style={{
+                    maxWidth: "calc(min(100% - 4rem,80rem))",
+                  }}
+                >
+                  <div
+                    style={{
+                      border: "4px solid #e8eaed",
+                      borderRadius: "24px",
+                      marginTop: "28px",
+                      height: "460px",
+                      marginBottom: "58px",
+                    }}
+                    className="overflow-hidden w-full"
+                  >
+                    <LoadableImage
+                      src={
+                        data[localstate.currentscreen].images[
+                          localstate.currentimage
+                        ]
+                      }
+                      centercrop={true}
+                    />
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="gallerybox">
-              <ExpandingClickablePhoto
-                data={data.stage3}
+              <ScrollablePhotoSet
+                localstate={localstate}
                 setstate={setState}
-                centercrop={true}
+                data={data}
+              />
+              <div
+                style={{
+                  height: "20px",
+                }}
+              ></div>
+              <PillButtonGenerator
+                localstate={localstate}
+                setstate={setState}
+                data={data}
               />
             </div>
-          </div>
-        </>
-      ) : (
-        <>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "center",
-              alignItems: "center",
-              alignSelf: "center",
-              width: "calc(100vw - min(100vw*(17/216),85px))",
-              overflow: "clip",
-            }}
-          >
-            <InternalNavBar
-              state={localstate}
-              setstate={setState}
-              data={data}
-            />
-          </div>
-          <div
-            style={{
-              border: "4px solid #e8eaed",
-              borderRadius: "24px",
-              width: "calc(895/1440 * 100vw)",
-              marginTop: "28px",
-              height: "460px",
-              marginBottom: "58px",
-              overflow: "hidden",
-            }}
-          >
-            <LoadableImage
-              src={
-                data[localstate.currentscreen].images[localstate.currentimage]
-              }
-              centercrop={true}
-            />
-          </div>
-          <ScrollablePhotoSet
-            localstate={localstate}
-            setstate={setState}
-            data={data}
-          />
-          <div
-            style={{
-              height: "20px",
-            }}
-          ></div>
-          <PillButtonGenerator
-            localstate={localstate}
-            setstate={setState}
-            data={data}
-          />
-        </>
-      )}
+          );
+        } else {
+          return (
+            <>
+              <div className="px-4 sm:px-0 max-w-4xl mx-auto">
+                <h1 className="font-normal-spyagency font-normal italic text-white text-center text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
+                  GALLERY
+                </h1>
+                <h4 className="text-white font-medium text-lg sm:text-xl lg:text-2xl mt-1">
+                  CHARACTER BUILDING MENTORING UMN 2024
+                </h4>
+                <div className="h-20"></div>
+                <h4 className="text-white font-medium text-lg sm:text-xl lg:text-2xl mt-1 boldcaption">
+                  SELECT YOUR EVENT
+                </h4>
+              </div>
+              <div className="w-full flex flex-row justify-center">
+                <div
+                  className="
+            canvas grid grid-cols-2 gap-4
+            sm:max-w-full
+            pad
+            m-4
+            md:max-w-6xl
+            w-full"
+                >
+                  <div className="w-full flex h-full flex-row">
+                    <div className="gallerybox">
+                      <ExpandingClickablePhoto
+                        data={data.tutorial}
+                        setstate={setState}
+                        centercrop={true}
+                      />
+                    </div>
+                  </div>
+                  <div className="gallerybox">
+                    <ExpandingClickablePhoto
+                      data={data.stage1}
+                      setstate={setState}
+                      centercrop={true}
+                    />
+                  </div>
+                  <div className="w-full flex h-full flex-row">
+                    <div className="gallerybox">
+                      <ExpandingClickablePhoto
+                        data={data.stage2}
+                        setstate={setState}
+                        centercrop={true}
+                      />
+                    </div>
+                  </div>
+                  <div className="gallerybox">
+                    <ExpandingClickablePhoto
+                      data={data.stage3}
+                      setstate={setState}
+                      centercrop={true}
+                    />
+                  </div>
+                </div>
+              </div>
+            </>
+          );
+        }
+      })()}
     </div>
   );
 }

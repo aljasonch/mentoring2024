@@ -4,55 +4,28 @@ import { LoadableImage } from "./LoadableImage";
 export function ExpandingClickablePhoto({ data, setstate, centercrop }) {
   return (
     <div
-      style={{
-        width: "100%",
-        height: "100%",
-        position: "relative",
-      }}
+      className="w-full h-full relative"
     >
       <div
-        style={{
-          overflow: "hidden",
-          position: "absolute",
-          left: "0",
-          right: "0",
-          marginLeft: "auto",
-          marginRight: "auto",
-          top: "0",
-          bottom: "0",
-          marginTop: "auto",
-          marginBottom: "auto",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
+        className="overflow-hidden absolute left-0 right-0 ml-auto mr-auto top-0 bottom-0 mt-auto mb-auto flex justify-center items-center"
       >
         <LoadableImage src={data.widecover} centercrop={centercrop} />
       </div>
       <div
         style={{
-          position: "absolute",
-          bottom: "0px",
-          left: "0px",
           padding: "16px",
           paddingBottom: "52px",
-          pointerEvents: "none",
         }}
-        className="tutorialtext"
+        className="tutorialtext absolute bottom-0 left-0 pointer-events-none"
       >
         {data.title}
       </div>
       <div
         style={{
-          position: "absolute",
-          bottom: "0px",
-          left: "0px",
           padding: "16px",
           backgroundColor: "rgba(127, 17, 224, 0.5)",
-          width: "100%",
-          height: "100%",
         }}
-        className="transition-opacity duration-500 tutorialtext ease-in-out opacity-0 hover:opacity-100 cursor-pointer"
+        className="absolute bottom-0 left-0 w-full h-full transition-opacity duration-500 tutorialtext ease-in-out opacity-0 hover:opacity-100 cursor-pointer"
         onClick={() => {
           //console.log(data)
           setstate({
@@ -62,27 +35,20 @@ export function ExpandingClickablePhoto({ data, setstate, centercrop }) {
       >
         <div
           style={{
-            position: "absolute",
-            bottom: "0px",
-            left: "0px",
             paddingTop: "8px",
-            paddingBottom: "0px",
             clipPath: "polygon(0 0, 83% 0, 100% 100%, 0% 100%)",
           }}
-          className="opengallerytext"
+          className="opengallerytext absolute bottom-0 left-0 pb-0"
         >
           <div
             style={{
-              width: "100%",
-              height: "100%",
-              backgroundColor: "white",
-
               padding: "16px",
               paddingLeft: "10px",
               paddingTop: "10px",
               paddingBottom: "8px",
               paddingRight: "48px",
             }}
+            className="w-full h-full bg-white"
           >
             Open Gallery
           </div>
