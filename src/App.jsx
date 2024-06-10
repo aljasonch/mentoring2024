@@ -6,20 +6,23 @@ import Faq from "./pages/faq";
 import About from "./pages/about";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import {Gallery} from './pages/gallery/index';
 
 
 function App() {
   return (
-      <div className="mx-auto">
-        <ScrollToTop />
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/faq" element={<Faq />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-        <Footer />
-      </div>
+    <div className="mx-auto">
+      <ScrollToTop />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/faq" element={<Faq />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/gallery/photoset" element={<Gallery />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 
