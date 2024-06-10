@@ -13,9 +13,7 @@ import DSC08830 from "../../assets/gallery/DSC08830.avif";
 import DSC08831 from "../../assets/gallery/DSC08831.avif";
 import DSC08832 from "../../assets/gallery/DSC08832.avif";
 import DSC08833 from "../../assets/gallery/DSC08833.avif";
-import DSC08834 from "../../assets/gallery/DSC08834.avif";
 import DSC08835 from "../../assets/gallery/DSC08835.avif";
-import DSC08836 from "../../assets/gallery/DSC08836.avif";
 
 export default {
     main: {},
@@ -73,6 +71,10 @@ export default {
             DSC08835,
         images: [
             DSC08835,
+            DSC08830,
+            DSC08831,
+            DSC08832,
+            DSC08833,
         ],
     },
 };

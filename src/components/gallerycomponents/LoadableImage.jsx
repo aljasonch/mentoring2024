@@ -56,11 +56,11 @@ export function LoadableImage({ src, centercrop }) {
             ...(centercrop
               ? {
                   objectFit: "cover",
-                width: "35%",
-                aspectRatio: "1/1",
+                  width: "55%",
+                  aspectRatio: "1/1",
                 }
               : {
-                  width: "35%",
+                  width: "55%",
                   aspectRatio: "1/1",
                 }),
             overflow: "hidden",

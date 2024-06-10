@@ -40,7 +40,6 @@ ment.surround {
     height: 100%;
     min-width: 120px;
     overflow: hidden;
-
     border-color: white;
     border-width: calc(2px + min(100vw * 0.01,8px));
     border-radius: 16px;
