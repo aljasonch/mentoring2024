@@ -1,9 +1,8 @@
 .background-mentoring {
+  background: #283771;
     background: url(../../assets/background.webp), radial-gradient(closest-side at center, #6d5FFF 0%, #5d52dd 42%, #283771 100%) ;
     background-blend-mode: overlay;
     background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
 }
 
 @font-face {

@@ -1,20 +1,66 @@
 .shadow-nav {
-    box-shadow: 4px 4px 15px rgba(245, 253, 255, 0.5);
-
+  box-shadow: 4px 4px 15px rgba(245, 253, 255, 0.5);
 }
 
 .shadow-object {
-    -webkit-filter: drop-shadow(0px 13px 6px rgba(24, 35, 50, 0.5));
-    filter: drop-shadow(0px 13px 6px rgba(24, 35, 50, 0.5));
+  -webkit-filter: drop-shadow(0px 13px 6px rgba(24, 35, 50, 0.5));
+  filter: drop-shadow(0px 13px 6px rgba(24, 35, 50, 0.5));
 }
 
 .background-navbar {
-    background:
-    linear-gradient(285.39deg, rgba(36, 164, 145, 0.3) 3.35%, rgba(34, 188, 177, 0.3) 39.41%, rgba(2, 180, 168, 0.3) 79.68%, rgba(40, 172, 156, 0.3) 95.74%),
-    linear-gradient(180deg, rgba(159, 205, 215, 0) 36.84%, rgba(66, 184, 252, 0.5) 100%);
-background-blend-mode: overlay;
-    box-shadow: 0px 20px 50px 0px #478198 inset;
-    box-shadow: 0px 0px 10px 0px #18235099;
+  background: linear-gradient(
+      285.39deg,
+      rgba(36, 164, 145, 0.3) 3.35%,
+      rgba(34, 188, 177, 0.3) 39.41%,
+      rgba(2, 180, 168, 0.3) 79.68%,
+      rgba(40, 172, 156, 0.3) 95.74%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(159, 205, 215, 0) 36.84%,
+      rgba(66, 184, 252, 0.5) 100%
+    );
+  background-blend-mode: overlay;
+  box-shadow: 0px 20px 50px 0px #478198 inset;
+  box-shadow: 0px 0px 10px 0px #18235099;
 }
 
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(58, 80, 169, 0.95);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 40;
+  transition: right 0.3s ease-in-out;
+  box-shadow: 0px 4px 189.6px 5px rgba(0, 0, 0, 1) inset;
+}
 
+.mobile-menu.open {
+  right: 0;
+}
+
+@media (max-width: 395px) {
+  .miniSmartphone {
+    margin-right: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .heightMiniSmartphone {
+    height: 4.5rem;
+  }
+}
+
+@media (min-width: 400px) {
+  .smartphone {
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+  }
+  .heightSmartphone {
+    height: 5rem;
+  }
+}

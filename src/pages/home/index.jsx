@@ -47,7 +47,6 @@ function Home() {
 
   return (
     <div className="py-32 md:py-40 background-mentoring">
-
       <div className="relative ">
             <img src={Green_Line_LancipKiri} className={`absolute w-6 md:w-8 xl:w-10 }`} />
         <div className={`font-spyagencygradient text-[#D3FFF4] text-8xl my-28 transition-all duration-1000 ${showText ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-10'}`}>

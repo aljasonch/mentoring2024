@@ -1,71 +1,31 @@
 import React from "react";
+import LazyLoad from "react-lazyload";
 import skeletonimage from "../../assets/SkeletonLoaderBkg.png";
 
 export function LoadableImage({ src, centercrop }) {
   const [loaded, setLoaded] = React.useState(false);
   const [cachedUrl, setCachedUrl] = React.useState(null);
-  if (cachedUrl !== src) {
-    setLoaded(false);
-    setCachedUrl(src);
-  }
+
+  React.useEffect(() => {
+    if (cachedUrl !== src) {
+      setLoaded(false);
+      setCachedUrl(src);
+    }
+  }, [src, cachedUrl]);
 
   return (
-    <div
-      style={{
-        ...(centercrop
-          ? {
-              objectFit: "cover",
-              width: "100%",
-              height: "100%",
-            }
-          : {
-              width: "100%",
-              height: "100%",
-            }),
-        overflow: "hidden",
-        display: "flex",
-
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <img
-        src={src}
-        style={{
-          display: loaded ? "block" : "none",
-          ...(centercrop
-            ? {
-                objectFit: "cover",
-                width: "100%",
-                height: "100%",
-              }
-            : {
-                width: "100%",
-                height: "100%",
-              }),
-          overflow: "hidden",
-          zIndex: "0",
-        }}
-        onLoad={() => setLoaded(true)}
-        loading="eager"
-      />
+    <div className={`flex justify-center items-center overflow-hidden ${centercrop ? 'object-cover' : ''} w-full h-full`}>
+      <LazyLoad offset={100} once>
+        <img
+          src={src}
+          className={`w-full h-full object-cover ${loaded ? 'block' : 'hidden'} z-0`}
+          onLoad={() => setLoaded(true)}
+        />
+      </LazyLoad>
       {!loaded && (
         <img
           src={skeletonimage}
-          style={{
-            ...(centercrop
-              ? {
-                  objectFit: "cover",
-                  width: "55%",
-                  aspectRatio: "1/1",
-                }
-              : {
-                  width: "55%",
-                  aspectRatio: "1/1",
-                }),
-            overflow: "hidden",
-          }}
-          className="animate-pulse"
+          className={`animate-pulse ${centercrop ? 'object-cover' : ''} w-1/2 aspect-w-1 aspect-h-1 overflow-hidden`}
         />
       )}
     </div>
