@@ -3,6 +3,7 @@ import BlackDots from "../../assets/BlackDots.webp";
 import Accordion, {
   AccordionItem,
 } from "../../components/accordion/CustomAccordion";
+import data from "./data.js";
 
 function Faq() {
   return (
@@ -18,22 +19,20 @@ function Faq() {
           CHARACTER BUILDING MENTORING UMN 2024
         </h4>
       </div>
-      <div className="px-4 sm:px-0 py-10 space-y-6">
-        <Accordion className="sm:max-w-2xl md:max-w-3xl lg:max-w-5xl mx-auto">
-          <AccordionItem value="1" trigger="Apa itu Character Building Mentoring UMN?">
-            Character Building Mentoring adalah kegiatan tahunan yang bersifat wajib bagi Mentee (Mahasiswa Baru UMN) dengan tujuan memperkenalkan nilai-nilai 5C UMN secara mendalam.
-          </AccordionItem>
-        </Accordion>
-        <Accordion className="sm:max-w-2xl md:max-w-3xl lg:max-w-5xl mx-auto">
-          <AccordionItem value="1" trigger="Apakah Character Building Mentoring merupakan kegiatan wajib?">
-          Character Building Mentoring merupakan kegiatan wajib.
-          </AccordionItem>
-        </Accordion>
-        <Accordion className="sm:max-w-2xl md:max-w-3xl lg:max-w-5xl mx-auto">
-          <AccordionItem value="1" trigger="CBM akan dilaksanakan secara offline atau online?">
-          Offline di kampus Universitas Multimedia Nusantara.
-          </AccordionItem>
-        </Accordion>
+      <div className="px-6 py-10 space-y-6">
+        {data.map((item, index) => {
+          return (
+            <Accordion className="sm:max-w-2xl md:max-w-3xl lg:max-w-5xl mx-auto">
+              <AccordionItem
+                key={index}
+                value="1"
+                trigger={item.header}
+              >
+                {item.content}
+              </AccordionItem>
+            </Accordion>
+          );
+        })}
       </div>
     </div>
   );

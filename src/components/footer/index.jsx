@@ -6,7 +6,7 @@ import UMN from "../../assets/UMN.webp";
 const Footer = () => {
   return (
     <footer className="background-footer container-2xl relative">
-      <div className="flex flex-col md:flex-row items-center pt-[3.563rem] px-[5rem] pb-[5.313rem]">
+      <div className="flex flex-col-reverse md:flex-row items-center pt-[3.563rem] px-[5rem] pb-[5.313rem]">
         <div className="items-center justify-center">
           <div className="font-normal leading-[18px] pt-4 text-[#F5FDFF] text-center md:text-start">
             <p>Universitas Multimedia Nusantara</p>
@@ -14,7 +14,7 @@ const Footer = () => {
             <p>Tangerang, Banten - 15811 Indonesia</p>
             <p>(t) +62-21.5422.0808; (f) +62-21.5422.0800</p>
           </div>
-          <div className="flex space-x-[1rem] my-5 md:mt-16 items-center justify-center md:justify-start">
+          <div className="flex space-x-[1rem] my-10 md:my-5 md:mt-16 items-center justify-between md:justify-start">
             <svg
               width="2.25rem"
               height="2.25rem"
@@ -126,18 +126,18 @@ const Footer = () => {
             </svg>
           </div>
         </div>
-        <div className="mx-auto p-0 md:m-auto md:pr-24">
+        <div className="mx-auto p-0 md:m-auto md:px-8">
           <img
             src={Logo}
             className="w-[12.5rem] height-[16.063rem] shadow-footer m-0"
           />
         </div>
         <div className="">
-          <div className="my-5 md:m-0 text-center md:text-end font-[22px] pt-2 leading-[22px] text-[#F5FDFF] font-spyagency ">
+          <div className="my-5 md:m-0 text-center md:text-end text-2xl md:font-[22px] pt-2 leading-[22px] text-[#F5FDFF] font-spyagencygradient">
             <p>REVEAL YOUR</p>
             <p>CAPABILITY WITHIN A</p>
             <p>PURPOSEFUL QUEST</p>
-            <img src={UMN} className="w-[3.75rem] mx-auto md:float-end pt-4" />
+            <img src={UMN} className="w-[3.75rem] mx-auto md:float-end pt-4 hidden md:block" />
           </div>
         </div>
       </div>
