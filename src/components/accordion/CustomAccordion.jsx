@@ -37,10 +37,10 @@ export const AccordionItem = ({
       <header
         role="button"
         onClick={() => setSelected(open ? null : value)}
-        className="flex justify-between items-center py-5 px-6 uppercase text-white font-bold sm:text-md md:text-lg lg:text-xl"
+        className="flex justify-between items-center py-5 px-6 uppercase text-white font-bold sm:text-base md:text-lg lg:text-xl"
       >
         {trigger}
-        <div className="bg-[#18E6B1] text-black rounded-full flex items-center justify-center w-8 h-8 md:w-10 md:h-10">
+        <div className="bg-[#18E6B1] text-black rounded-full flex items-center justify-center min-w-8 min-h-8 md:w-10 md:h-10">
           <ChevronDown
             width={28}
             className={`transition-transform ${open ? "rotate-180" : ""} w-5 md:w-10 m-0 p-0`}
@@ -53,7 +53,7 @@ export const AccordionItem = ({
         style={{ height: open ? ref.current?.offsetHeight || 0 : 0 }}
       >
         <div
-          className="px-6 py-5 text-white font-medium text-justify sm:text-sm md:text-md lg:text-lg"
+          className="px-6 py-5 text-white font-medium text-justify sm:text-sm md:text-base lg:text-lg"
           ref={ref}
         >
           {children}
