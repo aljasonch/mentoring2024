@@ -6,3 +6,55 @@
   padding: 0;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: 'SpyAgencyCond';
+  src: url('./assets/fonts/spyagencycond.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'SpyAgencyBoldItal';
+  src: url('./assets/fonts/spyagencyboldital.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'SpyAgencyGradient';
+  src: url('./assets/fonts/spyagencyvgrad.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'SpyAgencyItalic';
+  src: url('./assets/spyagencysemital.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'SpyAgencyRegular';
+  src: url('./assets/fonts/spyagency.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'SpyAgencyHalftone';
+  src: url('./assets/spyagencyhalf.ttf') format('truetype');
+}
+
+.spyagencyCond {
+  font-family: 'SpyAgencyCond', sans-serif;
+}
+
+.spyagencyBoldItal {
+  font-family: 'SpyAgencyBoldItal', sans-serif;
+}
+
+.spyagencyGradient {
+  font-family: 'SpyAgencyGradient', sans-serif;
+}
+
+.spyagencyItalic {
+  font-family: 'SpyAgencyItalic', sans-serif;
+}
+
+.spyagencyRegular {
+  font-family: 'SpyAgencyRegular', sans-serif;
+}
+
+.spyagencyHalftone {
+  font-family: 'SpyAgencyHalftone', sans-serif;
+}

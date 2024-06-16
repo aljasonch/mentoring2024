@@ -130,6 +130,7 @@ const Footer = () => {
           <img
             src={Logo}
             className="w-[12.5rem] height-[16.063rem] shadow-footer m-0"
+            alt="Logo"
           />
         </div>
         <div className="">

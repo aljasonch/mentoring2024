@@ -1,103 +1,56 @@
 ment.surround {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    justify-items: center;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-}
-
-.canvas {
-  /*   width: calc(100vw - (min(100vw * 0.05,64px))); */
-    height: calc(100vh - 160px);
-    background-color: transparent;
-    display: grid;
-    padding-bottom: 64px;
-    --width: calc(
-        max(503/1440 * 100vw, 420px)
-    );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
 }
 
 .sizeglobals {
-    --additionalmargin: calc(144/1440 * 100vw);
-    --buttonsize: calc(max((32/1440) * 100vw + 24px, 64px));
-    --carouselmargin: calc(48/1440 * (100vh + 100vw));
-    --carouselsize: calc(100vw - (var(--buttonsize) * 2) - (var(--carouselmargin) * 2) - (var(--additionalmargin) * 2) - 16px);
-    margin-left: var(--additionalmargin);
-    margin-right: var(--additionalmargin);
+  --additionalmargin: calc(144 / 1440 * 100vw);
+  margin-left: var(--additionalmargin);
+  margin-right: var(--additionalmargin);
 }
-
-.gallerybox {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 32px;
-    justify-content: center;
-    align-items: center;
-    width:  100%;
-    height: 100%;
-    min-width: 120px;
-    overflow: hidden;
-    border-color: white;
-    border-width: calc(2px + min(100vw * 0.01,8px));
-    border-radius: 16px;
-}
-
-@font-face {
-    font-family: 'SpyAgencyItalic';
-    src: url('../../assets/spyagencysemital.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'SpyAgencyRegular';
-    src: url('../../assets/fonts/spyagency.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Montserrat800';
-    src: url('../../assets/Montserrat-ExtraBold.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Montserrat500';
-    src: url('../../assets/Montserrat-Medium.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'SpyAgencyHalftone';
-    src: url('../../assets/spyagencyhalf.ttf') format('truetype');
-}
-
-.opengallerytext{
-    font-family: 'SpyAgencyHalftone', sans-serif;
-        color: black;
-    font-size: 25px;
-}
-
-
 
 .boldcaption {
-    font-family: 'Montserrat800', sans-serif;
-    color: white;
-    margin-top: 64px;
-    font-size: 30px;
+  font-family: "Montserrat800", sans-serif;
+  color: white;
+  margin-top: 64px;
+  font-size: 30px;
 }
 
 .captiontext {
-    font-family: 'Montserrat500', sans-serif;
-    color: white;
-    font-size: 25px;
+  font-family: "Montserrat500", sans-serif;
+  color: white;
+  font-size: 25px;
 }
 
-.headertext {
-    font-family: 'SpyAgencyItalic', sans-serif;
-    color: white;
-}
 
 .tutorialtext {
-    font-family: 'SpyAgencyRegular', sans-serif;
-    color: white;
-    font-size: calc(min(7/200 * (100vw), 24px));
+  font-family: "SpyAgencyRegular", sans-serif;
+  color: white;
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+@media (max-width: 450px) {
+  .polygon {
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+    right: 0;
+  }
+}
+@media (min-width: 640px) {
+  .polygon {
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+    left: 0;
+  }
 }
