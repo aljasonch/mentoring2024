@@ -57,7 +57,7 @@ export function Gallery() {
             />
           </div>
           <div className="w-full flex flex-col items-center justify-items-center">
-            <div className="flex flex-col items-center justify-center 2xl:w-[68rem] xl:w-[56rem] lg:w-[43rem] md:w-[31rem] w-[18rem]">
+            <div className="flex flex-col items-center justify-center 2xl:w-[60rem] xl:w-[48rem] lg:w-[36rem] md:w-[28rem] w-[18rem]">
               <div className="border-4 border-[#e8eaed] rounded-3xl mt-7 mb-16 overflow-hidden">
                 <LoadableImage
                   src={currentData.images[localstate.currentimage]}
