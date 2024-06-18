@@ -138,7 +138,7 @@ const Footer = () => {
             <p>REVEAL YOUR</p>
             <p>CAPABILITY WITHIN A</p>
             <p>PURPOSEFUL QUEST</p>
-            <img src={UMN} className="w-[3.75rem] mx-auto md:float-end pt-4 hidden md:block" />
+            <img src={UMN} className="w-[3.75rem] mx-auto md:float-end pt-4 hidden md:block" alt="UMN"/>
           </div>
         </div>
       </div>

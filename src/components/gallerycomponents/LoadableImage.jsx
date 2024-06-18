@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import LazyLoad from "react-lazyload";
-import skeletonimage from "../../assets/SkeletonLoaderBkg.png";
+import skeletonimage from "../../assets/SkeletonLoaderBkg.webp";
 
 export function LoadableImage({ src, centercrop }) {
   const [loaded, setLoaded] = useState(false);
@@ -18,11 +18,17 @@ export function LoadableImage({ src, centercrop }) {
   }, []);
 
   return (
-    <div className={`flex justify-center items-center overflow-hidden ${centercrop ? 'object-cover' : ''} w-full h-full`}>
+    <div
+      className={`flex justify-center items-center overflow-hidden ${
+        centercrop ? "object-cover" : ""
+      } w-full h-full`}
+    >
       <LazyLoad offset={200} once>
         <img
           src={src}
-          className={`w-full h-full object-cover ${loaded ? 'block' : 'hidden'} z-0`}
+          className={`w-full h-full object-cover ${
+            loaded ? "block" : "hidden"
+          } z-0`}
           onLoad={handleImageLoad}
           alt=""
         />
@@ -30,7 +36,9 @@ export function LoadableImage({ src, centercrop }) {
       {!loaded && (
         <img
           src={skeletonimage}
-          className={`animate-pulse ${centercrop ? 'object-cover' : ''} w-7/12 overflow-hidden`}
+          className={`animate-pulse ${
+            centercrop ? "object-cover" : ""
+          } w-7/12 overflow-hidden`}
           alt="Loading"
         />
       )}

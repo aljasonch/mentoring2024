@@ -16,65 +16,37 @@ import DSC08833 from "../../assets/gallery/DSC08833.avif";
 import DSC08835 from "../../assets/gallery/DSC08835.avif";
 
 export default {
-    main: {},
-    tutorial: {
-        back: "main",
-        screenname: "tutorial",
-        next: "stage1",
-        title: "Tutorial Stage",
-        widecover:
-            DSC08819,
-        images: [
-            DSC08819,
-            DSC08820,
-            DSC08821,
-            DSC08822,
-            DSC08823,
-        ],
-    },
-    stage1: {
-        back: "tutorial",
-        screenname: "stage1",
-        next: "stage2",
-        title: "Stage 1",
-        widecover:
-            DSC08824,
-        images: [
-            DSC08824,
-            DSC08825,
-            DSC08826,
-            DSC08827,
-            DSC08828,
-        ],
-    },
-    stage2: {
-        back: "stage1",
-        screenname: "stage2",
-        next: "stage3",
-        title: "Stage 2",
-        widecover:
-            DSC08829,
-        images: [
-            DSC08829,
-            DSC08830,
-            DSC08831,
-            DSC08832,
-            DSC08833,
-        ],
-    },
-    stage3: {
-        back: "stage2",
-        screenname: "stage3",
-        next: "main",
-        title: "Stage 3",
-        widecover:
-            DSC08835,
-        images: [
-            DSC08835,
-            DSC08830,
-            DSC08831,
-            DSC08832,
-            DSC08833,
-        ],
-    },
+  main: {},
+  tutorial: {
+    back: "main",
+    screenname: "tutorial",
+    next: "stage1",
+    title: "Tutorial Stage",
+    widecover: DSC08819,
+    images: [DSC08819, DSC08820, DSC08821, DSC08822, DSC08823],
+  },
+  stage1: {
+    back: "tutorial",
+    screenname: "stage1",
+    next: "stage2",
+    title: "Stage 1",
+    widecover: DSC08824,
+    images: [DSC08824, DSC08825, DSC08826, DSC08827, DSC08828],
+  },
+  stage2: {
+    back: "stage1",
+    screenname: "stage2",
+    next: "stage3",
+    title: "Stage 2",
+    widecover: DSC08829,
+    images: [DSC08829, DSC08830, DSC08831, DSC08832, DSC08833],
+  },
+  stage3: {
+    back: "stage2",
+    screenname: "stage3",
+    next: "main",
+    title: "Stage 3",
+    widecover: DSC08835,
+    images: [DSC08835, DSC08830, DSC08831, DSC08832, DSC08833],
+  },
 };

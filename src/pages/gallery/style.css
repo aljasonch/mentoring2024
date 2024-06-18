@@ -1,38 +1,7 @@
-ment.surround {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  justify-items: center;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-}
-
 .sizeglobals {
   --additionalmargin: calc(144 / 1440 * 100vw);
   margin-left: var(--additionalmargin);
   margin-right: var(--additionalmargin);
-}
-
-.boldcaption {
-  font-family: "Montserrat800", sans-serif;
-  color: white;
-  margin-top: 64px;
-  font-size: 30px;
-}
-
-.captiontext {
-  font-family: "Montserrat500", sans-serif;
-  color: white;
-  font-size: 25px;
-}
-
-
-.tutorialtext {
-  font-family: "SpyAgencyRegular", sans-serif;
-  color: white;
 }
 
 .scrollbar-none {

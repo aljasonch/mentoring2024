@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, useCallback, useMemo } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { ExpandingClickablePhoto } from "../../components/gallerycomponents/ExpandingClickablePhoto";
 import { LoadableImage } from "../../components/gallerycomponents/LoadableImage";
@@ -40,10 +40,13 @@ export function Gallery() {
     [navigate]
   );
 
-  const currentData = data[localstate.currentscreen];
+  const currentData = useMemo(
+    () => data[localstate.currentscreen],
+    [localstate.currentscreen]
+  );
 
   return (
-    <div className="surround background-mentoring py-40">
+    <div className="background-mentoring py-40">
       {location.pathname.endsWith("photoset") && currentData?.images ? (
         <div className="w-full flex justify-center flex-col">
           <div
@@ -84,43 +87,27 @@ export function Gallery() {
             <h1 className="font-normal-spyagency font-normal italic text-white text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
               GALLERY
             </h1>
-            <h4 className="text-white font-medium text-lg sm:text-xl lg:text-2xl mt-1">
+            <p className="text-white font-medium text-lg sm:text-xl lg:text-2xl mt-1">
               CHARACTER BUILDING MENTORING UMN 2024
-            </h4>
-            <h4 className="text-white font-semibold text-lg sm:text-xl lg:text-2xl xss:mt-8 md:mt-16 boldcaption">
+            </p>
+            <p className="text-white font-semibold text-lg sm:text-xl lg:text-2xl xss:mt-8 md:mt-16">
               SELECT YOUR EVENT
-            </h4>
+            </p>
           </div>
           <div className="w-full flex justify-center mt-2">
             <div className="grid grid-cols-1 md:grid-cols-2 xss:gap-0 md:gap-4 lg:gap-6">
-              <div className="overflow-hidden border-white md:border-8 xss:border-4 rounded-3xl xss:w-[19.5rem] xss:h-[8.438rem] sm:w-[30rem] md:w-[20rem] md:h-[12rem] lg:w-[24rem] lg:h-[14rem] xl:w-[32rem] xl:h-[19rem] 2xl:w-[42rem] 2xl:h-[25rem] sm:h-[14rem] md:mt-2 xss:mt-4">
-                <ExpandingClickablePhoto
-                  data={data.tutorial}
-                  setstate={setState}
-                  centercrop={true}
-                />
-              </div>
-              <div className="overflow-hidden border-white md:border-8 xss:border-4 rounded-3xl xss:w-[19.5rem] xss:h-[8.438rem] sm:w-[30rem] md:w-[20rem] md:h-[12rem] lg:w-[24rem] lg:h-[14rem] xl:w-[32rem] xl:h-[19rem] 2xl:w-[42rem] 2xl:h-[25rem] sm:h-[14rem] md:mt-2 xss:mt-4">
-                <ExpandingClickablePhoto
-                  data={data.stage1}
-                  setstate={setState}
-                  centercrop={true}
-                />
-              </div>
-              <div className="overflow-hidden border-white md:border-8 xss:border-4 rounded-3xl xss:w-[19.5rem] xss:h-[8.438rem] sm:w-[30rem] md:w-[20rem] md:h-[12rem] lg:w-[24rem] lg:h-[14rem] xl:w-[32rem] xl:h-[19rem] 2xl:w-[42rem] 2xl:h-[25rem] sm:h-[14rem] md:mt-2 xss:mt-4">
-                <ExpandingClickablePhoto
-                  data={data.stage2}
-                  setstate={setState}
-                  centercrop={true}
-                />
-              </div>
-              <div className="overflow-hidden border-white md:border-8 xss:border-4 rounded-3xl xss:w-[19.5rem] xss:h-[8.438rem] sm:w-[30rem] md:w-[20rem] md:h-[12rem] lg:w-[24rem] lg:h-[14rem] xl:w-[32rem] xl:h-[19rem] 2xl:w-[42rem] 2xl:h-[25rem] sm:h-[14rem] md:mt-2 xss:mt-4">
-                <ExpandingClickablePhoto
-                  data={data.stage3}
-                  setstate={setState}
-                  centercrop={true}
-                />
-              </div>
+              {["tutorial", "stage1", "stage2", "stage3"].map((key) => (
+                <div
+                  key={key}
+                  className="overflow-hidden border-white md:border-8 xss:border-4 rounded-3xl xss:w-[19.5rem] xss:h-[8.438rem] sm:w-[30rem] md:w-[20rem] md:h-[12rem] lg:w-[24rem] lg:h-[14rem] xl:w-[32rem] xl:h-[19rem] 2xl:w-[42rem] 2xl:h-[25rem] sm:h-[14rem] md:mt-2 xss:mt-4"
+                >
+                  <ExpandingClickablePhoto
+                    data={data[key]}
+                    setstate={setState}
+                    centercrop={true}
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </>
@@ -129,4 +116,4 @@ export function Gallery() {
   );
 }
 
-export default Gallery;
+export default React.memo(Gallery);
