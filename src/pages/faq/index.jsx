@@ -12,7 +12,7 @@ function Faq() {
         <img src={BlackDots} alt={BlackDots} className="w-72 h-auto" />
       </div>
       <div className="px-4 sm:px-0 max-w-4xl mx-auto">
-        <h1 className="font-normal-spyagency font-normal italic text-white text-center text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
+        <h1 className="spyagencyRegular font-normal italic text-white text-center text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
           FREQUENTLY ASKED QUESTIONS
         </h1>
         <h4 className="text-white font-medium text-lg sm:text-xl lg:text-2xl mt-1">

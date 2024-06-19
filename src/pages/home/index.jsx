@@ -17,7 +17,7 @@ import Logo_Competitive from "../../assets/Logo_Competitive.webp";
 import Logo_Customer_Delight from "../../assets/Logo_Customer_Delight.webp";
 import { Carousel } from "../../components/carousel/Carousel";
 import { slides } from "../../components/carousel/carouselData.json";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 function Home() {
   const logos = [
     Logo_Caring,
@@ -47,15 +47,35 @@ function Home() {
 
   return (
     <div className="py-32 md:py-40 background-mentoring">
-      <div className="relative ">
-            <img src={Green_Line_LancipKiri} className={`absolute w-6 md:w-8 xl:w-10 }`} />
-        <div className={`font-spyagencygradient text-[#D3FFF4] text-8xl my-28 transition-all duration-1000 ${showText ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-10'}`}>
-          <p className="mb-4">REVEAL YOUR </p>
-          <p className="mb-4">CAPABiLiTY WiTHiN A</p>
-          <p className="mb-4">PURPOSEFUL QUEST</p>
+      <div className="relative">
+        <img
+          src={Green_Line_LancipKiri}
+          className="absolute w-6 md:w-8 xl:w-10"
+        />
+        <div
+          className={`spyagencyGradient invisible text-[#D3FFF4] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl my-10 sm:my-12 md:my-16 lg:my-20 xl:my-28 min-h-[200px] transition-all duration-1000 ${
+            showText
+              ? "opacity-100 sm:visible translate-y-0"
+              : "opacity-0 invisible translate-y-10"
+          } sm:block`}
+        >
+          <p className="mb-2 sm:mb-3 md:mb-4 lg:mb-5">REVEAL YOUR</p>
+          <p className="mb-2 sm:mb-3 md:mb-4 lg:mb-5">CAPABiLiTY WiTHiN A</p>
+          <p className="mb-2 sm:mb-3 md:mb-4 lg:mb-5">PURPOSEFUL QUEST</p>
         </div>
-        <img src={Logo} className={`absolute left-1/2 transform -translate-x-1/2 w-[402px] -top-12 shadow-logo-home transition-all duration-[1500ms] delay-500 ${showLogo ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-10'}`} alt="" />
-            <img src={Green_Line_LancipKanan} className="right-0 top-0 absolute w-6 md:w-8 xl:w-10" />
+        <img
+          src={Logo}
+          className={`absolute left-1/2 transform -translate-x-1/2 w-48 sm:w-56 md:w-64 lg:w-80 xl:w-[402px] -top-8 sm:-top-10 md:-top-12 shadow-logo-home transition-all duration-[1500ms] delay-500 ${
+            showLogo
+              ? "opacity-100 visible translate-y-0"
+              : "opacity-0 invisible translate-y-10"
+          }`}
+          alt=""
+        />
+        <img
+          src={Green_Line_LancipKanan}
+          className="right-0 top-0 absolute w-6 md:w-8 xl:w-10"
+        />
       </div>
       <div className="pb-20 md:pb-28">
         <div className="relative ">
@@ -63,20 +83,20 @@ function Home() {
         </div>
         <div className="text-white my-10 mx-auto pt-44 md:pt-[300px] lg:pt-80 xl:pt-[530px]">
           <img src={Logo} className="w-[81px] mx-auto" alt="Logo Mentoring" />
-          <p className="font-spyagencycond text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+          <p className="spyagencyCond text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
             APA iTU
           </p>
-          <p className="font-spyagencybolditalic text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+          <p className="spyagencyBoldItal text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
             Mentoring?
           </p>
           <div
             className="mx-auto my-12 md:my-16 w-72 md:w-[500px] lg:w-[600px] xl:w-[800px] border-8 rounded-3xl md:rounded-[30px] lg:rounded-[40px] inline-block"
             style={{ boxShadow: "0px 4px 60px 0px #F5FDFF4D" }}
-            >
+          >
             <img
               src={Foto_1}
               className="mx-auto rounded-2xl md:rounded-3xl lg:rounded-[36px]"
-              />
+            />
           </div>
           <p className="text-xs sm:text-base lg:text-lg xl:text-xl font-medium px-14 md:px-24 xl:px-72 mx-auto">
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -96,7 +116,10 @@ function Home() {
           <img src={Transition2} className="w-full top-10 absolute z-10" />
           <img src={Purple_Line} className="right-0 top-0 absolute" />
           <img src={Bintik_3} className="mt-24 w-2/6 absolute" />
-          <img src={Pink_Line} className="right-0 top-0 pt-60 w-6 md:w-8 xl:w-10 absolute" />
+          <img
+            src={Pink_Line}
+            className="right-0 top-0 pt-60 w-6 md:w-8 xl:w-10 absolute"
+          />
         </div>
         <div className="pt-40 md:pt-48 lg:pt-64 xl:pt-[400px]">
           <img
@@ -105,10 +128,10 @@ function Home() {
             alt="Logo 5C"
           />
           <div className="text-white my-10">
-            <p className="font-spyagencycond text-2xl md:text-4xl lg:text-5xl text-center">
+            <p className="spyagencyCond text-2xl md:text-4xl lg:text-5xl text-center">
               NILAI-NILAI
             </p>
-            <p className="font-spyagencybolditalic text-5xl lg:text-9xl text-center">
+            <p className="spyagencyBoldItal text-5xl lg:text-9xl text-center">
               5C
             </p>
             <p className="text-xs sm:text-base lg:text-lg xl:text-xl font-medium px-12 md:px-40 xl:px-72 mx-auto mt-10 md:my-12 mb-24 lg:mb-16 xl:mb-20">
@@ -130,7 +153,7 @@ function Home() {
           <Carousel data={slides} logos={logos} />
         </div>
       </div>
-    </div >
+    </div>
   );
 }
 
