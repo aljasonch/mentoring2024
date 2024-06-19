@@ -33,14 +33,14 @@ export const AccordionItem = ({
   const ref = useRef(null);
 
   return (
-    <li className="background-custom-accordion rounded-lg" {...props}>
+    <li className="background-custom-accordion rounded-lg xss:min-h-24 grid items-center" {...props}>
       <header
         role="button"
         onClick={() => setSelected(open ? null : value)}
-        className="flex justify-between items-center py-5 px-6 uppercase text-start text-white font-bold sm:text-base md:text-lg lg:text-xl"
+        className="flex justify-between items-center py-5 px-6 uppercase text-start text-white font-bold sm:text-base md:text-lg lg:text-xl xss:text-sm "
       >
         {trigger}
-        <div className="bg-[#18E6B1] text-black rounded-full flex items-center justify-center min-w-8 min-h-8 md:w-10 md:h-10">
+        <div className="bg-[#18E6B1] text-black rounded-full flex items-center justify-center min-w-8 min-h-8 md:w-10 md:h-10 ml-2">
           <ChevronDown
             width={28}
             className={`transition-transform ${open ? "rotate-180" : ""} w-5 md:w-10 m-0 p-0`}
@@ -53,7 +53,7 @@ export const AccordionItem = ({
         style={{ height: open ? ref.current?.offsetHeight || 0 : 0 }}
       >
         <div
-          className="px-6 py-5 text-white font-medium text-justify sm:text-sm md:text-base lg:text-lg"
+          className="px-6 py-5 text-white xss:text-xs font-medium text-justify sm:text-sm md:text-base lg:text-lg"
           ref={ref}
         >
           {children}
