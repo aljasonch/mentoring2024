@@ -19,7 +19,7 @@ export function Gallery() {
   const [initialPathCheck, setInitialPathCheck] = useState(false);
 
   useEffect(() => {
-    if (!initialPathCheck && location.pathname.endsWith("photoset")) {
+    if (!initialPathCheck && location.pathname.endsWith("collection")) {
       _setstate((prevState) => ({
         ...prevState,
         currentscreen: "tutorial",
@@ -34,7 +34,7 @@ export function Gallery() {
       if (newstate.currentscreen === "main") {
         navigate("/gallery");
       } else {
-        navigate("/gallery/photoset");
+        navigate("/gallery/collection");
       }
     },
     [navigate]
@@ -47,7 +47,7 @@ export function Gallery() {
 
   return (
     <div className="background-mentoring py-40">
-      {location.pathname.endsWith("photoset") && currentData?.images ? (
+      {location.pathname.endsWith("collection") && currentData?.images ? (
         <div className="w-full flex justify-center flex-col">
           <div
             className="flex flex-row justify-between items-center mx-auto overflow-clip"

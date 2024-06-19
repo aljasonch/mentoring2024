@@ -31,7 +31,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/faq" element={<Faq />} />
             <Route path="/gallery" element={<Gallery />} />
-            <Route path="/gallery/photoset" element={<Gallery />} />
+            <Route path="/gallery/collection" element={<Gallery />} />
             <Route path="/about" element={<About />} />
           </Routes>
           <Footer />
