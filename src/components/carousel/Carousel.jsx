@@ -3,7 +3,6 @@ import {
   MdOutlineKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight,
 } from "react-icons/md";
-import "./Carousel.css";
 import Bintik_1 from "../../assets/Bintik_1.webp";
 import Bintik_2 from "../../assets/Bintik_2.webp";
 
@@ -42,8 +41,8 @@ export const Carousel = ({ data, logos }) => {
           alt={`Logo ${idx}`}
           className={
             slide === idx
-              ? "w-20 h-20 sm:w-32 sm:h-32 lg:w-40 lg:h-40 xl:w-48 xl:h-48 bottom-60 sm:bottom-[185px] md:bottom-[210px] lg:bottom-64 xl:bottom-[310px] left-[1/2] absolute"
-              : "w-20 h-20 sm:w-32 sm:h-32 lg:w-40 lg:h-40 xl:w-48 xl:h-48 bottom-60 sm:bottom-[185px] md:bottom-[210px] lg:bottom-64 xl:bottom-[310px] left-[1/2] absolute hidden"
+              ? "w-20 h-20 bg-white rounded-full shadow-xl sm:w-32 sm:h-32 lg:w-40 lg:h-40 xl:w-48 xl:h-48 bottom-60 sm:bottom-[185px] md:bottom-[210px] lg:bottom-64 xl:bottom-[310px] left-[1/2] absolute"
+              : "w-20 h-20 bg-white rounded-full shadow-xl sm:w-32 sm:h-32 lg:w-40 lg:h-40 xl:w-48 xl:h-48 bottom-60 sm:bottom-[185px] md:bottom-[210px] lg:bottom-64 xl:bottom-[310px] left-[1/2] absolute hidden"
           }
         />
       ))}
@@ -62,7 +61,7 @@ export const Carousel = ({ data, logos }) => {
             }
             style={{ boxShadow: "0px 0px 7px #666" }}
           >
-            <p className="font-spyagency text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl mb-5 mx-2">
+            <p className="spyagencyRegular text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl mb-5 mx-2">
               {item.title}
             </p>
             <p className="px-6 lg:px-16 text-xs sm:text-sm md:text-base lg:text-lg xl:text-2xl font-semibold m-auto">

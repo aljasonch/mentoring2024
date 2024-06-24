@@ -1,48 +1,49 @@
-.background-mentoring {
-    background: url(../../assets/background.webp), radial-gradient(closest-side at center, #6d5FFF 0%, #5d52dd 42%, #283771 100%) ;
-    background-blend-mode: overlay;
-    background-size: 1440px 900px;
-    background-repeat: repeat;
-    background-attachment: scroll; 
-    overflow: auto; 
+.background-atas {
+  background: url(../../assets/asset15.webp) no-repeat center;
+  background-size: 900px 50px;
+  height: 120px;
 }
 
-.background-atas {
-    background: url(../../assets/asset15.webp) no-repeat center;
-    background-size: 900px 50px;
-    height: 100px;
+@media (max-width: 768px) {
+  .background-atas {
+    background-size: 500px 35px;
+    height: 65px;
+  }
+}
+
+@media (max-width: 376px) {
+  .background-atas {
+    background-size: 250px 15px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 427px) {
+  .background-atas {
+    background-size: 300px 18px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 321px) {
+  .background-atas {
+    background-size: 200px 15px;
+    height: 30px;
+  }
 }
 
 .inner-shadow {
-    box-shadow: inset 0px 4px 50px #AFEFFF;
-  }
-
-@font-face {
-    font-family: 'SpyAgencyBoldItalic';
-    src: url('../../assets/fonts/spyagencyboldital.ttf') format('truetype');
+  box-shadow: inset 0px 4px 50px #afefff;
 }
 
-@font-face {
-    font-family: 'SpyAgency';
-    src: url('../../assets/fonts/spyagency.ttf') format('truetype');
-}
-
-.font-spyagencybi{
-    font-family: 'SpyAgencyBoldItalic', sans-serif;
-}
-
-.font-spyagencyOri{
-    font-family: 'SpyAgency', sans-serif;
-}
-
-.DropSemua{
-    box-shadow: 0px 10px 4px rgba(24, 35, 80, 0.5), inset 0px 4px 50px #AFEFFF;
+.DropSemua {
+  box-shadow: 0px 10px 4px rgba(24, 35, 80, 0.5), inset 0px 4px 50px #afefff;
 }
 
 .Daco img {
-  width: 800px; 
+  width: 800px;
   margin-bottom: -100px;
-  margin-left: 1270px; 
+  margin-left: 1270px;
   transform: rotate(123deg);
   opacity: 50%;
   z-index: 0;
@@ -50,33 +51,33 @@
 
 .daco-card {
   position: absolute;
-  top: 250px; 
-  right: -160px; 
+  top: 250px;
+  right: -160px;
   transform: rotate(128deg);
   width: 300px;
   opacity: 0.35;
-  z-index: -1; 
+  z-index: -1;
 }
 
 .daco-card1 {
   position: absolute;
-  top: -70px; 
-  right: 600px; 
+  top: -70px;
+  right: 600px;
   transform: rotate(-400deg);
   width: 300px;
   opacity: 0.35;
-  z-index: -1; 
+  z-index: -1;
 }
-.container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    z-index: 1000;
-    max-width: 80%; 
-    overflow-y: auto; 
-    animation: slideUp 0.5s ease-in-out forwards;
+.container1 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  z-index: 1000;
+  max-width: 80%;
+  overflow-y: auto;
+  animation: slideUp 0.5s ease-in-out forwards;
 }
 
 @keyframes slideUp {
@@ -91,7 +92,7 @@
 .slide-up {
   animation: slideUp 0.5s ease-in-out forwards;
 }
- 
+
 @keyframes slideDown {
   from {
     transform: translate(-50%, -50%);
@@ -105,11 +106,27 @@
   animation: slideDown 0.5s ease-in-out forwards;
 }
 
-.inShadow{
-  box-shadow: 0px 0px 10px 7px #F5FDFF, inset 0px 20px 50px #478198 ;
+.inShadow {
+  box-shadow: 0px 0px 10px 7px #f5fdff, inset 0px 20px 50px #478198;
 }
 
 .gradientcolor {
-  background: linear-gradient(180deg, rgba(159, 205, 215, 0) 36.84%, #B2CCDB 130%), linear-gradient(285.39deg, rgba(36, 164, 145, 0.98) 3.35%, rgba(34, 188, 177, 0.98) 39.41%, rgba(2, 180, 168, 0.98) 79.68%, rgba(40, 172, 156, 0.98) 95.74%);
+  background: linear-gradient(
+      180deg,
+      rgba(159, 205, 215, 0) 36.84%,
+      #b2ccdb 130%
+    ),
+    linear-gradient(
+      285.39deg,
+      rgba(36, 164, 145, 0.98) 3.35%,
+      rgba(34, 188, 177, 0.98) 39.41%,
+      rgba(2, 180, 168, 0.98) 79.68%,
+      rgba(40, 172, 156, 0.98) 95.74%
+    );
 }
 
+.align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

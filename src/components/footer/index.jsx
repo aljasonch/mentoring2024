@@ -134,7 +134,7 @@ const Footer = () => {
           />
         </div>
         <div className="">
-          <div className="my-5 md:m-0 text-center md:text-end text-2xl md:font-[22px] pt-2 leading-[22px] text-[#F5FDFF] font-spyagencygradient">
+          <div className="my-5 md:m-0 text-center md:text-end text-2xl md:font-[22px] pt-2 leading-[22px] text-[#F5FDFF] spyagencyHalftone">
             <p>REVEAL YOUR</p>
             <p>CAPABILITY WITHIN A</p>
             <p>PURPOSEFUL QUEST</p>

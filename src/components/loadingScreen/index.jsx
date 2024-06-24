@@ -3,7 +3,7 @@ import Loading from "../../assets/gif/loading.gif";
 
 const LoadingScreen = () => {
   return (
-    <div className="overflow-hidden h-screen w-screen flex justify-center items-center">
+    <div className="overflow-hidden h-screen w-screen flex justify-center items-center bg-[#283771]">
       <img src={Loading} alt="Loading" className="w-96 h-auto" />
     </div>
   );
