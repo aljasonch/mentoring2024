@@ -1,5 +1,8 @@
 #root {
   text-align: center;
+  background: url(./src/assets/background.webp), #283771;
+  background-blend-mode: overlay;
+  background-size: contain;
 }
 * {
   margin: 0;
