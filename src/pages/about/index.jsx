@@ -1,22 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./style.css";
-import Accom from "../../assets/Accom_Icon.webp";
-import Admin from "../../assets/Admin_Icon.webp";
-import CC from "../../assets/CC_Icon.webp";
-import Dokum from "../../assets/Dokum_Icon.webp";
-import Exc from "../../assets/Exc_Icon.webp";
-import Insurer from "../../assets/Insurer_Icon.webp";
-import Mentor from "../../assets/Mentor_Icon.webp";
-import Medpar from "../../assets/Medpar_Icon.webp";
-import Research from "../../assets/Research_Icon.webp";
-import Visual from "../../assets/Visual_Icon.webp";
-import Website from "../../assets/Website_Icon.webp";
 import Asset from "../../assets/Asset8_1.webp";
 import Assets from "../../assets/Asset8_2.webp";
 import Daco from "../../assets/Daco_519625.webp";
-import petirkiriatas from "../../assets/petirkiriatas.webp";
-import petirkananatas from "../../assets/petirkananatas.webp";
-import theme from "../../assets/theme.webp";
+import LightningLeft from "../../assets/petirkiriatas.webp";
+import LightningRight from "../../assets/petirkananatas.webp";
+import themeMobile from "../../assets/themeMobile.webp";
+import ZacheryMobile from "../../assets/ZacheryMobile.webp";
+import Logo from "../../assets/LogoAboutUS.webp";
 import tagline from "../../assets/tagline.webp";
 import zachery from "../../assets/zachery.webp";
 import z1 from "../../assets/z1.webp";
@@ -31,6 +22,8 @@ import z9 from "../../assets/z9.webp";
 import z10 from "../../assets/z10.webp";
 import logo from "../../assets/logoabout.webp";
 import data from "./data.js";
+
+const importImage = (name) => require(`../../assets/${name}.webp`);
 
 function About() {
   const [showCard, setShowCard] = useState(false);
@@ -60,81 +53,156 @@ function About() {
     setShowCard(true);
   };
 
+  const handleCardClick = (event) => {
+    if (cardRef.current && cardRef.current.contains(event.target)) {
+      cardRef.current.classList.remove("slide-up");
+      cardRef.current.classList.add("slide-down");
+      setTimeout(() => setShowCard(false), 500);
+    }
+  };
+
+  const handleCardStay = (event) => {
+    event.stopPropagation();
+  };
+
   return (
-    <div className="background-mentoring" ref={cardRef}>
-      <div className="hidden xl:block">
+    <>
+      <div className="background-mentoring">
         <div className="relative">
           <img
-            src={petirkiriatas}
-            className="absolute top-0 left-0 w-[100px] h-auto"
+            src={LightningLeft}
+            className="absolute top-0 left-0 w-24 h-auto xss:w-12 xss:top-28 md:w-24 md:top-44"
             alt="Lightning Left"
           />
           <img
-            src={petirkananatas}
-            className="absolute top-0 right-0 w-[170px] h-auto z-10"
+            src={LightningRight}
+            className="absolute top-0 right-0 w-44 h-auto z-10 xss:w-16 xss:top-12 md:w-28 md:top-16"
             alt="Lightning Right"
           />
-          <div>
-            <h1 className="text-white text-7xl pt-[250px] spyagencyBoldItal">
-              ABOUT US
-            </h1>
-            <p className="text-white text-3xl">
-              CHARACTER BUILDING MENTORING 2024
-            </p>
+          <div className="text-white text-7xl sm:pt-60 xss:pt-36 xss:text-2xl sm:text-4xl md:text-5xl spyagencyBoldItal">
+            ABOUT US
           </div>
+          <p className=" text-white text-3xl xss:text-xs sm:text-lg md:text-xl ">
+            CHARACTER BUILDING MENTORING 2024
+          </p>
         </div>
-        <div className="relative flex justify-between mt-[50px]">
-          <div className="flex flex-col z-20">
-            <h2 className="spyagencyRegular text-start text-white text-6xl ml-20 mt-[170px]">
-              REVEAL YOUR <br />
-              CAPABILITY <br /> WITHIN A <br />
-              PURPOSEFUL <br />
-              QUEST
-            </h2>
-            <p className="font-monsserat text-start text-white text-xl mt-10 ml-20">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged.
-            </p>
-          </div>
-          <img
-            src={theme}
-            className="relative z-10 mt-[50px] ml-10 mr-10 w-[700px] h-auto"
-            alt="Theme"
-          />
-        </div>
-
-        <div className="flex mt-[50px]">
-          <div className="flex flex-col">
+        <div className="w-9/12 md:w-[36.25rem] lg:hidden relative z-10 mx-auto mt-16">
+          <div className="relative">
             <img
-              src={z1}
-              className="relative z-10 mb-[50px]  w-[500px] mt-[-50px]"
-              alt="z1"
+              src={themeMobile}
+              className="border-4 sm:border-8 border-white rounded-3xl"
+              alt="Theme"
             />
+            <div className=" border-4 sm:border-8 rounded-3xl absolute inset-0 bg-[#5D52DD] opacity-50 "></div>
+          </div>
+          <div className="spyagencyHalftone  z-0 polygonTheme absolute bottom-0">
+            <div className="bg-white xss:py-1 py-2 sm:py-2 text-[#832AD0] text-xl sm:text-4xl sm:pl-24 sm:pr-12 pl-16 pr-6 rounded-br-2xl">
+              THEME
+            </div>
+          </div>
+        </div>
+        <div className="mx-auto w-9/12">
+          <div className="spyagencyBoldItal xss:text-xl xs:text-2xl sm:text-4xl text-start text-white mt-8">
+            REVEAL YOUR CAPABILITY WITHIN A PURPOSEFUL QUEST
+          </div>
+          <p className=" text-start text-white xss:text-xs xs:text-sm sm:text-lg mt-6 ">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged.
+          </p>
+        </div>
+        <div className="mt-12">
+          <div className=" relative">
+            <img src={z1} className="w-7/12 z-20 relative" alt="1" />
             <img
               src={z2}
-              className="relative z-5  w-[900px]   mt-[-150px] "
-              alt="z2"
+              className="absolute z-10 w-9/12 top-12 sm:top-24 left-0"
+              alt="2"
+            />
+            <img
+              src={z3}
+              className="absolute z-30 w-6/12 top-8 sm:top-16 right-0"
+              alt="3"
             />
           </div>
-          <img src={z3} className="relative z-10 ml-auto w-[500px]" alt="z3" />
         </div>
-
+      </div>
+      <div className="background-mentoring py-6">
+        <div className="w-9/12 md:w-[36.25rem] lg:hidden relative z-10 mx-auto mt-16">
+          <div className="relative">
+            <img
+              src={themeMobile}
+              className="border-4 sm:border-8 border-white rounded-3xl"
+              alt="Theme"
+            />
+            <div className=" border-4 sm:border-8 rounded-3xl absolute inset-0 bg-[#5D52DD] opacity-50 "></div>
+          </div>
+          <div className="spyagencyHalftone  z-0 polygonTheme absolute bottom-0">
+            <div className="bg-white xss:py-1 py-2 sm:py-2 text-[#832AD0] text-xl sm:text-4xl sm:pl-24 sm:pr-12 pl-12 pr-4 rounded-br-2xl">
+              TAGLINE
+            </div>
+          </div>
+        </div>
+        <div className="mx-auto w-9/12">
+          <div className="spyagencyBoldItal xss:text-xl xs:text-2xl sm:text-4xl text-end text-white mt-8">
+            <p>REVEAL,</p>
+            <p>REFINE,</p>
+            <p>RADIATE</p>
+          </div>
+          <p className=" text-end text-white xss:text-xs xs:text-sm sm:text-lg mt-6 ">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged.
+          </p>
+        </div>
+      </div>
+      <div className="mt-12">
         <div className="relative">
+          <img src={z4} className="w-7/12 z-20 relative" alt="1" />
           <img
-            src={tagline}
-            className="z-10 mr-[20px] right-[700px] w-[700px] mb-[-200px] mt-[-30px] ml-10"
-            alt="Tagline"
+            src={z5}
+            className="absolute z-20 w-8 top-12 sm:top-24 -left-4"
+            alt="2"
           />
-          <div className="absolute top-[340px] right-[50px] -translate-y-1/2 max-w-[50%] p-[20px] box-border">
-            <h2 className="spyagencyRegular text-end text-white text-6xl mr-10 mt-[5px]">
-              REVEAL, <br />
-              REFINE, <br /> RADIATE
-            </h2>
-            <p className="font-monsserat text-end text-white text-xl mr-10 ml-10 mt-10">
+          <img
+            src={z6}
+            className="absolute z-10 w-72 sm:w-7/12 top-6 sm:top-10 right-0"
+            alt="3"
+          />
+          <img
+            src={z7}
+            className="absolute z-0 w-36 -top-16 sm:w-48 sm:-top-16 right-0"
+            alt="3"
+          />
+        </div>
+        <div className="background-mentoring py-6">
+          <div className="w-9/12 md:w-[36.25rem] lg:hidden relative z-10 mx-auto mt-16">
+            <div className="relative">
+              <img
+                src={Logo}
+                className="border-4 relative z-10 sm:border-8 border-white rounded-3xl"
+                alt="Theme"
+              />
+              <div className=" border-4 sm:border-8 rounded-3xl z-0 absolute inset-0 bg-[#38467E] opacity-100 "></div>
+            </div>
+            <div className="spyagencyHalftone  z-0 polygonTheme absolute bottom-0">
+              <div className="bg-white xss:py-1 py-2 sm:py-2 text-[#832AD0] text-xl sm:text-4xl sm:pl-24 sm:pr-12 pl-12 pr-4 rounded-br-2xl">
+                LOGO
+              </div>
+            </div>
+          </div>
+          <div className="mx-auto w-9/12">
+            <div className="spyagencyBoldItal xss:text-xl xs:text-2xl sm:text-4xl text-start text-white mt-8">
+              <p>THE MEANING</p>
+              <p>BEHIND OUR LOGO</p>
+            </div>
+            <p className=" text-start text-white xss:text-xs xs:text-sm sm:text-lg mt-6 ">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
@@ -144,85 +212,42 @@ function About() {
             </p>
           </div>
         </div>
-        <div className="flex xl:mt-[50px]">
-          <div className="flex flex-col">
-            <img
-              src={z4}
-              className="relative z-10 mb-[50px] w-[650px] mt-[200px]"
-              alt="z4"
-            />
-            <img
-              src={z5}
-              className="relative z-5 w-[50px] mt-[-290px]"
-              alt="z5"
-            />
-          </div>
-          <div className="flex flex-col ml-auto">
-            <img
-              src={z6}
-              className="relative z-10 w-[800px] mt-[280px]"
-              alt="z6"
-            />
-            <img
-              src={z7}
-              className="relative z-5 w-[400px] mt-[-320px] ml-auto"
-              alt="z7"
-            />
-          </div>
-        </div>
-        <div className="relative flex justify-between mt-[50px]">
-          <div className="flex flex-col z-20">
-            <h2 className="spyagencyRegular text-start text-white text-6xl ml-20 mt-[-220px]">
-              THE MEANING <br />
-              BEHIND OUR <br /> LOGO
-            </h2>
-            <p className="text-start text-white text-xl mt-10 ml-20">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged.
-            </p>
-          </div>
+      </div>
+      <div className="mt-12">
+        <div className="relative">
+          <img src={z8} className="w-7/12 z-20 relative" alt="1" />
           <img
-            src={logo}
-            className="relative z-10 mt-[-350px] mx-10 w-[700px] h-auto"
-            alt="Theme"
+            src={z9}
+            className="absolute z-20 w-7/12 top-12 sm:top-24 left-0"
+            alt="2"
           />
-        </div>
-        <div className="flex mt-[50px]">
-          <div className="flex flex-col">
-            <img
-              src={z8}
-              className="relative z-10 mb-[0px]  w-[800px] mt-[-50px]"
-              alt="z8"
-            />
-            <img
-              src={z9}
-              className="relative z-5  w-[900px]   mt-[-150px] "
-              alt="z9"
-            />
-          </div>
           <img
             src={z10}
-            className="relative z-5 ml-auto w-[500px]  mt-[-60px]"
-            alt="z10"
+            className="absolute z-30 w-56 sm:-top-10 sm:w-7/12 -top-6 right-0"
+            alt="3"
           />
         </div>
-
-        <div className="relative">
-          <img
-            src={zachery}
-            className="z-10 mx-10 mr-[20px] right-[700px] w-[700px] mb-[-200px] mt-[10px]"
-            alt="Tagline"
-          />
-          <div className="absolute top-[340px] right-[50px] -translate-y-1/2 max-w-[50%] p-[20px] box-border">
-            <h2 className="spyagencyRegular text-end text-white text-6xl mx-10 mt-[5px]">
-              MEET <br />
-              ZACHERY
-            </h2>
-            <p className="text-end text-white text-xl mx-10 mt-10">
+        <div className="background-mentoring py-6">
+          <div className="w-9/12 md:w-[36.25rem] lg:hidden relative z-10 mx-auto mt-16">
+            <div className="relative">
+              <img
+                src={ZacheryMobile}
+                className="border-4 relative z-10 sm:border-8 border-white rounded-3xl"
+                alt="Theme"
+              />
+              <div className=" border-4 sm:border-8 rounded-3xl z-0 absolute inset-0 bg-[#38467E] opacity-100 "></div>
+            </div>
+            <div className="spyagencyHalftone  z-0 polygonTheme absolute bottom-0">
+              <div className="bg-white xss:py-1 py-2 sm:py-2 text-[#832AD0] text-xl sm:text-4xl sm:pl-24 sm:pr-12 pl-12 pr-4 rounded-br-2xl">
+                ZACHERY
+              </div>
+            </div>
+          </div>
+          <div className="mx-auto w-9/12">
+            <div className="spyagencyBoldItal xss:text-xl xs:text-2xl sm:text-4xl text-end text-white mt-8">
+              <p>MEET ZACHERY</p>
+            </div>
+            <p className=" text-end text-white xss:text-xs xs:text-sm sm:text-lg mt-6 ">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
@@ -232,7 +257,7 @@ function About() {
             </p>
           </div>
         </div>
-        <div className="flex justify-between background-atas mt-[250px] ">
+        <div className="flex justify-between background-atas background-mentoring mt-12">
           <img
             src={Asset}
             className="pb-5 xss:h-[60px] xs:h-[75px] md:h-[120px] lg:h-[160px] xl:h-[190px]"
@@ -242,229 +267,84 @@ function About() {
             className="pb-5 xss:h-[60px] xs:h-[75px] md:h-[120px] lg:h-[160px] xl:h-[190px]"
           />
         </div>
-      </div>
-      <div className="xss:mt-3 xs:mt-7 md:mt-14 md:mb-15">
-        <h2 className="spyagencyRegular text-white text-3xl xss:mb-10 xs:mb-12 md:mb-32 xss:text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
-          Our Division
-        </h2>
-        <a
-          href="#"
-          className="underline text-white text-xs lg:text-sm xl:text-md"
-        >
-          Click for more information
-        </a>
-      </div>
-      <div class="container flex justify-center relative z-10 mx-auto w-full p-4">
-        <div className="grid grid-cols-3 xs:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6 md:gap-10 justify-items-center">
-          <div
-            className="bg-white cursor-pointer p-4 md:p-6 sm:p-4 xs:p-4 rounded-full inner-shadow transition-color duration-500 ease-in-out hover:bg-[#9CF9FF] hover:shadow-none DropSemua flex justify-center"
-            onClick={() => {
-              setShowCard(!showCard);
-              setSelectedData({
-                title: data[0].title,
-                description: data[0].description,
-                image: Accom,
-              });
-            }}
-          >
-            <img
-              src={Accom}
-              className="h-auto w-full max-w-[7rem] img-fluid mx-auto flex items-center justify-center"
-            />
-          </div>
-          <div
-            className="bg-white cursor-pointer p-4 md:p-6 sm:p-4 xs:p-4 rounded-full inner-shadow transition-color duration-500 ease-in-out hover:bg-[#E1ED7B] hover:shadow-none DropSemua flex justify-center"
-            onClick={() => {
-              setShowCard(!showCard);
-              setSelectedData({
-                title: data[1].title,
-                description: data[1].description,
-                image: Admin,
-              });
-            }}
-          >
-            <img
-              src={Admin}
-              className="h-auto w-full max-w-[7rem] img-fluid mx-auto flex items-center justify-center"
-            />
-          </div>
-          <div
-            className="bg-white cursor-pointer p-4 md:p-6 sm:p-4 xs:p-4 rounded-full inner-shadow transition-color duration-500 ease-in-out hover:bg-[#FFFBB9] hover:shadow-none DropSemua flex justify-center"
-            onClick={() => {
-              setShowCard(!showCard);
-              setSelectedData({
-                title: data[2].title,
-                description: data[2].description,
-                image: CC,
-              });
-            }}
-          >
-            <img
-              src={CC}
-              className="h-auto w-full max-w-[7rem] img-fluid mx-auto flex items-center justify-center"
-            />
-          </div>
-          <div
-            className="bg-white cursor-pointer p-4 md:p-6 sm:p-4 xs:p-4 rounded-full inner-shadow transition-color duration-500 ease-in-out hover:bg-[#DCB5FF] hover:shadow-none DropSemua flex justify-center"
-            onClick={() => {
-              setShowCard(!showCard);
-              setSelectedData({
-                title: data[3].title,
-                description: data[3].description,
-                image: Dokum,
-              });
-            }}
-          >
-            <img
-              src={Dokum}
-              className="h-auto w-full max-w-[7rem] img-fluid mx-auto flex items-center justify-center"
-            />
-          </div>
-          <div
-            className="bg-white cursor-pointer p-4 md:p-6 sm:p-4 xs:p-4 rounded-full inner-shadow transition-color duration-500 ease-in-out hover:bg-[#94C3FF] hover:shadow-none DropSemua"
-            onClick={() => {
-              setShowCard(!showCard);
-              setSelectedData({
-                title: data[4].title,
-                description: data[4].description,
-                image: Exc,
-              });
-            }}
-          >
-            <img
-              src={Exc}
-              className="h-auto w-full max-w-[7rem] img-fluid mx-auto flex items-center justify-center"
-            />
-          </div>
-          <div
-            className="bg-white cursor-pointer p-4 md:p-6 sm:p-4 xs:p-4 rounded-full inner-shadow transition-color duration-500 ease-in-out hover:bg-[#CCCCCC] hover:shadow-none DropSemua"
-            onClick={() => {
-              setShowCard(!showCard);
-              setSelectedData({
-                title: data[5].title,
-                description: data[5].description,
-                image: Insurer,
-              });
-            }}
-          >
-            <img
-              src={Insurer}
-              className="h-auto w-full max-w-[7rem] img-fluid mx-auto flex items-center justify-center"
-            />
-          </div>
-          <div
-            className="bg-white cursor-pointer p-4 md:p-6 sm:p-4 xs:p-4 rounded-full inner-shadow transition-color duration-500 ease-in-out hover:bg-[#FFC0A5] hover:shadow-none DropSemua"
-            onClick={() => {
-              setShowCard(!showCard);
-              setSelectedData({
-                title: data[6].title,
-                description: data[6].description,
-                image: Mentor,
-              });
-            }}
-          >
-            <img
-              src={Mentor}
-              className="h-auto w-full max-w-[7rem] img-fluid mx-auto flex items-center justify-center"
-            />
-          </div>
-          <div
-            className="bg-white cursor-pointer p-4 md:p-6 sm:p-4 xs:p-4 rounded-full inner-shadow transition-color duration-500 ease-in-out hover:bg-[#FFC0C0] hover:shadow-none DropSemua"
-            onClick={() => {
-              setShowCard(!showCard);
-              setSelectedData({
-                title: data[7].title,
-                description: data[7].description,
-                image: Medpar,
-              });
-            }}
-          >
-            <img
-              src={Medpar}
-              className="h-auto w-full max-w-[7rem] img-fluid mx-auto flex items-center justify-center"
-            />
-          </div>
-          <div
-            className="bg-white cursor-pointer p-4 md:p-6 sm:p-4 xs:p-4 rounded-full inner-shadow transition-color duration-500 ease-in-out hover:bg-[#FFD4A9] hover:shadow-none DropSemua"
-            onClick={() => {
-              setShowCard(!showCard);
-              setSelectedData({
-                title: data[8].title,
-                description: data[8].description,
-                image: Research,
-              });
-            }}
-          >
-            <img
-              src={Research}
-              class="h-auto w-full max-w-[7rem] img-fluid mx-auto flex items-center justify-center"
-            />
-          </div>
-          <div
-            className="bg-white cursor-pointer p-4 md:p-6 sm:p-4 xs:p-4 rounded-full inner-shadow transition-color duration-500 ease-in-out hover:bg-[#FFCEE5] hover:shadow-none DropSemua"
-            onClick={() => {
-              setShowCard(!showCard);
-              setSelectedData({
-                title: data[9].title,
-                description: data[9].description,
-                image: Visual,
-              });
-            }}
-          >
-            <img
-              src={Visual}
-              class="h-auto w-full max-w-[7rem] img-fluid mx-auto flex items-center justify-center"
-            />
-          </div>
-          <div
-            className="bg-white cursor-pointer p-4 md:p-6 sm:p-4 xs:p-4 rounded-full inner-shadow transition-color duration-500 ease-in-out hover:bg-[#BBE0FF] hover:shadow-none DropSemua trigger"
-            onClick={() => {
-              setShowCard(!showCard);
-              setSelectedData({
-                title: data[10].title,
-                description: data[10].description,
-                image: Website,
-              });
-            }}
-          >
-            <img
-              src={Website}
-              class="h-auto w-full max-w-[7rem] img-fluid mx-auto flex items-center justify-center"
-            />
-          </div>
-        </div>
-      </div>
-      <div className="Daco relative top-0 right-0 w-full overflow-hidden">
-        <img src={Daco} className="daco-image" />
-      </div>
-      {showCard && selectedData && (
-        <div
-          className="w-[790px] h-[480px] overflow-hidden container1"
-          ref={cardRef}
-        >
-          <div className="bg-white cursor-pointer flex justify-center xs:w-[80px] md:w-[100px] lg:w-[120px] container1 xss:top-[42%] xs:top-[35%] md:top-[25%] lg:top-[15%] rounded-full DropSemua">
-            <img
-              src={selectedData.image}
-              className="xss:w-[30px] xs:w-[60px] md:w-[80px] lg:w-[100px] object-cover"
-            />
-          </div>
-          <div className="mt-10 mb-3 px-[40px] pb-[20px] gradientcolor container1 xss:w-[490px] xss:h-[130px] xs:w-[600px] xs:h-[200px] md:w-[700px] md:h-[300px] lg:w-[750px] lg:h-[370px] rounded-[60px] z-[-1] overflow-hidden inShadow">
-            <h2 className="spyagencyRegular text-white xss:text-[10px] xs:text-md md:text-xl lg:text-3xl xss:mt-3 xs:mt-5 md:mt-9 lg:mt-10">
-              {selectedData.title}
+        <div className="background-mentoring">
+          <div className="xss:mt-12 xs:mt-16 md:mt-14 md:mb-15 ">
+            <h2 className="spyagencyBoldItal text-white text-3xl  xss:mb-4 xs:mb-8 md:mb-16 xss:text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+              Our Division
             </h2>
-            <p className=" text-white xss:text-[6px] xs:text-[8px] md:text-lg lg:text-2xl text-center z-10 flex flex-col justify-center items-center xss:p-1 xs:p-3 md:p-4 lg:p-5 box-border">
-              {selectedData.description}
-            </p>
-            <div className="daco-card">
-              <img src={Daco} className="daco-image" />
-            </div>
-            <div className="daco-card1">
-              <img src={Daco} className="daco-image" />
+            <a
+              href="#"
+              className="underline text-white text-xs lg:text-sm xl:text-md"
+            >
+              Click for more information
+            </a>
+          </div>
+          <div class="container flex justify-center relative z-10 mx-auto w-full p-4 xss:mt-8 xs:mt-12 md:mt-16">
+            <div className="grid grid-cols-3 xs:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6 md:gap-10 justify-items-center">
+              {data.map((item, index) => (
+                <div
+                  key={index}
+                  className="bg-white cursor-pointer col-auto p-4 md:p-6 sm:p-4 xs:p-4 rounded-full inner-shadow transition-color duration-500 ease-in-out hover:bg-[${item.hoverColor}] hover:shadow-none DropSemua"
+                  onClick={() => {
+                    setShowCard(!showCard);
+                    setSelectedData({
+                      title: item.title,
+                      description: item.description,
+                      image: item.image,
+                    });
+                  }}
+                >
+                  <img
+                    src={item.image}
+                    className="h-auto w-full max-w-[7rem] img-fluid mx-auto flex items-center justify-center"
+                  />
+                </div>
+              ))}
             </div>
           </div>
+          <div className="Daco relative top-0 right-0 w-full overflow-hidden">
+            <img src={Daco} className="daco-image" />
+          </div>
+          {showCard && selectedData && (
+            <div
+              className="w-[790px] h-[480px] overflow-hidden container1"
+              ref={cardRef}
+              onClick={handleCardClick}
+            >
+              <div
+                className="bg-white cursor-pointer flex justify-center xss:w-[60px] xs:w-[68px] md:w-[100px] lg:w-[120px] container1 xss:top-[42%] xs:top-[38%] md:top-[25%] lg:top-[15%] rounded-full DropCard"
+                onClick={handleCardStay}
+              >
+                <img
+                  src={selectedData.image}
+                  className="xss:w-[40px] xs:w-[85px] md:w-[80px] lg:w-[100px] img-fluid object-cover"
+                />
+              </div>
+              <div
+                className="xss:mt-9 lg:mt-10 lg:mb-3 lg:px-[40px] lg:pb-[20px] gradientcolor container1 xss:w-[490px] xss:h-[130px] xs:w-[600px] xs:h-[160px] md:w-[700px] md:h-[300px] lg:w-[750px] lg:h-[370px] xss:rounded-[20px] xs:rounded-[35px] lg:rounded-[60px] z-[-1] overflow-hidden inShadow flex flex-col justify-between"
+                onClick={handleCardStay}
+              >
+                <h2 className="font-spyagencyOri text-white xss:text-[10px] xs:text-md md:text-xl lg:text-3xl xss:mt-5 xs:mt-6 md:mt-9 lg:mt-10">
+                  {selectedData.title}
+                </h2>
+                <div className="flex-grow flex items-center justify-center">
+                  <p className="text-monsserat text-white xss:text-[7px] xs:text-[10px] md:text-lg lg:text-2xl text-center z-10 xss:p-1 xs:p-3 md:p-4 lg:p-5 box-border xss:mb-2 lg:mb-5">
+                    {selectedData.description}
+                  </p>
+                </div>
+                <div className="daco-card">
+                  <img src={Daco} className="daco-image" />
+                </div>
+                <div className="daco-card1">
+                  <img src={Daco} className="daco-image" />
+                </div>
+              </div>
+            </div>
+          )}
         </div>
-      )}
-    </div>
+      </div>
+    </>
   );
 }
+
 export default About;
