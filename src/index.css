@@ -4,7 +4,7 @@
 
 :root {
   font-family: 'Montserrat', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background: url(./src/assets/background.webp), #283771;
+  background: url(/src/assets/background.webp), #283771;
   background-blend-mode: overlay;
   background-size: contain;
 }

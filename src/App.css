@@ -1,13 +1,12 @@
 #root {
   text-align: center;
-  background: url(./src/assets/background.webp), #283771;
-  background-blend-mode: overlay;
-  background-size: contain;
+
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 @font-face {
   font-family: 'SpyAgencyCond';
