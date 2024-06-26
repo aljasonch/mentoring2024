@@ -11,8 +11,8 @@ export default {
   theme: {
     extend: {
       screens: {
-        'xss': '320px',
-        'xs': '400px'
+        xss: "320px",
+        xs: "400px",
       },
       fontFamily: {
         sans: [
@@ -26,5 +26,9 @@ export default {
       },
     },
   },
-  plugins: [require("flowbite/plugin"), flowbite.plugin()],
-}; 
+  plugins: [
+    require("flowbite/plugin"),
+    flowbite.plugin(),
+    require("@khoohaoyit/tailwind-grid-center"),
+  ],
+};

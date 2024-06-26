@@ -112,16 +112,10 @@ function Home() {
               />
             </div>
             <p className="text-xs sm:text-base lg:text-lg xl:text-xl font-medium px-14 md:px-24 xl:px-72 mx-auto">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+              Character Building Mentoring (CBM) adalah kegiatan tahunan yang
+              wajib diikuti oleh Mentee (Mahasiswa Baru UMN) dengan tujuan
+              menyeluruh, memperkenalkan secara mendalam nilai-nilai 5C UMN.
+              Character Building Mentoring juga memiliki maskot bernama ZACHERY!
             </p>
           </div>
         </div>
@@ -148,7 +142,8 @@ function Home() {
               5C
             </p>
             <p className="text-base sm:text-base lg:text-lg xl:text-xl font-medium px-12 md:px-40 xl:px-72 mx-auto mt-10 md:my-12 mb-24 lg:mb-16 xl:mb-20">
-            5C merupakan nilai yang ditanamkan UMN kepada mahasiswanya melalui berbagai aktivitas kehidupan sehari-hari.
+              5C merupakan nilai yang ditanamkan UMN kepada mahasiswanya melalui
+              berbagai aktivitas kehidupan sehari-hari.
             </p>
           </div>
           <div className="md:pb-16">

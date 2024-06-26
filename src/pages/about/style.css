@@ -3,95 +3,92 @@
   background-size: 900px 50px;
   height: 120px;
 }
-.polygonTheme{
+.polygonTheme {
   clip-path: polygon(32% 0, 100% 0, 100% 100%, 0% 100%);
   right: 0;
 }
+
 @media (max-width: 768px) {
-.background-atas{
-  background-size: 500px 35px;
-  height: 65px
-}
+  .background-atas {
+    background-size: 500px 35px;
+    height: 65px;
+  }
 }
 
 @media (max-width: 376px) {
-.background-atas{
-  background-size: 250px 15px;
-  height: 40px
-}
+  .background-atas {
+    background-size: 250px 15px;
+    height: 40px;
+  }
 }
 
 @media (max-width: 427px) {
-.background-atas{
-  background-size: 300px 18px;
-  height: 40px
-}
+  .background-atas {
+    background-size: 300px 18px;
+    height: 40px;
+  }
+  .container1 {
+    padding: 13px;
+  }
+  .DropCard {
+    box-shadow: 0px 9px 2px rgba(24, 35, 80, 0.3), inset 0px 4px 50px #afefff;
+  }
 }
 
-@media (max-width: 321px) {
-.background-atas{
-  background-size: 200px 15px;
-  height: 30px
-}
+@media (max-width: 320px) {
+  .background-atas {
+    background-size: 200px 15px;
+    height: 30px;
+  }
+  .container1 {
+    padding: 12px;
+  }
+  .DropCard {
+    box-shadow: 0px 8px 2px rgba(24, 35, 80, 0.3), inset 0px 4px 50px #afefff;
+  }
 }
 
 .inner-shadow {
-  box-shadow: inset 0px 4px 50px #AFEFFF;
+  box-shadow: inset 0px 4px 50px #afefff;
 }
 
-@font-face {
-  font-family: 'SpyAgencyBoldItalic';
-  src: url('../../assets/fonts/spyagencyboldital.ttf') format('truetype');
+
+
+.DropSemua {
+  box-shadow: 0px 10px 4px rgba(24, 35, 80, 0.5), inset 0px 4px 50px #afefff;
 }
 
-@font-face {
-  font-family: 'SpyAgency';
-  src: url('../../assets/fonts/spyagency.ttf') format('truetype');
-}
-
-.font-spyagencybi{
-  font-family: 'SpyAgencyBoldItalic', sans-serif;
-}
-
-.font-spyagencyOri{
-  font-family: 'SpyAgency', sans-serif;
-}
-
-.DropSemua{
-  box-shadow: 0px 10px 4px rgba(24, 35, 80, 0.5), inset 0px 4px 50px #AFEFFF;
-}
-
-.DropCard{
-box-shadow: 0px 10px 4px rgba(24, 35, 80, 0.3), inset 0px 4px 50px #AFEFFF;
+.DropCard {
+  box-shadow: 0px 10px 4px rgba(24, 35, 80, 0.3), inset 0px 4px 50px #afefff;
 }
 
 .Daco img {
-width: 800px; 
-margin-bottom: -100px;
-margin-left: 1270px; 
-transform: rotate(123deg);
-opacity: 50%;
-z-index: 0;
+  width: 800px;
+  margin-bottom: -100px;
+  margin-left: 1270px;
+  transform: rotate(123deg);
+  opacity: 50%;
+  z-index: 0;
 }
 
 .daco-card {
-position: absolute;
-top: 250px; 
-right: -160px; 
-transform: rotate(128deg);
-width: 300px;
-opacity: 0.35;
-z-index: -1; 
+  position: absolute;
+  top: 250px;
+  right: -160px;
+  transform: rotate(128deg);
+  width: 300px;
+  opacity: 0.35;
+  z-index: -1;
 }
 
 .daco-card1 {
-position: absolute;
-top: -70px; 
-right: 600px; 
-transform: rotate(-400deg);
-width: 300px;
-opacity: 0.35;
-z-index: -1; 
+  position: absolute;
+  top: -70px;
+  right: 600px;
+  transform: rotate(-400deg);
+  width: 300px;
+  opacity: 0.35;
+  z-index: -1;
 }
 .container1 {
   position: fixed;
@@ -100,65 +97,53 @@ z-index: -1;
   transform: translate(-50%, -50%);
   padding: 20px;
   z-index: 1000;
-  max-width: 80%; 
-  overflow-y: auto; 
+  max-width: 80%;
+  overflow-y: auto;
   animation: slideUp 0.5s ease-in-out forwards;
 }
 
-@media (max-width: 320px) {
-.container1{
-  padding: 12px;
-}
-.DropCard{
-  box-shadow: 0px 8px 2px rgba(24, 35, 80, 0.3), inset 0px 4px 50px #AFEFFF;
-}
-}
-
-@media (max-width: 426px) {
-.container1{
-  padding: 13px;
-}
-.DropCard{
-  box-shadow: 0px 9px 2px rgba(24, 35, 80, 0.3), inset 0px 4px 50px #AFEFFF;
-}
-}
 
 @keyframes slideUp {
-from {
-  transform: translate(-50%, 100%);
-}
-to {
-  transform: translate(-50%, -50%);
-}
+  from {
+    transform: translate(-50%, 100%);
+  }
+  to {
+    transform: translate(-50%, -50%);
+  }
 }
 
 .slide-up {
-animation: slideUp 0.5s ease-in-out forwards;
+  animation: slideUp 0.5s ease-in-out forwards;
 }
 
 @keyframes slideDown {
-from {
-  transform: translate(-50%, -50%);
-}
-to {
-  transform: translate(-50%, 100%);
-}
+  from {
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: translate(-50%, 100%);
+  }
 }
 
 .slide-down {
-animation: slideDown 0.5s ease-in-out forwards;
+  animation: slideDown 0.5s ease-in-out forwards;
 }
 
-.inShadow{
-box-shadow: 0px 0px 10px 7px #F5FDFF, inset 0px 20px 50px #478198 ;
+.inShadow {
+  box-shadow: 0px 0px 10px 7px #f5fdff, inset 0px 20px 50px #478198;
 }
 
 .gradientcolor {
-background: linear-gradient(180deg, rgba(159, 205, 215, 0) 36.84%, #B2CCDB 130%), linear-gradient(285.39deg, rgba(36, 164, 145, 0.98) 3.35%, rgba(34, 188, 177, 0.98) 39.41%, rgba(2, 180, 168, 0.98) 79.68%, rgba(40, 172, 156, 0.98) 95.74%);
-}
-
-.align{
-display: flex;
-align-items: center;
-justify-content: center;
+  background: linear-gradient(
+      180deg,
+      rgba(159, 205, 215, 0) 36.84%,
+      #b2ccdb 130%
+    ),
+    linear-gradient(
+      285.39deg,
+      rgba(36, 164, 145, 0.98) 3.35%,
+      rgba(34, 188, 177, 0.98) 39.41%,
+      rgba(2, 180, 168, 0.98) 79.68%,
+      rgba(40, 172, 156, 0.98) 95.74%
+    );
 }

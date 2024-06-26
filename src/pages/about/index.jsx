@@ -22,6 +22,7 @@ import z9 from "../../assets/z9.webp";
 import z10 from "../../assets/z10.webp";
 import logo from "../../assets/logoabout.webp";
 import data from "./data.js";
+import theme from "../../assets/theme.webp";
 
 const importImage = (name) => require(`../../assets/${name}.webp`);
 
@@ -67,7 +68,7 @@ function About() {
 
   return (
     <>
-      <div className="background-mentoring">
+      <div className="background-mentoring ">
         <div className="relative">
           <img
             src={LightningLeft}
@@ -79,10 +80,10 @@ function About() {
             className="absolute top-0 right-0 w-44 h-auto z-10 xss:w-16 xss:top-12 md:w-28 md:top-16"
             alt="Lightning Right"
           />
-          <div className="text-white text-7xl sm:pt-60 xss:pt-36 xss:text-2xl sm:text-4xl md:text-5xl spyagencyBoldItal">
+          <div className="text-white text-7xl sm:pt-60 xss:pt-36 xss:text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl spyagencyBoldItal">
             ABOUT US
           </div>
-          <p className=" text-white text-3xl xss:text-xs sm:text-lg md:text-xl ">
+          <p className=" text-white text-3xl xss:text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-3xl ">
             CHARACTER BUILDING MENTORING 2024
           </p>
         </div>
@@ -101,18 +102,26 @@ function About() {
             </div>
           </div>
         </div>
-        <div className="mx-auto w-9/12">
-          <div className="spyagencyBoldItal xss:text-xl xs:text-2xl sm:text-4xl text-start text-white mt-8">
-            REVEAL YOUR CAPABILITY WITHIN A PURPOSEFUL QUEST
+        <div className="lg:justify-center lg:flex lg:mt-16">
+          <div className="mx-auto w-9/12 xl:ml-36 lg:ml-24 lg:w-[400px] xl:w-[600px]">
+            <div className="spyagencyBoldItal xss:text-xl lg:text-4xl xl:text-6xl xs:text-2xl sm:text-4xl text-start text-white mt-8">
+              REVEAL YOUR CAPABiLiTY WiTHiN A PURPOSEFUL QUEST
+            </div>
+            <p className=" text-justify text-white xss:text-xs xs:text-sm lg:text-sm xl:text-lg sm:text-lg mt-6 ">
+              Mahasiswa yang baru masuk ke dunia perkuliahan pasti merasakan
+              beberapa perbedaan aspek dalam kehidupan barunya pada masa
+              perkuliahan. Melalui CBM 2024 kata "Reveal Your Capability"
+              mencakup bagaimana mentee dapat mengungkapkan kapabilitas mereka
+              pada dunia perkuliahan. “Purposeful Quest” mengajak mentee untuk
+              menjelajahi hidup dengan tujuan yang bermakna. Seperti
+              berpetualang mencari arti dan tujuan hidup yang memberikan makna
+              dalam setiap pertemuan yang mereka alami.
+            </p>
           </div>
-          <p className=" text-start text-white xss:text-xs xs:text-sm sm:text-lg mt-6 ">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
-          </p>
+          <img
+            src={theme}
+            className="hidden lg:block lg:w-[480px] xl:w-[600px] object-contain lg:mr-12"
+          ></img>
         </div>
         <div className="mt-12">
           <div className=" relative">
@@ -146,20 +155,39 @@ function About() {
             </div>
           </div>
         </div>
-        <div className="mx-auto w-9/12">
-          <div className="spyagencyBoldItal xss:text-xl xs:text-2xl sm:text-4xl text-end text-white mt-8">
-            <p>REVEAL,</p>
-            <p>REFINE,</p>
-            <p>RADIATE</p>
+        <div className="w-9/12 lg:w-full lg:flex lg:justify-between">
+          <img
+            src={tagline}
+            className="hidden lg:block lg:w-[480px] xl:w-[600px] object-contain lg:ml-12 xl:ml-24"
+          ></img>
+          <div className="mx-auto lg:mr-24 lg:w-[400px] xl:w-[600px]">
+            <div className="spyagencyBoldItal xss:text-xl xs:text-2xl lg:text-4xl xl:text-6xl sm:text-4xl text-end text-white mt-8">
+              <p>REVEAL,</p>
+            </div>
+            <p className=" text-justify text-white xss:text-xs xs:text-sm sm:text-lg mb-2 lg:text-sm xl:text-lg">
+              Mentee dan panitia Character Building Mentoring UMN 2024
+              diharapkan dapat mengungkapkan kapabilitas dalam diri mereka
+              selama di dunia perkuliahan melalui proses Character Building
+              Mentoring UMN 2024.
+            </p>
+            <div className="spyagencyBoldItal xss:text-xl lg:text-4xl xl:text-6xl xs:text-2xl sm:text-4xl text-end text-white">
+              <p>REFiNE,</p>
+            </div>
+            <p className=" text-justify text-white xss:text-xs xs:text-sm sm:text-lg mb-2 lg:text-sm xl:text-lg">
+              Mentee dan panitia CBM 2024 dapat melakukan pembentukan diri
+              dengan mengembangkan kapabilitas dalam diri mereka selama
+              perkuliahan melalui CBM 2024.
+            </p>
+            <div className="spyagencyBoldItal xss:text-xl lg:text-4xl xl:text-6xl xs:text-2xl sm:text-4xl text-end text-white">
+              <p>RADiATE</p>
+            </div>
+            <p className=" text-justify text-white xss:text-xs xs:text-sm sm:text-lg mb-2 lg:text-sm xl:text-lg">
+              Mentee dan panitia Character Building Mentoring UMN 2024 dapat
+              memancarkan kapabilitas mereka menjadi lebih bersinar dengan
+              mengandalkan kemampuan yang mereka miliki agar dapat berdampak
+              bagi orang sekitar.
+            </p>
           </div>
-          <p className=" text-end text-white xss:text-xs xs:text-sm sm:text-lg mt-6 ">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
-          </p>
         </div>
       </div>
       <div className="mt-12">
@@ -181,7 +209,7 @@ function About() {
             alt="3"
           />
         </div>
-        <div className="background-mentoring py-6">
+        <div className="background-mentoring py-6 lg:flex lg:justify-between">
           <div className="w-9/12 md:w-[36.25rem] lg:hidden relative z-10 mx-auto mt-16">
             <div className="relative">
               <img
@@ -197,12 +225,12 @@ function About() {
               </div>
             </div>
           </div>
-          <div className="mx-auto w-9/12">
-            <div className="spyagencyBoldItal xss:text-xl xs:text-2xl sm:text-4xl text-start text-white mt-8">
-              <p>THE MEANING</p>
-              <p>BEHIND OUR LOGO</p>
+          <div className="mx-auto w-9/12 xl:ml-36 lg:ml-24 lg:w-[400px] xl:w-[600px] lg:my-auto">
+            <div className="spyagencyBoldItal xss:text-xl xs:text-2xl sm:text-4xl lg:text-4xl xl:text-6xl text-start text-white mt-8">
+              <p>THE MEANiNG</p>
+              <p>BEHiND OUR LOGO</p>
             </div>
-            <p className=" text-start text-white xss:text-xs xs:text-sm sm:text-lg mt-6 ">
+            <p className=" text-justify text-white xss:text-xs xs:text-sm sm:text-lg mt-6 lg:text-sm xl:text-lg ">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
@@ -211,6 +239,10 @@ function About() {
               electronic typesetting, remaining essentially unchanged.
             </p>
           </div>
+          <img
+            src={logo}
+            className="hidden lg:block lg:w-[480px] xl:w-[600px] object-contain lg:mr-12"
+          ></img>
         </div>
       </div>
       <div className="mt-12">
@@ -228,33 +260,39 @@ function About() {
           />
         </div>
         <div className="background-mentoring py-6">
-          <div className="w-9/12 md:w-[36.25rem] lg:hidden relative z-10 mx-auto mt-16">
-            <div className="relative">
-              <img
-                src={ZacheryMobile}
-                className="border-4 relative z-10 sm:border-8 border-white rounded-3xl"
-                alt="Theme"
-              />
-              <div className=" border-4 sm:border-8 rounded-3xl z-0 absolute inset-0 bg-[#38467E] opacity-100 "></div>
-            </div>
-            <div className="spyagencyHalftone  z-0 polygonTheme absolute bottom-0">
-              <div className="bg-white xss:py-1 py-2 sm:py-2 text-[#832AD0] text-xl sm:text-4xl sm:pl-24 sm:pr-12 pl-12 pr-4 rounded-br-2xl">
-                ZACHERY
+          <div className="lg:w-full lg:flex lg:justify-between">
+            <img
+              src={zachery}
+              className="hidden lg:block lg:w-[480px] xl:w-[600px] object-contain lg:ml-12 xl:ml-24"
+            ></img>
+            <div className="w-9/12 md:w-[36.25rem] lg:hidden relative z-10 mx-auto mt-16">
+              <div className="relative">
+                <img
+                  src={ZacheryMobile}
+                  className="border-4 relative z-10 sm:border-8 border-white rounded-3xl"
+                  alt="Theme"
+                />
+                <div className=" border-4 sm:border-8 rounded-3xl z-0 absolute inset-0 bg-[#38467E] opacity-100 "></div>
+              </div>
+              <div className="spyagencyHalftone  z-0 polygonTheme absolute bottom-0">
+                <div className="bg-white xss:py-1 py-2 sm:py-2 text-[#832AD0] text-xl sm:text-4xl sm:pl-24 sm:pr-12 pl-12 pr-4 rounded-br-2xl">
+                  ZACHERY
+                </div>
               </div>
             </div>
-          </div>
-          <div className="mx-auto w-9/12">
-            <div className="spyagencyBoldItal xss:text-xl xs:text-2xl sm:text-4xl text-end text-white mt-8">
-              <p>MEET ZACHERY</p>
+            <div className="mx-auto w-9/12 lg:mr-24 lg:w-[400px] xl:w-[600px] lg:my-auto">
+              <div className="spyagencyBoldItal xss:text-xl xs:text-2xl sm:text-4xl lg:text-4xl xl:text-6xl text-end text-white mt-8">
+                <p>MEET ZACHERY</p>
+              </div>
+              <p className=" text-justify text-white xss:text-xs xs:text-sm sm:text-lg mt-6 lg:text-sm xl:text-lg">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged.
+              </p>
             </div>
-            <p className=" text-end text-white xss:text-xs xs:text-sm sm:text-lg mt-6 ">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged.
-            </p>
           </div>
         </div>
         <div className="flex justify-between background-atas background-mentoring mt-12">
@@ -279,29 +317,42 @@ function About() {
               Click for more information
             </a>
           </div>
-          <div class="container flex justify-center relative z-10 mx-auto w-full p-4 xss:mt-8 xs:mt-12 md:mt-16">
-            <div className="grid grid-cols-3 xs:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6 md:gap-10 justify-items-center">
-              {data.map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-white cursor-pointer col-auto p-4 md:p-6 sm:p-4 xs:p-4 rounded-full inner-shadow transition-color duration-500 ease-in-out hover:bg-[${item.hoverColor}] hover:shadow-none DropSemua"
-                  onClick={() => {
-                    setShowCard(!showCard);
-                    setSelectedData({
-                      title: item.title,
-                      description: item.description,
-                      image: item.image,
-                    });
-                  }}
-                >
-                  <img
-                    src={item.image}
-                    className="h-auto w-full max-w-[7rem] img-fluid mx-auto flex items-center justify-center"
-                  />
-                </div>
-              ))}
+          <div className="container flex justify-center relative z-10 mx-auto w-full p-4 xss:mt-8 xs:mt-12 md:mt-16">
+            <div className="grid grid-cols-6 xs:grid-cols-6 md:grid-cols-6 lg:grid-cols-6 xl:grid-cols-8  gap-6 md:gap-10 justify-items-center">
+              {data.map((item, index) => {
+                const isLastRow = index >= data.length - (data.length % 3);
+                const isThirdToLast = index === data.length - 3;
+                return (
+                  <div
+                    key={index}
+                    className={`bg-white cursor-pointer p-4 md:p-6 sm:p-4 xs:p-4 col-span-2 rounded-full inner-shadow transition-color duration-500 ease-in-out hover:bg-[${
+                      item.hoverColor
+                    }] hover:shadow-none DropSemua ${
+                      isLastRow
+                        ? data.length % 3 === 2 && index === data.length - 2
+                          ? "col-start-2 xl:col-start-auto"
+                          : ""
+                        : ""
+                    }${isThirdToLast ? "xl:col-start-2" : ""}`}
+                    onClick={() => {
+                      setShowCard(!showCard);
+                      setSelectedData({
+                        title: item.title,
+                        description: item.description,
+                        image: item.image,
+                      });
+                    }}
+                  >
+                    <img
+                      src={item.image}
+                      className="h-auto w-full max-w-[7rem] img-fluid mx-auto flex items-center justify-center"
+                    />
+                  </div>
+                );
+              })}
             </div>
           </div>
+
           <div className="Daco relative top-0 right-0 w-full overflow-hidden">
             <img src={Daco} className="daco-image" />
           </div>
@@ -317,14 +368,14 @@ function About() {
               >
                 <img
                   src={selectedData.image}
-                  className="xss:w-[40px] xs:w-[85px] md:w-[80px] lg:w-[100px] img-fluid object-cover"
+                  className="xss:w-10 xs:w-[85px] md:w-[80px] lg:w-[100px] img-fluid object-cover"
                 />
               </div>
               <div
-                className="xss:mt-9 lg:mt-10 lg:mb-3 lg:px-[40px] lg:pb-[20px] gradientcolor container1 xss:w-[490px] xss:h-[130px] xs:w-[600px] xs:h-[160px] md:w-[700px] md:h-[300px] lg:w-[750px] lg:h-[370px] xss:rounded-[20px] xs:rounded-[35px] lg:rounded-[60px] z-[-1] overflow-hidden inShadow flex flex-col justify-between"
+                className="xss:mt-9 lg:mt-10 lg:mb-3 lg:px-10 lg:pb-5 gradientcolor container1 xss:w-[490px] xss:h-[130px] xs:w-[600px] xs:h-[160px] md:w-[700px] md:h-[300px] lg:w-[750px] lg:h-[370px] xss:rounded-[20px] xs:rounded-[35px] lg:rounded-[60px] z-[-1] overflow-hidden inShadow flex flex-col justify-between"
                 onClick={handleCardStay}
               >
-                <h2 className="font-spyagencyOri text-white xss:text-[10px] xs:text-md md:text-xl lg:text-3xl xss:mt-5 xs:mt-6 md:mt-9 lg:mt-10">
+                <h2 className="spyagencyRegular text-white xss:text-[10px] xs:text-md md:text-xl lg:text-3xl xss:mt-5 xs:mt-6 md:mt-9 lg:mt-10">
                   {selectedData.title}
                 </h2>
                 <div className="flex-grow flex items-center justify-center">
