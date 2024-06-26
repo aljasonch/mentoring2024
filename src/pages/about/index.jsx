@@ -155,7 +155,7 @@ function About() {
             </div>
           </div>
         </div>
-        <div className="w-9/12 lg:w-full lg:flex lg:justify-between">
+        <div className="w-9/12 mx-auto lg:w-full lg:flex lg:justify-between">
           <img
             src={tagline}
             className="hidden lg:block lg:w-[480px] xl:w-[600px] object-contain lg:ml-12 xl:ml-24"
