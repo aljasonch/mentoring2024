@@ -8,12 +8,12 @@ const data = [
         content: "Character Building Mentoring merupakan kegiatan wajib."
     },
     {
-        header: "CBM akan dilaksanakan secara offline atau online?",
+        header: "Mentoring akan dilaksanakan secara offline atau online?",
         content: "Offline di kampus Universitas Multimedia Nusantara."
     },
     {
-        header: "CBM dilaksanakan pada tanggal berapa?",
-        content: "CBM akan dilaksanakan pada 9, 16, 23, 30 September 2023"
+        header: "Mentoring dilaksanakan pada tanggal berapa?",
+        content: "Mentoring akan dilaksanakan pada 7, 14, 21, 28 September 2024"
     },
     {
         header: "Bagaimana cara mengecek daftar kelompok?",
@@ -24,7 +24,7 @@ const data = [
         content: "Silahkan hubungi DM Instagram Mentoring UMN (@mentoringumn)."
     },
     {
-        header: "Bagaimana jika jadwal CBM bertabrakan dengan jadwal kelas di hari Sabtu?",
+        header: "Bagaimana jika jadwal Mentoring bertabrakan dengan jadwal kelas di hari Sabtu?",
         content: "Silahkan hubungi DM Instagram Mentoring UMN (@mentoringumn)."
     },
     {
@@ -32,12 +32,12 @@ const data = [
         content: "Atasan putih polos dengan celana hitam polos."
     },
     {
-        header: "Apakah ada yang perlu dibawa ke CBM?",
+        header: "Apakah ada yang perlu dibawa ke Mentoring?",
         content: "KTM, dan perlengkapan setiap pertemuan yang dapat ditanyakan kepada mentor masing-masing."
     },
     {
         header: "Character Building Mentoring mulai jam berapa dan selesai jam berapa?",
-        content: "Waktu berlangsungnya CBM dapat dipastikan kepada Mentor masing-masing."
+        content: "Waktu berlangsungnya Mentoring dapat dipastikan kepada Mentor masing-masing."
     },
     {
         header: "Apakah rambut harus hitam atau boleh berwarna?",
