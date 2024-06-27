@@ -15,7 +15,7 @@ function Navbar() {
 
   return (
     <div>
-      <div className="fixed z-30 w-full sm:h-32 heightMiniSmartphone heightSmartphone 2xl:h-32 xl:h-28 md:h-36 lg:h-20 background-navbar"></div>
+      <div className="fixed z-30 w-full sm:h-32 heightMiniSmartphone heightSmartphone backdrop-blur 2xl:h-32 xl:h-28 md:h-36 lg:h-20 background-navbar"></div>
       <div className="w-full mx-auto flex items-center justify-between fixed z-40">
         <div className="relative">
           <img
