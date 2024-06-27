@@ -70,7 +70,7 @@ function Home() {
           </p>
         </div>
         <a
-          href="https://www.instagram.com/ven._.0404/"
+          href="https://www.instagram.com/mentoringumn/"
           target="_blank"
           rel="noopener noreferrer"
         >
