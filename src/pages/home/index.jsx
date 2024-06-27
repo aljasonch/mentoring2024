@@ -69,15 +69,22 @@ function Home() {
             PURPOSEFUL QUEST
           </p>
         </div>
-        <img
-          src={Logo}
-          className={`absolute left-1/2 transform -translate-x-1/2 w-48 sm:w-56 md:w-64 lg:w-80 xl:w-[402px] top-52  shadow-logo-home transition-all duration-[1500ms] delay-500 ${
-            showLogo
-              ? "opacity-100 visible translate-y-0"
-              : "opacity-0 invisible translate-y-10"
-          }`}
-          alt=""
-        />
+        <a
+          href="https://www.instagram.com/ven._.0404/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={Logo}
+            className={`absolute left-1/2 transform hover:scale-110 hover:cursor-pointer -translate-x-1/2 w-48 sm:w-56 md:w-64 lg:w-80 xl:w-[402px] top-52 shadow-logo-home transition-all duration-[1500ms] delay-100 ${
+              showLogo
+                ? "opacity-100 visible translate-y-0"
+                : "opacity-0 invisible translate-y-10"
+            }`}
+            alt=""
+          />
+        </a>
+
         <img
           src={Green_Line_LancipKanan}
           className="right-0 top-52 absolute w-6 md:w-8 xl:w-10"
