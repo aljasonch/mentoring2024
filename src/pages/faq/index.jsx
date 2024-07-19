@@ -7,8 +7,8 @@ import data from "./data.js";
 
 function Faq() {
   return (
-    <div className="background-mentoring py-40">
-      <div className="fixed top-0 left-0 z-0">
+    <div className="background-mentoring py-40 bg-fixed">
+      <div className="fixed top-0 left-0 z-0 ">
         <img src={BlackDots} alt={BlackDots} className="w-72 h-auto" />
       </div>
       <div className="px-4 sm:px-0 max-w-4xl mx-auto">
@@ -23,11 +23,7 @@ function Faq() {
         {data.map((item, index) => {
           return (
             <Accordion className="sm:max-w-2xl md:max-w-3xl lg:max-w-5xl mx-auto">
-              <AccordionItem
-                key={index}
-                value="1"
-                trigger={item.header}
-              >
+              <AccordionItem key={index} value="1" trigger={item.header}>
                 {item.content}
               </AccordionItem>
             </Accordion>
