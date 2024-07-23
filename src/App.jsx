@@ -4,7 +4,7 @@ import Navbar from "./components/navbar";
 import Home from "./pages/home";
 import Faq from "./pages/faq";
 import About from "./pages/about";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import { Gallery } from "./pages/gallery/index";
 import LoadingScreen from "./components/loadingScreen";
@@ -18,16 +18,29 @@ function App() {
     setTimeout(() => {
      setLoading(false);
     }, 2500);
+
+  }, []);
+  useEffect(() => {
+    window.addEventListener("message", (event) => {
+      const { pathname, crossoriginCheck } = event.data;
+      if (crossoriginCheck !== "PASS") {
+        return;
+      }
+      if (location.pathname !== pathname) {
+        history.replaceState(null, "", pathname);
+      }
+    });
+    window.parent.postMessage(
+      { pathname: location.pathname, crossoriginCheck: "PASS" },
+      "*"
+    );
   }, []);
 
-/*   useEffect(() => {
-    window.addEventListener("load", () => {
-      setLoading(false);
-    });
-  }, []); */
-
   useEffect(() => {
-    window.top.postMessage(location.pathname, "*");
+    window.parent.postMessage(
+      { pathname: location.pathname, crossoriginCheck: "PASS" },
+      "*"
+    );
   }, [location]);
 
 
