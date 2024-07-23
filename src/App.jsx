@@ -13,6 +13,7 @@ import { useState, useEffect } from "react";
 function App() {
   const [loading, setLoading] = useState(true);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     setTimeout(() => {
@@ -27,7 +28,9 @@ function App() {
         return;
       }
       if (location.pathname !== pathname) {
-        history.replaceState(null, "", pathname);
+        //history.replaceState(null, "", pathname);
+        //console.log("pathname", pathname);
+        navigate(pathname);
       }
     });
     window.parent.postMessage(
