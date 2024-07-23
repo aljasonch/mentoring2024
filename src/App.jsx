@@ -4,7 +4,7 @@ import Navbar from "./components/navbar";
 import Home from "./pages/home";
 import Faq from "./pages/faq";
 import About from "./pages/about";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import { Gallery } from "./pages/gallery/index";
 import LoadingScreen from "./components/loadingScreen";
@@ -12,12 +12,24 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const location = useLocation();
 
   useEffect(() => {
     setTimeout(() => {
-      setLoading(false);
+     setLoading(false);
     }, 2500);
   }, []);
+
+/*   useEffect(() => {
+    window.addEventListener("load", () => {
+      setLoading(false);
+    });
+  }, []); */
+
+  useEffect(() => {
+    window.top.postMessage(location.pathname, "*");
+  }, [location]);
+
 
   return (
     <div className="mx-auto">
