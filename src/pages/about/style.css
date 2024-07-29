@@ -52,16 +52,6 @@
   box-shadow: inset 0px 4px 50px #afefff;
 }
 
-
-
-.DropSemua {
-  box-shadow: 0px 10px 4px rgba(24, 35, 80, 0.5), inset 0px 4px 50px #afefff;
-}
-
-.DropCard {
-  box-shadow: 0px 10px 4px rgba(24, 35, 80, 0.3), inset 0px 4px 50px #afefff;
-}
-
 .Daco img {
   width: 800px;
   margin-bottom: -100px;
@@ -90,7 +80,7 @@
   opacity: 0.35;
   z-index: -1;
 }
-.container1 {
+.card-container {
   position: fixed;
   top: 50%;
   left: 50%;
