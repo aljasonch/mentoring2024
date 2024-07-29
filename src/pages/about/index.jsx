@@ -125,15 +125,15 @@ function About() {
         </div>
         <div className="mt-12">
           <div className=" relative">
-            <img src={z1} className="w-7/12 z-20 relative" alt="1" />
+            <img src={z1} className="w-7/12 z-20 relative lg:w-1/3" alt="1" />
             <img
               src={z2}
-              className="absolute z-10 w-9/12 top-12 sm:top-24 left-0"
+              className="absolute z-10 w-9/12 top-12 sm:top-24 left-0 lg:w-3/5"
               alt="2"
             />
             <img
               src={z3}
-              className="absolute z-30 w-6/12 top-8 sm:top-16 right-0"
+              className="absolute z-30 w-6/12 top-8 sm:top-16 right-0 lg:w-2/5"
               alt="3"
             />
           </div>
@@ -192,20 +192,20 @@ function About() {
       </div>
       <div className="mt-12">
         <div className="relative">
-          <img src={z4} className="w-7/12 z-20 relative" alt="1" />
+          <img src={z4} className="w-7/12 z-20 relative lg:w-2/5" alt="1" />
           <img
             src={z5}
-            className="absolute z-20 w-8 top-12 sm:top-24 -left-4"
+            className="absolute z-10 w-8 top-12 sm:top-24 -left-4 lg:w-12 lg:top-28"
             alt="2"
           />
           <img
             src={z6}
-            className="absolute z-10 w-72 sm:w-7/12 top-6 sm:top-10 right-0"
+            className="absolute z-10 w-72 sm:w-7/12 top-6 sm:top-10 right-0 lg:w-1/2"
             alt="3"
           />
           <img
             src={z7}
-            className="absolute z-0 w-36 -top-16 sm:w-48 sm:-top-16 right-0"
+            className="absolute z-0 w-36 -top-16 sm:w-48 sm:-top-16 right-0 lg:w-1/5 lg:-top-40 "
             alt="3"
           />
         </div>
@@ -247,15 +247,15 @@ function About() {
       </div>
       <div className="mt-12">
         <div className="relative">
-          <img src={z8} className="w-7/12 z-20 relative" alt="1" />
+          <img src={z8} className="w-7/12 z-20 relative lg:bottom-4" alt="1" />
           <img
             src={z9}
-            className="absolute z-20 w-7/12 top-12 sm:top-24 left-0"
+            className="absolute z-20 w-7/12 top-12 sm:top-24 left-0 lg:w-2/5"
             alt="2"
           />
           <img
             src={z10}
-            className="absolute z-30 w-56 sm:-top-10 sm:w-7/12 -top-6 right-0"
+            className="absolute z-20 w-56 sm:-top-10 sm:w-7/12 -top-6 right-0 lg:w-2/5"
             alt="3"
           />
         </div>
@@ -325,9 +325,7 @@ function About() {
                 return (
                   <div
                     key={index}
-                    className={`bg-white cursor-pointer p-4 md:p-6 sm:p-4 xs:p-4 col-span-2 rounded-full inner-shadow transition-color duration-500 ease-in-out hover:bg-[${
-                      item.hoverColor
-                    }] hover:shadow-none DropSemua ${
+                    className={`bg-white cursor-pointer p-4 md:p-6 sm:p-4 xs:p-4 col-span-2 rounded-full inner-shadow transition-color duration-500 ease-in-out hover:shadow-none shadow-2xl ${
                       isLastRow
                         ? data.length % 3 === 2 && index === data.length - 2
                           ? "col-start-2 xl:col-start-auto"
@@ -342,6 +340,16 @@ function About() {
                         image: item.image,
                       });
                     }}
+                    style={{
+                      transition: "background-color 0.5s ease-in-out",
+                      backgroundColor: "white",
+                    }}
+                    onMouseEnter={(e) =>
+                      (e.currentTarget.style.backgroundColor = item.hoverColor)
+                    }
+                    onMouseLeave={(e) =>
+                      (e.currentTarget.style.backgroundColor = "white")
+                    }
                   >
                     <img
                       src={item.image}
@@ -358,12 +366,12 @@ function About() {
           </div>
           {showCard && selectedData && (
             <div
-              className="w-[790px] h-[480px] overflow-hidden container1"
+              className="w-[790px] h-[480px] overflow-hidden card-container"
               ref={cardRef}
               onClick={handleCardClick}
             >
               <div
-                className="bg-white cursor-pointer flex justify-center xss:w-[60px] xs:w-[68px] md:w-[100px] lg:w-[120px] container1 xss:top-[42%] xs:top-[38%] md:top-[25%] lg:top-[15%] rounded-full DropCard"
+                className="bg-white cursor-pointer flex justify-center xss:w-[60px] xs:w-[68px] md:w-[100px] lg:w-[120px] card-container xss:top-[42%] xs:top-[38%] md:top-[25%] lg:top-[20%] rounded-full shadow-lg "
                 onClick={handleCardStay}
               >
                 <img
@@ -372,7 +380,7 @@ function About() {
                 />
               </div>
               <div
-                className="xss:mt-9 lg:mt-10 lg:mb-3 lg:px-10 lg:pb-5 gradientcolor container1 xss:w-[490px] xss:h-[130px] xs:w-[600px] xs:h-[160px] md:w-[700px] md:h-[300px] lg:w-[750px] lg:h-[370px] xss:rounded-[20px] xs:rounded-[35px] lg:rounded-[60px] z-[-1] overflow-hidden inShadow flex flex-col justify-between"
+                className="xss:mt-9 lg:mt-10 lg:mb-3 lg:px-10 lg:pb-5 gradientcolor card-container xss:w-[490px] xss:h-[130px] xs:w-[600px] xs:h-[160px] md:w-[700px] md:h-[300px] lg:w-[750px] lg:h-[370px] xss:rounded-[20px] xs:rounded-[35px] lg:rounded-[60px] z-[-1] overflow-hidden inShadow flex flex-col justify-between"
                 onClick={handleCardStay}
               >
                 <h2 className="spyagencyRegular text-white xss:text-sm xs:text-md md:text-xl lg:text-3xl xss:mt-3  xs:mt-6 md:mt-14 lg:mt-16">
