@@ -16,9 +16,61 @@ import Logo_Competent from "../../assets/COMPETENT.webp";
 import Logo_Competitive from "../../assets/COMPETITIVE.webp";
 import Logo_Customer_Delight from "../../assets/CUSTOMER.webp";
 import { Carousel } from "../../components/carousel/Carousel";
-import { slides } from "../../components/carousel/carouselData.json";
-import React, { useState, useEffect } from "react";
-function Home() {
+import { slidesCarousel } from "../../components/carousel/carouselData.json";
+import React, { useState, useEffect, useMemo } from "react";
+import { maps } from "./dataMap";
+import Lightbox from "yet-another-react-lightbox";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import "yet-another-react-lightbox/styles.css";
+
+export default function Home() {
+  const [index, setIndex] = useState(-1);
+  const [slides, setSlides] = useState([]);
+
+  const today = useMemo(() => new Date(), []);
+  const day1 = useMemo(() => new Date("2024-08-07"), []);
+  const day2 = useMemo(() => new Date("2024-09-14"), []);
+  const day3 = useMemo(() => new Date("2024-09-21"), []);
+  const day4 = useMemo(() => new Date("2024-09-28"), []);
+  const day5 = useMemo(() => new Date("2024-11-16"), []);
+  const manifest = maps[4];
+
+  useEffect(() => {
+    const newSlides = [];
+
+    if (today < day1) {
+      newSlides.push({ src: maps[0].locked, title: maps[0].title });
+    } else {
+      newSlides.push({ src: maps[0].unlocked, title: maps[0].title });
+    }
+
+    if (today < day2) {
+      newSlides.push({ src: maps[1].locked, title: maps[1].title });
+    } else {
+      newSlides.push({ src: maps[1].unlocked, title: maps[1].title });
+    }
+
+    if (today < day3) {
+      newSlides.push({ src: maps[2].locked, title: maps[2].title });
+    } else {
+      newSlides.push({ src: maps[2].unlocked, title: maps[2].title });
+    }
+
+    if (today < day4) {
+      newSlides.push({ src: maps[3].locked, title: maps[3].title });
+    } else {
+      newSlides.push({ src: maps[3].unlocked, title: maps[3].title });
+    }
+
+    if (today < day5) {
+      newSlides.push({ src: manifest.locked, title: manifest.title });
+    } else {
+      newSlides.push({ src: manifest.unlocked, title: manifest.title });
+    }
+
+    setSlides(newSlides);
+  }, [today, maps, day1, day2, day3, day4, day5, manifest]);
+
   const logos = [
     Logo_Caring,
     Logo_Credible,
@@ -81,7 +133,7 @@ function Home() {
                 ? "opacity-100 visible translate-y-0"
                 : "opacity-0 invisible translate-y-10"
             }`}
-            alt=""
+            alt="logo"
           />
         </a>
 
@@ -90,6 +142,7 @@ function Home() {
           className="right-0 top-52 absolute w-6 md:w-8 xl:w-10"
         />
       </div>
+
       <div className="relative background-transition">
         <img src={Transition1} className="relative z-10" />
         <img
@@ -100,6 +153,7 @@ function Home() {
           src={Petir_2}
           className="absolute xl:w-1/6 w-1/4 xss:top-16 xs:top-20 sm:top-36 xl:top-[300px] lg:top-48 right-0 z-0"
         />
+
         <div className="pb-20 md:pb-28 background-mentoring">
           <div className="text-white my-10 mx-auto">
             <img src={Logo} className="w-[81px] mx-auto" alt="Logo Mentoring" />
@@ -126,6 +180,63 @@ function Home() {
             </p>
           </div>
         </div>
+
+        <p className="text-white spyagencyBoldItal text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+            Mentoring Verse
+          </p>
+
+          <div className="mt-10 columns-1 md:columns-2 gap-5 px-14 md:px-24 xl:px-72 mx-auto">
+            {slides.map(
+              (slide, index) =>
+                index < 4 && (
+                  <div
+                    key={index}
+                    className="w-full relative cursor-pointer"
+                    onClick={() => setIndex(index)}
+                  >
+                    <img
+                      className="overflow-hidden mb-5 border-4 border-white object-cover"
+                      src={slide.src}
+                      alt={slide.title}
+                    />
+                    <div className="absolute bottom-0 p-4 z-0 bg-opacity-50 left-0 w-full h-full transition-opacity duration-500 ease-in-out xl:opacity-0 xl:hover:opacity-100 xss:opacity-100 xss:bg-opacity-50">
+                      <div className="spyagencyCond polygon absolute bottom-0">
+                        <div className="bg-white xss:py-1 py-2 xss:text-md md:text-lg lg:text-xl xl:text-2xl xss:px-6 xss:pr-2 md:pl-4 md:pr-8 xl:pr-10">
+                          {slide.title}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )
+            )}
+          </div>
+          <div className="mb-10 columns-1 px-14 md:px-24 xl:px-72 mx-auto">
+            <div
+              className="w-full relative cursor-pointer"
+              onClick={() => index === -1 && setIndex(slides.length - 1)}
+            >
+              <img
+                className="overflow-hidden mb-5 border-4 border-white object-cover"
+                src={manifest.locked}
+                alt={manifest.title}
+              />
+              <div className="absolute bottom-0 p-4 z-0 bg-opacity-50 left-0 w-full h-full transition-opacity duration-500 ease-in-out xl:opacity-0 xl:hover:opacity-100 xss:opacity-100 xss:bg-opacity-50">
+                <div className="spyagencyCond polygon absolute bottom-0">
+                  <div className="bg-white xss:py-1 py-2 xss:text-md md:text-lg lg:text-xl xl:text-2xl xss:px-6 xss:pr-2 md:pl-4 md:pr-8 xl:pr-10">
+                    {manifest.title}
+                  </div>
+                </div>
+              </div>
+
+              <Lightbox
+                slides={slides}
+                open={index >= 0}
+                index={index}
+                close={() => setIndex(-1)}
+                plugins={[Zoom]}
+              />
+            </div>
+          </div>
       </div>
       <div className="relative">
         <div className="background-transition_2">
@@ -135,7 +246,7 @@ function Home() {
             className="mt-24 w-2/6 top-0 left-0 absolute z-0"
           />
         </div>
-        <div className=" pb-20 md:pb-40 background-mentoring">
+        <div className="pb-20 md:pb-40 background-mentoring">
           <img
             src={Logo_5C}
             className="w-[76px] h-[81px] mx-auto"
@@ -156,11 +267,9 @@ function Home() {
           <div className="md:pb-16">
             <img src={Green_Line} className="absolute w-6 md:w-8 xl:w-10" />
           </div>
-          <Carousel data={slides} logos={logos} />
+          <Carousel data={slidesCarousel} logos={logos} />
         </div>
       </div>
     </>
   );
 }
-
-export default Home;

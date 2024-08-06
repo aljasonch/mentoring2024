@@ -1,7 +1,8 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import { LoadableImage } from "./LoadableImage";
 
 export function ExpandingClickablePhoto({ data, setstate, centercrop }) {
+  const [open, setOpen] = useState(false);
   const handleClick = useCallback(() => {
     setstate({
       currentscreen: data.screenname,
@@ -9,7 +10,7 @@ export function ExpandingClickablePhoto({ data, setstate, centercrop }) {
   }, [data, setstate]);
 
   return (
-    <div className="w-full h-full relative">
+    <div className="w-full h-full relative" onClick={() => setOpen(true)}>
       <div className="overflow-hidden absolute left-0 right-0 ml-auto mr-auto top-0 bottom-0 mt-auto mb-auto flex justify-center items-center">
         <LoadableImage src={data.widecover} centercrop={centercrop} />
       </div>
