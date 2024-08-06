@@ -96,10 +96,10 @@ export function Gallery() {
           </div>
           <div className="w-full flex justify-center mt-2">
             <div className="grid grid-cols-1 md:grid-cols-2 xss:gap-0 md:gap-4 lg:gap-6">
-              {["tutorial", "stage1", "stage2", "stage3"].map((key) => (
+              {["tutorial", "stage1", "stage2", "stage3", "manifest"].map((key) => (
                 <div
                   key={key}
-                  className="overflow-hidden border-white md:border-8 xss:border-4 rounded-3xl xss:w-[19.5rem] xss:h-[8.438rem] sm:w-[30rem] md:w-[20rem] md:h-[12rem] lg:w-[24rem] lg:h-[14rem] xl:w-[32rem] xl:h-[19rem] 2xl:w-[42rem] 2xl:h-[25rem] sm:h-[14rem] md:mt-2 xss:mt-4"
+                  className="overflow-hidden border-white md:border-8 xss:border-4 rounded-3xl xss:w-[19.5rem] xss:h-[8.438rem] sm:w-[30rem] md:w-[20rem] md:h-[12rem] lg:w-[24rem] lg:h-[14rem] xl:w-[32rem] xl:h-[18.5rem] 2xl:w-[41rem] 2xl:h-[23.5rem] sm:h-[14rem] md:mt-2 xss:mt-4"
                 >
                   <ExpandingClickablePhoto
                     data={data[key]}
