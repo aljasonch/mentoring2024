@@ -44,16 +44,6 @@ function About() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const handleDivisionClick = async (index) => {
-    const image = await importImage(data[index].imageName);
-    setSelectedData({
-      title: data[index].title,
-      description: data[index].description,
-      image: image.default,
-    });
-    setShowCard(true);
-  };
-
   const handleCardClick = (event) => {
     if (cardRef.current && cardRef.current.contains(event.target)) {
       cardRef.current.classList.remove("slide-up");
