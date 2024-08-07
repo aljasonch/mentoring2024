@@ -100,12 +100,14 @@ function About() {
             <p className=" text-justify text-white xss:text-xs xs:text-sm lg:text-sm xl:text-lg sm:text-lg mt-6 ">
               Mahasiswa yang baru masuk ke dunia perkuliahan pasti merasakan
               beberapa perbedaan aspek dalam kehidupan barunya pada masa
-              perkuliahan. Melalui CBM 2024 kata "Reveal Your Capability"
+              perkuliahan. Melalui CBM 2024 kata{" "}
+              <span className="font-bold italic">"Reveal Your Capability"</span>{" "}
               mencakup bagaimana mentee dapat mengungkapkan kapabilitas mereka
-              pada dunia perkuliahan. “Purposeful Quest” mengajak mentee untuk
-              menjelajahi hidup dengan tujuan yang bermakna. Seperti
-              berpetualang mencari arti dan tujuan hidup yang memberikan makna
-              dalam setiap pertemuan yang mereka alami.
+              pada dunia perkuliahan.{" "}
+              <span className="font-bold italic">“Purposeful Quest”</span>{" "}
+              mengajak mentee untuk menjelajahi hidup dengan tujuan yang
+              bermakna. Seperti berpetualang mencari arti dan tujuan hidup yang
+              memberikan makna dalam setiap pertemuan yang mereka alami.
             </p>
           </div>
           <img
@@ -275,12 +277,16 @@ function About() {
                 <p>MEET ZACHERY</p>
               </div>
               <p className=" text-justify text-white xss:text-xs xs:text-sm sm:text-lg mt-6 lg:text-sm xl:text-lg">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged.
+                <span className="font-bold italic">
+                  ZACHERY (Burung Hantu) : Zachery (Latin)
+                </span>{" "}
+                merupakan bentuk perwujudan dari logo Mentoring UMN 2021 yang
+                menggambarkan sifat {" "}
+                <span className="font-bold italic">
+                  kejujuran, kecerdasan, dan keyakinan yang tinggi.{" "}
+                </span>
+                Zachery akan menemani mentee mengarungi perjalanan panjang yang
+                tak terlupakan.
               </p>
             </div>
           </div>

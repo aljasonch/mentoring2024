@@ -30,11 +30,11 @@ function Navbar() {
           />
         </div>
         <div className="hidden lg:flex mx-auto">
-          <ul className="flex 2xl:pb-16 xl:pb-16 mx-auto md:pb-6 lg:pb-10 z-0 2xl:gap-x-24 xl:gap-x-20 md:gap-x-8 lg:gap-x-12">
+          <ul className="flex 2xl:pb-12 xl:pb-16 mx-auto md:pb-6 lg:pb-10 z-0 2xl:gap-x-20 xl:gap-x-20 md:gap-x-8 lg:gap-x-12">
             <Link to="/">
               <div className="2xl:w-44 2xl:h-16 xl:w-36 xl:h-12 md:w-24 md:h-10">
-                <li className="text-[#2B2476] bg-white 2xl:w-36 2xl:h-12 xl:w-28 xl:h-8 md:w-20 md:h-6 -skew-x-[40deg] shadow-nav rounded-tr-2xl rounded-bl-2xl rounded-tl rounded-br transform hover:scale-110 transition-transform duration-500">
-                  <h1 className="2xl:text-lg lg:text-[10px] xl:text-sm  2xl:pr-3 xl:pr-2 md:pr-0.5 2xl:py-3 xl:py-2 md:relative md:top-[-2.5px] font-semibold skew-x-[40deg] inline-block">
+                <li className="text-[#2B2476] bg-white 2xl:w-36 2xl:h-10 xl:w-28 xl:h-8 md:w-20 md:h-6 -skew-x-[40deg] shadow-nav rounded-tr-2xl rounded-bl-2xl rounded-tl rounded-br transform hover:scale-110 transition-transform duration-500">
+                  <h1 className="2xl:text-lg lg:text-[10px] xl:text-sm  2xl:pr-2 2xl:top-[-6px] xl:pr-2 md:pr-0.5 2xl:py-3 xl:py-2 md:relative md:top-[-2.5px] font-semibold skew-x-[40deg] inline-block">
                     HOME
                   </h1>
                 </li>
@@ -42,8 +42,8 @@ function Navbar() {
             </Link>
             <Link to="/faq">
               <div className="2xl:w-44 2xl:h-16 xl:w-36 xl:h-12 md:w-24 md:h-10">
-                <li className="text-[#2B2476] bg-white 2xl:w-36 2xl:h-12 xl:w-28 xl:h-8 md:w-20 md:h-6 -skew-x-[40deg] shadow-nav rounded-tr-2xl rounded-bl-2xl rounded-tl rounded-br transform hover:scale-110 transition-transform duration-500">
-                  <h1 className="2xl:text-lg lg:text-[10px] xl:text-sm  2xl:pr-3 xl:pr-2 md:pr-1 2xl:py-3 xl:py-2 md:relative md:top-[-2.5px] font-semibold skew-x-[40deg] inline-block">
+                <li className="text-[#2B2476] bg-white 2xl:w-36 2xl:h-10 xl:w-28 xl:h-8 md:w-20 md:h-6 -skew-x-[40deg] shadow-nav rounded-tr-2xl rounded-bl-2xl rounded-tl rounded-br transform hover:scale-110 transition-transform duration-500">
+                  <h1 className="2xl:text-lg lg:text-[10px] xl:text-sm  2xl:pr-2 2xl:top-[-6px] xl:pr-2 md:pr-1 2xl:py-3 xl:py-2 md:relative md:top-[-2.5px] font-semibold skew-x-[40deg] inline-block">
                     FAQ
                   </h1>
                 </li>
@@ -51,8 +51,8 @@ function Navbar() {
             </Link>
             <Link to="/about">
               <div className="2xl:w-44 2xl:h-16 xl:w-36 xl:h-12 md:w-24 md:h-10">
-                <li className="text-[#2B2476] bg-white 2xl:w-36 2xl:h-12 xl:w-28 xl:h-8 md:w-20 md:h-6 -skew-x-[40deg] shadow-nav rounded-tr-2xl rounded-bl-2xl rounded-tl rounded-br transform hover:scale-110 transition-transform duration-500">
-                  <h1 className="2xl:text-lg lg:text-[10px] xl:text-sm  2xl:pr-2 xl:pr-1 2xl:py-3 xl:py-2 md:relative md:top-[-2.5px] font-semibold skew-x-[40deg] inline-block">
+                <li className="text-[#2B2476] bg-white 2xl:w-36 2xl:h-10 xl:w-28 xl:h-8 md:w-20 md:h-6 -skew-x-[40deg] shadow-nav rounded-tr-2xl rounded-bl-2xl rounded-tl rounded-br transform hover:scale-110 transition-transform duration-500">
+                  <h1 className="2xl:text-lg lg:text-[10px] xl:text-sm  2xl:pr-2 2xl:top-[-6px] xl:pr-1 2xl:py-3 xl:py-2 md:relative md:top-[-2.5px] font-semibold skew-x-[40deg] inline-block">
                     ABOUT US
                   </h1>
                 </li>
@@ -60,8 +60,8 @@ function Navbar() {
             </Link>
             <Link to="/gallery">
               <div className="2xl:w-44 2xl:h-16 xl:w-36 xl:h-12 md:w-24 md:h-10">
-                <li className="text-[#2B2476] bg-white 2xl:w-36 2xl:h-12 xl:w-28 xl:h-8 md:w-20 md:h-6 -skew-x-[40deg] shadow-nav rounded-tr-2xl rounded-bl-2xl rounded-tl rounded-br transform hover:scale-110 transition-transform duration-500">
-                  <h1 className="2xl:text-lg lg:text-[10px] xl:text-sm  2xl:pr-2 xl:pr-1 2xl:py-3 xl:py-2 md:relative md:top-[-2.5px] font-semibold skew-x-[40deg] inline-block">
+                <li className="text-[#2B2476] bg-white 2xl:w-36 2xl:h-10 xl:w-28 xl:h-8 md:w-20 md:h-6 -skew-x-[40deg] shadow-nav rounded-tr-2xl rounded-bl-2xl rounded-tl rounded-br transform hover:scale-110 transition-transform duration-500">
+                  <h1 className="2xl:text-lg lg:text-[10px] xl:text-sm  2xl:pr-2 2xl:top-[-6px] xl:pr-1 2xl:py-3 xl:py-2 md:relative md:top-[-2.5px] font-semibold skew-x-[40deg] inline-block">
                     GALLERY
                   </h1>
                 </li>

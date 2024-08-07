@@ -6,9 +6,10 @@ import InternalNavBar from "../../components/gallerycomponents/InternalNavBar";
 import ScrollablePhotoSet from "../../components/gallerycomponents/ScrollablePhotoSet";
 import PillButtonGenerator from "../../components/gallerycomponents/PillButtonGenerator";
 import "./style.css";
-import data from "./data";
+import { getData } from './data.js';
 
 export function Gallery() {
+  const [data, setData] = useState(null);
   const [localstate, _setstate] = useState({
     selected: "tutorial",
     currentscreen: "main",
@@ -17,6 +18,19 @@ export function Gallery() {
   const navigate = useNavigate();
   const location = useLocation();
   const [initialPathCheck, setInitialPathCheck] = useState(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const fetchedData = await getData();
+        setData(fetchedData);
+      } catch (error) {
+        console.error('Failed to fetch data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   useEffect(() => {
     if (!initialPathCheck && location.pathname.endsWith("collection")) {
@@ -41,9 +55,13 @@ export function Gallery() {
   );
 
   const currentData = useMemo(
-    () => data[localstate.currentscreen],
-    [localstate.currentscreen]
+    () => data ? data[localstate.currentscreen] : null,
+    [data, localstate.currentscreen]
   );
+
+  if (!data) {
+    return <div>Loading...</div>; // Handle loading state
+  }
 
   return (
     <div className="background-mentoring py-40">

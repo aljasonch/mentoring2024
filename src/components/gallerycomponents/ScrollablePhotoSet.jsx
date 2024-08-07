@@ -68,7 +68,7 @@ const ScrollablePhotoSet = React.memo(({ localstate, setstate, data }) => {
               localstate.currentimage === index
                 ? "border-white"
                 : "border-transparent"
-            } min-w-24 sm:min-w-[88px] md:min-w-24 lg:min-w-28 xl:min-w-28 2xl:min-w-32 transition-all duration-200 ease-in-out hover:border-white cursor-pointer w-full h-full rounded-xl overflow-hidden`}
+            } min-w-24 sm:min-w-[88px] md:min-w-24 lg:min-w-28 xl:min-w-48 xl:max-w-48 2xl:min-w-56 2xl:max-w-56 transition-all duration-200 ease-in-out hover:border-white cursor-pointer w-full h-full rounded-xl overflow-hidden`}
           >
             <LoadableImage src={image} centercrop={true} />
           </div>
