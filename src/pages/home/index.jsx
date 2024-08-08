@@ -9,7 +9,7 @@ import Green_Line from "../../assets/6.webp";
 import Green_Line_LancipKiri from "../../assets/7.webp";
 import Green_Line_LancipKanan from "../../assets/8.webp";
 import Logo from "../../assets/Logo.webp";
-import Mentoring from "../../assets/Mentoring.webp";
+import Mentoring from "../../assets/Mentoring.jpg";
 import Logo_5C from "../../assets/5C.webp";
 import Logo_Caring from "../../assets/CARING.webp";
 import Logo_Credible from "../../assets/CREDIBLE.webp";
@@ -220,18 +220,18 @@ function Home() {
         />
       </div>
       <div className="relative background-transition">
-        <img src={Transition1} className="relative z-10" alt="Transition 1" />
+        <img src={Transition1} className="relative z-20" alt="Transition 1" />
         <img
           src={Petir_1}
-          className="absolute xl:w-1/6 w-1/4 xss:top-10 xl:top-40 sm:top-20 lg:top-24 left-0 z-0"
+          className="absolute xl:w-1/6 w-1/4 xss:top-10 xl:top-40 sm:top-20 lg:top-24 left-0 z-10"
           alt="Petir 1"
         />
         <img
           src={Petir_2}
-          className="absolute xl:w-1/4 w-1/6 xss:top-10 xl:top-40 sm:top-20 lg:top-24 right-0 z-0"
+          className="absolute xl:w-1/4 w-1/6 xss:top-10 xl:top-72 sm:top-20 lg:top-24 right-0 z-10"
           alt="Petir 2"
         />
-        <div className="relative z-20 py-20 lg:py-36 home">
+        <div className="relative z-0 py-20 lg:py-36 home">
           <div className="text-white my-10 mx-auto">
             <img src={Logo} className="w-[81px] mx-auto" alt="Logo Mentoring" />
             <p className="spyagencyCond text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
@@ -241,12 +241,12 @@ function Home() {
               Mentoring?
             </p>
             <div
-              className="mx-auto my-12 md:my-16 w-72 md:w-[500px] lg:w-[600px] xl:w-[800px] border-8 rounded-3xl md:rounded-[30px] lg:rounded-[40px] inline-block"
-              style={{ boxShadow: "0px 4px 60px 0px #F5FDFF4D" }}
+              className="mx-auto my-12 md:my-16 w-72 md:w-[500px] lg:w-[600px] xl:w-[700px] shadow-2xl"
+              
             >
               <img
                 src={Mentoring}
-                className="mx-auto rounded-2xl md:rounded-3xl lg:rounded-[36px]"
+                className=" border-8 rounded-3xl md:rounded-3xl lg:rounded-[36px]"
                 alt="Mentoring"
               />
             </div>

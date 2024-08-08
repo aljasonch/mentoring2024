@@ -7,7 +7,6 @@ import LightningLeft from "../../assets/petirkiriatas.webp";
 import LightningRight from "../../assets/petirkananatas.webp";
 import themeMobile from "../../assets/themeMobile.webp";
 import ZacheryMobile from "../../assets/ZacheryMobile.webp";
-import Logo from "../../assets/LogoAboutUS.webp";
 import tagline from "../../assets/tagline.webp";
 import zachery from "../../assets/zachery.webp";
 import z1 from "../../assets/z1.webp";
@@ -20,11 +19,15 @@ import z7 from "../../assets/z7.webp";
 import z8 from "../../assets/z8.webp";
 import z9 from "../../assets/z9.webp";
 import z10 from "../../assets/z10.webp";
-import logo from "../../assets/logoabout.webp";
 import data from "./data.js";
 import theme from "../../assets/theme.webp";
+import spirit from "../../assets/spirit.webp";
+import spiritMobile from "../../assets/spiritMobile.webp";
+import bintang from "../../assets/bintang.webp";
+import bintangMobile from "../../assets/bintangMobile.webp";
+import pintu from "../../assets/pintu.webp";
+import pintuMobile from "../../assets/pintuMobile.webp";
 
-const importImage = (name) => require(`../../assets/${name}.webp`);
 
 function About() {
   const [showCard, setShowCard] = useState(false);
@@ -201,40 +204,108 @@ function About() {
             alt="3"
           />
         </div>
-        <div className="background-mentoring py-6 lg:flex lg:justify-between">
-          <div className="w-9/12 md:w-[36.25rem] lg:hidden relative z-10 mx-auto mt-16">
-            <div className="relative">
-              <img
-                src={Logo}
-                className="border-4 relative z-10 sm:border-8 border-white rounded-3xl"
-                alt="Theme"
-              />
-              <div className=" border-4 sm:border-8 rounded-3xl z-0 absolute inset-0 bg-[#38467E] opacity-100 "></div>
-            </div>
-            <div className="spyagencyHalftone  z-0 polygonTheme absolute bottom-0">
-              <div className="bg-white xss:py-1 py-2 sm:py-2 text-[#832AD0] text-xl sm:text-4xl sm:pl-24 sm:pr-12 pl-12 pr-4 rounded-br-2xl">
-                LOGO
+        <div className="background-mentoring">
+          <div className="spyagencyBoldItal xss:text-xl xs:text-2xl sm:text-4xl lg:text-4xl xl:text-6xl text-center text-white mt-8">
+            <h1>
+              THE MEANING <br />
+              BEHIND OUR LOGO
+            </h1>
+          </div>
+          <div className=" py-6 lg:flex lg:justify-between">
+            <div className="w-9/12 md:w-[36.25rem] lg:hidden relative z-10 mx-auto mt-16">
+              <div className="relative">
+                <img
+                  src={bintangMobile}
+                  className="border-4 relative z-10 sm:border-8  border-white rounded-3xl"
+                  alt="Theme"
+                />
+                <div className=" border-4 sm:border-8 rounded-3xl z-0 absolute inset-0 bg-[#182350] opacity-100 "></div>
+              </div>
+              <div className="spyagencyHalftone  z-0 polygonTheme absolute bottom-0">
+                <div className="bg-white xss:py-1 py-2 sm:py-2 text-[#832AD0] text-xl sm:text-4xl sm:pl-24 sm:pr-12 pl-12 pr-4 rounded-br-2xl">
+                  LOGO
+                </div>
               </div>
             </div>
-          </div>
-          <div className="mx-auto w-9/12 xl:ml-36 lg:ml-24 lg:w-[400px] xl:w-[600px] lg:my-auto">
-            <div className="spyagencyBoldItal xss:text-xl xs:text-2xl sm:text-4xl lg:text-4xl xl:text-6xl text-start text-white mt-8">
-              <p>THE MEANiNG</p>
-              <p>BEHiND OUR LOGO</p>
+            <div className="mx-auto w-9/12 xl:ml-36 lg:ml-24 lg:w-[400px] xl:w-[600px] lg:my-auto ">
+              <div className="spyagencyBoldItal xss:text-xl lg:text-4xl xl:text-6xl xs:text-2xl sm:text-4xl text-start text-white mt-8">
+                BINTANG
+              </div>
+              <p className=" text-justify text-white xss:text-xs xs:text-sm sm:text-lg mt-6 lg:text-sm xl:text-lg ">
+                Bintang yang terbang keluar dari pintu menggambarkan mentee
+                dengan sayap para mentor di kiri dan kanannya. Mentor membantu
+                para mentee dalam mengungkapkan hingga menunjukkan
+                kapabilitasnya kepada dunia melalui kegiatan CBM 2024.
+              </p>
             </div>
-            <p className=" text-justify text-white xss:text-xs xs:text-sm sm:text-lg mt-6 lg:text-sm xl:text-lg ">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged.
-            </p>
+            <img
+              src={bintang}
+              className="hidden lg:block lg:w-[480px] xl:w-[600px] object-contain lg:mr-12"
+            ></img>
           </div>
-          <img
-            src={logo}
-            className="hidden lg:block lg:w-[480px] xl:w-[600px] object-contain lg:mr-12"
-          ></img>
+          <div className=" py-6 lg:flex lg:justify-between">
+            <div className="w-9/12 md:w-[36.25rem] lg:hidden relative z-10 mx-auto mt-16">
+              <div className="relative">
+                <img
+                  src={pintuMobile}
+                  className="border-4 relative z-10 sm:border-8  border-white rounded-3xl"
+                  alt="Theme"
+                />
+                <div className=" border-4 sm:border-8 rounded-3xl z-0 absolute inset-0 bg-[#182350] opacity-100 "></div>
+              </div>
+              <div className="spyagencyHalftone  z-0 polygonTheme absolute bottom-0">
+                <div className="bg-white xss:py-1 py-2 sm:py-2 text-[#832AD0] text-xl sm:text-4xl sm:pl-24 sm:pr-12 pl-12 pr-4 rounded-br-2xl">
+                  LOGO
+                </div>
+              </div>
+            </div>
+            <img
+              src={pintu}
+              className="hidden lg:block lg:w-[480px] xl:w-[600px] object-contain lg:ml-12 xl:ml-24"
+            ></img>
+            <div className="mx-auto w-9/12 lg:mr-24 lg:w-[400px] xl:w-[600px] lg:my-auto">
+              <div className="spyagencyBoldItal xss:text-xl lg:text-4xl xl:text-6xl xs:text-2xl sm:text-4xl text-end text-white mt-8">
+                PINTU
+              </div>
+              <p className=" text-justify text-white xss:text-xs xs:text-sm sm:text-lg mt-6 lg:text-sm xl:text-lg ">
+                Pintu sebagai jalan bintang keluar melambangkan masa depan
+                mentee yang telah berhasil mengembangkan kapabilitasnya melalui
+                CBM 2024.
+              </p>
+            </div>
+          </div>
+          <div className=" py-6 lg:flex lg:justify-between">
+            <div className="w-9/12 md:w-[36.25rem] lg:hidden relative z-10 mx-auto mt-16">
+              <div className="relative">
+                <img
+                  src={spiritMobile}
+                  className="border-4 relative z-10 sm:border-8  border-white rounded-3xl"
+                  alt="Theme"
+                />
+                <div className=" border-4 sm:border-8 rounded-3xl z-0 absolute inset-0 bg-[#182350] opacity-100 "></div>
+              </div>
+              <div className="spyagencyHalftone  z-0 polygonTheme absolute bottom-0">
+                <div className="bg-white xss:py-1 py-2 sm:py-2 text-[#832AD0] text-xl sm:text-4xl sm:pl-24 sm:pr-12 pl-12 pr-4 rounded-br-2xl">
+                  LOGO
+                </div>
+              </div>
+            </div>
+            <div className="mx-auto w-9/12 xl:ml-36 lg:ml-24 lg:w-[400px] xl:w-[600px] lg:my-auto ">
+              <div className="spyagencyBoldItal xss:text-xl lg:text-4xl xl:text-6xl xs:text-2xl sm:text-4xl text-start text-white mt-8">
+              SPIRIT
+              </div>
+              <p className=" text-justify text-white xss:text-xs xs:text-sm sm:text-lg mt-6 lg:text-sm xl:text-lg ">
+                Kelima spirit yang melingkari minerva menggambarkan bentuk
+                semangat yang berapi-api yang dihasilkan mentee dalam menerapkan
+                5C di perjalanannya membentuk dan memancarkan kapabilitas selama
+                perkuliahan melalui CBM 2024.
+              </p>
+            </div>
+            <img
+              src={spirit}
+              className="hidden lg:block lg:w-[480px] xl:w-[600px] object-contain lg:mr-12"
+            ></img>
+          </div>
         </div>
       </div>
       <div className="mt-12">
@@ -281,7 +352,7 @@ function About() {
                   ZACHERY (Burung Hantu) : Zachery (Latin)
                 </span>{" "}
                 merupakan bentuk perwujudan dari logo Mentoring UMN 2021 yang
-                menggambarkan sifat {" "}
+                menggambarkan sifat{" "}
                 <span className="font-bold italic">
                   kejujuran, kecerdasan, dan keyakinan yang tinggi.{" "}
                 </span>
