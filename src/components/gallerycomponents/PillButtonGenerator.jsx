@@ -3,7 +3,7 @@ import React from "react";
 const PillButtonGenerator = React.memo(({ localstate, setstate, data }) => {
   const currentscreen = data[localstate.currentscreen];
   return currentscreen?.images ? (
-    <div className="flex flex-row justify-center items-center mt-2 w-full gap-4 sm:gap-6 md:gap-8">
+    <div className="flex justify-center items-center mt-2 w-full gap-4 sm:gap-6 md:gap-8">
       {currentscreen.images.map((image, index) => (
         <div
           key={index}

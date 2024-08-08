@@ -12,17 +12,23 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
-      setLoading(false);
+      setFadeOut(true);
+      setTimeout(() => {
+        setLoading(false);
+      }, 500); // Durasi fade-out harus sama dengan durasi animasi di CSS (0.5s)
     }, 2500);
   }, []);
 
   return (
     <div className="mx-auto">
       {loading ? (
-        <LoadingScreen />
+        <div className={`fade-out ${fadeOut ? 'fade-out-active' : ''}`}>
+          <LoadingScreen />
+        </div>
       ) : (
         <>
           <ScrollToTop />
