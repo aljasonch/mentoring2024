@@ -11,8 +11,8 @@ function Faq() {
       <div className="fixed top-0 left-0 z-0 ">
         <img src={BlackDots} alt={BlackDots} className="w-72 h-auto" />
       </div>
-      <div className="px-4 sm:px-0 max-w-4xl mx-auto">
-        <h1 className="spyagencyRegular font-normal italic text-white text-center text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
+      <div className="px-4 sm:px-0 max-w-4xl mx-auto xss:mt-4 md:mt-8">
+        <h1 className="spyagencyRegular font-normal italic text-white text-center text-3xl sm:text-5xl md:text-5xl lg:text-7xl">
           FREQUENTLY ASKED QUESTIONS
         </h1>
         <h4 className="text-white font-medium text-lg sm:text-xl lg:text-2xl mt-1">

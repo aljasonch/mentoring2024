@@ -377,12 +377,6 @@ function About() {
             <h2 className="spyagencyBoldItal text-white text-3xl  xss:mb-4 xs:mb-8 md:mb-16 xss:text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
               Our Division
             </h2>
-            <a
-              href="#"
-              className="underline text-white text-xs lg:text-sm xl:text-md"
-            >
-              Click for more information
-            </a>
           </div>
           <div className="container flex justify-center relative z-10 mx-auto w-full p-4 xss:mt-8 xs:mt-12 md:mt-16">
             <div className="grid grid-cols-6 xs:grid-cols-6 md:grid-cols-6 lg:grid-cols-6 xl:grid-cols-8  gap-6 md:gap-10 justify-items-center">
@@ -429,7 +423,7 @@ function About() {
           </div>
 
           <div className="Daco relative top-0 right-0 w-full overflow-hidden">
-            <img src={Daco} className="daco-image" />
+            <img src={Daco} />
           </div>
           {showCard && selectedData && (
             <div
@@ -450,11 +444,11 @@ function About() {
                 className="xss:mt-9 lg:mt-10 lg:mb-3 lg:px-10 lg:pb-5 gradientcolor card-container xss:w-[490px] xss:h-[130px] xs:w-[600px] xs:h-[160px] md:w-[700px] md:h-[300px] lg:w-[750px] lg:h-[370px] xss:rounded-[20px] xs:rounded-[35px] lg:rounded-[60px] z-[-1] overflow-hidden inShadow flex flex-col justify-between"
                 onClick={handleCardStay}
               >
-                <h2 className="spyagencyRegular text-white xss:text-sm xs:text-md md:text-xl lg:text-3xl xss:mt-3  xs:mt-6 md:mt-14 lg:mt-16">
+                <h2 className="spyagencyRegular text-white xss:text-[12px] xs:text-sm md:text-xl lg:text-3xl xss:mt-2  xs:mt-4 md:mt-14 lg:mt-16">
                   {selectedData.title}
                 </h2>
                 <div className="flex-grow flex items-center justify-center">
-                  <p className="text-monsserat text-white xss:text-[10px] xs:text-[10px] md:text-lg lg:text-2xl text-center z-10 xss:p-1 xs:p-3 md:p-4 lg:p-5 box-border xss:mb-2 lg:mb-5">
+                  <p className="text-monsserat text-white xss:text-[8px] xs:text-[10px] md:text-lg lg:text-2xl text-center z-10 xss:p-1 xs:p-3 md:p-4 lg:p-5 box-border xss:mb-2 lg:mb-5">
                     {selectedData.description}
                   </p>
                 </div>
