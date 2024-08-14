@@ -32,7 +32,7 @@ function Division() {
   };
   return (
     <>
-      <div className="background-mentoring xss:pt-32 xs:pt-40 md:pt-52 md:pb-15 ">
+      <div className="home xss:pt-32 xs:pt-40 md:pt-52 md:pb-15 ">
           <h2 className="spyagencyBoldItal text-white  xss:mb-4 xs:mb-8 md:mb-16 xss:text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
             Our Division
           </h2>

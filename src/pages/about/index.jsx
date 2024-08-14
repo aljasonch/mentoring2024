@@ -27,7 +27,7 @@ import pintuMobile from "../../assets/pintuMobile.webp";
 function About() {
   return (
     <>
-      <div className="background-mentoring ">
+      <div className="home">
         <div className="relative">
           <img
             src={LightningLeft}
@@ -43,7 +43,7 @@ function About() {
             ABOUT US
           </div>
           <p className=" text-white text-3xl xss:text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-3xl ">
-            CHARACTER BUILDING MENTORING 2024
+            MENTORING UMN 2024
           </p>
         </div>
         <div className="w-9/12 md:w-[36.25rem] lg:hidden relative z-10 mx-auto mt-16">
@@ -69,7 +69,7 @@ function About() {
             <p className=" text-justify text-white xss:text-xs xs:text-sm lg:text-sm xl:text-lg sm:text-lg mt-6 ">
               Mahasiswa yang baru masuk ke dunia perkuliahan pasti merasakan
               beberapa perbedaan aspek dalam kehidupan barunya pada masa
-              perkuliahan. Melalui CBM 2024 kata{" "}
+              perkuliahan. Melalui Mentoring UMN 2024 kata{" "}
               <span className="font-bold italic">"Reveal Your Capability"</span>{" "}
               mencakup bagaimana mentee dapat mengungkapkan kapabilitas mereka
               pada dunia perkuliahan.{" "}
@@ -104,7 +104,7 @@ function About() {
           </div>
         </div>
       </div>
-      <div className="background-mentoring py-6">
+      <div className="home py-6">
         <div className="w-9/12 md:w-[36.25rem] lg:hidden relative z-10 mx-auto mt-16">
           <div className="relative">
             <img
@@ -130,7 +130,7 @@ function About() {
               <p>REVEAL,</p>
             </div>
             <p className=" text-justify text-white xss:text-xs xs:text-sm sm:text-lg mb-2 lg:text-sm xl:text-lg">
-              Mentee dan panitia Character Building Mentoring UMN 2024
+              Mentee dan panitia Mentoring UMN 2024
               diharapkan dapat mengungkapkan kapabilitas dalam diri mereka
               selama di dunia perkuliahan melalui proses Character Building
               Mentoring UMN 2024.
@@ -139,15 +139,15 @@ function About() {
               <p>REFiNE,</p>
             </div>
             <p className=" text-justify text-white xss:text-xs xs:text-sm sm:text-lg mb-2 lg:text-sm xl:text-lg">
-              Mentee dan panitia CBM 2024 dapat melakukan pembentukan diri
+              Mentee dan panitia Mentoring UMN 2024 dapat melakukan pembentukan diri
               dengan mengembangkan kapabilitas dalam diri mereka selama
-              perkuliahan melalui CBM 2024.
+              perkuliahan melalui Mentoring UMN 2024.
             </p>
             <div className="spyagencyBoldItal xss:text-xl lg:text-4xl xl:text-6xl xs:text-2xl sm:text-4xl text-end text-white">
               <p>RADiATE</p>
             </div>
             <p className=" text-justify text-white xss:text-xs xs:text-sm sm:text-lg mb-2 lg:text-sm xl:text-lg">
-              Mentee dan panitia Character Building Mentoring UMN 2024 dapat
+              Mentee dan panitia Mentoring UMN 2024 dapat
               memancarkan kapabilitas mereka menjadi lebih bersinar dengan
               mengandalkan kemampuan yang mereka miliki agar dapat berdampak
               bagi orang sekitar.
@@ -174,7 +174,7 @@ function About() {
           />
           <img
             src={Asset_7}
-            className="absolute z-0 w-36 -top-16 sm:w-48 sm:-top-16 right-0 lg:w-1/5 lg:-top-40 "
+            className="absolute z-10 w-36 -top-16 sm:w-48 sm:-top-16 right-0 lg:w-1/5 lg:-top-40 "
             alt="3"
           />
         </div>
@@ -209,7 +209,7 @@ function About() {
                 Bintang yang terbang keluar dari pintu menggambarkan mentee
                 dengan sayap para mentor di kiri dan kanannya. Mentor membantu
                 para mentee dalam mengungkapkan hingga menunjukkan
-                kapabilitasnya kepada dunia melalui kegiatan CBM 2024.
+                kapabilitasnya kepada dunia melalui kegiatan Mentoring UMN 2024.
               </p>
             </div>
             <img
@@ -244,7 +244,7 @@ function About() {
               <p className=" text-justify text-white xss:text-xs xs:text-sm sm:text-lg mt-6 lg:text-sm xl:text-lg ">
                 Pintu sebagai jalan bintang keluar melambangkan masa depan
                 mentee yang telah berhasil mengembangkan kapabilitasnya melalui
-                CBM 2024.
+                Mentoring UMN 2024.
               </p>
             </div>
           </div>
@@ -272,7 +272,7 @@ function About() {
                 Kelima spirit yang melingkari minerva menggambarkan bentuk
                 semangat yang berapi-api yang dihasilkan mentee dalam menerapkan
                 5C di perjalanannya membentuk dan memancarkan kapabilitas selama
-                perkuliahan melalui CBM 2024.
+                perkuliahan melalui Mentoring UMN 2024.
               </p>
             </div>
             <img
@@ -300,7 +300,7 @@ function About() {
             alt="3"
           />
         </div>
-        <div className="background-mentoring py-6">
+        <div className="home py-6">
           <div className="lg:w-full lg:flex lg:justify-between">
             <img
               src={zachery}

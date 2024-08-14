@@ -106,7 +106,7 @@ export function Gallery() {
               GALLERY
             </h1>
             <p className="text-white font-medium text-lg sm:text-xl lg:text-2xl mt-1">
-              CHARACTER BUILDING MENTORING UMN 2024
+              MENTORING UMN 2024
             </p>
             <p className="text-white font-semibold text-lg sm:text-xl lg:text-2xl xss:mt-8 md:mt-16">
               SELECT YOUR EVENT
