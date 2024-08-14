@@ -193,7 +193,7 @@ function About() {
                   className="border-4 relative z-10 sm:border-8  border-white rounded-3xl"
                   alt="Theme"
                 />
-                <div className=" border-4 sm:border-8 rounded-3xl z-0 absolute inset-0 bg-[#182350] opacity-100 "></div>
+                <div className=" border-4 sm:border-8 rounded-3xl z-0 absolute inset-0 bg-[#283673] opacity-100 "></div>
               </div>
               <div className="spyagencyHalftone  z-0 polygonTheme absolute bottom-0">
                 <div className="bg-white xss:py-1 py-2 sm:py-2 text-[#832AD0] text-xl sm:text-4xl sm:pl-24 sm:pr-12 pl-12 pr-4 rounded-br-2xl">
@@ -225,7 +225,7 @@ function About() {
                   className="border-4 relative z-10 sm:border-8  border-white rounded-3xl"
                   alt="Theme"
                 />
-                <div className=" border-4 sm:border-8 rounded-3xl z-0 absolute inset-0 bg-[#182350] opacity-100 "></div>
+                <div className=" border-4 sm:border-8 rounded-3xl z-0 absolute inset-0 bg-[#283673] opacity-100 "></div>
               </div>
               <div className="spyagencyHalftone  z-0 polygonTheme absolute bottom-0">
                 <div className="bg-white xss:py-1 py-2 sm:py-2 text-[#832AD0] text-xl sm:text-4xl sm:pl-24 sm:pr-12 pl-12 pr-4 rounded-br-2xl">
@@ -256,7 +256,7 @@ function About() {
                   className="border-4 relative z-10 sm:border-8  border-white rounded-3xl"
                   alt="Theme"
                 />
-                <div className=" border-4 sm:border-8 rounded-3xl z-0 absolute inset-0 bg-[#182350] opacity-100 "></div>
+                <div className=" border-4 sm:border-8 rounded-3xl z-0 absolute inset-0 bg-[#283673] opacity-100 "></div>
               </div>
               <div className="spyagencyHalftone  z-0 polygonTheme absolute bottom-0">
                 <div className="bg-white xss:py-1 py-2 sm:py-2 text-[#832AD0] text-xl sm:text-4xl sm:pl-24 sm:pr-12 pl-12 pr-4 rounded-br-2xl">
