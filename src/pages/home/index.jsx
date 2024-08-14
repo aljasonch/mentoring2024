@@ -251,10 +251,10 @@ function Home() {
               />
             </div>
             <p className="text-xs sm:text-base lg:text-lg xl:text-xl font-medium px-14 md:px-24 xl:px-72 mx-auto">
-              Character Building Mentoring (CBM) adalah kegiatan tahunan yang
-              wajib diikuti oleh Mentee (Mahasiswa Baru UMN) dengan tujuan
+              Mentoring UMN adalah kegiatan tahunan yang
+              wajib diikuti oleh Mentee dengan tujuan
               menyeluruh, memperkenalkan secara mendalam nilai-nilai 5C UMN.
-              Character Building Mentoring juga memiliki maskot bernama ZACHERY!
+              Mentoring UMN juga memiliki maskot bernama ZACHERY!
             </p>
           </div>
         </div>

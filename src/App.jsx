@@ -9,6 +9,7 @@ import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import { Gallery } from "./pages/gallery/index";
 import LoadingScreen from "./components/loadingScreen";
 import { useState, useEffect } from "react";
+import Division from "./pages/division";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -19,7 +20,7 @@ function App() {
       setFadeOut(true);
       setTimeout(() => {
         setLoading(false);
-      }, 500); // Durasi fade-out harus sama dengan durasi animasi di CSS (0.5s)
+      }, 500);
     }, 2500);
   }, []);
 
@@ -35,6 +36,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/division" element={<Division />} />
             <Route path="/faq" element={<Faq />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/gallery/collection" element={<Gallery />} />

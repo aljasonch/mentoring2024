@@ -6,7 +6,7 @@ import InternalNavBar from "../../components/gallerycomponents/InternalNavBar";
 import ScrollablePhotoSet from "../../components/gallerycomponents/ScrollablePhotoSet";
 import PillButtonGenerator from "../../components/gallerycomponents/PillButtonGenerator";
 import "./style.css";
-import { getData } from './data.js';
+import { getData } from "./data.js";
 
 export function Gallery() {
   const [data, setData] = useState(null);
@@ -25,7 +25,7 @@ export function Gallery() {
         const fetchedData = await getData();
         setData(fetchedData);
       } catch (error) {
-        console.error('Failed to fetch data:', error);
+        console.error("Failed to fetch data:", error);
       }
     };
 
@@ -55,16 +55,16 @@ export function Gallery() {
   );
 
   const currentData = useMemo(
-    () => data ? data[localstate.currentscreen] : null,
+    () => (data ? data[localstate.currentscreen] : null),
     [data, localstate.currentscreen]
   );
 
   if (!data) {
-    return <div>Loading...</div>; // Handle loading state
+    return <div>Loading...</div>;
   }
 
   return (
-    <div className="background-mentoring py-40">
+    <div className="background-mentoring pb-40">
       {location.pathname.endsWith("collection") && currentData?.images ? (
         <div className="w-full flex justify-center flex-col">
           <div
@@ -101,7 +101,7 @@ export function Gallery() {
         </div>
       ) : (
         <>
-          <div className="px-4 sm:px-0 max-w-4xl mx-auto text-center">
+          <div className="px-4 sm:px-0 max-w-4xl mx-auto text-center xss:pt-32 xs:pt-40 md:pt-52 md:pb-15">
             <h1 className="spyagencyBoldItal font-normal text-white text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
               GALLERY
             </h1>

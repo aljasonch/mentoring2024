@@ -3,8 +3,8 @@ import {
   MdOutlineKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight,
 } from "react-icons/md";
-import Bintik_1 from "../../assets/Bintik_1.webp";
-import Bintik_2 from "../../assets/Bintik_2.webp";
+import Blackdots_1 from "../../assets/Blackdots_1.webp";
+import Blackdots_2 from "../../assets/Blackdots_2.webp";
 
 export const Carousel = ({ data, logos }) => {
   const [slide, setSlide] = useState(0);
@@ -20,18 +20,20 @@ export const Carousel = ({ data, logos }) => {
   return (
     <div
       style={{
-        boxShadow: "0px 20px 40px 0px #478198 inset, 0px 0px 10px 7px #F5FDFF"
+        boxShadow: "0px 20px 40px 0px #478198 inset, 0px 0px 10px 7px #F5FDFF",
       }}
       className="mx-auto relative flex justify-center items-center 
         w-48 h-[290px] sm:w-[440px] sm:h-[260px] md:w-[420px] md:h-[290px] lg:w-[530px] lg:h-[350px] xl:w-[794px] xl:h-[421px] 
         rounded-3xl sm:rounded-[32px] md:rounded-[40px] lg:rounded-[57px] bg-gradient-to-b from-teal-600 via-teal-400 to-cyan-400 bg-blend-overlay"
     >
-      <img  
-        src={Bintik_1}
+      <img
+        alt="blackdots"
+        src={Blackdots_1}
         className="top-0 left-0 w-28 h-40 sm:w-44 sm:h-56 md:w-56 md:h-72 lg:w-64 lg:h-72 xl:w-80 xl:h-96 rounded-3xl sm:rounded-[32px] md:rounded-[40px] lg:rounded-[57px] opacity-25 absolute"
       />
       <img
-        src={Bintik_2}
+        alt="blackdots"
+        src={Blackdots_2}
         className="bottom-0 right-0 w-28 h-40 sm:w-44 sm:h-56 md:w-56 md:h-72 lg:w-64 lg:h-72 xl:w-80 xl:h-96 rounded-3xl sm:rounded-[32px] md:rounded-[40px] lg:rounded-[57px] opacity-25 absolute"
       />
       {logos.map((logo, idx) => (

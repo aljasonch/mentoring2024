@@ -1,25 +1,21 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import "./style.css";
-import Asset from "../../assets/Asset8_1.webp";
-import Assets from "../../assets/Asset8_2.webp";
-import Daco from "../../assets/Daco_519625.webp";
-import LightningLeft from "../../assets/petirkiriatas.webp";
-import LightningRight from "../../assets/petirkananatas.webp";
+import LightningLeft from "../../assets/Lightning_Left.webp";
+import LightningRight from "../../assets/Lightning_Right.webp";
 import themeMobile from "../../assets/themeMobile.webp";
 import ZacheryMobile from "../../assets/ZacheryMobile.webp";
 import tagline from "../../assets/tagline.webp";
 import zachery from "../../assets/zachery.webp";
-import z1 from "../../assets/z1.webp";
-import z2 from "../../assets/z2.webp";
-import z3 from "../../assets/z3.webp";
-import z4 from "../../assets/z4.webp";
-import z5 from "../../assets/z5.webp";
-import z6 from "../../assets/z6.webp";
-import z7 from "../../assets/z7.webp";
-import z8 from "../../assets/z8.webp";
-import z9 from "../../assets/z9.webp";
-import z10 from "../../assets/z10.webp";
-import data from "./data.js";
+import Asset_1 from "../../assets/10.webp";
+import Asset_2 from "../../assets/11.webp";
+import Asset_3 from "../../assets/12.webp";
+import Asset_4 from "../../assets/13.webp";
+import Asset_5 from "../../assets/14.webp";
+import Asset_6 from "../../assets/15.webp";
+import Asset_7 from "../../assets/16.webp";
+import Asset_8 from "../../assets/17.webp";
+import Asset_9 from "../../assets/18.webp";
+import Asset_10 from "../../assets/19.webp";
 import theme from "../../assets/theme.webp";
 import spirit from "../../assets/spirit.webp";
 import spiritMobile from "../../assets/spiritMobile.webp";
@@ -28,37 +24,7 @@ import bintangMobile from "../../assets/bintangMobile.webp";
 import pintu from "../../assets/pintu.webp";
 import pintuMobile from "../../assets/pintuMobile.webp";
 
-
 function About() {
-  const [showCard, setShowCard] = useState(false);
-  const [selectedData, setSelectedData] = useState(null);
-  const cardRef = useRef();
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (cardRef.current && !cardRef.current.contains(event.target)) {
-        cardRef.current.classList.remove("slide-up");
-        cardRef.current.classList.add("slide-down");
-        setTimeout(() => setShowCard(false), 500);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
-  const handleCardClick = (event) => {
-    if (cardRef.current && cardRef.current.contains(event.target)) {
-      cardRef.current.classList.remove("slide-up");
-      cardRef.current.classList.add("slide-down");
-      setTimeout(() => setShowCard(false), 500);
-    }
-  };
-
-  const handleCardStay = (event) => {
-    event.stopPropagation();
-  };
-
   return (
     <>
       <div className="background-mentoring ">
@@ -73,7 +39,7 @@ function About() {
             className="absolute top-0 right-0 w-44 h-auto z-10 xss:w-16 xss:top-12 md:w-28 md:top-16"
             alt="Lightning Right"
           />
-          <div className="text-white text-7xl sm:pt-60 xss:pt-36 xss:text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl spyagencyBoldItal">
+          <div className="text-white text-7xl sm:pt-52 xss:pt-36 xss:text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl spyagencyBoldItal">
             ABOUT US
           </div>
           <p className=" text-white text-3xl xss:text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-3xl ">
@@ -120,14 +86,18 @@ function About() {
         </div>
         <div className="mt-12">
           <div className=" relative">
-            <img src={z1} className="w-7/12 z-20 relative lg:w-1/3" alt="1" />
             <img
-              src={z2}
+              src={Asset_1}
+              className="w-7/12 z-20 relative lg:w-1/3"
+              alt="1"
+            />
+            <img
+              src={Asset_2}
               className="absolute z-10 w-9/12 top-12 sm:top-24 left-0 lg:w-3/5"
               alt="2"
             />
             <img
-              src={z3}
+              src={Asset_3}
               className="absolute z-30 w-6/12 top-8 sm:top-16 right-0 lg:w-2/5"
               alt="3"
             />
@@ -187,19 +157,23 @@ function About() {
       </div>
       <div className="mt-12">
         <div className="relative">
-          <img src={z4} className="w-7/12 z-20 relative lg:w-2/5" alt="1" />
           <img
-            src={z5}
+            src={Asset_4}
+            className="w-7/12 z-20 relative lg:w-2/5"
+            alt="1"
+          />
+          <img
+            src={Asset_5}
             className="absolute z-10 w-8 top-12 sm:top-24 -left-4 lg:w-12 lg:top-28"
             alt="2"
           />
           <img
-            src={z6}
+            src={Asset_6}
             className="absolute z-10 w-72 sm:w-7/12 top-6 sm:top-10 right-0 lg:w-1/2"
             alt="3"
           />
           <img
-            src={z7}
+            src={Asset_7}
             className="absolute z-0 w-36 -top-16 sm:w-48 sm:-top-16 right-0 lg:w-1/5 lg:-top-40 "
             alt="3"
           />
@@ -292,7 +266,7 @@ function About() {
             </div>
             <div className="mx-auto w-9/12 xl:ml-36 lg:ml-24 lg:w-[400px] xl:w-[600px] lg:my-auto ">
               <div className="spyagencyBoldItal xss:text-xl lg:text-4xl xl:text-6xl xs:text-2xl sm:text-4xl text-start text-white mt-8">
-              SPIRIT
+                SPIRIT
               </div>
               <p className=" text-justify text-white xss:text-xs xs:text-sm sm:text-lg mt-6 lg:text-sm xl:text-lg ">
                 Kelima spirit yang melingkari minerva menggambarkan bentuk
@@ -310,14 +284,18 @@ function About() {
       </div>
       <div className="mt-12">
         <div className="relative">
-          <img src={z8} className="w-7/12 z-20 relative lg:bottom-4" alt="1" />
           <img
-            src={z9}
+            src={Asset_8}
+            className="w-7/12 z-20 relative lg:bottom-4"
+            alt="1"
+          />
+          <img
+            src={Asset_9}
             className="absolute z-20 w-7/12 top-12 sm:top-24 left-0 lg:w-2/5"
             alt="2"
           />
           <img
-            src={z10}
+            src={Asset_10}
             className="absolute z-20 w-56 sm:-top-10 sm:w-7/12 -top-6 right-0 lg:w-2/5"
             alt="3"
           />
@@ -361,106 +339,6 @@ function About() {
               </p>
             </div>
           </div>
-        </div>
-        <div className="flex justify-between background-atas background-mentoring mt-12">
-          <img
-            src={Asset}
-            className="pb-5 xss:h-[60px] xs:h-[75px] md:h-[120px] lg:h-[160px] xl:h-[190px]"
-          />
-          <img
-            src={Assets}
-            className="pb-5 xss:h-[60px] xs:h-[75px] md:h-[120px] lg:h-[160px] xl:h-[190px]"
-          />
-        </div>
-        <div className="background-mentoring">
-          <div className="xss:mt-12 xs:mt-16 md:mt-14 md:mb-15 ">
-            <h2 className="spyagencyBoldItal text-white text-3xl  xss:mb-4 xs:mb-8 md:mb-16 xss:text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
-              Our Division
-            </h2>
-          </div>
-          <div className="container flex justify-center relative z-10 mx-auto w-full p-4 xss:mt-8 xs:mt-12 md:mt-16">
-            <div className="grid grid-cols-6 xs:grid-cols-6 md:grid-cols-6 lg:grid-cols-6 xl:grid-cols-8  gap-6 md:gap-10 justify-items-center">
-              {data.map((item, index) => {
-                const isLastRow = index >= data.length - (data.length % 3);
-                const isThirdToLast = index === data.length - 3;
-                return (
-                  <div
-                    key={index}
-                    className={`bg-white cursor-pointer p-4 md:p-6 sm:p-4 xs:p-4 col-span-2 rounded-full inner-shadow transition-color duration-500 ease-in-out hover:shadow-none shadow-2xl ${
-                      isLastRow
-                        ? data.length % 3 === 2 && index === data.length - 2
-                          ? "col-start-2 xl:col-start-auto"
-                          : ""
-                        : ""
-                    }${isThirdToLast ? "xl:col-start-2" : ""}`}
-                    onClick={() => {
-                      setShowCard(!showCard);
-                      setSelectedData({
-                        title: item.title,
-                        description: item.description,
-                        image: item.image,
-                      });
-                    }}
-                    style={{
-                      transition: "background-color 0.5s ease-in-out",
-                      backgroundColor: "white",
-                    }}
-                    onMouseEnter={(e) =>
-                      (e.currentTarget.style.backgroundColor = item.hoverColor)
-                    }
-                    onMouseLeave={(e) =>
-                      (e.currentTarget.style.backgroundColor = "white")
-                    }
-                  >
-                    <img
-                      src={item.image}
-                      className="h-auto w-full max-w-[7rem] img-fluid mx-auto flex items-center justify-center"
-                    />
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          <div className="Daco relative top-0 right-0 w-full overflow-hidden">
-            <img src={Daco} />
-          </div>
-          {showCard && selectedData && (
-            <div
-              className="w-[790px] h-[480px] overflow-hidden card-container"
-              ref={cardRef}
-              onClick={handleCardClick}
-            >
-              <div
-                className="bg-white cursor-pointer flex justify-center xss:w-[60px] xs:w-[68px] md:w-[100px] lg:w-[120px] card-container xss:top-[42%] xs:top-[38%] md:top-[25%] lg:top-[20%] rounded-full shadow-lg "
-                onClick={handleCardStay}
-              >
-                <img
-                  src={selectedData.image}
-                  className="xss:w-10 xs:w-[85px] md:w-[80px] lg:w-[100px] img-fluid object-cover"
-                />
-              </div>
-              <div
-                className="xss:mt-9 lg:mt-10 lg:mb-3 lg:px-10 lg:pb-5 gradientcolor card-container xss:w-[490px] xss:h-[130px] xs:w-[600px] xs:h-[160px] md:w-[700px] md:h-[300px] lg:w-[750px] lg:h-[370px] xss:rounded-[20px] xs:rounded-[35px] lg:rounded-[60px] z-[-1] overflow-hidden inShadow flex flex-col justify-between"
-                onClick={handleCardStay}
-              >
-                <h2 className="spyagencyRegular text-white xss:text-[12px] xs:text-sm md:text-xl lg:text-3xl xss:mt-2  xs:mt-4 md:mt-14 lg:mt-16">
-                  {selectedData.title}
-                </h2>
-                <div className="flex-grow flex items-center justify-center">
-                  <p className="text-monsserat text-white xss:text-[8px] xs:text-[10px] md:text-lg lg:text-2xl text-center z-10 xss:p-1 xs:p-3 md:p-4 lg:p-5 box-border xss:mb-2 lg:mb-5">
-                    {selectedData.description}
-                  </p>
-                </div>
-                <div className="daco-card">
-                  <img src={Daco} className="daco-image" />
-                </div>
-                <div className="daco-card1">
-                  <img src={Daco} className="daco-image" />
-                </div>
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </>
