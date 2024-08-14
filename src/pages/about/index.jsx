@@ -39,7 +39,7 @@ function About() {
             className="absolute top-0 right-0 w-44 h-auto z-10 xss:w-16 xss:top-12 md:w-28 md:top-16"
             alt="Lightning Right"
           />
-          <div className="text-white text-7xl sm:pt-52 xss:pt-36 xss:text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl spyagencyBoldItal">
+          <div className="text-white sm:pt-52 xss:pt-36 text-3xl sm:text-5xl md:text-6xl lg:text-7xl spyagencyBoldItal">
             ABOUT US
           </div>
           <p className=" text-white text-3xl xss:text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-3xl ">
