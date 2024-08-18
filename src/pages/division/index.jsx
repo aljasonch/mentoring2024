@@ -78,7 +78,7 @@ function Division() {
         </div>
         {showCard && selectedData && (
           <div
-            className="xss:w-[53.125rem] overflow-hidden card-container xss:top-[40%] sm:top-1/2 lg:top-[55%]"
+            className="xss:w-[53.125rem] overflow-hidden card-container xss:top-[50%] sm:top-1/2 lg:top-[55%]"
             ref={cardRef}
           >
             <div className="relative" id="screenPopUp">
@@ -116,10 +116,10 @@ function Division() {
               </button>
               <p
                 className="text-white absolute
-            md:bottom-[7%] lg:bottom-[12%] xss:bottom-[20%] xs:bottom-[22%] sm:bottom-[28%]
+            md:bottom-[7%] lg:bottom-[12%] xss:bottom-[21%] xs:bottom-[23%] sm:bottom-[28%]
             md:w-1/2 md:max-w-full
             md:text-justify xss:text-center
-            md:text-xs lg:text-sm xss:text-[8px] xs:text-[10px] sm:text-sm
+            md:text-xs lg:text-sm xss:text-[8px] xs:text-[9px] sm:text-sm
             md:left-[6%] lg:left-[7%] sm:w-96 xss:w-56 xs:w-64 center
             h-16"
               >
@@ -132,7 +132,7 @@ function Division() {
                 className="bg-white flex justify-center card-container absolute
                     md:top-[75%]
                     xss:top-[82%] xs:top-[81%] 
-                    xss:left-[50%] xss:max-w-12 xs:max-w-16 sm:max-w-20 sm:p-4 md:max-w-[80%] md:left-[84%] rounded-full shadow-lg xss:p-2 md:p-5"
+                    xss:left-[50%] xss:max-w-12 xs:max-w-14 sm:max-w-20 sm:p-4 md:max-w-[80%] md:left-[84%] rounded-full shadow-lg xss:p-2 md:p-5"
               >
                 <img src={selectedData.image} className=" object-cover" loading="lazy"/>
               </div>
