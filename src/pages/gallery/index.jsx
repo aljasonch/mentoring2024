@@ -6,9 +6,10 @@ import InternalNavBar from "../../components/gallerycomponents/InternalNavBar";
 import ScrollablePhotoSet from "../../components/gallerycomponents/ScrollablePhotoSet";
 import PillButtonGenerator from "../../components/gallerycomponents/PillButtonGenerator";
 import "./style.css";
-import data from "./data";
+import { getData } from "./data.js";
 
 export function Gallery() {
+  const [data, setData] = useState(null);
   const [localstate, _setstate] = useState({
     selected: "tutorial",
     currentscreen: "main",
@@ -17,6 +18,19 @@ export function Gallery() {
   const navigate = useNavigate();
   const location = useLocation();
   const [initialPathCheck, setInitialPathCheck] = useState(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const fetchedData = await getData();
+        setData(fetchedData);
+      } catch (error) {
+        console.error("Failed to fetch data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   useEffect(() => {
     if (!initialPathCheck && location.pathname.endsWith("collection")) {
@@ -41,14 +55,18 @@ export function Gallery() {
   );
 
   const currentData = useMemo(
-    () => data[localstate.currentscreen],
-    [localstate.currentscreen]
+    () => (data ? data[localstate.currentscreen] : null),
+    [data, localstate.currentscreen]
   );
 
+  if (!data) {
+    return <div>Loading...</div>;
+  }
+
   return (
-    <div className="background-mentoring py-40">
+    <div className="background-mentoring pb-40">
       {location.pathname.endsWith("collection") && currentData?.images ? (
-        <div className="w-full flex justify-center flex-col">
+        <div className="w-full flex justify-center pt-40 flex-col">
           <div
             className="flex flex-row justify-between items-center mx-auto overflow-clip"
             style={{ width: "calc(100vw - min(100vw*(17/216),85px))" }}
@@ -83,31 +101,37 @@ export function Gallery() {
         </div>
       ) : (
         <>
-          <div className="px-4 sm:px-0 max-w-4xl mx-auto text-center">
+          <div className="px-4 sm:px-0 max-w-4xl mx-auto text-center xss:pt-32 xs:pt-40 md:pt-52 md:pb-15">
             <h1 className="spyagencyBoldItal font-normal text-white text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
               GALLERY
             </h1>
-            <p className="text-white font-medium text-lg sm:text-xl lg:text-2xl mt-1">
-              CHARACTER BUILDING MENTORING UMN 2024
-            </p>
+            <h4 className="text-white font-medium text-lg sm:text-xl lg:text-2xl mt-1">
+              MENTORING UMN 2024
+            </h4>
             <p className="text-white font-semibold text-lg sm:text-xl lg:text-2xl xss:mt-8 md:mt-16">
               SELECT YOUR EVENT
             </p>
           </div>
           <div className="w-full flex justify-center mt-2">
             <div className="grid grid-cols-1 md:grid-cols-2 xss:gap-0 md:gap-4 lg:gap-6">
-              {["tutorial", "stage1", "stage2", "stage3"].map((key) => (
-                <div
-                  key={key}
-                  className="overflow-hidden border-white md:border-8 xss:border-4 rounded-3xl xss:w-[19.5rem] xss:h-[8.438rem] sm:w-[30rem] md:w-[20rem] md:h-[12rem] lg:w-[24rem] lg:h-[14rem] xl:w-[32rem] xl:h-[19rem] 2xl:w-[42rem] 2xl:h-[25rem] sm:h-[14rem] md:mt-2 xss:mt-4"
-                >
-                  <ExpandingClickablePhoto
-                    data={data[key]}
-                    setstate={setState}
-                    centercrop={true}
-                  />
-                </div>
-              ))}
+              {["tutorial", "stage1", "stage2", "stage3", "manifest"].map(
+                (key, index, array) => (
+                  <div
+                    key={key}
+                    className={`overflow-hidden border-white md:border-8 xss:border-4 rounded-3xl xss:w-[19.5rem] xss:h-[8.438rem] sm:w-[30rem] md:w-[20rem] md:h-[12rem] lg:w-[24rem] lg:h-[14rem] xl:w-[32rem] xl:h-[18.5rem] 2xl:w-[41rem] 2xl:h-[23.5rem] sm:h-[14rem] md:mt-2 xss:mt-4 ${
+                      index === array.length - 1 && array.length % 2 !== 0
+                        ? "md:col-span-2 md:justify-self-center"
+                        : ""
+                    }`}
+                  >
+                    <ExpandingClickablePhoto
+                      data={data[key]}
+                      setstate={setState}
+                      centercrop={true}
+                    />
+                  </div>
+                )
+              )}
             </div>
           </div>
         </>

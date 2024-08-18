@@ -1,11 +1,11 @@
 const data = [
     {
-        header: "Apa itu Character Building Mentoring UMN?",
-        content: "Character Building Mentoring adalah kegiatan tahunan yang bersifat wajib bagi Mentee (Mahasiswa Baru UMN) dengan tujuan memperkenalkan nilai-nilai 5C UMN secara mendalam."
+        header: "Apa itu Mentoring UMN?",
+        content: "Mentoring UMN adalah kegiatan tahunan yang bersifat wajib bagi Mentee dengan tujuan memperkenalkan nilai-nilai 5C UMN secara mendalam."
     },
     {
-        header: "Apakah Character Building Mentoring merupakan kegiatan wajib?",
-        content: "Character Building Mentoring merupakan kegiatan wajib."
+        header: "Apakah Mentoring merupakan kegiatan wajib?",
+        content: "Mentoring merupakan kegiatan wajib."
     },
     {
         header: "Mentoring akan dilaksanakan secara offline atau online?",
@@ -28,7 +28,7 @@ const data = [
         content: "Silahkan hubungi DM Instagram Mentoring UMN (@mentoringumn)."
     },
     {
-        header: "Apakah ada dress code untuk Character Building Mentoring?",
+        header: "Apakah ada dress code untuk Mentoring?",
         content: "Atasan putih polos dengan celana hitam polos."
     },
     {
@@ -36,7 +36,7 @@ const data = [
         content: "KTM, dan perlengkapan setiap pertemuan yang dapat ditanyakan kepada mentor masing-masing."
     },
     {
-        header: "Character Building Mentoring mulai jam berapa dan selesai jam berapa?",
+        header: "Mentoring mulai jam berapa dan selesai jam berapa?",
         content: "Waktu berlangsungnya Mentoring dapat dipastikan kepada Mentor masing-masing."
     },
     {

@@ -1,0 +1,127 @@
+.inner-shadow {
+  box-shadow: inset 0px 4px 50px #afefff;
+}
+.daco img {
+  width: 800px;
+  margin-bottom: -100px;
+  margin-left: 1270px;
+  transform: rotate(123deg);
+  opacity: 50%;
+  z-index: 0;
+}
+.card_1 {
+  position: absolute;
+  top: 250px;
+  right: -160px;
+  transform: rotate(128deg);
+  width: 300px;
+  opacity: 0.35;
+  z-index: -1;
+}
+
+.card_2 {
+  position: absolute;
+  top: -70px;
+  right: 500px;
+  transform: rotate(-400deg);
+  width: 300px;
+  opacity: 0.35;
+  z-index: -1;
+}
+
+@media (max-width: 395px) {
+  .card_1 {
+    top: 100px;
+    right: -110px;
+    width: 200px;
+    transform: rotate(128deg);
+  }
+
+  .card_2 {
+    top: -50px;
+    right: 200px;
+    width: 200px;
+    transform: rotate(-400deg);
+  }
+}
+
+@media (max-width: 440px) {
+  .card_1 {
+    top: 120px;
+    right: -110px;
+    width: 200px;
+    transform: rotate(128deg);
+  }
+
+  .card_2 {
+    top: -60px;
+    right: 200px;
+    width: 200px;
+    transform: rotate(-400deg);
+  }
+}
+
+@media(max-width:748px){
+  .center{
+    transform: translateX(-50%);
+    left:50%;
+    right:50%;
+  }
+}
+
+.card-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  z-index: 1000;
+  max-width: 80%;
+  overflow-y: auto;
+  animation: slideUp 0.5s ease-in-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translate(-50%, 100%);
+  }
+  to {
+    transform: translate(-50%, -50%);
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-in-out forwards;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: translate(-50%, 100%);
+  }
+}
+
+.slide-down {
+  animation: slideDown 0.5s ease-in-out forwards;
+}
+
+.inShadow {
+  box-shadow: 0px 0px 10px 7px #f5fdff, inset 0px 20px 50px #478198;
+}
+
+.gradientcolor {
+  background: linear-gradient(
+      180deg,
+      rgba(159, 205, 215, 0) 36.84%,
+      #b2ccdb 130%
+    ),
+    linear-gradient(
+      285.39deg,
+      rgba(36, 164, 145, 0.98) 3.35%,
+      rgba(34, 188, 177, 0.98) 39.41%,
+      rgba(2, 180, 168, 0.98) 79.68%,
+      rgba(40, 172, 156, 0.98) 95.74%
+    );
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import BlackDots from "../../assets/BlackDots.webp";
+import BlackDots from "../../assets/Blackdots_4.webp";
 import Accordion, {
   AccordionItem,
 } from "../../components/accordion/CustomAccordion";
@@ -7,16 +7,16 @@ import data from "./data.js";
 
 function Faq() {
   return (
-    <div className="background-mentoring py-40 bg-fixed">
+    <div className="home pb-40 bg-fixed">
       <div className="fixed top-0 left-0 z-0 ">
-        <img src={BlackDots} alt={BlackDots} className="w-72 h-auto" />
+        <img src={BlackDots} alt={BlackDots} className="w-72 xss:w-64 h-auto" />
       </div>
-      <div className="px-4 sm:px-0 max-w-4xl mx-auto">
-        <h1 className="spyagencyRegular font-normal italic text-white text-center text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
+      <div className="px-4 sm:px-0 max-w-4xl relative z-10 mx-auto xss:pt-32 xs:pt-40 md:pt-52 md:pb-15 ">
+        <h1 className="spyagencyRegular font-normal italic text-white text-center text-3xl sm:text-5xl md:text-5xl lg:text-7xl">
           FREQUENTLY ASKED QUESTIONS
         </h1>
         <h4 className="text-white font-medium text-lg sm:text-xl lg:text-2xl mt-1">
-          CHARACTER BUILDING MENTORING UMN 2024
+          MENTORING UMN 2024
         </h4>
       </div>
       <div className="px-6 py-10 space-y-6">
