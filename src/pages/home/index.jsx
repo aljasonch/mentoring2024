@@ -268,7 +268,7 @@ function Home() {
             alt="Bintik 3"
           />
         </div>
-        <div className="pb-20 md:pb-40 background-mentoring">
+        <div className="pb-20 md:pb-40 home">
           <img
             src={Logo_5C}
             className="w-[76px] h-[81px] mx-auto"

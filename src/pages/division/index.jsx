@@ -1,43 +1,35 @@
-import React, { useState, useEffect, useRef } from "react";
-import './style.css'
+import React, { useState, useRef } from "react";
+import "./style.css";
 import Daco from "../../assets/Blackdots_3.webp";
 import data from "../division/data.js";
+import Screen from "../../assets/screen.png";
+import ScreenMobile from "../../assets/screenMobile.png";
+import Button from "../../assets/button.png";
+
 function Division() {
   const [showCard, setShowCard] = useState(false);
   const [selectedData, setSelectedData] = useState(null);
-  const cardRef = useRef();
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (cardRef.current && !cardRef.current.contains(event.target)) {
-        cardRef.current.classList.remove("slide-up");
-        cardRef.current.classList.add("slide-down");
-        setTimeout(() => setShowCard(false), 500);
-      }
-    };
+  const cardRef = useRef(null);
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
-  const handleCardClick = (event) => {
-    if (cardRef.current && cardRef.current.contains(event.target)) {
+  const handleCardClick = () => {
+    if (cardRef.current) {
       cardRef.current.classList.remove("slide-up");
       cardRef.current.classList.add("slide-down");
       setTimeout(() => setShowCard(false), 500);
     }
   };
 
-  const handleCardStay = (event) => {
-    event.stopPropagation();
-  };
   return (
     <>
       <div className="home xss:pt-32 xs:pt-40 md:pt-52 md:pb-15 ">
-          <h2 className="spyagencyBoldItal text-white  xss:mb-4 xs:mb-8 md:mb-16 xss:text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
-            Our Division
-          </h2>
+        <h2 className="spyagencyBoldItal text-white text-3xl sm:text-5xl md:text-5xl lg:text-7xl">
+          Our Division
+        </h2>
+        <h4 className="text-white font-medium text-lg sm:text-xl lg:text-2xl mt-1">
+          MENTORING UMN 2024
+        </h4>
         <div className="container flex justify-center relative z-10 mx-auto w-full p-4 xss:mt-8 xs:mt-12 md:mt-16">
-          <div className="grid grid-cols-6 xs:grid-cols-6 md:grid-cols-6 lg:grid-cols-6 xl:grid-cols-8  gap-6 md:gap-10 justify-items-center">
+          <div className="grid grid-cols-6 xs:grid-cols-6 md:grid-cols-6 lg:grid-cols-6 xl:grid-cols-8 gap-6 md:gap-10 justify-items-center">
             {data.map((item, index) => {
               const isLastRow = index >= data.length - (data.length % 3);
               const isThirdToLast = index === data.length - 3;
@@ -52,11 +44,12 @@ function Division() {
                       : ""
                   }${isThirdToLast ? "xl:col-start-2" : ""}`}
                   onClick={() => {
-                    setShowCard(!showCard);
+                    setShowCard(true);
                     setSelectedData({
                       title: item.title,
                       description: item.description,
                       image: item.image,
+                      picture: item.picture,
                     });
                   }}
                   style={{
@@ -85,39 +78,63 @@ function Division() {
         </div>
         {showCard && selectedData && (
           <div
-            className="w-[790px] h-[480px] overflow-hidden card-container"
+            className="xss:w-[53.125rem] overflow-hidden card-container xss:top-[40%] sm:top-1/2 lg:top-[55%]"
             ref={cardRef}
-            onClick={handleCardClick}
           >
-            <div
-              className="bg-white cursor-pointer flex justify-center xss:w-[60px] xs:w-[68px] md:w-[100px] lg:w-[120px] card-container xss:top-[42%] xs:top-[38%] md:top-[25%] lg:top-[20%] rounded-full shadow-lg "
-              onClick={handleCardStay}
-            >
-              <img
-                src={selectedData.image}
-                className="xss:w-10 xs:w-[85px] md:w-[80px] lg:w-[100px] img-fluid object-cover"
-              />
-            </div>
-            <div
-              className="xss:mt-9 lg:mt-10 lg:mb-3 lg:px-10 lg:pb-5 gradientcolor card-container xss:w-[490px] xss:h-[130px] xs:w-[600px] xs:h-[160px] md:w-[700px] md:h-[300px] lg:w-[750px] lg:h-[370px] xss:rounded-[20px] xs:rounded-[35px] lg:rounded-[60px] z-[-1] overflow-hidden inShadow flex flex-col justify-between"
-              onClick={handleCardStay}
-            >
-              <h2 className="spyagencyRegular text-white xss:text-[12px] xs:text-sm md:text-xl lg:text-3xl xss:mt-2  xs:mt-4 md:mt-14 lg:mt-16">
-                {selectedData.title}
-              </h2>
-              <div className="flex-grow flex items-center justify-center">
-                <p className=" text-white xss:text-[8px] xs:text-[10px] md:text-lg lg:text-2xl text-center z-10 xss:p-1 xs:p-1 md:p-4 lg:p-5 box-border xss:mb-2 lg:mb-5">
-                  {selectedData.description}
+            <div className="relative" id="screenPopUp">
+              <div
+                className="absolute bg-[#02B4A8] border-2 border-[rgb(24,230,177)] md:rounded-tl-[15px] md:rounded-br-[15px] flex items-center justify-center
+              lg:w-60 lg:h-14 lg:top-[22%] lg:right-[9%] sm:w-60 sm:h-14
+              md:w-40 md:h-[34px] md:top-[22%] md:right-[10%] 
+              xss:w-32 xss:h-8 xss:top-[50%] xss:rounded-tl-[10px] xss:rounded-br-[10px]
+              xs:w-40 xs:h-10 xs:top-[50%] center"
+              >
+                <p
+                  className="text-[#F5FDFF] text-center
+                lg:text-[18px] md:text-[12px] xss:text-[10px] spyagencyRegular sm:text-base"
+                >
+                  {selectedData.title}
                 </p>
               </div>
-                <p className="xss:text-[5px] xs:text-[7px] md:text-sm lg:text-sm mx-auto underline text-white">
-                CLICK ANYWHERE TO CLOSE
-                </p>
-              <div className="card_1">
-                <img src={Daco}/>
+
+              <div
+                className="absolute bg-white md:w-[48%] xss:w-[85%]
+                    center
+                    md:top-[20%] lg:top-[20%] xss:top-[12%]
+                    md:left-[7%] "
+              >
+                <img
+                  className=" w-full xss:mt-2 md:mt-3"
+                  src={selectedData.picture}
+                />
               </div>
-              <div className="card_2">
-                <img src={Daco}/>
+              <button
+                className="xss:w-[72px] md:w-[120px] fixed right-[7%] xss:top-[3%] md:top-[0%]"
+                onClick={handleCardClick}
+              >
+                <img src={Button} />
+              </button>
+              <p
+                className="text-white absolute
+            md:bottom-[7%] lg:bottom-[12%] xss:bottom-[20%] xs:bottom-[22%] sm:bottom-[28%]
+            md:w-1/2 md:max-w-full
+            md:text-justify xss:text-center
+            md:text-xs lg:text-sm xss:text-[8px] xs:text-[10px] sm:text-sm
+            md:left-[6%] lg:left-[7%] sm:w-96 xss:w-56 xs:w-64 center
+            h-16"
+              >
+                {selectedData.description}
+              </p>
+
+              <img src={Screen} className="hidden md:block" />
+              <img src={ScreenMobile} className="md:hidden block" />
+              <div
+                className="bg-white flex justify-center card-container absolute
+                    md:top-[75%]
+                    xss:top-[82%] xs:top-[81%] 
+                    xss:left-[50%] xss:max-w-12 xs:max-w-16 sm:max-w-20 sm:p-4 md:max-w-[80%] md:left-[84%] rounded-full shadow-lg xss:p-2 md:p-5"
+              >
+                <img src={selectedData.image} className=" object-cover" loading="lazy"/>
               </div>
             </div>
           </div>
@@ -126,4 +143,5 @@ function Division() {
     </>
   );
 }
+
 export default Division;

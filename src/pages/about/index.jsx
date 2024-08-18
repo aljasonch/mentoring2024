@@ -42,9 +42,9 @@ function About() {
           <div className="text-white sm:pt-52 xss:pt-36 text-3xl sm:text-5xl md:text-6xl lg:text-7xl spyagencyBoldItal">
             ABOUT US
           </div>
-          <p className=" text-white text-3xl xss:text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-3xl ">
+          <h4 className="text-white font-medium text-lg sm:text-xl lg:text-2xl mt-1">
             MENTORING UMN 2024
-          </p>
+          </h4>
         </div>
         <div className="w-9/12 md:w-[36.25rem] lg:hidden relative z-10 mx-auto mt-16">
           <div className="relative">
@@ -130,27 +130,26 @@ function About() {
               <p>REVEAL,</p>
             </div>
             <p className=" text-justify text-white xss:text-xs xs:text-sm sm:text-lg mb-2 lg:text-sm xl:text-lg">
-              Mentee dan panitia Mentoring UMN 2024
-              diharapkan dapat mengungkapkan kapabilitas dalam diri mereka
-              selama di dunia perkuliahan melalui proses Character Building
-              Mentoring UMN 2024.
+              Mentee dan panitia Mentoring UMN 2024 diharapkan dapat
+              mengungkapkan kapabilitas dalam diri mereka selama di dunia
+              perkuliahan melalui proses Character Building Mentoring UMN 2024.
             </p>
             <div className="spyagencyBoldItal xss:text-xl lg:text-4xl xl:text-6xl xs:text-2xl sm:text-4xl text-end text-white">
               <p>REFiNE,</p>
             </div>
             <p className=" text-justify text-white xss:text-xs xs:text-sm sm:text-lg mb-2 lg:text-sm xl:text-lg">
-              Mentee dan panitia Mentoring UMN 2024 dapat melakukan pembentukan diri
-              dengan mengembangkan kapabilitas dalam diri mereka selama
+              Mentee dan panitia Mentoring UMN 2024 dapat melakukan pembentukan
+              diri dengan mengembangkan kapabilitas dalam diri mereka selama
               perkuliahan melalui Mentoring UMN 2024.
             </p>
             <div className="spyagencyBoldItal xss:text-xl lg:text-4xl xl:text-6xl xs:text-2xl sm:text-4xl text-end text-white">
               <p>RADiATE</p>
             </div>
             <p className=" text-justify text-white xss:text-xs xs:text-sm sm:text-lg mb-2 lg:text-sm xl:text-lg">
-              Mentee dan panitia Mentoring UMN 2024 dapat
-              memancarkan kapabilitas mereka menjadi lebih bersinar dengan
-              mengandalkan kemampuan yang mereka miliki agar dapat berdampak
-              bagi orang sekitar.
+              Mentee dan panitia Mentoring UMN 2024 dapat memancarkan
+              kapabilitas mereka menjadi lebih bersinar dengan mengandalkan
+              kemampuan yang mereka miliki agar dapat berdampak bagi orang
+              sekitar.
             </p>
           </div>
         </div>
