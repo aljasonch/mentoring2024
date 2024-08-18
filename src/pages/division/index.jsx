@@ -21,7 +21,7 @@ function Division() {
 
   return (
     <>
-      <div className="home xss:pt-32 xs:pt-40 md:pt-52 md:pb-15 ">
+      <div className="home xss:pt-32 xs:pt-40 md:pt-52 lg:pt-44 md:pb-15 ">
         <h2 className="spyagencyBoldItal text-white text-3xl sm:text-5xl md:text-5xl lg:text-7xl">
           Our Division
         </h2>
@@ -84,7 +84,7 @@ function Division() {
             <div className="relative" id="screenPopUp">
               <div
                 className="absolute bg-[#02B4A8] border-2 border-[rgb(24,230,177)] md:rounded-tl-[15px] md:rounded-br-[15px] flex items-center justify-center
-              lg:w-60 lg:h-14 lg:top-[22%] lg:right-[9%] sm:w-60 sm:h-14
+              lg:w-64 lg:h-14 lg:top-[22%] lg:right-[7%] sm:w-60 sm:h-14
               md:w-40 md:h-[34px] md:top-[22%] md:right-[10%] 
               xss:w-32 xss:h-8 xss:top-[50%] xss:rounded-tl-[10px] xss:rounded-br-[10px]
               xs:w-40 xs:h-10 xs:top-[50%] center"

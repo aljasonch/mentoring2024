@@ -39,7 +39,7 @@ function About() {
             className="absolute top-0 right-0 w-44 h-auto z-10 xss:w-16 xss:top-12 md:w-28 md:top-16"
             alt="Lightning Right"
           />
-          <div className="text-white sm:pt-52 xss:pt-36 text-3xl sm:text-5xl md:text-6xl lg:text-7xl spyagencyBoldItal">
+          <div className="text-white xss:pt-32 xs:pt-40 md:pt-52 lg:pt-44 md:pb-15 text-3xl sm:text-5xl md:text-6xl lg:text-7xl spyagencyBoldItal">
             ABOUT US
           </div>
           <h4 className="text-white font-medium text-lg sm:text-xl lg:text-2xl mt-1">
@@ -98,7 +98,7 @@ function About() {
             />
             <img
               src={Asset_3}
-              className="absolute z-30 w-6/12 top-8 sm:top-16 right-0 lg:w-2/5"
+              className="absolute z-20 w-6/12 top-8 sm:top-16 right-0 lg:w-2/5"
               alt="3"
             />
           </div>

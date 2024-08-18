@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./style.css";
+import { Link } from "react-router-dom";
 import Petir_1 from "../../assets/1.webp";
 import Petir_2 from "../../assets/2.webp";
 import Transition1 from "../../assets/3.webp";
 import Transition2 from "../../assets/4.webp";
 import Bintik_3 from "../../assets/5.webp";
 import Green_Line from "../../assets/6.webp";
-import Green_Line_LancipKiri from "../../assets/7.webp";
-import Green_Line_LancipKanan from "../../assets/8.webp";
+import Chat from "../../assets/bubblechat.png";
+import Zachery from "../../assets/gif/loading.gif";
 import Logo from "../../assets/Logo.webp";
 import Mentoring from "../../assets/Mentoring.jpg";
 import Logo_5C from "../../assets/5C.webp";
@@ -57,7 +58,7 @@ function Countdown({ targetDate, onCountdownComplete }) {
   }, [timeLeft, targetDate, onCountdownComplete]);
 
   return (
-    <div className="flex justify-center xl:gap-24 lg:gap-12 md:gap-6 xss:gap-0 items-center  xss:flex-col md:flex-row">
+    <div className="flex justify-center xl:gap-24 lg:gap-12 md:gap-6 xss:gap-0 items-center  xss:flex-col md:flex-row spyagencyGradient ">
       <div className="text-center xl:text-8xl lg:text-6xl md:text-5xl xss:text-4xl">
         {String(timeLeft.days || "0").padStart(2, "0")}
         <span className="xss:text-base md:text-xl block">Days</span>
@@ -143,13 +144,8 @@ function Home() {
   return (
     <>
       <div className="relative py-36 md:py-42 home w-full">
-        <img
-          src={Green_Line_LancipKiri}
-          className="absolute w-6 md:w-8 xl:w-10"
-          alt="Green Line"
-        />
         <div
-          className={`spyagencyGradient invisible text-[#D3FFF4] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl my-10 sm:my-12 md:my-16 lg:my-20 xl:my-28 min-h-[200px] transition-all duration-1000 ${
+          className={`invisible text-[#D3FFF4] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl my-10 sm:my-12 md:my-16 lg:my-20 xl:my-28 min-h-[200px] transition-all duration-1000 ${
             showText
               ? "opacity-100 sm:visible translate-y-0"
               : "opacity-0 invisible translate-y-10"
@@ -180,44 +176,49 @@ function Home() {
             }}
           >
             {showAdditionalSection && (
-              <>
-                <p className="mb-2 sm:mb-3 md:mb-4 lg:mb-5 sm:text-5xl lg:text-6xl xl:text-8xl">
-                  REVEAL YOUR
-                </p>
-                <p className="mb-2 sm:mb-3 md:mb-4 lg:mb-5 sm:text-5xl lg:text-6xl xl:text-8xl">
-                  CAPABiLiTY WiTHiN A
-                </p>
-                <p
-                  style={{ marginBottom: "00px" }}
-                  className="mb-2 sm:mb-3 md:mb-4 lg:mb-5 sm:text-5xl lg:text-6xl xl:text-8xl"
-                >
-                  PURPOSEFUL QUEST
-                </p>
-              </>
+              <div className="relative -top-24">
+                <img
+                  src={Zachery}
+                  alt="Loading"
+                  className="absolute left-12 top-8 w-[50%] shadow-object"
+                />
+                <div className="absolute lg:right-24 xl:right-36 lg:w-[50%] xl:w-[45%]">
+                  <div className="relative">
+                    <img src={Chat} className="w-full h-auto" />
+                    <div className="absolute inset-0 flex flex-col justify-center items-center text-center lg:ml-10 xl:ml-14 text-white">
+                      <h1 className="spyagencyRegular lg:text-2xl xl:text-4xl">
+                        Welcome To
+                      </h1>
+                      <h1 className="spyagencyGradient font-normal lg:text-5xl xl:text-7xl xl:leading-[56px] italic">
+                        Mentoring
+                        <br /> 2024
+                      </h1>
+                      <p className="lg:text-xs xl:text-sm max-w-[70%] lg:mt-6 xl:mt-8">
+                        Selamat datang di website Mentoring UMN 2024! <br />
+                        Kenalin, Aku{" "}
+                        <span className="font-bold italic">
+                          Zachery&#x1F44B;
+                        </span>
+                        , dan aku akan menjadi pemandu kamu dalam menemukan
+                        kelompokmu.
+                        <p className="xl:mt-10 font-bold  italic">
+                          Yuk, temukan kelompokmu sekarang dengan menekan tombol
+                          di bawah ini!
+                        </p>
+                      </p>
+                      <Link
+                        to="/groups"
+                        className="bg-white w-48 h-10 text-base rounded-3xl font-normal shadow-lg text-black mt-4 flex items-center justify-center hover:text-white hover:bg-transparent hover:border-white hover:border-2"
+                      >
+                        Find Your Group
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
             )}
-            <a
-              href="https://www.instagram.com/mentoringumn/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={Logo}
-                className={`absolute left-1/2 transform hover:scale-110 hover:cursor-pointer -translate-x-1/2 w-48 sm:w-56 md:w-64 lg:w-80 xl:w-[402px] -top-8 shadow-logo-home transition-all duration-[1500ms] delay-100 ${
-                  showLogo
-                    ? "opacity-100 visible translate-y-0"
-                    : "opacity-0 invisible translate-y-10"
-                }`}
-                alt="Logo"
-              />
-            </a>
           </div>
         </div>
-
-        <img
-          src={Green_Line_LancipKanan}
-          className="right-0 top-52 absolute w-6 md:w-8 xl:w-10"
-          alt="Green Line"
-        />
       </div>
       <div className="relative background-transition">
         <img src={Transition1} className="relative z-20" alt="Transition 1" />
@@ -240,10 +241,7 @@ function Home() {
             <p className="spyagencyBoldItal text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
               Mentoring?
             </p>
-            <div
-              className="mx-auto my-12 md:my-16 w-72 md:w-[500px] lg:w-[600px] xl:w-[700px] shadow-2xl"
-              
-            >
+            <div className="mx-auto my-12 md:my-16 w-72 md:w-[500px] lg:w-[600px] xl:w-[700px] shadow-2xl">
               <img
                 src={Mentoring}
                 className=" border-8 rounded-3xl md:rounded-3xl lg:rounded-[36px]"
@@ -251,10 +249,10 @@ function Home() {
               />
             </div>
             <p className="xss:text-sm xs:text-base sm:text-base lg:text-lg xl:text-xl font-medium px-14 md:px-24 xl:px-72 mx-auto">
-              Mentoring UMN adalah kegiatan tahunan yang
-              wajib diikuti oleh Mentee dengan tujuan
-              menyeluruh, memperkenalkan secara mendalam nilai-nilai 5C UMN.
-              Mentoring UMN juga memiliki maskot bernama ZACHERY!
+              Mentoring UMN adalah kegiatan tahunan yang wajib diikuti oleh
+              Mentee dengan tujuan menyeluruh, memperkenalkan secara mendalam
+              nilai-nilai 5C UMN. Mentoring UMN juga memiliki maskot bernama
+              ZACHERY!
             </p>
           </div>
         </div>
