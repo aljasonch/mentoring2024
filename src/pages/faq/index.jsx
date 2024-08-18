@@ -7,7 +7,7 @@ import data from "./data.js";
 
 function Faq() {
   return (
-    <div className="background-mentoring pb-40 bg-fixed">
+    <div className="home pb-40 bg-fixed">
       <div className="fixed top-0 left-0 z-0 ">
         <img src={BlackDots} alt={BlackDots} className="w-72 xss:w-64 h-auto" />
       </div>
@@ -16,7 +16,7 @@ function Faq() {
           FREQUENTLY ASKED QUESTIONS
         </h1>
         <h4 className="text-white font-medium text-lg sm:text-xl lg:text-2xl mt-1">
-          CHARACTER BUILDING MENTORING UMN 2024
+          MENTORING UMN 2024
         </h4>
       </div>
       <div className="px-6 py-10 space-y-6">

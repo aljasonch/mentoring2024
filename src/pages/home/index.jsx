@@ -250,7 +250,7 @@ function Home() {
                 alt="Mentoring"
               />
             </div>
-            <p className="text-xs sm:text-base lg:text-lg xl:text-xl font-medium px-14 md:px-24 xl:px-72 mx-auto">
+            <p className="xss:text-sm xs:text-base sm:text-base lg:text-lg xl:text-xl font-medium px-14 md:px-24 xl:px-72 mx-auto">
               Mentoring UMN adalah kegiatan tahunan yang
               wajib diikuti oleh Mentee dengan tujuan
               menyeluruh, memperkenalkan secara mendalam nilai-nilai 5C UMN.
@@ -268,7 +268,7 @@ function Home() {
             alt="Bintik 3"
           />
         </div>
-        <div className="pb-20 md:pb-40 background-mentoring">
+        <div className="pb-20 md:pb-40 home">
           <img
             src={Logo_5C}
             className="w-[76px] h-[81px] mx-auto"
@@ -281,7 +281,7 @@ function Home() {
             <p className="spyagencyBoldItal text-5xl lg:text-9xl text-center">
               5C
             </p>
-            <p className="text-base sm:text-base lg:text-lg xl:text-xl font-medium px-12 md:px-40 xl:px-72 mx-auto mt-10 md:my-12 mb-24 lg:mb-16 xl:mb-20">
+            <p className="xss:text-sm xs:text-base sm:text-base lg:text-lg xl:text-xl font-medium px-12 md:px-40 xl:px-72 mx-auto mt-10 md:my-12 mb-24 lg:mb-16 xl:mb-20">
               5C merupakan nilai yang ditanamkan UMN kepada mahasiswanya melalui
               berbagai aktivitas kehidupan sehari-hari.
             </p>

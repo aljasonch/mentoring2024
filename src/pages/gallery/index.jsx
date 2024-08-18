@@ -66,7 +66,7 @@ export function Gallery() {
   return (
     <div className="background-mentoring pb-40">
       {location.pathname.endsWith("collection") && currentData?.images ? (
-        <div className="w-full flex justify-center flex-col">
+        <div className="w-full flex justify-center pt-40 flex-col">
           <div
             className="flex flex-row justify-between items-center mx-auto overflow-clip"
             style={{ width: "calc(100vw - min(100vw*(17/216),85px))" }}
@@ -105,9 +105,9 @@ export function Gallery() {
             <h1 className="spyagencyBoldItal font-normal text-white text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
               GALLERY
             </h1>
-            <p className="text-white font-medium text-lg sm:text-xl lg:text-2xl mt-1">
-              CHARACTER BUILDING MENTORING UMN 2024
-            </p>
+            <h4 className="text-white font-medium text-lg sm:text-xl lg:text-2xl mt-1">
+              MENTORING UMN 2024
+            </h4>
             <p className="text-white font-semibold text-lg sm:text-xl lg:text-2xl xss:mt-8 md:mt-16">
               SELECT YOUR EVENT
             </p>
