@@ -6,6 +6,8 @@ import { Kelompok, Anggota, AnggotaList, KelompokList } from "./data";
 import React, { memo, useEffect, useState } from "react";
 import KelompokItem from "../../components/groups/KelompokItem";
 import { immerable } from "immer";
+import KelompokItemSkeleton from "../../components/groups/KelompokItemSkeleton";
+import SearchSubSection from "../../components/groups/SearchSubSection";
 
 class PageState {
   [immerable] = true;
@@ -34,7 +36,20 @@ class PageState {
   showsearch = false;
 
   initialdatafetch = false;
+
+  skeleton = true;
 }
+
+export class Globals {
+  static StateContext = React.createContext({
+    /**
+     * @type {PageState | null}
+     * */
+    state: null,
+    setState: (k) => {},
+  });
+}
+
 export default function Groups() {
   /**
    * @type {[PageState, (k: PageState) => void]}
@@ -49,6 +64,7 @@ export default function Groups() {
          * @returns {void}
          * */ (draft) => {
           draft.initialdatafetch = true;
+          draft.skeleton = false;
           draft.semuakelompok = KelompokList.create();
           draft.semuakelompok.kelompok = [];
           for (let i = 0; i < 200; i++) {
@@ -114,19 +130,17 @@ export default function Groups() {
       </div>
       <div className="h-12"></div>
       <div className="w-full mb-12 flex flex-col items-center justify-center">
-        <div className="w-[90%] bg-white h-12 sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-[70%] 2xl:w-[65%] rounded-[24px] flex flex-row items-center justify-start overflow-hidden">
-          <div className="w-6"></div>
-          <img src={searchicon} className="w-6 h-6" />
-          <input
-            type="text"
-            placeholder="Search"
-            className="w-full h-12 bg-transparent outline-none border-transparent"
-          />
-        </div>
-        <div className="h-12"></div>
-        <div className="w-[90%] h-full sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-[70%] 2xl:w-[65%] flex flex-col">
-          {state.rendercache}
-        </div>
+        <Globals.StateContext.Provider value={{ state, setState }}>
+          <SearchSubSection />
+          <div className="h-12"></div>
+          <div className="w-[90%] h-full sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-[70%] 2xl:w-[65%] flex flex-col">
+            {state.skeleton ? (
+              <KelompokItemSkeleton numberofrows={5} />
+            ) : (
+              state.rendercache
+            )}
+          </div>
+        </Globals.StateContext.Provider>
       </div>
     </div>
   );
