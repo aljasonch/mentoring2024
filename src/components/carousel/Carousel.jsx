@@ -84,7 +84,7 @@ export const Carousel = ({ data, logos }) => {
               className={
                 slide === idx
                   ? "w-5 h-1.5 sm:w-7 sm:h-2 lg:w-10 lg:h-3.5 xl:w-12 xl:h-3.5 mx-2.5 lg:mx-4 bg-white rounded-2xl border-none outline-none"
-                  : "w-1.5 h-1.5 sm:w-2 sm:h-2 lg:w-3.5 lg:h-3.5 xl:w-3.5 xl:h-3.5 mx-2.5 lg:mx-4 bg-gray-500 rounded-2xl border-none outline-none"
+                  : "w-1.5 h-1.5 sm:w-2 sm:h-2 lg:w-3.5 lg:h-3.5 xl:w-3.5 xl:h-3.5 mx-2.5 lg:mx-4 bg-gray-500 hover:bg-white rounded-2xl border-none outline-none"
               }
               onClick={() => setSlide(idx)}
             ></button>

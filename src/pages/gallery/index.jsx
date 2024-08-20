@@ -101,7 +101,7 @@ export function Gallery() {
         </div>
       ) : (
         <>
-          <div className="px-4 sm:px-0 max-w-4xl mx-auto text-center xss:pt-32 xs:pt-40 md:pt-52 md:pb-15">
+          <div className="px-4 sm:px-0 max-w-4xl mx-auto text-center xss:pt-32 xs:pt-40 md:pt-52 lg:pt-44 md:pb-15">
             <h1 className="spyagencyBoldItal font-normal text-white text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
               GALLERY
             </h1>

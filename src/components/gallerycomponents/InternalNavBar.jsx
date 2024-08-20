@@ -42,7 +42,7 @@ const InternalNavBar = React.memo(({ state, setstate, data }) => {
           {data[state.currentscreen]?.title}
         </h1>
         <h4 className="text-white font-medium text-lg xss:text-sm xs:text-md xs:mx-10 xss:mx-4 sm:text-lg lg:text-xl mt-1">
-          CHARACTER BUILDING MENTORING UMN 2024
+          MENTORING UMN 2024
         </h4>
       </div>
       <div

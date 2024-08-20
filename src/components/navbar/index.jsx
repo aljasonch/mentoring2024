@@ -15,22 +15,22 @@ function Navbar() {
 
   return (
     <div>
-      <div className="fixed z-30 w-full sm:h-32 heightMiniSmartphone heightSmartphone backdrop-blur 2xl:h-32 xl:h-28 md:h-36 lg:h-20 background-navbar"></div>
+      <div className="fixed z-30 w-full sm:h-32  xss:h-[4.4rem] xs:h-20 heightMiniSmartphone heightSmartphone backdrop-blur xl:h-24 md:h-36 lg:h-16 background-navbar"></div>
       <div className="w-full mx-auto flex items-center justify-between fixed z-40">
         <div className="relative">
           <img
             src={Logo}
-            className="w-12 mx-6 mt-6 md:w-28 mb-8 2xl:w-24 xl:w-24 absolute z-10 2xl:m-10 xl:m-8 md:ml-8 2xl:ml-20 xl:ml-16 shadow-object md:m-10 lg:w-16 lg:ml-12 lg:m-6"
+            className="w-12 sm:w-20 sm:m-8 mx-6 mt-6 md:w-28 mb-8 xl:w-20 absolute z-10 xl:m-6 md:ml-8 xl:ml-16 shadow-object md:m-10 lg:w-12 lg:ml-12 lg:m-5"
             alt="Logo"
           />
           <img
             src={Pistol}
-            className="2xl:w-[36rem] xl:w-[34rem] lg:w-96 shadow-object md:w-[650px]"
+            className="xl:w-[28rem] lg:w-80 shadow-object md:w-[650px]"
             alt="Pistol"
           />
         </div>
         <div className="hidden lg:flex mx-auto">
-          <ul className="flex xl:pb-16 mx-auto md:pb-6 lg:pb-10 z-0 2xl:gap-x-12 xl:gap-x-12 md:gap-x-8 lg:gap-x-12">
+          <ul className="flex xl:pb-12 mx-auto md:pb-6 lg:pb-10 z-0  xl:gap-x-12 md:gap-x-8 lg:gap-x-8">
             <Link to="/">
               <div className="xl:w-36 xl:h-12 md:w-24 md:h-10">
                 <li className="text-[#2B2476] bg-white xl:w-28 xl:h-8 md:w-20 md:h-6 -skew-x-[40deg] shadow-nav rounded-tr-2xl rounded-bl-2xl rounded-tl rounded-br transform hover:scale-110 transition-transform duration-500">
