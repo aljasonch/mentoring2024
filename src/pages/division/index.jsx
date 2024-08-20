@@ -2,9 +2,9 @@ import React, { useState, useRef } from "react";
 import "./style.css";
 import Daco from "../../assets/Blackdots_3.webp";
 import data from "../division/data.js";
-import Screen from "../../assets/screen.png";
-import ScreenMobile from "../../assets/screenMobile.png";
-import Button from "../../assets/button.png";
+import Screen from "../../assets/screen.webp";
+import ScreenMobile from "../../assets/screenMobile.webp";
+import Button from "../../assets/button.webp";
 
 function Division() {
   const [showCard, setShowCard] = useState(false);
@@ -72,7 +72,6 @@ function Division() {
             })}
           </div>
         </div>
-
         <div className="daco relative top-0 right-0 w-full overflow-hidden">
           <img src={Daco} />
         </div>
@@ -134,7 +133,11 @@ function Division() {
                     xss:top-[82%] xs:top-[81%] 
                     xss:left-[50%] xss:max-w-12 xs:max-w-14 sm:max-w-20 sm:p-4 md:max-w-[80%] md:left-[84%] rounded-full shadow-lg xss:p-2 md:p-5"
               >
-                <img src={selectedData.image} className=" object-cover" loading="lazy"/>
+                <img
+                  src={selectedData.image}
+                  className=" object-cover"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>

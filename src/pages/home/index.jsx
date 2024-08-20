@@ -3,12 +3,15 @@ import "./style.css";
 import { Link } from "react-router-dom";
 import Petir_1 from "../../assets/1.webp";
 import Petir_2 from "../../assets/2.webp";
+import GreenLine from "../../assets/7.webp";
 import Transition1 from "../../assets/3.webp";
 import Transition2 from "../../assets/4.webp";
 import Bintik_3 from "../../assets/5.webp";
 import Green_Line from "../../assets/6.webp";
-import Chat from "../../assets/bubblechat.png";
-import Zachery from "../../assets/gif/loading.gif";
+import Asset_6 from "../../assets/15.webp";
+import Chat from "../../assets/bubblechat.webp";
+import ChatMobile from "../../assets/bubblechatMobile.webp";
+import Zachery from "../../assets/zacheryspeak.webp";
 import Logo from "../../assets/Logo.webp";
 import Mentoring from "../../assets/Mentoring.jpg";
 import Logo_5C from "../../assets/5C.webp";
@@ -98,7 +101,6 @@ function Home() {
   ];
 
   const [showText, setShowText] = useState(false);
-  const [showLogo, setShowLogo] = useState(false);
   const [showAdditionalSection, setShowAdditionalSection] = useState(false);
   const [showCountdown, setShowCountdown] = useState(true);
 
@@ -110,27 +112,21 @@ function Home() {
       localStorage.setItem("countdownComplete", "true");
       setShowCountdown(false);
       setShowText(true);
-      setShowLogo(true);
       setShowAdditionalSection(true);
       return;
     }
 
     const timer1 = setTimeout(() => {
       setShowText(true);
-    }, 2000);
+    }, 1500);
 
     const timer2 = setTimeout(() => {
-      setShowLogo(true);
-    }, 3000);
-
-    const timer3 = setTimeout(() => {
       setShowAdditionalSection(true);
-    }, 4000);
+    }, 3000);
 
     return () => {
       clearTimeout(timer1);
       clearTimeout(timer2);
-      clearTimeout(timer3);
     };
   }, []);
 
@@ -144,6 +140,8 @@ function Home() {
   return (
     <>
       <div className="relative py-36 md:py-42 home w-full">
+      <img src={GreenLine} className="absolute top-36 w-6 md:w-10 left-0"/>
+      <img src={GreenLine} className="absolute top-36 w-6 md:w-10 right-0 scale-x-[-1]"/>
         <div
           className={`invisible text-[#D3FFF4] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl my-10 sm:my-12 md:my-16 lg:my-20 xl:my-28 min-h-[200px] transition-all duration-1000 ${
             showText
@@ -159,7 +157,7 @@ function Home() {
             }}
           >
             <p className="spyagencyCond xss:text-xl sm:text-3xl md:text-4xl md:mt-24 mb-12 lg:text-5xl">
-              OUR JOURNEY BEGINS IN
+              OUR JOURNEY BEGINS iN
             </p>
             <div>
               <Countdown
@@ -169,31 +167,40 @@ function Home() {
             </div>
           </div>
           <div
-            id="count2"
+            id="display"
             style={{
               display: showCountdown ? "none" : "block",
               visibility: showCountdown ? "hidden" : "visible",
             }}
           >
             {showAdditionalSection && (
-              <div className="relative -top-24">
+              <div className="relative -top-10 sm:top-6 md:top-12 lg:-top-12 xl:-top-20">
+                <img src={GreenLine} className="absolute top-8 sm:hidden block w-6 left-0"/>
+                <img src={GreenLine} className="absolute top-8 sm:hidden block w-6 right-0 scale-x-[-1]"/>
                 <img
                   src={Zachery}
                   alt="Loading"
-                  className="absolute left-12 top-8 w-[50%] shadow-object"
+                  className="absolute center-mobile xss:top-72 xs:top-80 sm:left-4 md:left-4 lg:left-8 sm:top-0 md:-top-4 lg:-top-8 sm:w-[40%] xss:w-[50%] shadow-object"
                 />
-                <div className="absolute lg:right-24 xl:right-36 lg:w-[50%] xl:w-[45%]">
-                  <div className="relative">
-                    <img src={Chat} className="w-full h-auto" />
-                    <div className="absolute inset-0 flex flex-col justify-center items-center text-center lg:ml-10 xl:ml-14 text-white">
-                      <h1 className="spyagencyRegular lg:text-2xl xl:text-4xl">
+                <div className="absolute sm:right-0 md:right-12 lg:right-24 xl:right-36 sm:w-[60%] md:w-[55%] lg:w-[50%] xl:w-[45%] w-full flex justify-center sm:justify-end">
+                  <div className="flex justify-center items-center">
+                    <img
+                      src={Chat}
+                      className="sm:block hidden lg:w-full md:w-[90%] sm:w-[85%] h-auto"
+                    />
+                    <img
+                      src={ChatMobile}
+                      className="block sm:hidden h-auto w-[65%] "
+                    />
+                    <div className="absolute inset-0 flex flex-col justify-center items-center xss:-top-8 xs:-top-12 sm:top-0 text-center sm:ml-8 md:ml-9 lg:ml-12 xl:ml-20 text-white xss:max-w-[50%] xss:mx-auto sm:max-w-[100%]">
+                      <h1 className="spyagencyRegular xss:text-xs sm:text-sm md:text-base lg:text-2xl xl:text-3xl">
                         Welcome To
                       </h1>
-                      <h1 className="spyagencyGradient font-normal lg:text-5xl xl:text-7xl xl:leading-[56px] italic">
+                      <h1 className="spyagencyGradient font-normal xss:text-2xl xs:text-3xl xs:leading-[20px] xss:leading-[18px] sm:text-2xl md:text-3xl lg:text-5xl lg:leading-[36px] xl:text-7xl xl:leading-[56px] md:leading-[24px] sm:leading-[20px] italic">
                         Mentoring
                         <br /> 2024
                       </h1>
-                      <p className="lg:text-xs xl:text-sm max-w-[70%] lg:mt-6 xl:mt-8">
+                      <p className="xs:text-[11px] xss:text-[10px] xss:leading-[10px] xs:leading-[12px] sm:text-[10px] md:text-[10px] sm:leading-[12px] md:leading-[14px] lg:text-sm xl:text-lg sm:max-w-[75%] md:max-w-[60%] lg:max-w-[80%] xss:mt-6 sm:mt-2 md:mt-2 lg:mt-6 xl:mt-8">
                         Selamat datang di website Mentoring UMN 2024! <br />
                         Kenalin, Aku{" "}
                         <span className="font-bold italic">
@@ -201,26 +208,37 @@ function Home() {
                         </span>
                         , dan aku akan menjadi pemandu kamu dalam menemukan
                         kelompokmu.
-                        <p className="xl:mt-10 font-bold  italic">
+                        <p className="mt-6 sm:mt-5 md:mt-6 lg:mt-10 font-bold italic">
                           Yuk, temukan kelompokmu sekarang dengan menekan tombol
                           di bawah ini!
                         </p>
                       </p>
                       <Link
                         to="/groups"
-                        className="bg-white w-48 h-10 text-base rounded-3xl font-normal shadow-lg text-black mt-4 flex items-center justify-center hover:text-white hover:bg-transparent hover:border-white hover:border-2"
+                        className="bg-white xss:w-24 xs:w-28 xss:h-7 xs:h-8 sm:w-32 sm:h-8 lg:w-48 lg:h-10 text-sm lg:text-lg rounded-3xl font-semibold shadow-lg text-[#2B2476] mt-4 flex items-center justify-center hover:text-white hover:bg-transparent hover:border-white hover:border-2"
                       >
-                        Find Your Group
+                        Let's Go!
                       </Link>
                     </div>
                   </div>
                 </div>
+                <img
+                  src={Asset_6}
+                  className="absolute hidden sm:block scale-x-[-1] z-10 w-72 sm:w-7/12 sm:-top-12 md:-top-14 lg:top-4 left-0 lg:w-1/2"
+                  alt="3"
+                />
+                <img
+                  src={Asset_6}
+                  className="absolute hidden sm:block z-10 w-72 sm:w-7/12 sm:-bottom-80 md:-bottom-[23rem] lg:-bottom-[30rem] xl:-bottom-[40rem] right-0 lg:w-1/2"
+                  alt="3"
+                />
               </div>
             )}
           </div>
         </div>
       </div>
-      <div className="relative background-transition">
+
+      <div className="relative background-transition mt-20">
         <img src={Transition1} className="relative z-20" alt="Transition 1" />
         <img
           src={Petir_1}
