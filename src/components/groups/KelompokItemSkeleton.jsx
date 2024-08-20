@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import "./main.css";
 import PropTypes from "prop-types";
 
-function PulsatingDiv({ children }) {
+export function PulsatingDiv({ children }) {
   return (
     <div className="animate-pulse w-full h-full rounded-[12px] overflow-hidden">
       <div className="w-full h-full bg-gray-300 text-transparent">1</div>
@@ -29,7 +29,7 @@ export default function KelompokItemSkeleton({ numberofrows }) {
           <div className="h-4"></div>
           <div className="spyagencyBoldItal text-white text-sm sm:text-xl md:text-2xl lg:text-3xl w-full">
             <PulsatingDiv>
-              <div className="w-full h-full bg-white">3213</div>
+              <div className="w-full h-full bg-white"></div>
             </PulsatingDiv>
           </div>
         </div>
@@ -49,17 +49,17 @@ export default function KelompokItemSkeleton({ numberofrows }) {
               <tr key={index}>
                 <td className="tdfinalleft">
                   <PulsatingDiv>
-                    <div className="w-full h-full bg-white">3213</div>
+                    <div className="w-full h-full bg-white"></div>
                   </PulsatingDiv>
                 </td>
                 <td className="tdmiddlefinal w-full h-full">
                   <PulsatingDiv>
-                    <div className="w-full h-full bg-white">3213</div>
+                    <div className="w-full h-full bg-white"></div>
                   </PulsatingDiv>
                 </td>
                 <td className="tdfinalright">
                   <PulsatingDiv>
-                    <div className="w-full h-full bg-white">3213</div>
+                    <div className="w-full h-full bg-white"></div>
                   </PulsatingDiv>
                 </td>
               </tr>
@@ -67,19 +67,17 @@ export default function KelompokItemSkeleton({ numberofrows }) {
               <tr key={index}>
                 <td className="tdleftmost w-full h-full">
                   <PulsatingDiv>
-                    <div className="w-full h-full bg-gray-500">3213</div>
+                    <div className="w-full h-full bg-gray-500"></div>
                   </PulsatingDiv>
                 </td>
                 <td className="tdmiddle">
                   <PulsatingDiv>
-                    <div className="w-full h-full bg-gray-500">3213</div>
+                    <div className="w-full h-full bg-gray-500"></div>
                   </PulsatingDiv>
                 </td>
                 <td className="tdrightmost w-full h-full">
                   <PulsatingDiv>
-                    <div className="w-full h-full bg-gray-500">
-                      you cant see this
-                    </div>
+                    <div className="w-full h-full bg-gray-500"></div>
                   </PulsatingDiv>
                 </td>
               </tr>

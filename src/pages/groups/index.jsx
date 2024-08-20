@@ -1,6 +1,4 @@
 // @ts-check
-// @ts-expect-error
-import searchicon from "../../assets/searchicon.svg";
 import { useImmer } from "use-immer";
 import { Kelompok, Anggota, AnggotaList, KelompokList } from "./data";
 import React, { memo, useEffect, useState } from "react";
@@ -69,10 +67,11 @@ export default function Groups() {
           draft.semuakelompok.kelompok = [];
           for (let i = 0; i < 200; i++) {
             let kelompok = new Kelompok();
-            kelompok.namakelompok = `${i}`;
+            kelompok.namakelompok = `Mentor K${i}`;
             kelompok.anggota = AnggotaList.create();
             kelompok.nomorkelompok = `${i}`;
             kelompok.namamentor = `Mentor ${i}`;
+            kelompok.idline = `@${i}`;
             for (let j = 0; j < 10; j++) {
               let anggota = new Anggota();
               anggota.nama = `Anggota ${j}`;
@@ -109,7 +108,7 @@ export default function Groups() {
           setState((draft) => {
             let kelompok =
               state.semuakelompok.kelompok[state.rendercache.length];
-            console.log("Rendering", kelompok.anggota.list.length);
+            //console.log("Rendering", kelompok.anggota.list.length);
             draft.rendercache.push(
               <KelompokItem key={kelompok.namakelompok} kelompok={kelompok} />
             );
@@ -131,7 +130,7 @@ export default function Groups() {
       <div className="h-12"></div>
       <div className="w-full mb-12 flex flex-col items-center justify-center">
         <Globals.StateContext.Provider value={{ state, setState }}>
-          <SearchSubSection />
+          <SearchSubSection kelompokdata={state.statecache.kelompok} />
           <div className="h-12"></div>
           <div className="w-[90%] h-full sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-[70%] 2xl:w-[65%] flex flex-col">
             {state.skeleton ? (

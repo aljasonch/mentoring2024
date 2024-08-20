@@ -5,6 +5,7 @@ import "./main.css";
 import { Anggota, Kelompok, AnggotaList } from "../../pages/groups/data";
 import { useImmer } from "use-immer";
 import PropTypes from "prop-types";
+import { HashDataType } from "./data";
 /**
  * @param {Object} props
  * @param {Kelompok} props.kelompok
@@ -34,7 +35,7 @@ export default function KelompokItem({ kelompok }) {
         });
       } else {
         if (state.rendereditems.length == kelompok.anggota.list.length) {
-          console.log(state.rendereditems.length, kelompok.anggota.list.length);
+          //console.log(state.rendereditems.length, kelompok.anggota.list.length);
         } else {
           requestAnimationFrame(() => {
             setState((draft) => {
@@ -47,17 +48,59 @@ export default function KelompokItem({ kelompok }) {
               ) {
                 draft.rendereditems.push(
                   <tr key={anggota.nim}>
-                    <td className="tdfinalleft">{anggota.nama}</td>
-                    <td className="tdmiddlefinal">{anggota.jurusan}</td>
-                    <td className="tdfinalright">{anggota.angkatan}</td>
+                    <td
+                      className={`tdfinalleft ${HashGenerator(
+                        HashDataType.NAMAANGGOTA,
+                        anggota.nama
+                      )}`}
+                    >
+                      {anggota.nama}
+                    </td>
+                    <td
+                      className={`tdmiddlefinal ${HashGenerator(
+                        HashDataType.JURUSAN,
+                        anggota.jurusan
+                      )}`}
+                    >
+                      {anggota.jurusan}
+                    </td>
+                    <td
+                      className={`tdfinalright ${HashGenerator(
+                        HashDataType.JURUSAN,
+                        anggota.angkatan
+                      )}`}
+                    >
+                      {anggota.angkatan}
+                    </td>
                   </tr>
                 );
               } else {
                 draft.rendereditems.push(
                   <tr key={anggota.nim}>
-                    <td>{anggota.nama}</td>
-                    <td className="tdmiddle">{anggota.jurusan}</td>
-                    <td>{anggota.angkatan}</td>
+                    <td
+                      className={HashGenerator(
+                        HashDataType.NAMAANGGOTA,
+                        anggota.nama + anggota.nim
+                      )}
+                    >
+                      {anggota.nama}
+                    </td>
+                    <td
+                      className={`tdmiddle ${HashGenerator(
+                        HashDataType.JURUSAN,
+                        anggota.jurusan + anggota.nim
+                      )}`}
+                    >
+                      {anggota.jurusan}
+                    </td>
+                    <td
+                      className={HashGenerator(
+                        HashDataType.ANGKATAN,
+                        anggota.angkatan + anggota.nim
+                      )}
+                    >
+                      {anggota.angkatan}
+                    </td>
                   </tr>
                 );
               }
@@ -77,7 +120,7 @@ export default function KelompokItem({ kelompok }) {
     <div className="flex flex-col items-center justify-center w-full mb-8">
       <div className="w-full flex flex-row items-center">
         <div
-          className="bg-white rounded-[50%]
+          className={`bg-white rounded-[50%]
         aspect-square
         font-extrabold
         w-[48px]
@@ -91,16 +134,27 @@ export default function KelompokItem({ kelompok }) {
         xl:w-[125px]
         flex items-center justify-center
         mr-6
-        "
+        ${HashGenerator(HashDataType.NOMORKELOMPOK, kelompok.nomorkelompok)}
+        `}
         >
           {kelompok.nomorkelompok}
         </div>
 
         <div className="flex flex-col items-start justify-center">
-          <div className="spyagencyRegular font-bold text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl">
+          <div
+            className={`spyagencyRegular font-bold text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl ${HashGenerator(
+              HashDataType.NAMAKELOMPOK,
+              kelompok.namakelompok + kelompok.nomorkelompok
+            )}`}
+          >
             KELOMPOK {kelompok.namakelompok}
           </div>
-          <div className="spyagencyBoldItal text-white text-sm sm:text-xl md:text-2xl lg:text-3xl ">
+          <div
+            className={`spyagencyBoldItal text-white text-sm sm:text-xl md:text-2xl lg:text-3xl ${HashGenerator(
+              HashDataType.NAMAMENTOR,
+              kelompok.namamentor + kelompok.nomorkelompok
+            )}`}
+          >
             MENTOR: {kelompok.namamentor}
           </div>
           {state.rendereditems.length != kelompok.anggota.list.length && (
@@ -121,6 +175,15 @@ export default function KelompokItem({ kelompok }) {
         </thead>
         <tbody>{state.rendereditems}</tbody>
       </table>
+      <div className="h-2"></div>
+      <div
+        className={`w-full flex flex-row items-center justify-center text-white ${HashGenerator(
+          HashDataType.IDLINE,
+          kelompok.idline + kelompok.nomorkelompok
+        )}`}
+      >
+        ID LINE: {kelompok.idline}
+      </div>
     </div>
   );
 }
@@ -128,3 +191,12 @@ export default function KelompokItem({ kelompok }) {
 KelompokItem.propTypes = {
   kelompok: PropTypes.object.isRequired,
 };
+
+/**
+ *
+ * @param {string} typeofdata
+ * @param {string} value
+ */
+export function HashGenerator(typeofdata, value) {
+  return btoa(`${typeofdata}-${value}`);
+}
