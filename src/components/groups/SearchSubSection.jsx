@@ -405,9 +405,16 @@ function SearchResultItem({ result }) {
             <div
               className="spyagencyBoldItal text-white text-lg sm:text-xl md:text-2xl lg:text-3xl hover:bg-white/[.5] rounded transition-all"
               onClick={() => {
+                console.log(
+                  "Jumping to ",
+                  HashGenerator(
+                    HashDataType.IDLINE,
+                    data.data.idline + data.data.nomorkelompok
+                  )
+                );
                 JumpToHash(
                   HashGenerator(
-                    HashDataType.NAMAMENTOR,
+                    HashDataType.IDLINE,
                     data.data.idline + data.data.nomorkelompok
                   )
                 );
