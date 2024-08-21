@@ -87,7 +87,7 @@ export class Kelompok {
        * @type {Anggota}
        */
       let anggota = Anggota.create();
-      anggota.nama = "Anggota " + i;
+      anggota.nama = "Anggota Dengan nama yang panjang" + i;
       anggota.nim = "000000000" + i;
       anggota.jurusan = "Teknik Informatika";
       anggota.angkatan = "2024";

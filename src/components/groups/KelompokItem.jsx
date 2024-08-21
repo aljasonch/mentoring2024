@@ -37,7 +37,7 @@ export default function KelompokItem({ kelompok }) {
         if (state.rendereditems.length == kelompok.anggota.list.length) {
           //console.log(state.rendereditems.length, kelompok.anggota.list.length);
         } else {
-          requestAnimationFrame(() => {
+          setTimeout(() => {
             setState((draft) => {
               //console.log("Rendering", kelompok.anggota.list);
               let anggota = kelompok.anggota.list[state.rendereditems.length];

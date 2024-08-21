@@ -74,9 +74,9 @@ export default function Groups() {
             kelompok.idline = `@${i}`;
             for (let j = 0; j < 10; j++) {
               let anggota = new Anggota();
-              anggota.nama = `Anggota ${j}`;
-              anggota.nim = `000000${j} ${Math.random() * 9999999}`;
-              anggota.jurusan = "Informatika";
+              anggota.nama = `Anggota Dengan nama yang panjang ${j}`;
+              anggota.nim = `${Math.floor(Math.random() * 9999999999)}`;
+              anggota.jurusan = "Master of Technology Management";
               anggota.angkatan = "2024";
               kelompok.anggota.list.push(anggota);
             }
@@ -104,7 +104,7 @@ export default function Groups() {
           state.semuakelompok.kelompok.length
         );
       } else {
-        requestAnimationFrame(() => {
+        setTimeout(() => {
           setState((draft) => {
             let kelompok =
               state.semuakelompok.kelompok[state.rendercache.length];
@@ -132,6 +132,31 @@ export default function Groups() {
         <Globals.StateContext.Provider value={{ state, setState }}>
           <SearchSubSection kelompokdata={state.statecache.kelompok} />
           <div className="h-12"></div>
+          {state.rendercache.length !== state.semuakelompok.kelompok.length && (
+            <>
+              <div className="w-[90%] h-12 sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-[70%] 2xl:w-[65%] flex flex-row bg-white/[.25] rounded items-center justify-start text-white">
+                <div className="w-4"></div>
+                <div className="w-fit inline-block whitespace-nowrap">
+                  Loading: {state.rendercache.length} /{" "}
+                  {state.semuakelompok.kelompok.length}
+                </div>
+                <div className="m-4 bg-white/[.25] w-full h-8 rounded flex flex-row">
+                  <div
+                    className="h-full bg-teal-500 rounded"
+                    style={{
+                      width: `${
+                        (state.rendercache.length /
+                          state.semuakelompok.kelompok.length) *
+                        100
+                      }%`,
+                    }}
+                  ></div>
+                </div>
+              </div>
+              <div className="h-12"></div>
+            </>
+          )}
+
           <div className="w-[90%] h-full sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-[70%] 2xl:w-[65%] flex flex-col">
             {state.skeleton ? (
               <KelompokItemSkeleton numberofrows={5} />

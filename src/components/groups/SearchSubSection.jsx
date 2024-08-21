@@ -217,7 +217,7 @@ function IncrementalListBuilder({ items, itemgenerator, generationid }) {
         console.log("Incremental rendering done");
         console.log(state.rendercache.length, state.cacheditems.length);
       } else {
-        requestAnimationFrame(() => {
+        setTimeout(() => {
           setState((draft) => {
             let item = state.cacheditems[state.rendercache.length];
             //console.log("Rendering", item);
@@ -252,8 +252,9 @@ function SearchResultItem({ result }) {
     rendered = (
       <div className="bg-white/[.25] rounded mb-4 flex flex-row p-4">
         <div className="min-w-full flex flex-row">
-          <div
-            className="bg-white rounded-[50%]
+          <div className="h-full flex flex-col items-start justify-start">
+            <div
+              className="bg-white rounded-[50%]
         aspect-square
         font-extrabold
         w-[120px]
@@ -269,21 +270,23 @@ function SearchResultItem({ result }) {
         mr-6
         hover:bg-black/[.2]
         transition-all
+        cursor-pointer
         "
-            onClick={() => {
-              JumpToHash(
-                HashGenerator(
-                  HashDataType.NAMAANGGOTA,
-                  data.data.nama + data.data.nim
-                )
-              );
-            }}
-          >
-            <img src={personicon} className="w-[70%] h-[70%]" />
+              onClick={() => {
+                JumpToHash(
+                  HashGenerator(
+                    HashDataType.NAMAANGGOTA,
+                    data.data.nama + data.data.nim
+                  )
+                );
+              }}
+            >
+              <img src={personicon} className="w-[70%] h-[70%]" />
+            </div>
           </div>
-          <div className="flex flex-col items-start justify-center">
+          <div className="flex flex-col items-start justify-center text-left break-all">
             <div
-              className="spyagencyRegular font-bold text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl hover:bg-white/[.5] rounded transition-all"
+              className="spyagencyRegular font-bold text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl hover:bg-white/[.5] rounded transition-all break-normal cursor-pointer"
               onClick={() => {
                 JumpToHash(
                   HashGenerator(
@@ -296,7 +299,7 @@ function SearchResultItem({ result }) {
               {data.data.nama}
             </div>
             <div
-              className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl hover:bg-white/[.5] rounded transition-all"
+              className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl hover:bg-white/[.5] rounded transition-all  cursor-pointer"
               onClick={() => {
                 JumpToHash(
                   HashGenerator(
@@ -309,7 +312,7 @@ function SearchResultItem({ result }) {
               {data.data.nim}
             </div>
             <div
-              className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl hover:bg-white/[.5] rounded transition-all"
+              className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl hover:bg-white/[.5] rounded transition-all break-normal  cursor-pointer"
               onClick={() => {
                 JumpToHash(
                   HashGenerator(
@@ -322,7 +325,7 @@ function SearchResultItem({ result }) {
               {data.data.jurusan}
             </div>
             <div
-              className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl hover:bg-white/[.5] rounded transition-all"
+              className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl hover:bg-white/[.5] rounded transition-all  cursor-pointer"
               onClick={() => {
                 JumpToHash(
                   HashGenerator(
@@ -380,9 +383,9 @@ function SearchResultItem({ result }) {
               {data.data.nomorkelompok}
             </div>
           </div>
-          <div className="flex flex-col items-start justify-center">
+          <div className="flex flex-col items-start justify-center text-left break-all">
             <div
-              className="spyagencyRegular font-bold text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl hover:bg-white/[.5] rounded transition-all"
+              className="spyagencyRegular font-bold text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl hover:bg-white/[.5] rounded transition-all break-normal  cursor-pointer"
               onClick={() => {
                 JumpToHash(
                   HashGenerator(
@@ -395,7 +398,7 @@ function SearchResultItem({ result }) {
               Kelompok {data.data.namakelompok}
             </div>
             <div
-              className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl hover:bg-white/[.5] rounded transition-all"
+              className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl hover:bg-white/[.5] rounded transition-all  cursor-pointer break-normal"
               onClick={() => {
                 JumpToHash(
                   HashGenerator(
