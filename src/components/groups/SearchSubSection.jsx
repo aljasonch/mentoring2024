@@ -296,7 +296,7 @@ function SearchResultItem({ result }) {
               {data.data.nama}
             </div>
             <div
-              className="spyagencyBoldItal text-white text-lg sm:text-xl md:text-2xl lg:text-3xl hover:bg-white/[.5] rounded transition-all"
+              className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl hover:bg-white/[.5] rounded transition-all"
               onClick={() => {
                 JumpToHash(
                   HashGenerator(
@@ -309,7 +309,7 @@ function SearchResultItem({ result }) {
               {data.data.nim}
             </div>
             <div
-              className="spyagencyBoldItal text-white text-lg sm:text-xl md:text-2xl lg:text-3xl hover:bg-white/[.5] rounded transition-all"
+              className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl hover:bg-white/[.5] rounded transition-all"
               onClick={() => {
                 JumpToHash(
                   HashGenerator(
@@ -322,7 +322,7 @@ function SearchResultItem({ result }) {
               {data.data.jurusan}
             </div>
             <div
-              className="spyagencyBoldItal text-white text-lg sm:text-xl md:text-2xl lg:text-3xl hover:bg-white/[.5] rounded transition-all"
+              className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl hover:bg-white/[.5] rounded transition-all"
               onClick={() => {
                 JumpToHash(
                   HashGenerator(
@@ -395,7 +395,7 @@ function SearchResultItem({ result }) {
               Kelompok {data.data.namakelompok}
             </div>
             <div
-              className="spyagencyBoldItal text-white text-lg sm:text-xl md:text-2xl lg:text-3xl hover:bg-white/[.5] rounded transition-all"
+              className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl hover:bg-white/[.5] rounded transition-all"
               onClick={() => {
                 JumpToHash(
                   HashGenerator(
@@ -408,7 +408,7 @@ function SearchResultItem({ result }) {
               Mentor: {data.data.namamentor}
             </div>
             <div
-              className="spyagencyBoldItal text-white text-lg sm:text-xl md:text-2xl lg:text-3xl hover:bg-white/[.5] rounded transition-all"
+              className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl hover:bg-white/[.5] rounded transition-all"
               onClick={() => {
                 console.log(
                   "Jumping to ",
