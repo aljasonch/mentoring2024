@@ -75,7 +75,7 @@ export default function Groups() {
             for (let j = 0; j < 10; j++) {
               let anggota = new Anggota();
               anggota.nama = `Anggota ${j}`;
-              anggota.nim = `000000${j}`;
+              anggota.nim = `000000${j} ${Math.random() * 9999999}`;
               anggota.jurusan = "Informatika";
               anggota.angkatan = "2024";
               kelompok.anggota.list.push(anggota);

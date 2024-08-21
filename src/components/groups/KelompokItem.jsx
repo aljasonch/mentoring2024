@@ -51,7 +51,7 @@ export default function KelompokItem({ kelompok }) {
                     <td
                       className={`tdfinalleft ${HashGenerator(
                         HashDataType.NAMAANGGOTA,
-                        anggota.nama
+                        anggota.nama + anggota.nim
                       )}`}
                     >
                       {anggota.nama}
@@ -59,15 +59,15 @@ export default function KelompokItem({ kelompok }) {
                     <td
                       className={`tdmiddlefinal ${HashGenerator(
                         HashDataType.JURUSAN,
-                        anggota.jurusan
+                        anggota.jurusan + anggota.nim
                       )}`}
                     >
                       {anggota.jurusan}
                     </td>
                     <td
                       className={`tdfinalright ${HashGenerator(
-                        HashDataType.JURUSAN,
-                        anggota.angkatan
+                        HashDataType.ANGKATAN,
+                        anggota.angkatan + anggota.nim
                       )}`}
                     >
                       {anggota.angkatan}
