@@ -9,6 +9,7 @@ import {
 
 // @ts-check
 onmessage = function (e) {
+  let starttime = new Date().getTime();
   /**
    * @type {SearchWorkerMessage}
    */
@@ -72,5 +73,7 @@ onmessage = function (e) {
     }
   }
   console.log("Search done");
+  let enddtime = new Date().getTime();
+  console.log("Search done in " + (enddtime - starttime) + " ms");
   postMessage(result);
 };
