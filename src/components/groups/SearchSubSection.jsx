@@ -165,7 +165,12 @@ export default function SearchSubSection({ kelompokdata }) {
               <IncrementalListBuilder
                 generationid={state.latestsearchresult?.responseid ?? ""}
                 items={state.latestsearchresult?.result ?? []}
-                itemgenerator={(item) => <SearchResultItem result={item} />}
+                itemgenerator={(item) => (
+                  <SearchResultItem
+                    result={item}
+                    key={Math.random().toString()}
+                  />
+                )}
                 key={Math.random().toString()}
               />
             </div>
