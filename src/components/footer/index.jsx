@@ -174,6 +174,7 @@ const Footer = () => {
         <h1>
           Developed and Managed by Website Division
         </h1>
+        
       </div>
     </footer>
   );

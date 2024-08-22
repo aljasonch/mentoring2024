@@ -7,7 +7,6 @@ import About from "./pages/about";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import { Gallery } from "./pages/gallery/index";
-import Groups from "./pages/groups";
 import LoadingScreen from "./components/loadingScreen";
 import { useState, useEffect } from "react";
 import Division from "./pages/division";
@@ -69,7 +68,7 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/gallery/collection" element={<Gallery />} />
             <Route path="/about" element={<About />} />
-            <Route path="/groups" element={<Groups />} />
+            {/* <Route path="/groups" element={<Groups />} /> */}
           </Routes>
           <Footer />
         </>
