@@ -14,8 +14,6 @@ import Division from "./pages/division";
 
 function App() {
   const [loading, setLoading] = useState(true);
-  const location = useLocation();
-  const navigate = useNavigate();
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
@@ -26,30 +24,7 @@ function App() {
       }, 500);
     }, 2500);
   }, []);
-  useEffect(() => {
-    window.addEventListener("message", (event) => {
-      const { pathname, crossoriginCheck } = event.data;
-      if (crossoriginCheck !== "PASS") {
-        return;
-      }
-      if (location.pathname !== pathname) {
-        //history.replaceState(null, "", pathname);
-        //console.log("pathname", pathname);
-        navigate(pathname);
-      }
-    });
-    window.parent.postMessage(
-      { pathname: location.pathname, crossoriginCheck: "PASS" },
-      "*"
-    );
-  }, []);
-
-  useEffect(() => {
-    window.parent.postMessage(
-      { pathname: location.pathname, crossoriginCheck: "PASS" },
-      "*"
-    );
-  }, [location]);
+  
 
   return (
     <div className="mx-auto">
