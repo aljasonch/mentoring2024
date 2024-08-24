@@ -36,7 +36,7 @@ function Division() {
               return (
                 <div
                   key={index}
-                  className={`bg-white cursor-pointer p-4 md:p-6 sm:p-4 xs:p-4 col-span-2 rounded-full inner-shadow transition-color duration-500 ease-in-out hover:shadow-none shadow-2xl ${
+                  className={`bg-white cursor-pointer lg:min-w-36 lg:min-h-36 p-4 md:p-6 sm:p-4 xs:p-4 col-span-2 rounded-full inner-shadow transition-color duration-500 ease-in-out hover:shadow-none shadow-2xl ${
                     isLastRow
                       ? data.length % 3 === 2 && index === data.length - 2
                         ? "col-start-2 xl:col-start-auto"
@@ -64,6 +64,7 @@ function Division() {
                   }
                 >
                   <img
+                    loading="lazy"
                     src={item.image}
                     className="h-auto w-full max-w-[7rem] img-fluid mx-auto flex items-center justify-center"
                   />

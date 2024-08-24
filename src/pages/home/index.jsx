@@ -140,8 +140,11 @@ function Home() {
   return (
     <>
       <div className="relative py-36 md:py-42 home w-full">
-      <img src={GreenLine} className="absolute top-36 w-6 md:w-10 left-0"/>
-      <img src={GreenLine} className="absolute top-36 w-6 md:w-10 right-0 scale-x-[-1]"/>
+        <img src={GreenLine} className="absolute top-36 w-6 md:w-10 left-0" />
+        <img
+          src={GreenLine}
+          className="absolute top-36 w-6 md:w-10 right-0 scale-x-[-1]"
+        />
         <div
           className={`invisible text-[#D3FFF4] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl my-10 sm:my-12 md:my-16 lg:my-20 xl:my-28 min-h-[200px] transition-all duration-1000 ${
             showText
@@ -174,9 +177,15 @@ function Home() {
             }}
           >
             {showAdditionalSection && (
-              <div className="relative -top-10 sm:top-6 md:top-12 lg:-top-12 xl:-top-20">
-                <img src={GreenLine} className="absolute top-8 sm:hidden block w-6 left-0"/>
-                <img src={GreenLine} className="absolute top-8 sm:hidden block w-6 right-0 scale-x-[-1]"/>
+              <div className="relative -top-10 sm:top-6 md:top-12 lg:-top-10 xl:-top-20">
+                <img
+                  src={GreenLine}
+                  className="absolute top-8 sm:hidden block w-6 left-0"
+                />
+                <img
+                  src={GreenLine}
+                  className="absolute top-8 sm:hidden block w-6 right-0 scale-x-[-1]"
+                />
                 <img
                   src={Zachery}
                   alt="Loading"
@@ -192,7 +201,7 @@ function Home() {
                       src={ChatMobile}
                       className="block sm:hidden h-auto w-[65%] "
                     />
-                    <div className="absolute inset-0 flex flex-col justify-center items-center xss:-top-8 xs:-top-12 sm:top-0 text-center sm:ml-8 md:ml-9 lg:ml-12 xl:ml-20 text-white xss:max-w-[50%] xss:mx-auto sm:max-w-[100%]">
+                    <div className="absolute inset-0 flex flex-col justify-center items-center xss:-top-8 xs:-top-10 sm:top-0 text-center sm:ml-8 md:ml-9 lg:ml-12 xl:ml-20 text-white xss:max-w-[50%] xss:mx-auto sm:max-w-[100%]">
                       <h1 className="spyagencyRegular xss:text-xs sm:text-sm md:text-base lg:text-2xl xl:text-3xl">
                         Welcome To
                       </h1>
@@ -224,7 +233,7 @@ function Home() {
                 </div>
                 <img
                   src={Asset_6}
-                  className="absolute hidden sm:block scale-x-[-1] z-10 w-72 sm:w-7/12 sm:-top-12 md:-top-14 lg:top-4 left-0 lg:w-1/2"
+                  className="absolute hidden sm:block scale-x-[-1] z-10 w-72 sm:w-7/12 sm:-top-10 md:-top-14 lg:top-4 left-0 lg:w-1/2"
                   alt="3"
                 />
                 <img
@@ -237,7 +246,109 @@ function Home() {
           </div>
         </div>
       </div>
+      <div className="relative z-0 py-20 lg:py-36 home lg:block hidden">
+        <p className="spyagencyBoldItal text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white">
+          TIMELINE
+        </p>
+        <div className="flex flex-col items-center space-y-4 p-4 mt-4 ">
+          <div className="relative">
+            <div className="w-0.5 h-40 bg-[#95A9FF] mx-auto"></div>
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-[#95A9FF]"></div>
+          </div>
+          <div className="relative">
+            <div className=" absolute  right-24 -top-10">
+              <div className="flex w-[28rem] h-36 bg-white rounded-3xl p-4 items-center">
+                <div className="w-32 h-28 bg-gray-200 rounded-xl"></div>
+                <div className="flex-row text-start ml-4">
+                  <div className="text-purple-600 text-sm font-medium">
+                    Sabtu, 7 September 2024
+                  </div>
+                  <div className="text-blue-700 font-bold text-lg ">???</div>
+                  <div className="text-blue-700 font-bold text-lg ">???</div>
+                  <div className="text-purple-400 text-sm">Offline</div>
+                </div>
+              </div>
+            </div>
+            <div className="w-16 h-16 rounded-full border-4 eclipse border-[#18E6B1] border-l-transparent flex items-center justify-center my-2">
+              <div className="w-12 h-12 rounded-full border-4 border-[#18E6B1] border-l-transparent "></div>
+            </div>
+          </div>
+          <div className="relative">
+            <div className="w-4 h-4 rounded-full bg-[#95A9FF]"></div>
+            <div className="w-0.5 h-28 bg-[#95A9FF] mx-auto"></div>
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-[#95A9FF]"></div>
+          </div>
+          <div className="relative">
+            <div className=" absolute  left-24 -top-10">
+              <div className="flex w-[28rem] h-36 bg-white rounded-3xl p-4 items-center">
+                <div className="w-32 h-28 bg-gray-200 rounded-xl"></div>
+                <div className="flex-row text-start ml-4">
+                  <div className="text-purple-600 text-sm font-medium">
+                    Sabtu, 14 September 2024
+                  </div>
+                  <div className="text-blue-700 font-bold text-lg ">???</div>
+                  <div className="text-blue-700 font-bold text-lg ">???</div>
+                  <div className="text-purple-400 text-sm">Offline</div>
+                </div>
+              </div>
+            </div>
+            <div className="w-16 h-16 rounded-full border-4 eclipse border-[#18E6B1] border-r-transparent flex items-center justify-center my-2">
+              <div className="w-12 h-12 rounded-full border-4 border-[#18E6B1] border-r-transparent "></div>
+            </div>
+          </div>
+          <div className="relative">
+            <div className="w-4 h-4 rounded-full bg-[#95A9FF]"></div>
+            <div className="w-0.5 h-28 bg-[#95A9FF] mx-auto"></div>
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-[#95A9FF]"></div>
+          </div>
+          <div className="relative">
+            <div className=" absolute  right-24 -top-10">
+              <div className="flex w-[28rem] h-36 bg-white rounded-3xl p-4 items-center">
+                <div className="w-32 h-28 bg-gray-200 rounded-xl"></div>
+                <div className="flex-row text-start ml-4">
+                  <div className="text-purple-600 text-sm font-medium">
+                    Sabtu, 21 September 2024
+                  </div>
+                  <div className="text-blue-700 font-bold text-lg ">???</div>
+                  <div className="text-blue-700 font-bold text-lg ">???</div>
+                  <div className="text-purple-400 text-sm">Offline</div>
+                </div>
+              </div>
+            </div>
+            <div className="w-16 h-16 rounded-full border-4 eclipse border-[#18E6B1] border-l-transparent flex items-center justify-center my-2">
+              <div className="w-12 h-12 rounded-full border-4 border-[#18E6B1] border-l-transparent "></div>
+            </div>
+          </div>
+          <div className="relative">
+            <div className="w-4 h-4 rounded-full bg-[#95A9FF]"></div>
+            <div className="w-0.5 h-28 bg-[#95A9FF] mx-auto"></div>
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-[#95A9FF]"></div>
+          </div>
+          <div className="relative">
+            <div className=" absolute  left-24 -top-10">
+              <div className="flex w-[28rem] h-36 bg-white rounded-3xl p-4 items-center">
+                <div className="w-32 h-28 bg-gray-200 rounded-xl"></div>
+                <div className="flex-row text-start ml-4">
+                  <div className="text-purple-600 text-sm font-medium">
+                    Sabtu, 28 September 2024
+                  </div>
+                  <div className="text-blue-700 font-bold text-lg ">???</div>
+                  <div className="text-blue-700 font-bold text-lg ">???</div>
+                  <div className="text-purple-400 text-sm">Offline</div>
+                </div>
+              </div>
+            </div>
+            <div className="w-16 h-16 rounded-full border-4 eclipse border-[#18E6B1] border-r-transparent flex items-center justify-center my-2">
+              <div className="w-12 h-12 rounded-full border-4 border-[#18E6B1] border-r-transparent "></div>
+            </div>
+          </div>
 
+          <div className="relative">
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-[#95A9FF]"></div>
+            <div className="w-0.5 h-40 bg-[#95A9FF] mx-auto"></div>
+          </div>
+        </div>
+      </div>
       <div className="relative background-transition mt-20">
         <img src={Transition1} className="relative z-20" alt="Transition 1" />
         <img

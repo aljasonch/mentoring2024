@@ -68,3 +68,9 @@
     transform: translateX(-50%);
   }
 }
+.eclipse
+{
+  stroke-width: 3px;
+stroke: #18E6B1;
+filter: drop-shadow(0px 0px 2px #F5FDFF);
+}
