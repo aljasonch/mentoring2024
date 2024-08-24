@@ -10,7 +10,7 @@ import { Gallery } from "./pages/gallery/index";
 import LoadingScreen from "./components/loadingScreen";
 import { useState, useEffect } from "react";
 import Division from "./pages/division";
-// import Groups from "./pages/groups";
+import Groups from "./pages/groups";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -24,7 +24,6 @@ function App() {
       }, 500);
     }, 2500);
   }, []);
-  
 
   return (
     <div className="mx-auto">
@@ -43,7 +42,7 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/gallery/collection" element={<Gallery />} />
             <Route path="/about" element={<About />} />
-            {/* <Route path="/groups" element={<Groups />} /> */}
+            <Route path="/groups" element={<Groups />} />
           </Routes>
           <Footer />
         </>
