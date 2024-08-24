@@ -52,6 +52,7 @@ export default function SearchSubSection({ kelompokdata }) {
 
     startedsearching: false,
     hideresults: false,
+    antiblur: false,
   });
   useEffect(() => {
     if (state.dosearch && !state.throttlingsearch) {
@@ -111,7 +112,14 @@ export default function SearchSubSection({ kelompokdata }) {
   }, [state.searchquery]);
   return (
     <>
-      <div className="overflow-visible h-12 w-[90%] bg-white sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-[70%] 2xl:w-[65%] rounded-[24px] z-10">
+      <div
+        className="overflow-visible h-12 w-[90%] bg-white sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-[70%] 2xl:w-[65%] rounded-[24px] z-10"
+        onMouseEnter={() => {
+          setState((draft) => {
+            draft.antiblur = true;
+          });
+        }}
+      >
         <div className="w-full flex flex-col bg-white rounded-[24px] items-center justify-start h-fit overflow-hidden">
           <div className="w-full h-12 flex flex-row items-center justify-start">
             <img src={searchicon} className="ml-6 w-6 h-6" />
@@ -130,6 +138,9 @@ export default function SearchSubSection({ kelompokdata }) {
                 boxShadow: "none",
               }}
               onBlur={() => {
+                if (state.antiblur) {
+                  return;
+                }
                 setState((draft) => {
                   draft.hideresults = true;
                 });
@@ -170,6 +181,7 @@ export default function SearchSubSection({ kelompokdata }) {
                     <SearchResultItem
                       result={item}
                       key={Math.random().toString()}
+                      setState={setState}
                     />
                   )}
                   key={Math.random().toString()}
@@ -194,8 +206,9 @@ SearchSubSection.propTypes = {
 /**
  * @param {Object} props
  * @param {KelompokResult | AnggotaResult} props.result
+ * @param {(updater: (state: {antiblur: boolean, hideresults: boolean}) => void) => void} props.setState
  */
-function SearchResultItem({ result }) {
+function SearchResultItem({ result, setState }) {
   let rendered = <></>;
   //console.log("Rendering", result);
   if (result.type === "anggota") {
@@ -208,14 +221,18 @@ function SearchResultItem({ result }) {
       <>
         <div
           className="w-full hover:bg-black/25 cursor-pointer transition-all duration-150 h-12 flex flex-row items-center justify-start"
-          onClick={() =>
+          onClick={() => {
+            setState((draft) => {
+              draft.antiblur = false;
+              draft.hideresults = true;
+            });
             JumpToHash(
               HashGenerator(
                 HashDataType.NAMAANGGOTA,
                 data.data.nama + data.data.nim
               )
-            )
-          }
+            );
+          }}
         >
           <img src={searchicon} className="ml-6 w-6 h-6" />
           <div className="text-black text-lg ml-4">
@@ -230,12 +247,14 @@ function SearchResultItem({ result }) {
 
 SearchResultItem.propTypes = {
   result: PropTypes.object.isRequired,
+  setState: PropTypes.func.isRequired,
 };
 
 /**
  * @param {string} hash
  */
 function JumpToHash(hash) {
+  console.log("Jumping to hash", hash);
   let element = document.getElementsByClassName(hash)[0];
   if (element != null) {
     element.scrollIntoView({
