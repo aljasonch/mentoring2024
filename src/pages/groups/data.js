@@ -95,3 +95,26 @@ export class Kelompok {
     }
   }
 }
+
+export class IncrementalRenderingMethod {
+  /**
+   * @type {(callback: () => void) => void}
+   */
+  static FIREFOX_FAST = (callback) => {
+    setTimeout(callback);
+  };
+  /**
+   * @type {(callback: () => void) => void}
+   */
+  static FAILSAFE = (callback) => {
+    requestAnimationFrame(() => callback());
+  };
+  /**
+   * @type {(callback: () => void) => void}
+   */
+  static ALL_EXCEPT_SAFARI = (callback) => {
+    requestIdleCallback(() => callback(), {
+      timeout: 1000 / 30, // 30 times per second
+    });
+  };
+}

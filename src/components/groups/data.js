@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // @ts-check
 
 import { Anggota, Kelompok } from "../../pages/groups/data";
@@ -10,11 +11,6 @@ export class SearchWorkerMessage {
    * @type {Anggota[]}
    */
   anggotamaster = [];
-
-  /**
-   * @type {Kelompok[]}
-   */
-  kelompokmaster = [];
 }
 
 export class SearchResult {

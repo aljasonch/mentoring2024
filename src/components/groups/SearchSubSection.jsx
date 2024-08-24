@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // @ts-check
 
 import React, { useEffect } from "react";
@@ -8,6 +9,7 @@ import searchicon from "../../assets/searchicon.svg";
 // @ts-expect-error
 import Worker2 from "./searchworker?worker";
 import { useImmer } from "use-immer";
+
 import {
   AnggotaResult,
   HashDataType,
@@ -15,10 +17,10 @@ import {
   SearchResult,
   SearchWorkerMessage,
 } from "./data";
+import { IncrementalListBuilder } from "./IncrementalListBuilder";
 import { Anggota, Kelompok } from "../../pages/groups/data";
 import PropTypes from "prop-types";
-// @ts-expect-error
-import personicon from "../../assets/personicon.svg";
+import "./main.css";
 import { PulsatingDiv } from "./KelompokItemSkeleton";
 import { HashGenerator } from "./KelompokItem";
 /**
@@ -49,6 +51,7 @@ export default function SearchSubSection({ kelompokdata }) {
     skeleton: true,
 
     startedsearching: false,
+    hideresults: false,
   });
   useEffect(() => {
     if (state.dosearch && !state.throttlingsearch) {
@@ -63,7 +66,6 @@ export default function SearchSubSection({ kelompokdata }) {
       let message = new SearchWorkerMessage();
       message.query = state.searchquery;
       message.anggotamaster = anggotamaster;
-      message.kelompokmaster = kelompokdata;
       message.requestid = "search" + Math.random().toString();
       searchworker.postMessage(message);
       setState((draft) => {
@@ -109,131 +111,84 @@ export default function SearchSubSection({ kelompokdata }) {
   }, [state.searchquery]);
   return (
     <>
-      <div className="w-[90%] bg-white h-12 sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-[70%] 2xl:w-[65%] rounded-[24px] flex flex-row items-center justify-start overflow-hidden">
-        <div className="w-6"></div>
-        <img src={searchicon} className="w-6 h-6" />
-        <input
-          type="text"
-          placeholder="Search"
-          className="w-full h-12 bg-transparent outline-none border-transparent"
-          onChange={(e) => {
-            setState((draft) => {
-              draft.startedsearching = true;
-              draft.searchquery = e.target.value;
-            });
-          }}
-        />
+      <div className="overflow-visible h-12 w-[90%] bg-white sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-[70%] 2xl:w-[65%] rounded-[24px] z-10">
+        <div className="w-full flex flex-col bg-white rounded-[24px] items-center justify-start h-fit overflow-hidden">
+          <div className="w-full h-12 flex flex-row items-center justify-start">
+            <img src={searchicon} className="ml-6 w-6 h-6" />
+            <input
+              type="text"
+              placeholder="Search"
+              className="w-full h-12 bg-transparent outline-none border-transparent"
+              onChange={(e) => {
+                setState((draft) => {
+                  draft.startedsearching = true;
+                  draft.searchquery = e.target.value;
+                });
+              }}
+              style={{
+                borderWidth: "0px",
+                boxShadow: "none",
+              }}
+              onBlur={() => {
+                setState((draft) => {
+                  draft.hideresults = true;
+                });
+              }}
+              onFocus={() => {
+                setState((draft) => {
+                  draft.hideresults = false;
+                });
+              }}
+            />
+          </div>
+          {state.startedsearching && state.searchquery.length > 0 ? (
+            state.skeleton ? (
+              <>
+                <div className="h-4 w-[90%] m-4">
+                  <PulsatingDiv />
+                </div>
+                <div className="h-4 w-[90%] m-4">
+                  <PulsatingDiv />
+                </div>
+                <div className="h-4 w-[90%] m-4">
+                  <PulsatingDiv />
+                </div>
+                <div className="h-4 w-[90%] m-4">
+                  <PulsatingDiv />
+                </div>
+              </>
+            ) : (state.latestsearchresult?.result ?? []).length > 0 ? (
+              <div
+                className={`w-full transition-all duration-150 ${
+                  !state.hideresults ? "" : "opacity-0 h-0"
+                }`}
+              >
+                <IncrementalListBuilder
+                  generationid={state.latestsearchresult?.responseid ?? ""}
+                  items={state.latestsearchresult?.result ?? []}
+                  itemgenerator={(item) => (
+                    <SearchResultItem
+                      result={item}
+                      key={Math.random().toString()}
+                    />
+                  )}
+                  key={Math.random().toString()}
+                />
+              </div>
+            ) : (
+              <div className="mb-4">No results found.</div>
+            )
+          ) : (
+            <></>
+          )}
+        </div>
       </div>
-      {state.startedsearching && state.searchquery.length > 0 ? (
-        state.skeleton ? (
-          <>
-            <div className="h-4"></div>
-            <div className="h-4 w-[90%] sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-[70%] 2xl:w-[65%]">
-              <PulsatingDiv />
-            </div>
-            <div className="h-4"></div>
-            <div className="w-[90%] sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-[70%] 2xl:w-[65%] bg-white/[.25] rounded flex flex-col p-2">
-              <div className="h-20">
-                <PulsatingDiv />
-              </div>
-              <div className="h-4"></div>
-              <div className="h-20">
-                <PulsatingDiv />
-              </div>
-              <div className="h-4"></div>
-              <div className="h-20">
-                <PulsatingDiv />
-              </div>
-              <div className="h-4"></div>
-              <div className="h-20">
-                <PulsatingDiv />
-              </div>
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="h-4"></div>
-            <div className="text-white text-lg w-[90%] sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-[70%] 2xl:w-[65%] flex flex-row justify-start items-center">
-              Found{" "}
-              {state.latestsearchresult == null
-                ? 0
-                : state.latestsearchresult.result.length}{" "}
-              results
-            </div>
-            <div className="h-4"></div>
-            <div className="w-[90%] sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-[70%] 2xl:w-[65%] bg-white/[.25] rounded flex flex-col p-2 pb-0">
-              <IncrementalListBuilder
-                generationid={state.latestsearchresult?.responseid ?? ""}
-                items={state.latestsearchresult?.result ?? []}
-                itemgenerator={(item) => (
-                  <SearchResultItem
-                    result={item}
-                    key={Math.random().toString()}
-                  />
-                )}
-                key={Math.random().toString()}
-              />
-            </div>
-          </>
-        )
-      ) : (
-        <></>
-      )}
     </>
   );
 }
 
 SearchSubSection.propTypes = {
   kelompokdata: PropTypes.array,
-};
-
-/**
- * @param {Object} props
- * @param {any[]} props.items
- * @param {(x: any) => JSX.Element} props.itemgenerator
- * @param {string} props.generationid
- */
-function IncrementalListBuilder({ items, itemgenerator, generationid }) {
-  const [state, setState] = useImmer({
-    /**
-     * @type {any[]}
-     */
-    cacheditems: [],
-    /**
-     * @type {JSX.Element[]}
-     */
-    rendercache: [],
-    cachedgenerationid: "",
-  });
-  useEffect(() => {
-    if (state.cachedgenerationid !== generationid) {
-      setState((draft) => {
-        draft.cacheditems = items;
-        draft.rendercache = [];
-        draft.cachedgenerationid = generationid;
-      });
-    } else {
-      if (state.rendercache.length === state.cacheditems.length) {
-        console.log("Incremental rendering done");
-        console.log(state.rendercache.length, state.cacheditems.length);
-      } else {
-        setTimeout(() => {
-          setState((draft) => {
-            let item = state.cacheditems[state.rendercache.length];
-            //console.log("Rendering", item);
-            draft.rendercache.push(itemgenerator(item));
-          });
-        });
-      }
-    }
-  });
-  return <>{state.rendercache}</>;
-}
-
-IncrementalListBuilder.propTypes = {
-  items: PropTypes.array.isRequired,
-  itemgenerator: PropTypes.func.isRequired,
-  generationid: PropTypes.string.isRequired,
 };
 
 /**
@@ -250,189 +205,24 @@ function SearchResultItem({ result }) {
     // @ts-ignore
     let data = result;
     rendered = (
-      <div className="bg-white/[.25] rounded mb-4 flex flex-row p-4">
-        <div className="min-w-full flex flex-row">
-          <div className="h-full flex flex-col items-start justify-start">
-            <div
-              className="bg-white rounded-[50%]
-        aspect-square
-        font-extrabold
-        w-[120px]
-        text-2xl
-        sm:text-4xl
-        sm:w-[132px]
-        md:w-[140px]
-        md:text-5xl
-        lg:w-[150px]
-        lg:text-6xl
-        xl:w-[160px]
-        flex items-center justify-center
-        mr-6
-        hover:bg-black/[.2]
-        transition-all
-        cursor-pointer
-        "
-              onClick={() => {
-                JumpToHash(
-                  HashGenerator(
-                    HashDataType.NAMAANGGOTA,
-                    data.data.nama + data.data.nim
-                  )
-                );
-              }}
-            >
-              <img src={personicon} className="w-[70%] h-[70%]" />
-            </div>
-          </div>
-          <div className="flex flex-col items-start justify-center text-left break-all">
-            <div
-              className="spyagencyRegular font-bold text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl hover:bg-white/[.5] rounded transition-all break-normal cursor-pointer"
-              onClick={() => {
-                JumpToHash(
-                  HashGenerator(
-                    HashDataType.NAMAANGGOTA,
-                    data.data.nama + data.data.nim
-                  )
-                );
-              }}
-            >
-              {data.data.nama}
-            </div>
-            <div
-              className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl hover:bg-white/[.5] rounded transition-all  cursor-pointer"
-              onClick={() => {
-                JumpToHash(
-                  HashGenerator(
-                    HashDataType.NAMAANGGOTA,
-                    data.data.nama + data.data.nim
-                  )
-                );
-              }}
-            >
-              {data.data.nim}
-            </div>
-            <div
-              className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl hover:bg-white/[.5] rounded transition-all break-normal  cursor-pointer"
-              onClick={() => {
-                JumpToHash(
-                  HashGenerator(
-                    HashDataType.JURUSAN,
-                    data.data.jurusan + data.data.nim
-                  )
-                );
-              }}
-            >
-              {data.data.jurusan}
-            </div>
-            <div
-              className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl hover:bg-white/[.5] rounded transition-all  cursor-pointer"
-              onClick={() => {
-                JumpToHash(
-                  HashGenerator(
-                    HashDataType.ANGKATAN,
-                    data.data.angkatan + data.data.nim
-                  )
-                );
-              }}
-            >
-              {data.data.angkatan}
-            </div>
+      <>
+        <div
+          className="w-full hover:bg-black/25 cursor-pointer transition-all duration-150 h-12 flex flex-row items-center justify-start"
+          onClick={() =>
+            JumpToHash(
+              HashGenerator(
+                HashDataType.NAMAANGGOTA,
+                data.data.nama + data.data.nim
+              )
+            )
+          }
+        >
+          <img src={searchicon} className="ml-6 w-6 h-6" />
+          <div className="text-black text-lg ml-4">
+            {data.data.nama} - {data.data.nim}
           </div>
         </div>
-      </div>
-    );
-  }
-  if (result.type === "kelompok") {
-    /**
-     * @type {KelompokResult}
-     */
-    // @ts-ignore
-    let data = result;
-
-    rendered = (
-      <div className="bg-white/[.25] rounded mb-4 flex flex-row p-4">
-        <div className="min-w-full flex flex-row">
-          <div
-            className="bg-white rounded-[50%]
-        aspect-square
-        font-extrabold
-        w-[120px]
-        text-2xl
-        sm:text-4xl
-        sm:w-[132px]
-        md:w-[140px]
-        md:text-5xl
-        lg:w-[150px]
-        lg:text-6xl
-        xl:w-[160px]
-        flex items-center justify-center
-        mr-6
-        hover:bg-black/[.2]
-        transition-all
-        "
-            onClick={() => {
-              JumpToHash(
-                HashGenerator(
-                  HashDataType.NOMORKELOMPOK,
-                  data.data.nomorkelompok
-                )
-              );
-            }}
-          >
-            <div className="spyagencyRegular font-bold text-black text-lg sm:text-2xl md:text-3xl lg:text-4xl rounded">
-              {data.data.nomorkelompok}
-            </div>
-          </div>
-          <div className="flex flex-col items-start justify-center text-left break-all">
-            <div
-              className="spyagencyRegular font-bold text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl hover:bg-white/[.5] rounded transition-all break-normal  cursor-pointer"
-              onClick={() => {
-                JumpToHash(
-                  HashGenerator(
-                    HashDataType.NAMAKELOMPOK,
-                    data.data.namakelompok + data.data.nomorkelompok
-                  )
-                );
-              }}
-            >
-              Kelompok {data.data.namakelompok}
-            </div>
-            <div
-              className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl hover:bg-white/[.5] rounded transition-all  cursor-pointer break-normal"
-              onClick={() => {
-                JumpToHash(
-                  HashGenerator(
-                    HashDataType.NAMAMENTOR,
-                    data.data.namamentor + data.data.nomorkelompok
-                  )
-                );
-              }}
-            >
-              Mentor: {data.data.namamentor}
-            </div>
-            <div
-              className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl hover:bg-white/[.5] rounded transition-all"
-              onClick={() => {
-                console.log(
-                  "Jumping to ",
-                  HashGenerator(
-                    HashDataType.IDLINE,
-                    data.data.idline + data.data.nomorkelompok
-                  )
-                );
-                JumpToHash(
-                  HashGenerator(
-                    HashDataType.IDLINE,
-                    data.data.idline + data.data.nomorkelompok
-                  )
-                );
-              }}
-            >
-              Id Line: {data.data.idline}
-            </div>
-          </div>
-        </div>
-      </div>
+      </>
     );
   }
   return rendered;
