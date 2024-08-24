@@ -119,6 +119,11 @@ export default function SearchSubSection({ kelompokdata }) {
             draft.antiblur = true;
           });
         }}
+        onMouseLeave={() => {
+          setState((draft) => {
+            draft.antiblur = false;
+          });
+        }}
       >
         <div className="w-full flex flex-col bg-white rounded-[24px] items-center justify-start h-fit overflow-hidden">
           <div className="w-full h-12 flex flex-row items-center justify-start">
