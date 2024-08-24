@@ -42,7 +42,7 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/gallery/collection" element={<Gallery />} />
             <Route path="/about" element={<About />} />
-            <Route path="/groups" element={<Groups />} />
+            {/*             <Route path="/groups" element={<Groups />} /> */}
           </Routes>
           <Footer />
         </>
