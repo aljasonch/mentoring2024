@@ -2,9 +2,9 @@ import React, { useState, useRef } from "react";
 import "./style.css";
 import Daco from "../../assets/Blackdots_3.webp";
 import data from "../division/data.js";
-import Screen from "../../assets/screen.png";
-import ScreenMobile from "../../assets/screenMobile.png";
-import Button from "../../assets/button.png";
+import Screen from "../../assets/screen.webp";
+import ScreenMobile from "../../assets/screenMobile.webp";
+import Button from "../../assets/button.webp";
 
 function Division() {
   const [showCard, setShowCard] = useState(false);
@@ -21,7 +21,7 @@ function Division() {
 
   return (
     <>
-      <div className="home xss:pt-32 xs:pt-40 md:pt-52 md:pb-15 ">
+      <div className="home xss:pt-32 xs:pt-40 md:pt-52 lg:pt-44 md:pb-15 ">
         <h2 className="spyagencyBoldItal text-white text-3xl sm:text-5xl md:text-5xl lg:text-7xl">
           Our Division
         </h2>
@@ -36,7 +36,7 @@ function Division() {
               return (
                 <div
                   key={index}
-                  className={`bg-white cursor-pointer p-4 md:p-6 sm:p-4 xs:p-4 col-span-2 rounded-full inner-shadow transition-color duration-500 ease-in-out hover:shadow-none shadow-2xl ${
+                  className={`bg-white cursor-pointer lg:min-w-36 lg:min-h-36 p-4 md:p-6 sm:p-4 xs:p-4 col-span-2 rounded-full inner-shadow transition-color duration-500 ease-in-out hover:shadow-none shadow-2xl ${
                     isLastRow
                       ? data.length % 3 === 2 && index === data.length - 2
                         ? "col-start-2 xl:col-start-auto"
@@ -64,6 +64,7 @@ function Division() {
                   }
                 >
                   <img
+                    loading="lazy"
                     src={item.image}
                     className="h-auto w-full max-w-[7rem] img-fluid mx-auto flex items-center justify-center"
                   />
@@ -72,7 +73,6 @@ function Division() {
             })}
           </div>
         </div>
-
         <div className="daco relative top-0 right-0 w-full overflow-hidden">
           <img src={Daco} />
         </div>
@@ -84,7 +84,7 @@ function Division() {
             <div className="relative" id="screenPopUp">
               <div
                 className="absolute bg-[#02B4A8] border-2 border-[rgb(24,230,177)] md:rounded-tl-[15px] md:rounded-br-[15px] flex items-center justify-center
-              lg:w-60 lg:h-14 lg:top-[22%] lg:right-[9%] sm:w-60 sm:h-14
+              lg:w-64 lg:h-14 lg:top-[22%] lg:right-[7%] sm:w-60 sm:h-14
               md:w-40 md:h-[34px] md:top-[22%] md:right-[10%] 
               xss:w-32 xss:h-8 xss:top-[50%] xss:rounded-tl-[10px] xss:rounded-br-[10px]
               xs:w-40 xs:h-10 xs:top-[50%] center"
@@ -134,7 +134,11 @@ function Division() {
                     xss:top-[82%] xs:top-[81%] 
                     xss:left-[50%] xss:max-w-12 xs:max-w-14 sm:max-w-20 sm:p-4 md:max-w-[80%] md:left-[84%] rounded-full shadow-lg xss:p-2 md:p-5"
               >
-                <img src={selectedData.image} className=" object-cover" loading="lazy"/>
+                <img
+                  src={selectedData.image}
+                  className=" object-cover"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>

@@ -10,17 +10,17 @@ import Medpar from '../../assets/Medpar_Icon.webp';
 import Research from '../../assets/Research_Icon.webp';
 import Visual from '../../assets/Visual_Icon.webp';
 import Website from '../../assets/Website_Icon.webp';
-import Accom_Picture from "../../assets/divisi.png";
-import Mentor_Picture from "../../assets/divisi.png";
-import Insurer_Picture from "../../assets/divisi.png";
-import Medpar_Picture from "../../assets/divisi.png";
-import Website_Picture from "../../assets/divisi.png";
-import Exc_Picture from "../../assets/divisi.png";
-import Research_Picture from "../../assets/divisi.png";
-import Visual_Picture from "../../assets/divisi.png";
-import CC_Picture from "../../assets/divisi.png";
-import Dokum_Picture from "../../assets/divisi.png";
-import Admin_Picture from "../../assets/divisi.png";
+import Accom_Picture from "../../assets/divisi.webp";
+import Mentor_Picture from "../../assets/divisi.webp";
+import Insurer_Picture from "../../assets/divisi.webp";
+import Medpar_Picture from "../../assets/divisi.webp";
+import Website_Picture from "../../assets/divisi.webp";
+import Exc_Picture from "../../assets/divisi.webp";
+import Research_Picture from "../../assets/divisi.webp";
+import Visual_Picture from "../../assets/divisi.webp";
+import CC_Picture from "../../assets/divisi.webp";
+import Dokum_Picture from "../../assets/divisi.webp";
+import Admin_Picture from "../../assets/divisi.webp";
 const data = [
     {
         id: 1,

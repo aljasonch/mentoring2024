@@ -2,10 +2,12 @@ import React from "react";
 import "./style.css";
 import LightningLeft from "../../assets/Lightning_Left.webp";
 import LightningRight from "../../assets/Lightning_Right.webp";
-import themeMobile from "../../assets/themeMobile.webp";
-import ZacheryMobile from "../../assets/ZacheryMobile.webp";
+import theme from "../../assets/theme.webp";
+import themeMobile from "../../assets/theme_mobile.webp";
 import tagline from "../../assets/tagline.webp";
+import taglineMobile from "../../assets/tagline_mobile.webp";
 import zachery from "../../assets/zachery.webp";
+import ZacheryMobile from "../../assets/ZacheryMobile.webp";
 import Asset_1 from "../../assets/10.webp";
 import Asset_2 from "../../assets/11.webp";
 import Asset_3 from "../../assets/12.webp";
@@ -16,7 +18,6 @@ import Asset_7 from "../../assets/16.webp";
 import Asset_8 from "../../assets/17.webp";
 import Asset_9 from "../../assets/18.webp";
 import Asset_10 from "../../assets/19.webp";
-import theme from "../../assets/theme.webp";
 import spirit from "../../assets/spirit.webp";
 import spiritMobile from "../../assets/spiritMobile.webp";
 import bintang from "../../assets/bintang.webp";
@@ -39,7 +40,7 @@ function About() {
             className="absolute top-0 right-0 w-44 h-auto z-10 xss:w-16 xss:top-12 md:w-28 md:top-16"
             alt="Lightning Right"
           />
-          <div className="text-white sm:pt-52 xss:pt-36 text-3xl sm:text-5xl md:text-6xl lg:text-7xl spyagencyBoldItal">
+          <div className="text-white xss:pt-32 xs:pt-40 md:pt-52 lg:pt-44 md:pb-15 text-3xl sm:text-5xl md:text-6xl lg:text-7xl spyagencyBoldItal">
             ABOUT US
           </div>
           <h4 className="text-white font-medium text-lg sm:text-xl lg:text-2xl mt-1">
@@ -53,7 +54,6 @@ function About() {
               className="border-4 sm:border-8 border-white rounded-3xl"
               alt="Theme"
             />
-            <div className=" border-4 sm:border-8 rounded-3xl absolute inset-0 bg-[#5D52DD] opacity-50 "></div>
           </div>
           <div className="spyagencyHalftone  z-0 polygonTheme absolute bottom-0">
             <div className="bg-white xss:py-1 py-2 sm:py-2 text-[#832AD0] text-xl sm:text-4xl sm:pl-24 sm:pr-12 pl-16 pr-6 rounded-br-2xl">
@@ -98,7 +98,7 @@ function About() {
             />
             <img
               src={Asset_3}
-              className="absolute z-30 w-6/12 top-8 sm:top-16 right-0 lg:w-2/5"
+              className="absolute z-20 w-6/12 top-8 sm:top-16 right-0 lg:w-2/5"
               alt="3"
             />
           </div>
@@ -108,11 +108,11 @@ function About() {
         <div className="w-9/12 md:w-[36.25rem] lg:hidden relative z-10 mx-auto mt-16">
           <div className="relative">
             <img
-              src={themeMobile}
+              src={taglineMobile}
               className="border-4 sm:border-8 border-white rounded-3xl"
               alt="Theme"
             />
-            <div className=" border-4 sm:border-8 rounded-3xl absolute inset-0 bg-[#5D52DD] opacity-50 "></div>
+            {/* <div className=" border-4 sm:border-8 rounded-3xl absolute inset-0 bg-[#5D52DD] opacity-50 "></div> */}
           </div>
           <div className="spyagencyHalftone  z-0 polygonTheme absolute bottom-0">
             <div className="bg-white xss:py-1 py-2 sm:py-2 text-[#832AD0] text-xl sm:text-4xl sm:pl-24 sm:pr-12 pl-12 pr-4 rounded-br-2xl">
@@ -123,7 +123,7 @@ function About() {
         <div className="w-9/12 mx-auto lg:w-full lg:flex lg:justify-between">
           <img
             src={tagline}
-            className="hidden lg:block lg:w-[480px] xl:w-[600px] object-contain lg:ml-12 xl:ml-24"
+            className="hidden lg:block lg:w-[480px] xl:w-[600px] object-contain lg:ml-12 xl:ml-24 bg-transparent"
           ></img>
           <div className="mx-auto lg:mr-24 lg:w-[400px] xl:w-[600px]">
             <div className="spyagencyBoldItal xss:text-xl xs:text-2xl lg:text-4xl xl:text-6xl sm:text-4xl text-end text-white mt-8">
