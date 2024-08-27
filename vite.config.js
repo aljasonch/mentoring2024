@@ -1,6 +1,7 @@
-import { defineConfig } from "vite";
+import { defineConfig, normalizePath } from "vite";
 import react from "@vitejs/plugin-react";
-
+import { viteStaticCopy } from "vite-plugin-static-copy";
+import path from "path";
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
@@ -8,7 +9,16 @@ export default defineConfig({
       "Access-Control-Allow-Origin": "*",
     },
   },
-  plugins: [react()],
+  plugins: [
+    viteStaticCopy({
+      targets: [
+        {
+          src: normalizePath("intermediatefetch/kelompoks.json"), // 1️
+          dest: "data", // 2️
+        },
+      ],
+    }),
+  ],
   worker: {
     format: "es",
   },

@@ -75,5 +75,5 @@ request.body
   })
   .on("end", () => {
     let serialized = JSON.stringify(kelompoks);
-    fs.writeFileSync("kelompoks.json", serialized);
+    fs.writeFileSync("..\\dist\\kelompoks.json", serialized);
   });
