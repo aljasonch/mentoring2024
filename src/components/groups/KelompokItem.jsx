@@ -96,9 +96,9 @@ export default function KelompokItem({ kelompok, rendermethod }) {
             MENTOR: {kelompok.namamentor}
           </div>
           <div
-            className={`spyagencyBoldItal text-sm sm:text-xl md:text-2xl lg:text-3xl`}
+            className={`font-bold text-sm sm:text-xl md:text-2xl lg:text-3xl`}
           >
-            SESI: {kelompok.sesi}
+            {kelompok.sesi}
           </div>
           {state.rendereditems.length != kelompok.anggota.list.length && (
             <div className="spyagencyRegular text-sm sm:text-xl md:text-2xl lg:text-3xl">
