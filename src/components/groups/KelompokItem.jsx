@@ -91,7 +91,7 @@ export default function KelompokItem({ kelompok, rendermethod }) {
             KELOMPOK {kelompok.namakelompok}
           </div>
           <div
-            className={`spyagencyBoldItal text-sm sm:text-xl md:text-2xl lg:text-3xl`}
+            className={`spyagencyBoldItal text-sm sm:text-xl md:text-2xl lg:text-3xl text-left`}
           >
             MENTOR: {kelompok.namamentor}
           </div>
