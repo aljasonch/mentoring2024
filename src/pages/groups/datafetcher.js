@@ -37,6 +37,7 @@ export async function fetchDataFromCache() {
       nomorkelompok: Number.parseInt(key),
       idline: data[key].idline,
       namamentor: data[key].namamentor,
+      sesi: data[key].sesi,
     });
   }
   return kelompoklist;

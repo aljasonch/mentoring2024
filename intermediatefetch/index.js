@@ -6,6 +6,19 @@ import { parse } from "jsonstream";
 import fs from "fs";
 import fetch from "node-fetch";
 
+/**
+ * @param {number} kelompoknumber
+ * @returns {string}
+ */
+function sessionGenerator(kelompoknumber) {
+  if (kelompoknumber <= 90) {
+    return "Sesi Pagi";
+  } else if (kelompoknumber <= 165) {
+    return "Sesi Siang";
+  }
+  return "Sesi Unassigned";
+}
+
 class MemberRecord {
   name = "";
   nim = "";
@@ -31,16 +44,19 @@ class KelompokRecord {
    * @type {MemberRecord[]}
    */
   members = [];
+  sesi = "";
 
   /**
    * @param {string} namamentor
    * @param {string} idline
    * @param {MemberRecord[]} members
+   * @param {string} sesi
    */
-  constructor(namamentor, idline, members) {
+  constructor(namamentor, idline, members, sesi) {
     this.namamentor = namamentor;
     this.idline = idline;
     this.members = members;
+    this.sesi = sesi;
   }
 }
 
@@ -70,8 +86,13 @@ request.body
     let isGroupSheet = title.match(/[0-9]/g)?.length == title.length;
 
     if (isGroupSheet) {
-      let kelompokrecord = new KelompokRecord("", "", []);
       let kelompoknumber = Number.parseInt(title);
+      let kelompokrecord = new KelompokRecord(
+        "",
+        "",
+        [],
+        sessionGenerator(kelompoknumber)
+      );
       /**
        * @type {MemberRecord[]}
        */

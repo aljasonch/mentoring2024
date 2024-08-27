@@ -39,8 +39,8 @@ export default function KelompokItemSkeleton({ numberofrows }) {
         <thead className="rounded">
           <tr className="spyagencyRegular">
             <th className="thleftmost">Nama</th>
-            <th className="thmiddle">Jurusan</th>
-            <th className="thrightmost">Angkatan</th>
+            <th className="thmiddle">NIM</th>
+            <th className="thrightmost">Jurusan</th>
           </tr>
         </thead>
         <tbody>

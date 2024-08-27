@@ -34,16 +34,19 @@ export class KelompokRecord {
    * @type {MemberRecord[]}
    */
   members = [];
+  sesi = "";
 
   /**
    * @param {string} namamentor
    * @param {string} idline
    * @param {MemberRecord[]} members
+   * @param {string} sesi
    */
-  constructor(namamentor, idline, members) {
+  constructor(namamentor, idline, members, sesi) {
     this.namamentor = namamentor;
     this.idline = idline;
     this.members = members;
+    this.sesi = sesi;
   }
 }
 
@@ -107,16 +110,18 @@ export class Kelompok {
   namamentor = "";
   idline = "";
   nomorkelompok = "";
+  sesi = "";
   /**
    * @type {AnggotaList}
    */
   anggota = AnggotaList.create();
   generationID = "";
-  constructor(namakelompok, namamentor, idline, nomorkelompok) {
+  constructor(namakelompok, namamentor, idline, nomorkelompok, sesi) {
     this.namakelompok = namakelompok;
     this.namamentor = namamentor;
     this.idline = idline;
     this.nomorkelompok = nomorkelompok;
+    this.sesi = sesi;
     this.generationID = generateGUID();
   }
   generateHugeData() {
