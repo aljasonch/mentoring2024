@@ -9,6 +9,23 @@ export function generateGUID() {
   });
 }
 
+export class MemberRecord {
+  name = "";
+  nim = "";
+  prodi = "";
+  /**
+   * @param {string} name
+   * @param {string} nim
+   * @param {string} prodi
+   *
+   */
+  constructor(name, nim, prodi) {
+    this.name = name;
+    this.nim = nim;
+    this.prodi = prodi;
+  }
+}
+
 export class KelompokList {
   /**
    * @type {Kelompok[]}

@@ -8,12 +8,13 @@ import {
   KelompokList,
   IncrementalRenderingMethod,
 } from "./data";
-import React, { memo, useEffect, useState } from "react";
+import React, { memo, useCallback, useEffect, useState } from "react";
 import KelompokItem from "../../components/groups/KelompokItem";
 import { immerable } from "immer";
 import KelompokItemSkeleton from "../../components/groups/KelompokItemSkeleton";
 import SearchSubSection from "../../components/groups/SearchSubSection";
 import { detect } from "detect-browser";
+import { fetchDataFromCache } from "./datafetcher";
 import "./style.css";
 class PageState {
   [immerable] = true;
@@ -42,6 +43,8 @@ class PageState {
   showsearch = false;
 
   initialdatafetch = false;
+
+  startdatafetch = true;
 
   skeleton = true;
   /**
@@ -114,6 +117,44 @@ export default function Groups() {
     }
   }, [state.renderingmethod, setState]);
   useEffect(() => {
+    if (state.startdatafetch) {
+      let request = fetchDataFromCache();
+      setState(
+        /**
+         * @param {PageState} draft
+         */
+        // @ts-ignore
+        (draft) => {
+          draft.startdatafetch = false;
+        }
+      );
+      request
+        .then((kelompoklist) => {
+          setState(
+            /**
+             * @param {PageState} draft
+             */
+            // @ts-ignore
+            (draft) => {
+              draft.semuakelompok = kelompoklist;
+            }
+          );
+        })
+        .catch((err) => {
+          console.error(err);
+          setState(
+            /**
+             * @param {PageState} draft
+             */
+            // @ts-ignore
+            (draft) => {
+              draft.startdatafetch = true;
+            }
+          );
+        });
+    }
+  }, [state, setState]);
+  useEffect(() => {
     if (!state.initialdatafetch && state.renderingmethod != null) {
       // @ts-ignore
 
@@ -125,25 +166,6 @@ export default function Groups() {
         (draft) => {
           draft.initialdatafetch = true;
           draft.skeleton = false;
-          draft.semuakelompok = KelompokList.create();
-          draft.semuakelompok.kelompok = [];
-          for (let i = 0; i < 200; i++) {
-            let kelompok = new Kelompok();
-            kelompok.namakelompok = `Mentor K${i}`;
-            kelompok.anggota = AnggotaList.create();
-            kelompok.nomorkelompok = `${i}`;
-            kelompok.namamentor = `Mentor ${i}`;
-            kelompok.idline = `@${i}`;
-            for (let j = 0; j < 10; j++) {
-              let anggota = new Anggota();
-              anggota.nama = `Anggota Dengan nama yang panjang ${j}`;
-              anggota.nim = `${Math.floor(Math.random() * 9999999999)}`;
-              anggota.jurusan = "Master of Technology Management";
-              anggota.angkatan = "2024";
-              kelompok.anggota.list.push(anggota);
-            }
-            draft.semuakelompok.kelompok.push(kelompok);
-          }
         }
       );
     }

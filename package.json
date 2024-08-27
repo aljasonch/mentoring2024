@@ -13,6 +13,8 @@
     "@fancyapps/fancybox": "^3.5.7",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@googleapis/sheets": "^9.3.0",
+    "@types/gapi": "^0.0.47",
     "detect-browser": "^5.3.0",
     "firebase": "^10.12.5",
     "flowbite": "^2.3.0",
