@@ -66,8 +66,8 @@ export default function KelompokItem({ kelompok, rendermethod }) {
             draft.rendereditems.push(
               <tr key={anggota.nim}>
                 <td className={`${leftclass}`}>{anggota.nama}</td>
-                <td className={`${middleclass}`}>{anggota.jurusan}</td>
-                <td className={`${rightclass}`}>{anggota.angkatan}</td>
+                <td className={`${middleclass}`}>{anggota.nim}</td>
+                <td className={`${rightclass}`}>{anggota.jurusan}</td>
               </tr>
             );
           });
@@ -106,8 +106,8 @@ export default function KelompokItem({ kelompok, rendermethod }) {
         <thead className="rounded">
           <tr className="spyagencyRegular">
             <th className="thleftmost">Nama</th>
-            <th className="thmiddle">Jurusan</th>
-            <th className="thrightmost">Angkatan</th>
+            <th className="thmiddle">NIM</th>
+            <th className="thrightmost">Jurusan</th>
           </tr>
         </thead>
         <tbody>{state.rendereditems}</tbody>

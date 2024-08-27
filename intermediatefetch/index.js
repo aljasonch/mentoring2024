@@ -23,6 +23,27 @@ class MemberRecord {
   }
 }
 
+class KelompokRecord {
+  namamentor = "";
+  idline = "";
+
+  /**
+   * @type {MemberRecord[]}
+   */
+  members = [];
+
+  /**
+   * @param {string} namamentor
+   * @param {string} idline
+   * @param {MemberRecord[]} members
+   */
+  constructor(namamentor, idline, members) {
+    this.namamentor = namamentor;
+    this.idline = idline;
+    this.members = members;
+  }
+}
+
 let request = await fetch(
   `
             https://sheets.googleapis.com/v4/spreadsheets/${SPREADHSHEETID}?includeGridData=true
@@ -35,7 +56,7 @@ let request = await fetch(
 );
 
 /**
- * @type {{[key: string]: MemberRecord[]}}
+ * @type {{[key: string]: KelompokRecord}}
  */
 let kelompoks = {};
 
@@ -49,10 +70,35 @@ request.body
     let isGroupSheet = title.match(/[0-9]/g)?.length == title.length;
 
     if (isGroupSheet) {
+      let kelompokrecord = new KelompokRecord("", "", []);
       let kelompoknumber = Number.parseInt(title);
+      /**
+       * @type {MemberRecord[]}
+       */
       let memberrecords = [];
-      let currentmemberrecord = new MemberRecord("", "", "", title);
-      for (let index = 3; true; index++) {
+      {
+        // parsing for mentor
+        /**
+         * @type {string}
+         */
+        let fullheader = sheet.data[0].rowData[0].values[0].formattedValue;
+        let header = fullheader.split("-");
+        // remove everything before (
+        let mentorname = header[0].split("(")[1];
+        kelompokrecord.namamentor = mentorname;
+      }
+      {
+        // parsing for idline
+        /**
+         * @type {string}
+         */
+        let fullheader = sheet.data[0].rowData[0].values[0].formattedValue;
+        let splitted = fullheader.split(": ")[1];
+        let removed = splitted.split(")")[0];
+        kelompokrecord.idline = removed;
+      }
+      let currentmemberrecord = new MemberRecord("", "", "");
+      for (let index = 2; true; index++) {
         currentmemberrecord = new MemberRecord(
           sheet.data[0].rowData[index].values[1].formattedValue,
           sheet.data[0].rowData[index].values[2].formattedValue,
@@ -67,7 +113,8 @@ request.body
         }
         memberrecords.push(currentmemberrecord);
       }
-      kelompoks[kelompoknumber] = memberrecords;
+      kelompokrecord.members = memberrecords;
+      kelompoks[kelompoknumber] = kelompokrecord;
     }
   })
   .on("error", (error) => {
@@ -75,5 +122,8 @@ request.body
   })
   .on("end", () => {
     let serialized = JSON.stringify(kelompoks);
+    fs.writeFileSync("..\\public\\kelompoks.json", serialized);
     fs.writeFileSync("..\\dist\\kelompoks.json", serialized);
+    fs.writeFileSync("..\\src\\assets\\kelompoks.json", serialized);
+    fs.writeFileSync("kelompoks.json", serialized);
   });

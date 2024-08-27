@@ -125,9 +125,11 @@ export default function Groups() {
          */
         // @ts-ignore
         (draft) => {
+          draft.skeleton = true;
           draft.startdatafetch = false;
         }
       );
+      console.log("Fetching data");
       request
         .then((kelompoklist) => {
           setState(
@@ -136,7 +138,16 @@ export default function Groups() {
              */
             // @ts-ignore
             (draft) => {
+              if (draft.semuakelompok.kelompok.length != 0) {
+                console.log("Data already fetched");
+                return;
+              }
+              draft.startdatafetch = false;
+              draft.initialdatafetch = true;
+              draft.skeleton = false;
+
               draft.semuakelompok = kelompoklist;
+              draft.rendercache = [];
             }
           );
         })
@@ -152,22 +163,6 @@ export default function Groups() {
             }
           );
         });
-    }
-  }, [state, setState]);
-  useEffect(() => {
-    if (!state.initialdatafetch && state.renderingmethod != null) {
-      // @ts-ignore
-
-      setState(
-        /**
-         * @param {PageState} draft
-         */
-        // @ts-ignore
-        (draft) => {
-          draft.initialdatafetch = true;
-          draft.skeleton = false;
-        }
-      );
     }
   }, [state, setState]);
   useEffect(() => {

@@ -26,6 +26,27 @@ export class MemberRecord {
   }
 }
 
+export class KelompokRecord {
+  namamentor = "";
+  idline = "";
+
+  /**
+   * @type {MemberRecord[]}
+   */
+  members = [];
+
+  /**
+   * @param {string} namamentor
+   * @param {string} idline
+   * @param {MemberRecord[]} members
+   */
+  constructor(namamentor, idline, members) {
+    this.namamentor = namamentor;
+    this.idline = idline;
+    this.members = members;
+  }
+}
+
 export class KelompokList {
   /**
    * @type {Kelompok[]}
