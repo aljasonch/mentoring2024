@@ -7,6 +7,7 @@ import { Anggota, Kelompok, AnggotaList } from "../../pages/groups/data";
 import { useImmer } from "use-immer";
 import PropTypes from "prop-types";
 import { HashDataType } from "./data";
+
 /**
  * @param {Object} props
  * @param {Kelompok} props.kelompok
@@ -65,9 +66,11 @@ export default function KelompokItem({ kelompok, rendermethod }) {
 
             draft.rendereditems.push(
               <tr key={anggota.nim}>
-                <td className={`${leftclass}`}>{anggota.nama}</td>
-                <td className={`${middleclass}`}>{anggota.nim}</td>
-                <td className={`${rightclass}`}>{anggota.jurusan}</td>
+                <td className={`break-all ${leftclass}`}>{anggota.nama}</td>
+                <td className={`break-words ${middleclass}`}>{anggota.nim}</td>
+                <td className={`break-words ${rightclass}`}>
+                  {anggota.jurusan}
+                </td>
               </tr>
             );
           });
@@ -91,7 +94,10 @@ export default function KelompokItem({ kelompok, rendermethod }) {
             KELOMPOK {kelompok.namakelompok}
           </div>
           <div
-            className={`spyagencyBoldItal text-sm sm:text-xl md:text-2xl lg:text-3xl text-left`}
+            className={`spyagencyBoldItal text-sm sm:text-xl md:text-2xl lg:text-3xl text-left ${HashGenerator(
+              HashDataType.NAMAMENTOR,
+              kelompok.namamentor
+            )}`}
           >
             MENTOR: {kelompok.namamentor}
           </div>
@@ -107,7 +113,7 @@ export default function KelompokItem({ kelompok, rendermethod }) {
           )}
         </div>
       </div>
-      <table className="w-full border-separate mb-2">
+      <table className="w-full border-separate mb-2 hyphens-auto">
         <thead className="rounded">
           <tr className="spyagencyRegular">
             <th className="thleftmost">Nama</th>
@@ -115,7 +121,7 @@ export default function KelompokItem({ kelompok, rendermethod }) {
             <th className="thrightmost">Jurusan</th>
           </tr>
         </thead>
-        <tbody>{state.rendereditems}</tbody>
+        <tbody className="text-sm">{state.rendereditems}</tbody>
       </table>
       <div
         className={`w-full flex flex-row items-center justify-center text-white`}

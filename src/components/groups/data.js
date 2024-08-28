@@ -11,6 +11,11 @@ export class SearchWorkerMessage {
    * @type {Anggota[]}
    */
   anggotamaster = [];
+
+  /**
+   * @type {Kelompok[]}
+   */
+  kelompokmaster = [];
 }
 
 export class SearchResult {

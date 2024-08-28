@@ -28,6 +28,14 @@ import { HashGenerator } from "./KelompokItem";
  */
 const searchworker = new Worker2();
 
+function capitalizeWords(sentence) {
+  return sentence
+    .toLowerCase()
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
 /**
  * @param {Object} props
  * @param {Kelompok[]} props.kelompokdata
@@ -67,6 +75,7 @@ export default function SearchSubSection({ kelompokdata }) {
       let message = new SearchWorkerMessage();
       message.query = state.searchquery;
       message.anggotamaster = anggotamaster;
+      message.kelompokmaster = kelompokdata;
       message.requestid = "search" + Math.random().toString();
       searchworker.postMessage(message);
       setState((draft) => {
@@ -225,7 +234,7 @@ function SearchResultItem({ result, setState }) {
     rendered = (
       <>
         <div
-          className="w-full hover:bg-black/25 cursor-pointer transition-all duration-150 h-12 flex flex-row items-center justify-start"
+          className="w-full hover:bg-black/25 cursor-pointer transition-all duration-150 min-h-12 flex flex-row items-center justify-start text-left"
           onClick={() => {
             setState((draft) => {
               draft.antiblur = false;
@@ -241,8 +250,33 @@ function SearchResultItem({ result, setState }) {
         >
           <img src={searchicon} className="ml-6 w-6 h-6" />
           <div className="text-black text-lg ml-4">
-            {data.data.nama} - {data.data.nim}
+            {capitalizeWords(data.data.nama)} - {data.data.nim}
           </div>
+        </div>
+      </>
+    );
+  } else if (result.type == "kelompok") {
+    /**
+     * @type {KelompokResult}
+     */
+    // @ts-ignore
+    let data = result;
+    rendered = (
+      <>
+        <div
+          className="w-full hover:bg-black/25 cursor-pointer transition-all duration-150 min-h-12 flex flex-row items-center justify-start text-left"
+          onClick={() => {
+            setState((draft) => {
+              draft.antiblur = false;
+              draft.hideresults = true;
+            });
+            JumpToHash(
+              HashGenerator(HashDataType.NAMAMENTOR, data.data.namamentor)
+            );
+          }}
+        >
+          <img src={searchicon} className="ml-6 w-6 h-6" />
+          <div className="text-black text-lg ml-4">{data.data.namamentor}</div>
         </div>
       </>
     );
