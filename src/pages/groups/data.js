@@ -9,6 +9,47 @@ export function generateGUID() {
   });
 }
 
+export class MemberRecord {
+  name = "";
+  nim = "";
+  prodi = "";
+  /**
+   * @param {string} name
+   * @param {string} nim
+   * @param {string} prodi
+   *
+   */
+  constructor(name, nim, prodi) {
+    this.name = name;
+    this.nim = nim;
+    this.prodi = prodi;
+  }
+}
+
+export class KelompokRecord {
+  namamentor = "";
+  idline = "";
+
+  /**
+   * @type {MemberRecord[]}
+   */
+  members = [];
+  sesi = "";
+
+  /**
+   * @param {string} namamentor
+   * @param {string} idline
+   * @param {MemberRecord[]} members
+   * @param {string} sesi
+   */
+  constructor(namamentor, idline, members, sesi) {
+    this.namamentor = namamentor;
+    this.idline = idline;
+    this.members = members;
+    this.sesi = sesi;
+  }
+}
+
 export class KelompokList {
   /**
    * @type {Kelompok[]}
@@ -69,16 +110,18 @@ export class Kelompok {
   namamentor = "";
   idline = "";
   nomorkelompok = "";
+  sesi = "";
   /**
    * @type {AnggotaList}
    */
   anggota = AnggotaList.create();
   generationID = "";
-  constructor(namakelompok, namamentor, idline, nomorkelompok) {
+  constructor(namakelompok, namamentor, idline, nomorkelompok, sesi) {
     this.namakelompok = namakelompok;
     this.namamentor = namamentor;
     this.idline = idline;
     this.nomorkelompok = nomorkelompok;
+    this.sesi = sesi;
     this.generationID = generateGUID();
   }
   generateHugeData() {
@@ -94,4 +137,27 @@ export class Kelompok {
       this.anggota.list.push(anggota);
     }
   }
+}
+
+export class IncrementalRenderingMethod {
+  /**
+   * @type {(callback: () => void) => void}
+   */
+  static FIREFOX_FAST = (callback) => {
+    setTimeout(callback);
+  };
+  /**
+   * @type {(callback: () => void) => void}
+   */
+  static FAILSAFE = (callback) => {
+    requestAnimationFrame(() => callback());
+  };
+  /**
+   * @type {(callback: () => void) => void}
+   */
+  static ALL_EXCEPT_SAFARI = (callback) => {
+    requestIdleCallback(() => callback(), {
+      timeout: 1000 / 30, // 30 times per second
+    });
+  };
 }

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {
   SearchWorkerMessage,
   SearchResult,
@@ -17,6 +18,21 @@ onmessage = function (e) {
 
   let result = new SearchResult();
   result.responseid = data.requestid;
+  for (let kelompok of data.kelompokmaster) {
+    /**
+     * @type {number[]}
+     */
+    let foundin = [];
+    if (kelompok.namamentor.toLowerCase().includes(data.query.toLowerCase())) {
+      foundin.push(KelompokResultFoundIn.NAMAMENTOR);
+    }
+    if (foundin.length > 0) {
+      let resultkelompok = new KelompokResult();
+      resultkelompok.foundin = foundin;
+      resultkelompok.data = kelompok;
+      result.result.push(resultkelompok);
+    }
+  }
   for (let anggota of data.anggotamaster) {
     /**
      * @type {number[]}
@@ -42,36 +58,6 @@ onmessage = function (e) {
     }
   }
 
-  for (let kelompok of data.kelompokmaster) {
-    /**
-     * @type {number[]}
-     */
-    let foundin = [];
-    if (
-      kelompok.namakelompok.toLowerCase().includes(data.query.toLowerCase())
-    ) {
-      foundin.push(KelompokResultFoundIn.NAMAKELOMPOK);
-    }
-
-    if (kelompok.namamentor.toLowerCase().includes(data.query.toLowerCase())) {
-      foundin.push(KelompokResultFoundIn.NAMAMENTOR);
-    }
-    if (kelompok.idline.toLowerCase().includes(data.query.toLowerCase())) {
-      foundin.push(KelompokResultFoundIn.IDLINE);
-    }
-    if (
-      kelompok.nomorkelompok.toLowerCase().includes(data.query.toLowerCase())
-    ) {
-      foundin.push(KelompokResultFoundIn.NOMORKELOMPOK);
-    }
-
-    if (foundin.length > 0) {
-      let resultkelompok = new KelompokResult();
-      resultkelompok.data = kelompok;
-      resultkelompok.foundin = foundin;
-      result.result.push(resultkelompok);
-    }
-  }
   console.log("Search done");
   let enddtime = new Date().getTime();
   console.log("Search done in " + (enddtime - starttime) + " ms");

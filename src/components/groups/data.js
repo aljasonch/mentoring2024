@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // @ts-check
 
 import { Anggota, Kelompok } from "../../pages/groups/data";

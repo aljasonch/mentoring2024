@@ -50,3 +50,6 @@ td {
   border-bottom: 2px solid white;
   border-bottom-right-radius: 5px;
 }
+select:focus {
+  outline: none;
+}
