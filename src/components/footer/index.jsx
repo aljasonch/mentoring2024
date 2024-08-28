@@ -169,7 +169,7 @@ const Footer = () => {
       </div>
       <img src={Medpar} className="mx-auto w-[90%] md:block hidden"></img>
       <img src={MedparMobile} className="mx-auto w-[90%] md:hidden block"></img>
-      <div className="sm:block hidden font-normal mx-auto py-4 text-xs text-white ">
+      <div className="font-normal mx-auto py-4 text-xs text-white ">
         <h1 className="text-sm font-semibold">@Mentoring UMN 2024</h1>
         <h1>
           Developed and Managed by Website Division

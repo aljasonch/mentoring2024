@@ -218,7 +218,7 @@ export default function Groups() {
   }, [state, setState]);
   return (
     <div>
-      <div className="px-4 mb-12 sm:px-0 max-w-4xl mx-auto text-center xss:pt-32 xs:pt-40 md:pt-52 md:pb-15">
+      <div className="px-4 mb-12 sm:px-0 max-w-4xl mx-auto text-center xss:pt-32 xs:pt-40 md:pt-52 md:pb-15 ">
         <h1 className="spyagencyBoldItal font-normal text-white text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
           GROUPS
         </h1>
@@ -226,13 +226,13 @@ export default function Groups() {
           MENTORING UMN 2024
         </h4>
       </div>
-      <div className="w-full mb-12 flex flex-col items-center justify-center">
+      <div className="w-full mb-12 flex flex-col items-center justify-center ">
         <Globals.StateContext.Provider value={{ state, setState }}>
           <SearchSubSection kelompokdata={state.statecache.kelompok} />
           <div className="h-12"></div>
           {state.rendercache.length !== state.semuakelompok.kelompok.length && (
             <>
-              <div className="w-[90%] h-12 mb-12 sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-[70%] 2xl:w-[65%] flex flex-row bg-white/[.25] rounded items-center justify-start text-white">
+              <div className="w-[90%]  h-12 mb-12 sm:w-[90%] md:w-[80%] lg:w-[75%] xl:w-[70%] 2xl:w-[65%] flex flex-row bg-white/[.25] rounded items-center justify-start text-white">
                 <div className="w-fit inline-block whitespace-nowrap ml-4">
                   Loading: {state.rendercache.length} /{" "}
                   {state.semuakelompok.kelompok.length}

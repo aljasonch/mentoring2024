@@ -66,9 +66,9 @@ export default function KelompokItem({ kelompok, rendermethod }) {
 
             draft.rendereditems.push(
               <tr key={anggota.nim}>
-                <td className={`break-all ${leftclass}`}>{anggota.nama}</td>
-                <td className={`break-words ${middleclass}`}>{anggota.nim}</td>
-                <td className={`break-words ${rightclass}`}>
+                <td className={`break-words text-xs sm:text-sm lg:text-lg  ${leftclass}`}>{anggota.nama}</td>
+                <td className={`break-words sm:text-sm lg:text-lg  ${middleclass}`}>{anggota.nim}</td>
+                <td className={`break-words sm:text-sm lg:text-lg  ${rightclass}`}>
                   {anggota.jurusan}
                 </td>
               </tr>
@@ -79,7 +79,7 @@ export default function KelompokItem({ kelompok, rendermethod }) {
     }
   });
   return (
-    <div className="flex flex-col items-center justify-center w-full mb-8">
+    <div className="flex flex-col items-center justify-center w-full mb-8 home">
       <div className="mb-6 w-full flex flex-row items-center">
         <div
           className={`bg-white rounded-[50%] aspect-square font-extrabold w-[48px] text-2xl sm:text-4xlsm:w-[80px] md:w-[100px] md:text-5xl lg:w-[120px] lg:text-6xl xl:w-[125px] flex items-center justify-center mr-6`}
@@ -102,7 +102,7 @@ export default function KelompokItem({ kelompok, rendermethod }) {
             MENTOR: {kelompok.namamentor}
           </div>
           <div
-            className={`font-bold text-sm sm:text-xl md:text-2xl lg:text-3xl`}
+            className={`font-normal text-xs sm:text-lg md:text-xl lg:text-2xl`}
           >
             {kelompok.sesi}
           </div>
@@ -116,9 +116,9 @@ export default function KelompokItem({ kelompok, rendermethod }) {
       <table className="w-full border-separate mb-2 hyphens-auto">
         <thead className="rounded">
           <tr className="spyagencyRegular">
-            <th className="thleftmost">Nama</th>
-            <th className="thmiddle">NIM</th>
-            <th className="thrightmost">Jurusan</th>
+            <th className="thleftmost w-[50%]">Nama</th>
+            <th className="thmiddle w-[20%]">NIM</th>
+            <th className="thrightmost w-[30%]">Jurusan</th>
           </tr>
         </thead>
         <tbody className="text-sm">{state.rendereditems}</tbody>
