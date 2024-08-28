@@ -104,7 +104,7 @@ export default function KelompokItem({ kelompok, rendermethod }) {
             KELOMPOK {kelompok.namakelompok}
           </div>
           <div
-            className={`spyagencyBoldItal text-lg leading-4 mb-0.5 sm:mb-0 sm:text-2xl md:text-3xl lg:text-4xl text-left ${HashGenerator(
+            className={`spyagencyBoldItal text-base leading-4 mb-0.5 sm:mb-0 sm:text-2xl md:text-3xl lg:text-4xl text-left ${HashGenerator(
               HashDataType.NAMAMENTOR,
               kelompok.namamentor
             )}`}
