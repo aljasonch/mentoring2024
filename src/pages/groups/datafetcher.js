@@ -11,7 +11,7 @@ import {
  */
 export async function fetchDataFromCache() {
   let request = await fetch(
-    `https://github.com/aljasonch/mentoring2024/raw/main/intermediatefetch/kelompoks.json`
+    `https://raw.githubusercontent.com/aljasonch/mentoring2024/main/intermediatefetch/kelompoks.json`
   );
 
   let kelompoklist = new KelompokList();
