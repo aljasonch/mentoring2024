@@ -72,12 +72,12 @@ export default function KelompokItem({ kelompok, rendermethod }) {
                   {anggota.nama}
                 </td>
                 <td
-                  className={`break-words sm:text-sm lg:text-lg  ${middleclass}`}
+                  className={`break-words text-xs sm:text-sm lg:text-lg  ${middleclass}`}
                 >
                   {anggota.nim}
                 </td>
                 <td
-                  className={`break-words sm:text-sm lg:text-lg  ${rightclass}`}
+                  className={`break-words text-xs sm:text-sm lg:text-lg  ${rightclass}`}
                 >
                   {anggota.jurusan}
                 </td>
