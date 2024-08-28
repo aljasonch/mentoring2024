@@ -116,7 +116,7 @@ function Home() {
 
   useEffect(() => {
     const now = new Date();
-    const endDate = new Date("2024-08-30T17:00:00");
+    const endDate = new Date("2024-08-27T17:00:00");
 
     if (now >= endDate) {
       localStorage.setItem("countdownComplete", "true");
@@ -140,7 +140,7 @@ function Home() {
     };
   }, []);
 
-  const targetDate = "2024-08-30T17:00:00";
+  const targetDate = "2024-08-27T17:00:00";
 
   const handleCountdownComplete = () => {
     setShowCountdown(false);
@@ -176,11 +176,6 @@ function Home() {
   return (
     <>
       <div className="relative py-36 md:py-42 home w-full">
-        <img src={GreenLine} className="absolute top-36 w-6 md:w-10 left-0" />
-        <img
-          src={GreenLine}
-          className="absolute top-36 w-6 md:w-10 right-0 scale-x-[-1]"
-        />
         <div
           className={`invisible text-[#D3FFF4] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl my-10 sm:my-12 md:my-16 lg:my-20 xl:my-28 min-h-[200px] transition-all duration-1000 ${
             showText
@@ -274,7 +269,7 @@ function Home() {
                 />
                 <img
                   src={Asset_6}
-                  className="absolute hidden sm:block z-10 w-72 sm:w-7/12 sm:-bottom-80 md:-bottom-[23rem] lg:-bottom-[30rem] xl:-bottom-[40rem] right-0 lg:w-1/2"
+                  className="absolute 2xl:hidden hidden sm:block z-10 w-72 sm:w-7/12 sm:-bottom-80 md:-bottom-[23rem] lg:-bottom-[30rem] xl:-bottom-[40rem] right-0 lg:w-1/2"
                   alt="3"
                 />
               </div>
@@ -282,7 +277,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="relative py-20 lg:py-36 home">
+      <div className="relative mt-40 lg:mt-72 home">
         <p className="spyagencyBoldItal text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white">
           TIMELINE
         </p>
