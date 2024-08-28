@@ -116,7 +116,7 @@ function Home() {
 
   useEffect(() => {
     const now = new Date();
-    const endDate = new Date("2024-09-09T17:00:00");
+    const endDate = new Date("2024-08-30T17:00:00");
 
     if (now >= endDate) {
       localStorage.setItem("countdownComplete", "true");
@@ -140,7 +140,7 @@ function Home() {
     };
   }, []);
 
-  const targetDate = "2024-09-09T17:00:00";
+  const targetDate = "2024-08-30T17:00:00";
 
   const handleCountdownComplete = () => {
     setShowCountdown(false);
@@ -159,11 +159,11 @@ function Home() {
     const today = new Date();
 
     const dates = [
-      { key: "T1", date: new Date("2024-09-07") },
-      { key: "T2", date: new Date("2024-09-14") },
-      { key: "T3", date: new Date("2024-09-21") },
-      { key: "T4", date: new Date("2024-09-28") },
-      { key: "T5", date: new Date("2024-09-05") },
+      { key: "T1", date: new Date("2024-08-07") },
+      { key: "T2", date: new Date("2024-08-14") },
+      { key: "T3", date: new Date("2024-08-21") },
+      { key: "T4", date: new Date("2024-08-28") },
+      { key: "T5", date: new Date("2024-08-05") },
     ];
 
     dates.forEach(({ key, date }) => {
@@ -317,8 +317,8 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="relative right-32 xs:right-40 md:right-56 lg:right-0 size-8 md:size-12 lg:size-16 rounded-full border-2 md:border-3 lg:border-4 eclipse border-[#18E6B1] border-r-transparent flex items-center justify-center my-2">
-              <div className="size-6 md:size-8 lg:size-12 rounded-full border-2 md:border-3 lg:border-4 border-[#18E6B1] border-r-transparent "></div>
+            <div className="relative right-32 xs:right-40 md:right-56 lg:right-0 size-8 md:size-12 lg:size-16 rounded-full border-2 md:border-3 lg:border-4 eclipse border-[#18E6B1] border-r-transparent lg:border-l-transparent lg:border-r-[#18E6B1] flex items-center justify-center my-2">
+              <div className="size-6 md:size-8 lg:size-12 rounded-full border-2 md:border-3 lg:border-4 border-[#18E6B1] border-r-transparent lg:border-l-transparent lg:border-r-[#18E6B1] "></div>
             </div>
           </div>
           <div className="relative right-32 xs:right-40 md:right-56 lg:right-0">
@@ -383,8 +383,8 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="relative right-32 xs:right-40 md:right-56 lg:right-0 size-8 md:size-12 lg:size-16 rounded-full border-2 md:border-3 lg:border-4 eclipse border-[#18E6B1] border-r-transparent flex items-center justify-center my-2">
-              <div className="size-6 md:size-8 lg:size-12 rounded-full border-2 md:border-3 lg:border-4 border-[#18E6B1] border-r-transparent "></div>
+            <div className="relative right-32 xs:right-40 md:right-56 lg:right-0 size-8 md:size-12 lg:size-16 rounded-full border-2 md:border-3 lg:border-4 eclipse border-[#18E6B1] border-r-transparent lg:border-l-transparent lg:border-r-[#18E6B1] flex items-center justify-center my-2">
+              <div className="size-6 md:size-8 lg:size-12 rounded-full border-2 md:border-3 lg:border-4 border-[#18E6B1] border-r-transparent lg:border-l-transparent lg:border-r-[#18E6B1] "></div>
             </div>
           </div>
           <div className="relative right-32 xs:right-40 md:right-56 lg:right-0">
@@ -422,12 +422,11 @@ function Home() {
           </div>
           <div className="relative right-32 xs:right-40 md:right-56 lg:right-0">
             <div className="w-2 lg:w-4 h-2 lg:h-4 rounded-full bg-[#95A9FF]"></div>
-            {/* uncomment line bawah to replace line
-            <div className="w-0.5 h-20 md:h-28 lg:h-28 bg-[#95A9FF] mx-auto"></div> */}
-            <div className="w-0.5 h-11 md:h-20 lg:h-40 bg-[#95A9FF] mx-auto"></div>
+            <div className="w-0.5 h-20 md:h-28 lg:h-28 bg-[#95A9FF] mx-auto"></div>
+            <div className="w-2 lg:w-4 h-2 lg:h-4 rounded-full bg-[#95A9FF]"></div>
             <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 size-2 lg:size-4 rounded-full bg-[#95A9FF] hidden"></div>
           </div>
-          <div className="relative hidden">
+          <div className="relative ">
             <div className="absolute -right-32 xs:-right-40 md:-right-60 lg:right-24 -top-8">
               <div className="flex w-60 xs:w-72 md:w-[26rem] xl:w-[28rem] h-28 xs:h-32 xl:h-36 bg-white rounded-3xl p-4 items-center cardTl">
                 <img
@@ -437,13 +436,10 @@ function Home() {
                 />
                 <div className="flex-row text-start ml-4">
                   <div className="text-[#AF71FF] text-xs lg:text-sm font-medium px-3 border rounded-2xl border-[#9747FF]">
-                    Sabtu, ?? ?? 2024
+                    Coming Soon
                   </div>
                   <div className="spyagencyBoldItal text-[#4458AD] font-bold lg:text-lg">
                     {unlocked.T5 ? "MANIFEST" : "???"}
-                  </div>
-                  <div className="text-[#4458AD] font-bold text-sm sm:text-base">
-                    {unlocked.T5 ? "Deskripsi acara 5" : "???"}
                   </div>
                   <div className="text-[#AF71FF] text-xs lg:text-base font-medium">
                     Offline
@@ -451,11 +447,11 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="relative right-32 xs:right-40 md:right-52 lg:right-0 size-8 md:size-12 lg:size-16 rounded-full border-2 md:border-3 lg:border-4 eclipse border-[#18E6B1] border-r-transparent flex items-center justify-center my-2 hidden">
-              <div className="size-6 md:size-8 lg:size-12 rounded-full border-2 md:border-3 lg:border-4 border-[#18E6B1] border-r-transparent "></div>
+            <div className="relative right-32 xs:right-40 md:right-56 lg:right-0 size-8 md:size-12 lg:size-16 rounded-full border-2 md:border-3 lg:border-4 eclipse border-[#18E6B1] border-r-transparent lg:border-l-transparent lg:border-r-[#18E6B1] flex items-center justify-center my-2">
+              <div className="size-6 md:size-8 lg:size-12 rounded-full border-2 md:border-3 lg:border-4 border-[#18E6B1] border-r-transparent lg:border-l-transparent lg:border-r-[#18E6B1] "></div>
             </div>
           </div>
-          <div className="relative right-32 xs:right-40 md:right-52 lg:right-0 hidden">
+          <div className="relative right-32 xs:right-40 md:right-52 lg:right-0">
             <div className="w-0.5 h-11 md:h-20 lg:h-40 bg-[#95A9FF] mx-auto"></div>
             <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 size-2 lg:size-4 rounded-full bg-[#95A9FF]"></div>
           </div>

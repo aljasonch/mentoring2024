@@ -66,9 +66,19 @@ export default function KelompokItem({ kelompok, rendermethod }) {
 
             draft.rendereditems.push(
               <tr key={anggota.nim}>
-                <td className={`break-words text-xs sm:text-sm lg:text-lg  ${leftclass}`}>{anggota.nama}</td>
-                <td className={`break-words sm:text-sm lg:text-lg  ${middleclass}`}>{anggota.nim}</td>
-                <td className={`break-words sm:text-sm lg:text-lg  ${rightclass}`}>
+                <td
+                  className={`break-words text-xs sm:text-sm lg:text-lg  ${leftclass}`}
+                >
+                  {anggota.nama}
+                </td>
+                <td
+                  className={`break-words sm:text-sm lg:text-lg  ${middleclass}`}
+                >
+                  {anggota.nim}
+                </td>
+                <td
+                  className={`break-words sm:text-sm lg:text-lg  ${rightclass}`}
+                >
                   {anggota.jurusan}
                 </td>
               </tr>
@@ -82,19 +92,19 @@ export default function KelompokItem({ kelompok, rendermethod }) {
     <div className="flex flex-col items-center justify-center w-full mb-8 home">
       <div className="mb-6 w-full flex flex-row items-center">
         <div
-          className={`bg-white rounded-[50%] aspect-square font-extrabold w-[48px] text-2xl sm:text-4xlsm:w-[80px] md:w-[100px] md:text-5xl lg:w-[120px] lg:text-6xl xl:w-[125px] flex items-center justify-center mr-6`}
+          className={`bg-white rounded-[50%] aspect-square font-extrabold w-[40px] text-xl sm:text-2xl sm:w-[55px] md:w-[65px] md:text-3xl lg:w-[70px] lg:text-4xl xl:w-[80px] flex items-center justify-center sm:mr-6 mr-4`}
         >
           {kelompok.nomorkelompok}
         </div>
 
         <div className="flex flex-col items-start justify-center text-white">
           <div
-            className={`spyagencyRegular font-bold text-lg sm:text-2xl md:text-3xl lg:text-4xl`}
+            className={`spyagencyRegular font-bold  text-sm sm:text-xl md:text-2xl lg:text-3xl`}
           >
             KELOMPOK {kelompok.namakelompok}
           </div>
           <div
-            className={`spyagencyBoldItal text-sm sm:text-xl md:text-2xl lg:text-3xl text-left ${HashGenerator(
+            className={`spyagencyBoldItal text-lg leading-4 mb-0.5 sm:mb-0 sm:text-2xl md:text-3xl lg:text-4xl text-left ${HashGenerator(
               HashDataType.NAMAMENTOR,
               kelompok.namamentor
             )}`}
@@ -102,7 +112,7 @@ export default function KelompokItem({ kelompok, rendermethod }) {
             MENTOR: {kelompok.namamentor}
           </div>
           <div
-            className={`font-normal text-xs sm:text-lg md:text-xl lg:text-2xl`}
+            className={`font-semibold text-sm sm:text-lg md:text-xl lg:text-2xl`}
           >
             {kelompok.sesi}
           </div>
@@ -113,8 +123,14 @@ export default function KelompokItem({ kelompok, rendermethod }) {
           )}
         </div>
       </div>
+
       <table className="w-full border-separate mb-2 hyphens-auto">
         <thead className="rounded">
+          <tr>
+            <th colSpan={3} className="text-center text-white border-b-0">
+              ID LINE: {kelompok.idline}
+            </th>
+          </tr>
           <tr className="spyagencyRegular">
             <th className="thleftmost w-[50%]">Nama</th>
             <th className="thmiddle w-[20%]">NIM</th>
@@ -123,11 +139,6 @@ export default function KelompokItem({ kelompok, rendermethod }) {
         </thead>
         <tbody className="text-sm">{state.rendereditems}</tbody>
       </table>
-      <div
-        className={`w-full flex flex-row items-center justify-center text-white`}
-      >
-        ID LINE: {kelompok.idline}
-      </div>
     </div>
   );
 }

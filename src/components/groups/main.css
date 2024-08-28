@@ -11,11 +11,11 @@ th {
 }
 
 .thleftmost {
-  border-top-left-radius: 5px;
+  border-top-left-radius: 0px;
 }
 
 .thrightmost {
-  border-top-right-radius: 5px;
+  border-top-right-radius: 0px;
 }
 
 .thmiddle {
