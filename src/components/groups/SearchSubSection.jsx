@@ -136,7 +136,7 @@ export default function SearchSubSection({ kelompokdata }) {
       >
         <div className="w-full flex flex-col bg-white rounded-[24px] items-center justify-start h-fit overflow-hidden">
           <div className="w-full h-12 flex flex-row items-center justify-start">
-            <img src={searchicon} className="ml-6 w-6 h-6" />
+            <img src={searchicon} className="w-5 ml-5 h-5 lg:ml-6 lg:w-6 lg:h-6" />
             <input
               type="text"
               placeholder="Search"
