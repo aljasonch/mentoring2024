@@ -248,8 +248,8 @@ function SearchResultItem({ result, setState }) {
             );
           }}
         >
-          <img src={searchicon} className="ml-6 w-6 h-6" />
-          <div className="text-black text-sm lg:text-lg ml-4">
+          <img src={searchicon} className="ml-5 w-5 h-5 lg:ml-6 lg:w-6 lg:h-6" />
+          <div className="text-black text-sm md:text-base lg:text-lg ml-4">
             {capitalizeWords(data.data.nama)} - {data.data.nim}
           </div>
         </div>
@@ -275,8 +275,8 @@ function SearchResultItem({ result, setState }) {
             );
           }}
         >
-          <img src={searchicon} className="ml-6 w-6 h-6" />
-          <div className="text-black text-lg ml-4">{data.data.namamentor}</div>
+          <img src={searchicon} className="ml-5 w-5 h-5 lg:ml-6 lg:w-6 lg:h-6" />
+          <div className="text-black text-sm md:textbase lg:text-lg ml-4">{data.data.namamentor}</div>
         </div>
       </>
     );
