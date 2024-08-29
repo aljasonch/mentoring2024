@@ -249,7 +249,7 @@ function SearchResultItem({ result, setState }) {
           }}
         >
           <img src={searchicon} className="ml-6 w-6 h-6" />
-          <div className="text-black text-lg ml-4">
+          <div className="text-black text-sm lg:text-lg ml-4">
             {capitalizeWords(data.data.nama)} - {data.data.nim}
           </div>
         </div>
