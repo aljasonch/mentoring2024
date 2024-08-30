@@ -15,6 +15,7 @@ function Division() {
   const [selectedData, setSelectedData] = useState(null);
   const [imagesLoaded, setImagesLoaded] = useState(false);
   const [isCardVisible, setIsCardVisible] = useState(false);
+  const [animationClass, setAnimationClass] = useState('');
 
   useEffect(() => {
     const loadImage = (src) => {
@@ -42,13 +43,16 @@ function Division() {
   }, []);
 
   const handleCloseCard = useCallback(() => {
-    setIsCardVisible(false);
-    setTimeout(() => setSelectedData(null), 500); 
+    setAnimationClass('slide-down');
+    setTimeout(() => {
+      setIsCardVisible(false);
+      setSelectedData(null);
+      setAnimationClass('');
+    }, 500); // Match this duration with the CSS animation duration
   }, []);
 
-
   if (!imagesLoaded) {
-    return <div className="loading">Loading...</div>; 
+    return <div className="loading">Loading...</div>;
   }
 
   return (
@@ -101,7 +105,7 @@ function Division() {
         <img src={Daco} alt="Daco" />
       </div>
       {selectedData && (
-        <div className={`xss:w-[53.125rem] overflow-hidden card-container xss:top-[50%] sm:top-1/2 lg:top-[55%] transition-opacity duration-300 ${isCardVisible ? 'opacity-100' : 'opacity-0'}`}>
+        <div className={`xss:w-[53.125rem] overflow-hidden card-container ${animationClass} xss:top-[50%] sm:top-1/2 lg:top-[55%] transition-opacity duration-300 ${isCardVisible ? 'opacity-100' : 'opacity-0'}`}>
           <div className="relative" id="screenPopUp">
             <div className="absolute bg-[#02B4A8] border-2 border-[rgb(24,230,177)] md:rounded-tl-[15px] md:rounded-br-[15px] flex items-center justify-center lg:w-64 lg:h-14 lg:top-[22%] lg:right-[7%] sm:w-60 sm:h-14 md:w-40 md:h-[34px] md:top-[22%] md:right-[10%] xss:w-32 xss:h-8 xss:top-[50%] xss:rounded-tl-[10px] xss:rounded-br-[10px] xs:w-40 xs:h-10 xs:top-[50%] center">
               <p className="text-[#F5FDFF] text-center lg:text-[18px] md:text-[12px] xss:text-[10px] spyagencyRegular sm:text-base">
