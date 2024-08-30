@@ -23,3 +23,21 @@
     left: 0;
   }
 }
+.home {
+  background: url(../../assets/background.webp),
+    radial-gradient(
+      closest-side at center,
+      #6d5fff 0%,
+      #5d52dd 42%,
+      #283771 100%
+    );
+  background-blend-mode: overlay;
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media (max-width: 450px) {
+  .home {
+    background-size: contain;
+  }
+}
