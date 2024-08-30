@@ -15,7 +15,7 @@
   background-position: center;
   background-size: cover;
 }
-@media (max-width: 450px) {
+@media (max-width: 1024px) {
   .home {
     background-size: contain;
   }
