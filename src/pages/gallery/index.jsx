@@ -79,13 +79,21 @@ export function Gallery() {
           </div>
           <div className="w-full flex flex-col items-center justify-items-center">
             <div className="flex flex-col items-center justify-center 2xl:w-[60rem] xl:w-[48rem] lg:w-[36rem] md:w-[28rem] w-[18rem]">
-              <div className="border-4 border-[#e8eaed] rounded-3xl mt-7 mb-16 overflow-hidden">
+              <div className="border-4 border-[#e8eaed] rounded-3xl mt-7 overflow-hidden">
                 <LoadableImage
                   src={currentData.images[localstate.currentimage]}
                   centercrop={true}
                   loading="lazy"
                 />
               </div>
+              <a
+                href={currentData.link}
+                className="bg-white xss:w-24 xs:w-28 xss:h-7 xs:h-8 sm:w-32 sm:h-8 lg:w-48 lg:h-10 text-sm lg:text-lg rounded-3xl font-semibold shadow-lg text-[#2B2476] mt-7 flex items-center justify-center hover:text-white hover:bg-transparent hover:border-white hover:border-2 mb-10"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                See More
+              </a>
             </div>
           </div>
           <ScrollablePhotoSet

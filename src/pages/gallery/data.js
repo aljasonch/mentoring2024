@@ -58,6 +58,7 @@ export const getData = async () => {
         widecoverUnlocked: theQuestUnlocked,
         date: "2024-09-07",
         images: imageUrls.tutorial,
+        link:  "https://bit.ly/thequestmentoring2024",
       },
       stage1: {
         back: "tutorial",
@@ -68,6 +69,7 @@ export const getData = async () => {
         widecoverUnlocked: verse1Unlocked,
         date: "2024-09-14",
         images: imageUrls.stage1,
+        link: "https://bit.ly/1stversementoring2024",
       },
       stage2: {
         back: "stage1",
@@ -78,6 +80,7 @@ export const getData = async () => {
         widecoverUnlocked: verse2Unlocked,
         date: "2024-09-21",
         images: imageUrls.stage2,
+        link: "https://bit.ly/2ndversementoring2024",
       },
       stage3: {
         back: "stage2",
@@ -88,6 +91,7 @@ export const getData = async () => {
         widecoverUnlocked: verse3Unlocked,
         date: "2024-09-28",
         images: imageUrls.stage3,
+        link: "https://bit.ly/3rdversementoring2024"
       },
       manifest: {
         back: "stage3",
