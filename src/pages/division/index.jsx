@@ -67,7 +67,7 @@ function Division() {
             return (
               <div
                 key={item.title}
-                className={`cursor-pointer xl:w-48 xl:h-48 xs:w-28 xs:h-28 xss:w-24 xss:h-24 md:w-32 md:h-32 sm:w-28 sm:h-28 md:p-5 xss:p-4 xl:p-6 col-span-2 rounded-full inner-shadow transition-color duration-500 ease-in-out hover:shadow-none shadow-2xl ${
+                className={`cursor-pointer xl:w-48 xl:h-48 xs:w-28 xs:h-28 xss:w-24 xss:h-24 md:w-32 md:h-32 sm:w-28 sm:h-28 lg:w-40 lg:h-40 md:p-5 xss:p-4 xl:p-6 col-span-2 rounded-full inner-shadow transition-color duration-500 ease-in-out hover:shadow-none shadow-2xl ${
                   isLastRow
                     ? data.length % 3 === 2 && index === data.length - 2
                       ? "col-start-2 xl:col-start-auto"
