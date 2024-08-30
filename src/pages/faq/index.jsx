@@ -4,10 +4,10 @@ import Accordion, {
   AccordionItem,
 } from "../../components/accordion/CustomAccordion";
 import data from "./data.js";
-
+import './style.css'
 function Faq() {
   return (
-    <div className="home pb-40 bg-fixed">
+    <div className="background-mentoring pb-40 bg-fixed">
       <div className="fixed top-0 left-0 z-0 ">
         <img src={BlackDots} alt={BlackDots} className="w-72 xss:w-64 h-auto" />
       </div>
