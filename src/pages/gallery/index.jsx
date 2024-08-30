@@ -64,7 +64,7 @@ export function Gallery() {
   }
 
   return (
-    <div className="background-mentoring pb-40">
+    <div className="home pb-40">
       {location.pathname.endsWith("collection") && currentData?.images ? (
         <div className="w-full flex justify-center pt-40 flex-col">
           <div
