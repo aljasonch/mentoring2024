@@ -11,14 +11,13 @@ import fetch from "node-fetch";
  * @returns {string}
  */
 function sessionGenerator(kelompoknumber) {
-  if (kelompoknumber <= 90) {
+  if (kelompoknumber <= 82) {
     return "Sesi Pagi";
   } else if (kelompoknumber <= 165) {
     return "Sesi Siang";
   }
   return "Sesi Unassigned";
 }
-
 class MemberRecord {
   name = "";
   nim = "";
