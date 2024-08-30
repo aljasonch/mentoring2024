@@ -13,7 +13,7 @@ const data = [
     },
     {
         header: "Mentoring dilaksanakan pada tanggal berapa?",
-        content: "Mentoring akan dilaksanakan pada 7, 14, 21, 28 September 2024"
+        content: "Mentoring akan dilaksanakan pada 7, 14, 21, 28 September 2024."
     },
     {
         header: "Bagaimana cara mengecek daftar kelompok?",
