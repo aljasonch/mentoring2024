@@ -109,7 +109,7 @@ function Division() {
                 />
               </div>
               <button
-                className="xss:w-[72px] md:w-[120px] fixed right-[7%] xss:top-[3%] md:top-[0%]"
+                className="xss:w-[72px] md:w-[120px] fixed xss:right-[9%] md:right-[7%] xss:top-[3%] md:top-[0%]"
                 onClick={handleCardClick}
               >
                 <img src={Button} />

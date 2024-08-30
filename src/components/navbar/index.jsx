@@ -103,35 +103,35 @@ function Navbar() {
         <Link
           to="/"
           onClick={toggleMobileMenu}
-          className="mb-4 text-lg lg:text-[10px] font-semibold text-white"
+          className="mb-4 text-lg md:text-xl lg:text-2xl font-semibold text-white"
         >
           HOME
         </Link>
         <Link
           to="/faq"
           onClick={toggleMobileMenu}
-          className="mb-4 text-lg lg:text-[10px]  font-semibold text-white"
+          className="mb-4 text-lg md:text-xl lg:text-2xl  font-semibold text-white"
         >
           FAQ
         </Link>
         <Link
           to="/about"
           onClick={toggleMobileMenu}
-          className="mb-4 text-lg lg:text-[10px] font-semibold text-white"
+          className="mb-4 text-lg md:text-xl lg:text-2xl font-semibold text-white"
         >
           ABOUT US
         </Link>
         <Link
           to="/division"
           onClick={toggleMobileMenu}
-          className="mb-4 text-lg lg:text-[10px] font-semibold text-white"
+          className="mb-4 text-lg md:text-xl lg:text-2xl font-semibold text-white"
         >
           DIVISION
         </Link>
         <Link
           to="/gallery"
           onClick={toggleMobileMenu}
-          className="mb-4 text-lg lg:text-[10px] font-semibold text-white"
+          className="mb-4 text-lg md:text-xl lg:text-2xl font-semibold text-white"
         >
           GALLERY
         </Link>

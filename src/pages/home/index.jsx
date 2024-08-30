@@ -116,7 +116,7 @@ function Home() {
 
   useEffect(() => {
     const now = new Date();
-    const endDate = new Date("2024-08-27T17:00:00");
+    const endDate = new Date("2024-08-31T10:00:00");
 
     if (now >= endDate) {
       localStorage.setItem("countdownComplete", "true");
@@ -140,7 +140,7 @@ function Home() {
     };
   }, []);
 
-  const targetDate = "2024-08-27T17:00:00";
+  const targetDate = "2024-08-31T10:00:00";
 
   const handleCountdownComplete = () => {
     setShowCountdown(false);
@@ -269,7 +269,7 @@ function Home() {
                 />
                 <img
                   src={Asset_6}
-                  className="absolute 2xl:hidden hidden sm:block z-10 w-72 sm:w-7/12 sm:-bottom-80 md:-bottom-[23rem] lg:-bottom-[30rem] xl:-bottom-[40rem] right-0 lg:w-1/2"
+                  className="absolute 2xl:hidden hidden sm:block z-10 w-72 sm:w-7/12 sm:-bottom-80 md:-bottom-[27rem] lg:-bottom-[30rem] xl:-bottom-[40rem] right-0 lg:w-1/2"
                   alt="3"
                 />
               </div>
