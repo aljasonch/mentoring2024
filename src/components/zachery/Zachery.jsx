@@ -7,7 +7,7 @@ import ZacherySpeak from "../../assets/zacheryspeak.webp";
 
 const Zachery = () => {
   return (
-    <div className="relative h-screen top-36 sm:top-[300px] lg:top-36 xl:top-[170px]">
+    <div className="relative min-h-[80vh] lg:h-screen top-36 sm:top-[300px] lg:top-36 xl:top-[170px]">
       <img
         src={GreenLine}
         className="absolute top-8 sm:hidden block w-6 left-0"
@@ -58,11 +58,6 @@ const Zachery = () => {
       <img
         src={Asset_6}
         className="absolute hidden sm:block scale-x-[-1] z-10 w-72 sm:w-7/12 sm:-top-10 md:-top-14 lg:top-4 left-0 lg:w-1/2"
-        alt="3"
-      />
-      <img
-        src={Asset_6}
-        className="absolute 2xl:hidden hidden sm:block z-10 w-72 sm:w-7/12 sm:-bottom-80 md:-bottom-[27rem] lg:-bottom-[30rem] xl:-bottom-[40rem] right-0 lg:w-1/2"
         alt="3"
       />
     </div>

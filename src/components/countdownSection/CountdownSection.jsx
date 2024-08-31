@@ -106,13 +106,10 @@ const CountdownSection = () => {
     let foundUpcoming = false;
 
     for (let i = 0; i < endDate.length; i++) {
-      for (let j = 0; j < endDate[i].date.length; j++) {
-        if (now < endDate[i].date[j]) {
-          setCurrentEventIndex(i);
-          setCurrentDateIndex(j);
-          foundUpcoming = true;
-          break;
-        }
+      if (now < endDate[i].date) {
+        setCurrentEventIndex(i);
+        foundUpcoming = true;
+        break;
       }
       if (foundUpcoming) break;
     }
@@ -152,14 +149,14 @@ const CountdownSection = () => {
   }
 
   return (
-    <div className="relative py-36 md:py-42 w-full h-screen">
-      <div className="text-[#D3FFF4] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl my-10 sm:my-12 md:my-16 lg:my-20 xl:my-28 min-h-[200px] transition-all duration-1000 opacity-100 sm:visible translate-y-0 sm:block">
+    <div className="flex items-center flex-col justify-center md:py-42 w-full min-h-[50vh] lg:min-h-[70vh]">
+      <div className=" text-[#D3FFF4] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl sm:my-12 md:my-16 lg:my-20 xl:my-28  transition-all duration-1000 opacity-100 sm:visible translate-y-0 sm:block">
         <p className="spyagencyCond xss:text-xl sm:text-3xl md:text-4xl md:mt-24 mb-12 lg:text-5xl">
-          {endDate[currentEventIndex].title} BEGINS IN
+          {endDate[currentEventIndex].title} <br />BEGINS IN
         </p>
         <div>
           <Countdown
-            targetDate={endDate[currentEventIndex].date[currentDateIndex]}
+            targetDate={endDate[currentEventIndex].date}
             onCountdownComplete={handleCountdownComplete}
           />
         </div>

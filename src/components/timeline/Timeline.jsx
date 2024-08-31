@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import T1 from "../../assets/map/verse 1_LOCKED.jpg";
-import T2 from "../../assets/map/verse 2_LOCKED.jpg";
-import T3 from "../../assets/map/verse 3_LOCKED.jpg";
-import T4 from "../../assets/map/the quest_LOCKED.jpg";
+import T1 from "../../assets/map/the quest_LOCKED.jpg";
+import T2 from "../../assets/map/verse 1_LOCKED.jpg";
+import T3 from "../../assets/map/verse 2_LOCKED.jpg";
+import T4 from "../../assets/map/verse 3_LOCKED.jpg";
 import T5 from "../../assets/map/manifest_LOCKED.jpg";
-import T1_2 from "../../assets/map/verse 1_UNLOCKED.jpg";
-import T2_2 from "../../assets/map/verse 2_UNLOCKED.jpg";
-import T3_2 from "../../assets/map/verse 3_UNLOCKED.jpg";
-import T4_2 from "../../assets/map/the quest_UNLOCKED.jpg";
+import T1_2 from "../../assets/map/the quest_UNLOCKED.jpg";
+import T2_2 from "../../assets/map/verse 1_UNLOCKED.jpg";
+import T3_2 from "../../assets/map/verse 2_UNLOCKED.jpg";
+import T4_2 from "../../assets/map/verse 3_UNLOCKED.jpg";
 import T5_2 from "../../assets/map/manifest_UNLOCKED.jpg";
 
 const Timeline = () => {
@@ -60,10 +60,10 @@ const Timeline = () => {
                   Sabtu, 7 September 2024
                 </div>
                 <div className="spyagencyBoldItal text-[#4458AD] font-bold lg:text-lg">
-                  {unlocked.T1 ? "TUTORIAL" : "???"}
+                  {unlocked.T1 ? "THE QUEST" : "???"}
                 </div>
                 <div className="text-[#4458AD] font-bold text-xs sm:text-base">
-                  {unlocked.T1 ? "THE QUEST: INTRODUCTION TO MENTORING" : "???"}
+                  {unlocked.T1 ? "INTRODUCTION TO MENTORING" : "???"}
                 </div>
                 <div className="text-[#AF71FF] text-xs lg:text-base font-medium">
                   Offline
