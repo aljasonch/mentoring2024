@@ -97,60 +97,74 @@ import Countdown from "../countdown/Countdown";
 import { endDate } from "./endDate";
 
 const CountdownSection = () => {
-  const now = new Date("2024-09-06T07:54:00"); // Waktu saat ini
-  const [currentEventIndex, setCurrentEventIndex] = useState(0); // Tracking event di endDate
-  const [currentDateIndex, setCurrentDateIndex] = useState(0); // Tracking tanggal di dalam event
+  const [currentEventIndex, setCurrentEventIndex] = useState(0);
+  const [currentDateIndex, setCurrentDateIndex] = useState(0);
   const [isCountdownComplete, setIsCountdownComplete] = useState(false);
 
   useEffect(() => {
-    const upcomingEventIndex = endDate.findIndex((event) => {
-      return event.date.some((date) => now <= date);
-    });
+    const now = new Date();
+    let foundUpcoming = false;
 
-    if (upcomingEventIndex !== -1) {
-      const upcomingDateIndex = endDate[upcomingEventIndex].date.findIndex(
-        (date) => now <= date
-      );
-      setCurrentEventIndex(upcomingEventIndex);
-      setCurrentDateIndex(upcomingDateIndex);
-    } else {
+    for (let i = 0; i < endDate.length; i++) {
+      for (let j = 0; j < endDate[i].date.length; j++) {
+        if (now < endDate[i].date[j]) {
+          setCurrentEventIndex(i);
+          setCurrentDateIndex(j);
+          foundUpcoming = true;
+          break;
+        }
+      }
+      if (foundUpcoming) break;
+    }
+
+    if (!foundUpcoming) {
       setIsCountdownComplete(true);
     }
-  }, [now]);
+  }, []);
 
   const handleCountdownComplete = () => {
-    if (
-      currentDateIndex + 1 < endDate[currentEventIndex].date.length
-    ) {
-      // Jika masih ada tanggal berikutnya dalam event yang sama
-      setCurrentDateIndex(currentDateIndex + 1);
-    } else if (currentEventIndex + 1 < endDate.length) {
-      // Jika ada event berikutnya dalam endDate
-      setCurrentEventIndex(currentEventIndex + 1);
-      setCurrentDateIndex(0); // Reset tanggal ke yang pertama dalam event berikutnya
+    let nextEventIndex = currentEventIndex;
+    let nextDateIndex = currentDateIndex + 1;
+
+    if (nextDateIndex >= endDate[nextEventIndex].date.length) {
+      nextEventIndex++;
+      nextDateIndex = 0;
+    }
+
+    if (nextEventIndex < endDate.length) {
+      setCurrentEventIndex(nextEventIndex);
+      setCurrentDateIndex(nextDateIndex);
     } else {
       setIsCountdownComplete(true);
     }
   };
 
-  return (
-    <>
-      {!isCountdownComplete && (
-        <div className="relative py-36 md:py-42 w-full h-screen">
-          <div className="text-[#D3FFF4] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl my-10 sm:my-12 md:my-16 lg:my-20 xl:my-28 min-h-[200px] transition-all duration-1000 opacity-100 sm:visible translate-y-0 sm:block">
-            <p className="spyagencyCond xss:text-xl sm:text-3xl md:text-4xl md:mt-24 mb-12 lg:text-5xl">
-              {endDate[currentEventIndex].title} BEGINS IN
-            </p>
-            <div>
-              <Countdown
-                targetDate={endDate[currentEventIndex].date[currentDateIndex]}
-                onCountdownComplete={handleCountdownComplete}
-              />
-            </div>
-          </div>
+  if (isCountdownComplete) {
+    return (
+      <div className="relative py-36 md:py-42 w-full h-screen">
+        <div className="text-[#D3FFF4] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl my-10 sm:my-12 md:my-16 lg:my-20 xl:my-28 min-h-[200px] transition-all duration-1000 opacity-100 sm:visible translate-y-0 sm:block">
+          <p className="spyagencyCond xss:text-xl sm:text-3xl md:text-4xl md:mt-24 mb-12 lg:text-5xl">
+            ALL EVENTS HAVE CONCLUDED
+          </p>
         </div>
-      )}
-    </>
+      </div>
+    );
+  }
+
+  return (
+    <div className="relative py-36 md:py-42 w-full h-screen">
+      <div className="text-[#D3FFF4] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl my-10 sm:my-12 md:my-16 lg:my-20 xl:my-28 min-h-[200px] transition-all duration-1000 opacity-100 sm:visible translate-y-0 sm:block">
+        <p className="spyagencyCond xss:text-xl sm:text-3xl md:text-4xl md:mt-24 mb-12 lg:text-5xl">
+          {endDate[currentEventIndex].title} BEGINS IN
+        </p>
+        <div>
+          <Countdown
+            targetDate={endDate[currentEventIndex].date[currentDateIndex]}
+            onCountdownComplete={handleCountdownComplete}
+          />
+        </div>
+      </div>
+    </div>
   );
 };
 
