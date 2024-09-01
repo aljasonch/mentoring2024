@@ -141,7 +141,7 @@ request.body
     console.error("Error parsing JSON stream:", error);
   })
   .on("end", () => {
-    let serialized = JSON.stringify(kelompoks);
+    let serialized = JSON.stringify(kelompoks, null, 2);
     fs.writeFileSync("..\\public\\kelompoks.json", serialized);
     fs.writeFileSync("..\\dist\\kelompoks.json", serialized);
     fs.writeFileSync("..\\src\\assets\\kelompoks.json", serialized);
