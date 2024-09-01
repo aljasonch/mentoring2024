@@ -3,7 +3,11 @@
     "namamentor": "Anna Hanafi ",
     "idline": "anna31han",
     "members": [
-      { "name": "SILVIA GRACELLA", "nim": "00000113220", "prodi": "AKUNTANSI" },
+      {
+        "name": "SILVIA GRACELLA",
+        "nim": "00000113220",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "HAPPY NALASARI",
         "nim": "00000129584",
@@ -150,6 +154,11 @@
         "name": "HANDYKA YHUDISTHIRA AFFANDI",
         "nim": "00000130241",
         "prodi": "MANAJEMEN"
+      },
+      {
+        "name": "CHARLENE JANINE GILLIAN GUNAWAN",
+        "nim": "00000109071",
+        "prodi": "MANAJEMEN"
       }
     ],
     "sesi": "Sesi Pagi"
@@ -198,7 +207,11 @@
         "nim": "00000130125",
         "prodi": "MANAJEMEN"
       },
-      { "name": "ANGEL AURELIA", "nim": "00000108696", "prodi": "MANAJEMEN" },
+      {
+        "name": "ANGEL AURELIA",
+        "nim": "00000108696",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "KAYLEEN ARLI LUKITO",
         "nim": "00000139701",
@@ -209,7 +222,11 @@
         "nim": "00000130565",
         "prodi": "INFORMATIKA"
       },
-      { "name": "ALEXIO MANUELO", "nim": "00000112272", "prodi": "AKUNTANSI" },
+      {
+        "name": "ALEXIO MANUELO",
+        "nim": "00000112272",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "ARYA RANU PANI",
         "nim": "00000134521",
@@ -314,7 +331,11 @@
     "namamentor": "Steven Stevanus Tan ",
     "idline": "dragon_leonidas",
     "members": [
-      { "name": "JENNIFER HUANG", "nim": "00000113077", "prodi": "AKUNTANSI" },
+      {
+        "name": "JENNIFER HUANG",
+        "nim": "00000113077",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "ALLYSSA CELFIN PERMATA",
         "nim": "00000117087",
@@ -365,7 +386,11 @@
         "nim": "00000128411",
         "prodi": "INFORMATIKA"
       },
-      { "name": "ILLONA HARTANTO", "nim": "00000111230", "prodi": "AKUNTANSI" },
+      {
+        "name": "ILLONA HARTANTO",
+        "nim": "00000111230",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "CHERYL JUVENTIA GOEWIN",
         "nim": "00000108173",
@@ -375,6 +400,11 @@
         "name": "EUNIKE CHRISTY CHRISTANTI",
         "nim": "00000128762",
         "prodi": "MANAJEMEN"
+      },
+      {
+        "name": "FUGEN PURNAMA",
+        "nim": "00000116652",
+        "prodi": "KOMUNIKASI STRATEGIS"
       }
     ],
     "sesi": "Sesi Pagi"
@@ -438,9 +468,26 @@
         "nim": "00000138865",
         "prodi": "INFORMATIKA"
       },
-      { "name": "ANDREAS CHANDRA", "nim": "00000113116", "prodi": "AKUNTANSI" },
-      { "name": "ELLEN FLORENSIA", "nim": "00000094660", "prodi": "AKUNTANSI" },
-      { "name": "JUWITA AMANDA", "nim": "00000116452", "prodi": "MANAJEMEN" }
+      {
+        "name": "ANDREAS CHANDRA",
+        "nim": "00000113116",
+        "prodi": "AKUNTANSI"
+      },
+      {
+        "name": "ELLEN FLORENSIA",
+        "nim": "00000094660",
+        "prodi": "AKUNTANSI"
+      },
+      {
+        "name": "JUWITA AMANDA",
+        "nim": "00000116452",
+        "prodi": "MANAJEMEN"
+      },
+      {
+        "name": "KAUTSAR AHMED RIJAL",
+        "nim": "00000130021",
+        "prodi": "ARSITEKTUR"
+      }
     ],
     "sesi": "Sesi Pagi"
   },
@@ -448,7 +495,11 @@
     "namamentor": "Amira Maritza Rama ",
     "idline": "ritza2000",
     "members": [
-      { "name": "LENI NUR AENI", "nim": "00000133569", "prodi": "AKUNTANSI" },
+      {
+        "name": "LENI NUR AENI",
+        "nim": "00000133569",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "BEATRICE GRACIELA HADI",
         "nim": "00000112045",
@@ -504,8 +555,21 @@
         "nim": "00000106190",
         "prodi": "AKUNTANSI"
       },
-      { "name": "ANGGUN HAYATI", "nim": "00000130399", "prodi": "ARSITEKTUR" },
-      { "name": "GIFTA ANINA", "nim": "00000133818", "prodi": "MANAJEMEN" }
+      {
+        "name": "ANGGUN HAYATI",
+        "nim": "00000130399",
+        "prodi": "ARSITEKTUR"
+      },
+      {
+        "name": "GIFTA ANINA",
+        "nim": "00000133818",
+        "prodi": "MANAJEMEN"
+      },
+      {
+        "name": "KEYSAR YEREMIA DIRGA PIOH",
+        "nim": "00000123556",
+        "prodi": "DESAIN KOMUNIKASI VISUAL"
+      }
     ],
     "sesi": "Sesi Pagi"
   },
@@ -513,7 +577,11 @@
     "namamentor": "Audry Calysta ",
     "idline": "audrycalysta",
     "members": [
-      { "name": "NAYLA SALSABILA", "nim": "00000136034", "prodi": "AKUNTANSI" },
+      {
+        "name": "NAYLA SALSABILA",
+        "nim": "00000136034",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "ANGELINE .",
         "nim": "00000130604",
@@ -544,8 +612,16 @@
         "nim": "00000118064",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "LAURIEN VELICIA", "nim": "00000116045", "prodi": "MANAJEMEN" },
-      { "name": "ADINDA .", "nim": "00000115716", "prodi": "MANAJEMEN" },
+      {
+        "name": "LAURIEN VELICIA",
+        "nim": "00000116045",
+        "prodi": "MANAJEMEN"
+      },
+      {
+        "name": "ADINDA .",
+        "nim": "00000115716",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "SUJATA MULYANA",
         "nim": "00000116351",
@@ -566,7 +642,16 @@
         "nim": "00000126825",
         "prodi": "FILM & ANIMASI"
       },
-      { "name": "JESSICA TIOVANI", "nim": "00000126676", "prodi": "MANAJEMEN" }
+      {
+        "name": "JESSICA TIOVANI",
+        "nim": "00000126676",
+        "prodi": "MANAJEMEN"
+      },
+      {
+        "name": "KELVIN",
+        "nim": "00000133503",
+        "prodi": "MANAJEMEN"
+      }
     ],
     "sesi": "Sesi Pagi"
   },
@@ -574,7 +659,11 @@
     "namamentor": "Bryan Emmanuel Yubenz ",
     "idline": "bryan050605",
     "members": [
-      { "name": "ERVINA LEONITA", "nim": "00000107676", "prodi": "AKUNTANSI" },
+      {
+        "name": "ERVINA LEONITA",
+        "nim": "00000107676",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "JESSLYN ALEXANDER LIU",
         "nim": "00000106087",
@@ -610,7 +699,11 @@
         "nim": "00000116199",
         "prodi": "MANAJEMEN"
       },
-      { "name": "MONICA GREYCIA", "nim": "00000117115", "prodi": "MANAJEMEN" },
+      {
+        "name": "MONICA GREYCIA",
+        "nim": "00000117115",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "VALENTINO CANDAKO HARDI",
         "nim": "00000107746",
@@ -631,7 +724,11 @@
         "nim": "00000120867",
         "prodi": "FILM & ANIMASI"
       },
-      { "name": "ANTONIUS WILLIAM", "nim": "00000127236", "prodi": "MANAJEMEN" }
+      {
+        "name": "ANTONIUS WILLIAM",
+        "nim": "00000127236",
+        "prodi": "MANAJEMEN"
+      }
     ],
     "sesi": "Sesi Pagi"
   },
@@ -659,7 +756,11 @@
         "nim": "00000113534",
         "prodi": "FILM & ANIMASI"
       },
-      { "name": "ROBBY HOTMIAN", "nim": "00000131681", "prodi": "PERHOTELAN" },
+      {
+        "name": "ROBBY HOTMIAN",
+        "nim": "00000131681",
+        "prodi": "PERHOTELAN"
+      },
       {
         "name": "CINDY SINTYA",
         "nim": "00000105472",
@@ -685,7 +786,11 @@
         "nim": "00000128080",
         "prodi": "SISTEM INFORMASI"
       },
-      { "name": "ALVINA .", "nim": "00000108748", "prodi": "INFORMATIKA" },
+      {
+        "name": "ALVINA .",
+        "nim": "00000108748",
+        "prodi": "INFORMATIKA"
+      },
       {
         "name": "REBECCA TANUWIDJAJA",
         "nim": "00000122012",
@@ -708,7 +813,11 @@
     "namamentor": "Jeannie Rukmana ",
     "idline": "jeruknanassemangka",
     "members": [
-      { "name": "CYNTHIA KAMAL", "nim": "00000108857", "prodi": "AKUNTANSI" },
+      {
+        "name": "CYNTHIA KAMAL",
+        "nim": "00000108857",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "SAYYID FATHUR RAHMAN",
         "nim": "00000126711",
@@ -744,7 +853,11 @@
         "nim": "00000125376",
         "prodi": "MANAJEMEN"
       },
-      { "name": "MELLY WIANATAN", "nim": "00000106056", "prodi": "MANAJEMEN" },
+      {
+        "name": "MELLY WIANATAN",
+        "nim": "00000106056",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "DERRICK STEVEN SUTANTO",
         "nim": "00000127333",
@@ -755,7 +868,11 @@
         "nim": "00000108931",
         "prodi": "INFORMATIKA"
       },
-      { "name": "NAUFAL RAIHAN", "nim": "00000137496", "prodi": "AKUNTANSI" },
+      {
+        "name": "NAUFAL RAIHAN",
+        "nim": "00000137496",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "ERSA ZAHRA MAULIYA",
         "nim": "00000137835",
@@ -808,8 +925,16 @@
         "nim": "00000119352",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "LYDIA SETIAWAN", "nim": "00000114791", "prodi": "MANAJEMEN" },
-      { "name": "NITYA JIVITA", "nim": "00000109028", "prodi": "MANAJEMEN" },
+      {
+        "name": "LYDIA SETIAWAN",
+        "nim": "00000114791",
+        "prodi": "MANAJEMEN"
+      },
+      {
+        "name": "NITYA JIVITA",
+        "nim": "00000109028",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "BENEDIKTUS REINALDI HANGGARA",
         "nim": "00000117141",
@@ -842,7 +967,11 @@
     "namamentor": "Ben Arief Moggalana ",
     "idline": "benarief005",
     "members": [
-      { "name": "NEVAN ARNALDO", "nim": "00000114128", "prodi": "AKUNTANSI" },
+      {
+        "name": "NEVAN ARNALDO",
+        "nim": "00000114128",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "RIVALDI ARDIWINATA",
         "nim": "00000108501",
@@ -858,7 +987,11 @@
         "nim": "00000116913",
         "prodi": "FILM & ANIMASI"
       },
-      { "name": "WANDA NATHASIA", "nim": "00000107856", "prodi": "PERHOTELAN" },
+      {
+        "name": "WANDA NATHASIA",
+        "nim": "00000107856",
+        "prodi": "PERHOTELAN"
+      },
       {
         "name": "ALISHA MAZAYA SADIKIN",
         "nim": "00000127563",
@@ -874,7 +1007,11 @@
         "nim": "00000108394",
         "prodi": "MANAJEMEN"
       },
-      { "name": "ADONIRAM YUAN", "nim": "00000111308", "prodi": "MANAJEMEN" },
+      {
+        "name": "ADONIRAM YUAN",
+        "nim": "00000111308",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "ALFONSUS RONALDY HIDAYAT",
         "nim": "00000112181",
@@ -885,7 +1022,11 @@
         "nim": "00000134156",
         "prodi": "INFORMATIKA"
       },
-      { "name": "CHELSEA ANGELA", "nim": "00000107661", "prodi": "AKUNTANSI" },
+      {
+        "name": "CHELSEA ANGELA",
+        "nim": "00000107661",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "CARLA CHARLENE SEANLIM",
         "nim": "00000115903",
@@ -903,7 +1044,11 @@
     "namamentor": "Jesslyn Alviana Lioe ",
     "idline": "jesslynnn05",
     "members": [
-      { "name": "HERMAN .", "nim": "00000129885", "prodi": "AKUNTANSI" },
+      {
+        "name": "HERMAN .",
+        "nim": "00000129885",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "DENIS PRATAMA",
         "nim": "00000105220",
@@ -919,7 +1064,11 @@
         "nim": "00000116495",
         "prodi": "FILM & ANIMASI"
       },
-      { "name": "M. AGUNG ISRA", "nim": "00000122520", "prodi": "PERHOTELAN" },
+      {
+        "name": "M. AGUNG ISRA",
+        "nim": "00000122520",
+        "prodi": "PERHOTELAN"
+      },
       {
         "name": "SAKHA VIMALA CANDRA",
         "nim": "00000115529",
@@ -930,7 +1079,11 @@
         "nim": "00000127762",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "GHAIDA ZHABIRA", "nim": "00000115260", "prodi": "MANAJEMEN" },
+      {
+        "name": "GHAIDA ZHABIRA",
+        "nim": "00000115260",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "FARRELLIN ZETTIRA FANLIUS",
         "nim": "00000119365",
@@ -946,7 +1099,11 @@
         "nim": "00000120963",
         "prodi": "INFORMATIKA"
       },
-      { "name": "ARIEL CAESARIO", "nim": "00000134725", "prodi": "AKUNTANSI" },
+      {
+        "name": "ARIEL CAESARIO",
+        "nim": "00000134725",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "EVAN ALLEGRO MULYANTO",
         "nim": "00000125140",
@@ -984,7 +1141,11 @@
         "nim": "00000106263",
         "prodi": "FILM & ANIMASI"
       },
-      { "name": "BRANDON .", "nim": "00000109994", "prodi": "PERHOTELAN" },
+      {
+        "name": "BRANDON .",
+        "nim": "00000109994",
+        "prodi": "PERHOTELAN"
+      },
       {
         "name": "CHRISTIAN JONATHAN LIMAN",
         "nim": "00000107785",
@@ -995,15 +1156,31 @@
         "nim": "00000108654",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "TITUS R SAPUTRO", "nim": "00000126682", "prodi": "MANAJEMEN" },
+      {
+        "name": "TITUS R SAPUTRO",
+        "nim": "00000126682",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "JESSICA MICHELLE ANGELIANY",
         "nim": "00000106403",
         "prodi": "MANAJEMEN"
       },
-      { "name": "JAVIER .", "nim": "00000124728", "prodi": "SISTEM INFORMASI" },
-      { "name": "KEVIN TANIAR", "nim": "00000105724", "prodi": "INFORMATIKA" },
-      { "name": "JESSICA AUDREY", "nim": "00000113287", "prodi": "AKUNTANSI" },
+      {
+        "name": "JAVIER .",
+        "nim": "00000124728",
+        "prodi": "SISTEM INFORMASI"
+      },
+      {
+        "name": "KEVIN TANIAR",
+        "nim": "00000105724",
+        "prodi": "INFORMATIKA"
+      },
+      {
+        "name": "JESSICA AUDREY",
+        "nim": "00000113287",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "EDWARD JOURDAN LIE",
         "nim": "00000124555",
@@ -1041,7 +1218,11 @@
         "nim": "00000113821",
         "prodi": "FILM & ANIMASI"
       },
-      { "name": "JUAN ARYANTO", "nim": "00000122450", "prodi": "PERHOTELAN" },
+      {
+        "name": "JUAN ARYANTO",
+        "nim": "00000122450",
+        "prodi": "PERHOTELAN"
+      },
       {
         "name": "AIMAN ELHAMY AJMAL",
         "nim": "00000127334",
@@ -1077,7 +1258,11 @@
         "nim": "00000114094",
         "prodi": "AKUNTANSI"
       },
-      { "name": "FIONNA .", "nim": "00000120811", "prodi": "FILM & ANIMASI" },
+      {
+        "name": "FIONNA .",
+        "nim": "00000120811",
+        "prodi": "FILM & ANIMASI"
+      },
       {
         "name": "ALDRIAN PUTRA PRATAMA",
         "nim": "00000121626",
@@ -1167,7 +1352,11 @@
     "namamentor": "Arwen Gloria Takasili ",
     "idline": "wenar16",
     "members": [
-      { "name": "ELYA CHRISTY", "nim": "00000121363", "prodi": "AKUNTANSI" },
+      {
+        "name": "ELYA CHRISTY",
+        "nim": "00000121363",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "DAVINA ANINDYA QUEENTANIA",
         "nim": "00000129364",
@@ -1203,7 +1392,11 @@
         "nim": "00000108507",
         "prodi": "MANAJEMEN"
       },
-      { "name": "TIFFANIE YAP", "nim": "00000134639", "prodi": "MANAJEMEN" },
+      {
+        "name": "TIFFANIE YAP",
+        "nim": "00000134639",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "ANDREAS RENALDO",
         "nim": "00000119429",
@@ -1224,7 +1417,11 @@
         "nim": "00000111929",
         "prodi": "FILM & ANIMASI"
       },
-      { "name": "ADHARA EKA SAKTI", "nim": "00000118295", "prodi": "MANAJEMEN" }
+      {
+        "name": "ADHARA EKA SAKTI",
+        "nim": "00000118295",
+        "prodi": "MANAJEMEN"
+      }
     ],
     "sesi": "Sesi Pagi"
   },
@@ -1297,7 +1494,11 @@
         "nim": "00000115690",
         "prodi": "FILM & ANIMASI"
       },
-      { "name": "MARINCE NABABAN", "nim": "00000125038", "prodi": "MANAJEMEN" }
+      {
+        "name": "MARINCE NABABAN",
+        "nim": "00000125038",
+        "prodi": "MANAJEMEN"
+      }
     ],
     "sesi": "Sesi Pagi"
   },
@@ -1305,7 +1506,11 @@
     "namamentor": "Khalista Nurul Lestari ",
     "idline": "knlestari19",
     "members": [
-      { "name": "SAMUEL PRATAMA", "nim": "00000125866", "prodi": "AKUNTANSI" },
+      {
+        "name": "SAMUEL PRATAMA",
+        "nim": "00000125866",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "MIKEL LEO MORIS",
         "nim": "00000125965",
@@ -1336,7 +1541,11 @@
         "nim": "00000106083",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "DWI MARIANA", "nim": "00000135045", "prodi": "MANAJEMEN" },
+      {
+        "name": "DWI MARIANA",
+        "nim": "00000135045",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "BAYU RASYA FIRDAUS",
         "nim": "00000131785",
@@ -1352,7 +1561,11 @@
         "nim": "00000114493",
         "prodi": "INFORMATIKA"
       },
-      { "name": "RAISSA MICHAELA", "nim": "00000113950", "prodi": "AKUNTANSI" },
+      {
+        "name": "RAISSA MICHAELA",
+        "nim": "00000113950",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "JOESCELYN IRENA SONI",
         "nim": "00000127362",
@@ -1410,7 +1623,11 @@
         "nim": "00000126449",
         "prodi": "MANAJEMEN"
       },
-      { "name": "POPPY TRI PUTRI", "nim": "00000112539", "prodi": "MANAJEMEN" },
+      {
+        "name": "POPPY TRI PUTRI",
+        "nim": "00000112539",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "MELVIN TIMOTHY",
         "nim": "00000105381",
@@ -1575,13 +1792,21 @@
         "nim": "00000124318",
         "prodi": "INFORMATIKA"
       },
-      { "name": "BRYAN HENDERSON", "nim": "00000133814", "prodi": "AKUNTANSI" },
+      {
+        "name": "BRYAN HENDERSON",
+        "nim": "00000133814",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "FARREL ATHFIL FAATIHAH",
         "nim": "00000132812",
         "prodi": "FILM & ANIMASI"
       },
-      { "name": "DERREN LIUSNO", "nim": "00000106585", "prodi": "MANAJEMEN" }
+      {
+        "name": "DERREN LIUSNO",
+        "nim": "00000106585",
+        "prodi": "MANAJEMEN"
+      }
     ],
     "sesi": "Sesi Pagi"
   },
@@ -1624,7 +1849,11 @@
         "nim": "00000105854",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "STEFANIE HO", "nim": "00000121726", "prodi": "MANAJEMEN" },
+      {
+        "name": "STEFANIE HO",
+        "nim": "00000121726",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "SHERLYNN JOSEPHINE WIJAYA",
         "nim": "00000114669",
@@ -1702,7 +1931,11 @@
         "nim": "00000126579",
         "prodi": "MANAJEMEN"
       },
-      { "name": "SATRIA RIZKIANO", "nim": "00000136288", "prodi": "MANAJEMEN" },
+      {
+        "name": "SATRIA RIZKIANO",
+        "nim": "00000136288",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "ANDRI ABDUL AZIZ JAHA",
         "nim": "00000132504",
@@ -1723,7 +1956,11 @@
         "nim": "00000130452",
         "prodi": "FILM & ANIMASI"
       },
-      { "name": "JOVAEL TIMOTHY", "nim": "00000126721", "prodi": "MANAJEMEN" }
+      {
+        "name": "JOVAEL TIMOTHY",
+        "nim": "00000126721",
+        "prodi": "MANAJEMEN"
+      }
     ],
     "sesi": "Sesi Pagi"
   },
@@ -1781,7 +2018,11 @@
         "nim": "00000133570",
         "prodi": "TEKNIK KOMPUTER"
       },
-      { "name": "DARREN .", "nim": "00000110694", "prodi": "INFORMATIKA" },
+      {
+        "name": "DARREN .",
+        "nim": "00000110694",
+        "prodi": "INFORMATIKA"
+      },
       {
         "name": "FATHI FARREL AL FAWWAZ",
         "nim": "00000136819",
@@ -1792,7 +2033,11 @@
         "nim": "00000131686",
         "prodi": "FILM & ANIMASI"
       },
-      { "name": "KAYLA TINAYA", "nim": "00000105476", "prodi": "MANAJEMEN" }
+      {
+        "name": "KAYLA TINAYA",
+        "nim": "00000105476",
+        "prodi": "MANAJEMEN"
+      }
     ],
     "sesi": "Sesi Pagi"
   },
@@ -1800,7 +2045,11 @@
     "namamentor": "Putri Zabrina Mediana",
     "idline": "@putriizabrinaa",
     "members": [
-      { "name": "ANGEL MONICA", "nim": "00000114878", "prodi": "AKUNTANSI" },
+      {
+        "name": "ANGEL MONICA",
+        "nim": "00000114878",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "MUARA IKHWAN FARAAJ",
         "nim": "00000126797",
@@ -1831,7 +2080,11 @@
         "nim": "00000133571",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "JOVAN MEILANDO", "nim": "00000106703", "prodi": "MANAJEMEN" },
+      {
+        "name": "JOVAN MEILANDO",
+        "nim": "00000106703",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "KELVIN ALEXANDER",
         "nim": "00000106797",
@@ -1919,14 +2172,26 @@
         "nim": "00000106732",
         "prodi": "TEKNIK KOMPUTER"
       },
-      { "name": "JUSTIN YUSLIH", "nim": "00000120765", "prodi": "INFORMATIKA" },
-      { "name": "DEVIN DINNATHA", "nim": "00000112328", "prodi": "ARSITEKTUR" },
+      {
+        "name": "JUSTIN YUSLIH",
+        "nim": "00000120765",
+        "prodi": "INFORMATIKA"
+      },
+      {
+        "name": "DEVIN DINNATHA",
+        "nim": "00000112328",
+        "prodi": "ARSITEKTUR"
+      },
       {
         "name": "TIRZA JOYLYNN CRISSIE CAHYADI",
         "nim": "00000105890",
         "prodi": "FILM & ANIMASI"
       },
-      { "name": "FAHRI FERDIAN", "nim": "00000112689", "prodi": "MANAJEMEN" }
+      {
+        "name": "FAHRI FERDIAN",
+        "nim": "00000112689",
+        "prodi": "MANAJEMEN"
+      }
     ],
     "sesi": "Sesi Pagi"
   },
@@ -1934,7 +2199,11 @@
     "namamentor": "Angela Gabriele Santosa",
     "idline": "gabriele.sant",
     "members": [
-      { "name": "DELLA VISTA", "nim": "00000108295", "prodi": "AKUNTANSI" },
+      {
+        "name": "DELLA VISTA",
+        "nim": "00000108295",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "DEVA CHANDRA",
         "nim": "00000106147",
@@ -2062,13 +2331,21 @@
         "nim": "00000133486",
         "prodi": "INFORMATIKA"
       },
-      { "name": "JOB KENDRA", "nim": "00000127785", "prodi": "ARSITEKTUR" },
+      {
+        "name": "JOB KENDRA",
+        "nim": "00000127785",
+        "prodi": "ARSITEKTUR"
+      },
       {
         "name": "SCOLASTICA REGNAROSARI HENDARTO",
         "nim": "00000106756",
         "prodi": "FILM & ANIMASI"
       },
-      { "name": "ALIA RAMADHANI", "nim": "00000120744", "prodi": "MANAJEMEN" }
+      {
+        "name": "ALIA RAMADHANI",
+        "nim": "00000120744",
+        "prodi": "MANAJEMEN"
+      }
     ],
     "sesi": "Sesi Pagi"
   },
@@ -2188,7 +2465,11 @@
         "nim": "00000107602",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "GRACIA ANABEL", "nim": "00000106594", "prodi": "MANAJEMEN" },
+      {
+        "name": "GRACIA ANABEL",
+        "nim": "00000106594",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "CHRISTIAN RONALDHO",
         "nim": "00000112266",
@@ -2214,7 +2495,11 @@
         "nim": "00000110586",
         "prodi": "FILM & ANIMASI"
       },
-      { "name": "DELVIN BRELYAN", "nim": "00000117596", "prodi": "MANAJEMEN" }
+      {
+        "name": "DELVIN BRELYAN",
+        "nim": "00000117596",
+        "prodi": "MANAJEMEN"
+      }
     ],
     "sesi": "Sesi Pagi"
   },
@@ -2257,7 +2542,11 @@
         "nim": "00000116049",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "AULIA ROSSA", "nim": "00000127366", "prodi": "MANAJEMEN" },
+      {
+        "name": "AULIA ROSSA",
+        "nim": "00000127366",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "CLARISSA AGATHA DARREN",
         "nim": "00000111290",
@@ -2268,7 +2557,11 @@
         "nim": "00000111296",
         "prodi": "TEKNIK KOMPUTER"
       },
-      { "name": "JESSISKA .", "nim": "00000114416", "prodi": "INFORMATIKA" },
+      {
+        "name": "JESSISKA .",
+        "nim": "00000114416",
+        "prodi": "INFORMATIKA"
+      },
       {
         "name": "LEON FRADERIC",
         "nim": "00000112059",
@@ -2341,14 +2634,26 @@
         "nim": "00000139974",
         "prodi": "TEKNIK ELEKTRO"
       },
-      { "name": "RICHARD LIU", "nim": "00000107431", "prodi": "INFORMATIKA" },
+      {
+        "name": "RICHARD LIU",
+        "nim": "00000107431",
+        "prodi": "INFORMATIKA"
+      },
       {
         "name": "MUHAMMAD NOOR RIZQI FAUZI",
         "nim": "00000128819",
         "prodi": "DESAIN KOMUNIKASI VISUAL"
       },
-      { "name": "GERALDO TANNER", "nim": "00000106826", "prodi": "PERHOTELAN" },
-      { "name": "KARUNA BUDIYANTO", "nim": "00000125235", "prodi": "MANAJEMEN" }
+      {
+        "name": "GERALDO TANNER",
+        "nim": "00000106826",
+        "prodi": "PERHOTELAN"
+      },
+      {
+        "name": "KARUNA BUDIYANTO",
+        "nim": "00000125235",
+        "prodi": "MANAJEMEN"
+      }
     ],
     "sesi": "Sesi Pagi"
   },
@@ -2356,7 +2661,11 @@
     "namamentor": "Annisa Putri",
     "idline": "annisput",
     "members": [
-      { "name": "SINDY CRISTINA", "nim": "00000127510", "prodi": "AKUNTANSI" },
+      {
+        "name": "SINDY CRISTINA",
+        "nim": "00000127510",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "KIMBERLY DILOVA TJAHJANA",
         "nim": "00000115450",
@@ -2541,7 +2850,11 @@
         "nim": "00000112493",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "CHELSIA PRATAMA", "nim": "00000117452", "prodi": "MANAJEMEN" },
+      {
+        "name": "CHELSIA PRATAMA",
+        "nim": "00000117452",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "JERALD VALERIAN",
         "nim": "00000125119",
@@ -2562,7 +2875,11 @@
         "nim": "00000108590",
         "prodi": "DESAIN KOMUNIKASI VISUAL"
       },
-      { "name": "MAY CYNTIA", "nim": "00000133795", "prodi": "PERHOTELAN" },
+      {
+        "name": "MAY CYNTIA",
+        "nim": "00000133795",
+        "prodi": "PERHOTELAN"
+      },
       {
         "name": "REVELYNE NADYA MAHARANI",
         "nim": "00000134182",
@@ -2575,7 +2892,11 @@
     "namamentor": "Livia Hadi",
     "idline": "hadi_livia",
     "members": [
-      { "name": "VALENTINO .", "nim": "00000111306", "prodi": "AKUNTANSI" },
+      {
+        "name": "VALENTINO .",
+        "nim": "00000111306",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "SURYA RAMADHAN",
         "nim": "00000136219",
@@ -2879,7 +3200,11 @@
     "namamentor": "Valentine Angel Lee",
     "idline": "valentineh10",
     "members": [
-      { "name": "ARVELY HOSARI", "nim": "00000108673", "prodi": "AKUNTANSI" },
+      {
+        "name": "ARVELY HOSARI",
+        "nim": "00000108673",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "REVAYAH BRAHMA HAMONANGAN HUTABARAT",
         "nim": "00000111034",
@@ -3106,7 +3431,11 @@
     "namamentor": "Airyara Dorthea Warella",
     "idline": "yarwrllaaa.",
     "members": [
-      { "name": "MELDO ANG", "nim": "00000117620", "prodi": "AKUNTANSI" },
+      {
+        "name": "MELDO ANG",
+        "nim": "00000117620",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "ANGELICA LIANTI",
         "nim": "00000110784",
@@ -3132,7 +3461,11 @@
         "nim": "00000111100",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "NIA APRILIA", "nim": "00000106106", "prodi": "JURNALISTIK" },
+      {
+        "name": "NIA APRILIA",
+        "nim": "00000106106",
+        "prodi": "JURNALISTIK"
+      },
       {
         "name": "RADYATHA ARKA ZAHRAN",
         "nim": "00000127825",
@@ -3225,7 +3558,11 @@
         "nim": "00000108952",
         "prodi": "TEKNIK ELEKTRO"
       },
-      { "name": "ABTHAL AKBAR", "nim": "00000121788", "prodi": "INFORMATIKA" },
+      {
+        "name": "ABTHAL AKBAR",
+        "nim": "00000121788",
+        "prodi": "INFORMATIKA"
+      },
       {
         "name": "ANNABELLE CAILIN DONOVAN",
         "nim": "00000114591",
@@ -3248,7 +3585,11 @@
     "namamentor": "Filbert Fausto ",
     "idline": "filbert_fausto",
     "members": [
-      { "name": "BELLA VISTA", "nim": "00000108270", "prodi": "AKUNTANSI" },
+      {
+        "name": "BELLA VISTA",
+        "nim": "00000108270",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "CHATERINE FLORENCIA",
         "nim": "00000105430",
@@ -3351,7 +3692,11 @@
         "nim": "00000108741",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "GAZA RAMANDA", "nim": "00000116936", "prodi": "JURNALISTIK" },
+      {
+        "name": "GAZA RAMANDA",
+        "nim": "00000116936",
+        "prodi": "JURNALISTIK"
+      },
       {
         "name": "MARSYAL ANANDA FEBRYANTONO",
         "nim": "00000114462",
@@ -3471,7 +3816,11 @@
     "namamentor": "Yar Muhammad Hassya Jendra",
     "idline": "Jendra25",
     "members": [
-      { "name": "JEMMY .", "nim": "00000112981", "prodi": "AKUNTANSI" },
+      {
+        "name": "JEMMY .",
+        "nim": "00000112981",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "MUHAMMAD KEYSARHASFARIL",
         "nim": "00000134928",
@@ -3502,7 +3851,11 @@
         "nim": "00000135703",
         "prodi": "FILM & ANIMASI"
       },
-      { "name": "MUHAMMAD SABRI", "nim": "00000126360", "prodi": "MANAJEMEN" },
+      {
+        "name": "MUHAMMAD SABRI",
+        "nim": "00000126360",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "KEVIN WIJAYA",
         "nim": "00000122010",
@@ -3523,7 +3876,11 @@
         "nim": "00000128026",
         "prodi": "TEKNIK ELEKTRO"
       },
-      { "name": "ALTO DEV", "nim": "00000113502", "prodi": "INFORMATIKA" },
+      {
+        "name": "ALTO DEV",
+        "nim": "00000113502",
+        "prodi": "INFORMATIKA"
+      },
       {
         "name": "JOSHUA IVANDER HARTAWAN",
         "nim": "00000108976",
@@ -3648,13 +4005,21 @@
         "nim": "00000126690",
         "prodi": "JURNALISTIK"
       },
-      { "name": "KEVIN CHANDRA", "nim": "00000105639", "prodi": "MANAJEMEN" },
+      {
+        "name": "KEVIN CHANDRA",
+        "nim": "00000105639",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "LEONARTO .",
         "nim": "00000126969",
         "prodi": "SISTEM INFORMASI"
       },
-      { "name": "FERY FERNANDO", "nim": "00000108245", "prodi": "INFORMATIKA" },
+      {
+        "name": "FERY FERNANDO",
+        "nim": "00000108245",
+        "prodi": "INFORMATIKA"
+      },
       {
         "name": "RICHARD STERN CHANDRA",
         "nim": "00000136391",
@@ -3918,7 +4283,11 @@
     "namamentor": "Meylani Alfatikha Eka Sandy ",
     "idline": "firenathh",
     "members": [
-      { "name": "AURELIA ESTINOV", "nim": "00000140101", "prodi": "AKUNTANSI" },
+      {
+        "name": "AURELIA ESTINOV",
+        "nim": "00000140101",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "NADINE ANTONI",
         "nim": "00000105832",
@@ -4026,7 +4395,11 @@
         "nim": "00000105447",
         "prodi": "JURNALISTIK"
       },
-      { "name": "MARVELLA ERINE", "nim": "00000106839", "prodi": "MANAJEMEN" },
+      {
+        "name": "MARVELLA ERINE",
+        "nim": "00000106839",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "ANNISA ILLIYINA",
         "nim": "00000135962",
@@ -4218,7 +4591,11 @@
     "namamentor": "Leticia Jennedy ",
     "idline": "leticiaaikatsu",
     "members": [
-      { "name": "STEVANIA GEA", "nim": "00000135155", "prodi": "AKUNTANSI" },
+      {
+        "name": "STEVANIA GEA",
+        "nim": "00000135155",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "CHARLENE NATALIE MULJO",
         "nim": "00000108621",
@@ -4249,7 +4626,11 @@
         "nim": "00000127153",
         "prodi": "JURNALISTIK"
       },
-      { "name": "LIVIYA APRILIA", "nim": "00000137371", "prodi": "MANAJEMEN" },
+      {
+        "name": "LIVIYA APRILIA",
+        "nim": "00000137371",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "FRENKI SATRIAJAYA",
         "nim": "00000106897",
@@ -4322,7 +4703,11 @@
         "nim": "00000133584",
         "prodi": "JURNALISTIK"
       },
-      { "name": "CARNELIUS .", "nim": "00000114934", "prodi": "MANAJEMEN" },
+      {
+        "name": "CARNELIUS .",
+        "nim": "00000114934",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "ARIE PRATAMA YULIANSYAH",
         "nim": "00000115965",
@@ -4559,8 +4944,16 @@
         "nim": "00000122364",
         "prodi": "SISTEM INFORMASI"
       },
-      { "name": "FIGO BAROSKY", "nim": "00000108111", "prodi": "INFORMATIKA" },
-      { "name": "KEVIN MIKAEL", "nim": "00000111440", "prodi": "INFORMATIKA" },
+      {
+        "name": "FIGO BAROSKY",
+        "nim": "00000108111",
+        "prodi": "INFORMATIKA"
+      },
+      {
+        "name": "KEVIN MIKAEL",
+        "nim": "00000111440",
+        "prodi": "INFORMATIKA"
+      },
       {
         "name": "KEZIA BERNADETTE HARJONO",
         "nim": "00000128408",
@@ -4660,7 +5053,11 @@
     "namamentor": "Margareta Averina Lianti ",
     "idline": "margareta2445",
     "members": [
-      { "name": "NABILA PUTRI", "nim": "00000116923", "prodi": "AKUNTANSI" },
+      {
+        "name": "NABILA PUTRI",
+        "nim": "00000116923",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "MUHAMMAD ALFARIZZY NURDIANSYAH",
         "nim": "00000116715",
@@ -4887,7 +5284,11 @@
     "namamentor": "Sheiren Felisye Loissandra Pani Balun ",
     "idline": "sheirenbalun",
     "members": [
-      { "name": "KEVIN .", "nim": "00000121418", "prodi": "AKUNTANSI" },
+      {
+        "name": "KEVIN .",
+        "nim": "00000121418",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "VALLERIE ALEXANDRIA TJONG",
         "nim": "00000113015",
@@ -4960,7 +5361,11 @@
     "namamentor": "Callista Jane Tanu ",
     "idline": "Call.jane",
     "members": [
-      { "name": "ANGELINA .", "nim": "00000121704", "prodi": "AKUNTANSI" },
+      {
+        "name": "ANGELINA .",
+        "nim": "00000121704",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "KHALID ISMAIL ALZAMZAMI",
         "nim": "00000133292",
@@ -5083,7 +5488,11 @@
         "nim": "00000122139",
         "prodi": "INFORMATIKA"
       },
-      { "name": "CINDELA .", "nim": "00000105419", "prodi": "INFORMATIKA" },
+      {
+        "name": "CINDELA .",
+        "nim": "00000105419",
+        "prodi": "INFORMATIKA"
+      },
       {
         "name": "MALIKA SARAH SALSABILLA",
         "nim": "00000136217",
@@ -5106,7 +5515,11 @@
     "namamentor": "Khalishah Nadhelia Gunawan",
     "idline": "khalishandhl",
     "members": [
-      { "name": "HSU SIN JI", "nim": "00000115980", "prodi": "AKUNTANSI" },
+      {
+        "name": "HSU SIN JI",
+        "nim": "00000115980",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "KEZIA ANGELINA ARYA",
         "nim": "00000109809",
@@ -5137,7 +5550,11 @@
         "nim": "00000139425",
         "prodi": "JURNALISTIK"
       },
-      { "name": "MUHAMMAD RIFAI", "nim": "00000136342", "prodi": "MANAJEMEN" },
+      {
+        "name": "MUHAMMAD RIFAI",
+        "nim": "00000136342",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "KEVIN AUGUSTA MAHARTADI",
         "nim": "00000115470",
@@ -5175,7 +5592,11 @@
     "namamentor": "Maghali Inara Netar ",
     "idline": "maghalinetarrr_",
     "members": [
-      { "name": "WINA HUDOYO", "nim": "00000112766", "prodi": "AKUNTANSI" },
+      {
+        "name": "WINA HUDOYO",
+        "nim": "00000112766",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "SITI ALIA SARASWATI",
         "nim": "00000127826",
@@ -5206,7 +5627,11 @@
         "nim": "00000114132",
         "prodi": "JURNALISTIK"
       },
-      { "name": "ALVARO SUTANTO", "nim": "00000112680", "prodi": "MANAJEMEN" },
+      {
+        "name": "ALVARO SUTANTO",
+        "nim": "00000112680",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "ADITHIA HIDAYAT",
         "nim": "00000134190",
@@ -5438,7 +5863,11 @@
         "nim": "00000130147",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "ANGELITA .", "nim": "00000127280", "prodi": "JURNALISTIK" },
+      {
+        "name": "ANGELITA .",
+        "nim": "00000127280",
+        "prodi": "JURNALISTIK"
+      },
       {
         "name": "DANIEL VALENTINO ANDIVA",
         "nim": "00000132820",
@@ -5516,7 +5945,11 @@
         "nim": "00000131656",
         "prodi": "JURNALISTIK"
       },
-      { "name": "MAX WILBERT", "nim": "00000112996", "prodi": "MANAJEMEN" },
+      {
+        "name": "MAX WILBERT",
+        "nim": "00000112996",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "AZRIEL TIMONS FRONIMOS",
         "nim": "00000125131",
@@ -5527,7 +5960,11 @@
         "nim": "00000113329",
         "prodi": "INFORMATIKA"
       },
-      { "name": "DYLAN WILSON", "nim": "00000134282", "prodi": "INFORMATIKA" },
+      {
+        "name": "DYLAN WILSON",
+        "nim": "00000134282",
+        "prodi": "INFORMATIKA"
+      },
       {
         "name": "VANESSA PATRICIA RENATA SETIAWAN",
         "nim": "00000117622",
@@ -5580,7 +6017,11 @@
         "nim": "00000126526",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "LOUIS CASTELO", "nim": "00000121925", "prodi": "JURNALISTIK" },
+      {
+        "name": "LOUIS CASTELO",
+        "nim": "00000121925",
+        "prodi": "JURNALISTIK"
+      },
       {
         "name": "FERNANDO DAMIAN RENALD JAGO TEKU",
         "nim": "00000112022",
@@ -5653,7 +6094,11 @@
         "nim": "00000136167",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "PETER HUANG", "nim": "00000136319", "prodi": "MANAJEMEN" },
+      {
+        "name": "PETER HUANG",
+        "nim": "00000136319",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "REVALDO CHRISTIAN",
         "nim": "00000117479",
@@ -5711,7 +6156,11 @@
         "nim": "00000108238",
         "prodi": "DESAIN KOMUNIKASI VISUAL"
       },
-      { "name": "ANGEL .", "nim": "00000117621", "prodi": "FILM & ANIMASI" },
+      {
+        "name": "ANGEL .",
+        "nim": "00000117621",
+        "prodi": "FILM & ANIMASI"
+      },
       {
         "name": "GRACE MARGARETHA CHRISTANTY",
         "nim": "00000110277",
@@ -5804,7 +6253,11 @@
         "nim": "00000121369",
         "prodi": "JURNALISTIK"
       },
-      { "name": "GRACE VARENCIA", "nim": "00000122422", "prodi": "MANAJEMEN" },
+      {
+        "name": "GRACE VARENCIA",
+        "nim": "00000122422",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "MICHAEL ROMEO ALLEGRO DA CELLO SOENTARA",
         "nim": "00000110649",
@@ -5998,6 +6451,11 @@
         "name": "DERRICK GABRIEL SUKRISNA",
         "nim": "00000106341",
         "prodi": "DESAIN KOMUNIKASI VISUAL"
+      },
+      {
+        "name": "NATHANAEL JAESON RENAWAN",
+        "nim": "00000108540",
+        "prodi": "KOMUNIKASI STRATEGIS"
       }
     ],
     "sesi": "Sesi Siang"
@@ -6036,7 +6494,11 @@
         "nim": "00000108719",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "INGGIE KWEE", "nim": "00000117322", "prodi": "MANAJEMEN" },
+      {
+        "name": "INGGIE KWEE",
+        "nim": "00000117322",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "MARIA MIRACOLOSA HANALAURA",
         "nim": "00000108345",
@@ -6067,7 +6529,11 @@
         "nim": "00000128505",
         "prodi": "TEKNIK KOMPUTER"
       },
-      { "name": "FREDY WIJAYA", "nim": "00000112111", "prodi": "MANAJEMEN" },
+      {
+        "name": "FREDY WIJAYA",
+        "nim": "00000112111",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "SANDRA AURORA MARGARETH SIHOTANG",
         "nim": "00000135299",
@@ -6080,7 +6546,11 @@
     "namamentor": "Elshaday Eoudia Hermawan ",
     "idline": "azachaa",
     "members": [
-      { "name": "CYNTHIA WANDANU", "nim": "00000118256", "prodi": "AKUNTANSI" },
+      {
+        "name": "CYNTHIA WANDANU",
+        "nim": "00000118256",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "NOVAL NUR GUNAWAN",
         "nim": "00000127860",
@@ -6111,7 +6581,11 @@
         "nim": "00000112763",
         "prodi": "MANAJEMEN"
       },
-      { "name": "JESSICA KOMALA", "nim": "00000105596", "prodi": "MANAJEMEN" },
+      {
+        "name": "JESSICA KOMALA",
+        "nim": "00000105596",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "JAYSON CHRISTOPHER LIM",
         "nim": "00000136197",
@@ -6154,7 +6628,11 @@
     "namamentor": "Gading Habibi Wicaksono ",
     "idline": "gdngbos",
     "members": [
-      { "name": "REYNALDI .", "nim": "00000105258", "prodi": "AKUNTANSI" },
+      {
+        "name": "REYNALDI .",
+        "nim": "00000105258",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "MACHIKO DEFANIE MANANSAL",
         "nim": "00000111212",
@@ -6185,13 +6663,21 @@
         "nim": "00000117463",
         "prodi": "MANAJEMEN"
       },
-      { "name": "JERRY STEVEN", "nim": "00000121101", "prodi": "MANAJEMEN" },
+      {
+        "name": "JERRY STEVEN",
+        "nim": "00000121101",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "FRANSISCA VALERIE ROBERTS",
         "nim": "00000108982",
         "prodi": "SISTEM INFORMASI"
       },
-      { "name": "HELEN .", "nim": "00000111362", "prodi": "INFORMATIKA" },
+      {
+        "name": "HELEN .",
+        "nim": "00000111362",
+        "prodi": "INFORMATIKA"
+      },
       {
         "name": "DEVANIO HERMANTO",
         "nim": "00000115543",
@@ -6207,7 +6693,11 @@
         "nim": "00000134176",
         "prodi": "TEKNIK KOMPUTER"
       },
-      { "name": "KEVIN SORENSEN", "nim": "00000062002", "prodi": "INFORMATIKA" }
+      {
+        "name": "KEVIN SORENSEN",
+        "nim": "00000062002",
+        "prodi": "INFORMATIKA"
+      }
     ],
     "sesi": "Sesi Siang"
   },
@@ -6245,14 +6735,26 @@
         "nim": "00000134685",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "AIRA RAHAJENG", "nim": "00000134932", "prodi": "JURNALISTIK" },
-      { "name": "KEMAL ALFARIZI", "nim": "00000117975", "prodi": "MANAJEMEN" },
+      {
+        "name": "AIRA RAHAJENG",
+        "nim": "00000134932",
+        "prodi": "JURNALISTIK"
+      },
+      {
+        "name": "KEMAL ALFARIZI",
+        "nim": "00000117975",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "FELICIA JOCELYN TJANDRA",
         "nim": "00000106807",
         "prodi": "SISTEM INFORMASI"
       },
-      { "name": "HANSEN JAPRI", "nim": "00000108259", "prodi": "INFORMATIKA" },
+      {
+        "name": "HANSEN JAPRI",
+        "nim": "00000108259",
+        "prodi": "INFORMATIKA"
+      },
       {
         "name": "CLEMENT AELWYN WIRAWAN",
         "nim": "00000105577",
@@ -6357,7 +6859,11 @@
     "namamentor": "Fakhira Putri Pertaminanti Roch ",
     "idline": "farah.pertaminanti",
     "members": [
-      { "name": "YVONNE WIJAYA", "nim": "00000130254", "prodi": "ARSITEKTUR" },
+      {
+        "name": "YVONNE WIJAYA",
+        "nim": "00000130254",
+        "prodi": "ARSITEKTUR"
+      },
       {
         "name": "JEANETTE TRUDITA SOERYO",
         "nim": "00000114922",
@@ -6383,7 +6889,11 @@
         "nim": "00000127185",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "ELBERT .", "nim": "00000129054", "prodi": "MANAJEMEN" },
+      {
+        "name": "ELBERT .",
+        "nim": "00000129054",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "NILA AMALIA NABILA",
         "nim": "00000117833",
@@ -6394,7 +6904,11 @@
         "nim": "00000128030",
         "prodi": "SISTEM INFORMASI"
       },
-      { "name": "AMANDA ALIYAH", "nim": "00000135964", "prodi": "INFORMATIKA" },
+      {
+        "name": "AMANDA ALIYAH",
+        "nim": "00000135964",
+        "prodi": "INFORMATIKA"
+      },
       {
         "name": "MUHAMMAD DAFFA RAYYANDA",
         "nim": "00000082247",
@@ -6452,7 +6966,11 @@
         "nim": "00000130612",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "TRISNA .", "nim": "00000141077", "prodi": "MANAJEMEN" },
+      {
+        "name": "TRISNA .",
+        "nim": "00000141077",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "MUHAMMAD ABDUL LATIF",
         "nim": "00000137464",
@@ -6649,7 +7167,11 @@
     "namamentor": "Jennifer Lie",
     "idline": "jennie_lie260905",
     "members": [
-      { "name": "YUKY LIM", "nim": "00000111226", "prodi": "ARSITEKTUR" },
+      {
+        "name": "YUKY LIM",
+        "nim": "00000111226",
+        "prodi": "ARSITEKTUR"
+      },
       {
         "name": "CHRISELDA MICHIKO TANDELLA",
         "nim": "00000105667",
@@ -6829,7 +7351,11 @@
         "nim": "00000134235",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "IRFAN RAZZAAQ", "nim": "00000124386", "prodi": "MANAJEMEN" },
+      {
+        "name": "IRFAN RAZZAAQ",
+        "nim": "00000124386",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "FEMMY ADYA ESA AGUSTIN",
         "nim": "00000140204",
@@ -6877,7 +7403,11 @@
         "nim": "00000111520",
         "prodi": "DESAIN KOMUNIKASI VISUAL"
       },
-      { "name": "KENNY WELLIANTO", "nim": "00000113443", "prodi": "MANAJEMEN" },
+      {
+        "name": "KENNY WELLIANTO",
+        "nim": "00000113443",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "BRYAN NATHAN WIJAYA",
         "nim": "00000114948",
@@ -6898,8 +7428,16 @@
         "nim": "00000112308",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "BIMO ALVAREZA", "nim": "00000119422", "prodi": "MANAJEMEN" },
-      { "name": "FREDDY HARLIN", "nim": "00000121004", "prodi": "MANAJEMEN" },
+      {
+        "name": "BIMO ALVAREZA",
+        "nim": "00000119422",
+        "prodi": "MANAJEMEN"
+      },
+      {
+        "name": "FREDDY HARLIN",
+        "nim": "00000121004",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "DAVEED ARDEN TULUNGALLO",
         "nim": "00000106041",
@@ -6920,7 +7458,11 @@
         "nim": "00000112038",
         "prodi": "FILM & ANIMASI"
       },
-      { "name": "SALVIUS EVERLAN", "nim": "00000083530", "prodi": "MANAJEMEN" },
+      {
+        "name": "SALVIUS EVERLAN",
+        "nim": "00000083530",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "AMADEUS DYLAN TJAHJADI PRAJUGI",
         "nim": "00000075391",
@@ -6983,7 +7525,11 @@
         "nim": "00000114057",
         "prodi": "SISTEM INFORMASI"
       },
-      { "name": "KURNIAWAN .", "nim": "00000114726", "prodi": "INFORMATIKA" },
+      {
+        "name": "KURNIAWAN .",
+        "nim": "00000114726",
+        "prodi": "INFORMATIKA"
+      },
       {
         "name": "DENNY ARYAN SETYAWAN ",
         "nim": "00000073630",
@@ -7123,7 +7669,11 @@
         "nim": "00000126830",
         "prodi": "MANAJEMEN"
       },
-      { "name": "CELINE CHOW", "nim": "00000113457", "prodi": "MANAJEMEN" },
+      {
+        "name": "CELINE CHOW",
+        "nim": "00000113457",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "CARLA OPHELIA TIOHO",
         "nim": "00000122090",
@@ -7149,7 +7699,11 @@
         "nim": "00000128606",
         "prodi": "INFORMATIKA"
       },
-      { "name": "ADRIANO WIJAYA", "nim": "00000073601", "prodi": "MANAJEMEN" }
+      {
+        "name": "ADRIANO WIJAYA",
+        "nim": "00000073601",
+        "prodi": "MANAJEMEN"
+      }
     ],
     "sesi": "Sesi Siang"
   },
@@ -7192,7 +7746,11 @@
         "nim": "00000114422",
         "prodi": "MANAJEMEN"
       },
-      { "name": "SHERYL LETICIA", "nim": "00000110595", "prodi": "MANAJEMEN" },
+      {
+        "name": "SHERYL LETICIA",
+        "nim": "00000110595",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "BRANDON ANDERSEN",
         "nim": "00000110701",
@@ -7208,7 +7766,11 @@
         "nim": "00000075605",
         "prodi": "MANAJEMEN"
       },
-      { "name": "NIKOLAS KEEGAN", "nim": "00000100792", "prodi": "ARSITEKTUR" },
+      {
+        "name": "NIKOLAS KEEGAN",
+        "nim": "00000100792",
+        "prodi": "ARSITEKTUR"
+      },
       {
         "name": "EVELINE MARVELIA",
         "nim": "00000077234",
@@ -7226,7 +7788,11 @@
     "namamentor": "Adetia Widiani",
     "idline": "adtiawdani20",
     "members": [
-      { "name": "FAWWAZ ALNARZA", "nim": "00000128773", "prodi": "ARSITEKTUR" },
+      {
+        "name": "FAWWAZ ALNARZA",
+        "nim": "00000128773",
+        "prodi": "ARSITEKTUR"
+      },
       {
         "name": "CAHAYA KIRANIA LARASATI",
         "nim": "00000112534",
@@ -7406,7 +7972,11 @@
         "nim": "00000134317",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "JONATHAN CUO", "nim": "00000112505", "prodi": "MANAJEMEN" },
+      {
+        "name": "JONATHAN CUO",
+        "nim": "00000112505",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "VINCENT VALENTINO WITARSA",
         "nim": "00000105715",
@@ -7561,7 +8131,11 @@
         "nim": "00000109025",
         "prodi": "MANAJEMEN"
       },
-      { "name": "GUNTUR DOAPUTRA", "nim": "00000116915", "prodi": "MANAJEMEN" },
+      {
+        "name": "GUNTUR DOAPUTRA",
+        "nim": "00000116915",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "ALDRIAN BRIANDY CHEA",
         "nim": "00000107416",
@@ -7599,7 +8173,11 @@
     "namamentor": "Steven Lim ",
     "idline": "steveblim8890",
     "members": [
-      { "name": "RACHEL BATA", "nim": "00000106045", "prodi": "ARSITEKTUR" },
+      {
+        "name": "RACHEL BATA",
+        "nim": "00000106045",
+        "prodi": "ARSITEKTUR"
+      },
       {
         "name": "FELICIA VALERIE WINOTO",
         "nim": "00000117514",
@@ -7707,13 +8285,21 @@
         "nim": "00000128631",
         "prodi": "MANAJEMEN"
       },
-      { "name": "BRILIANT .", "nim": "00000113195", "prodi": "MANAJEMEN" },
+      {
+        "name": "BRILIANT .",
+        "nim": "00000113195",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "WILSEN GOMES",
         "nim": "00000127804",
         "prodi": "SISTEM INFORMASI"
       },
-      { "name": "YENSEN SIOW", "nim": "00000121040", "prodi": "INFORMATIKA" },
+      {
+        "name": "YENSEN SIOW",
+        "nim": "00000121040",
+        "prodi": "INFORMATIKA"
+      },
       {
         "name": "CAROLYN VALENSIA RACHMAN",
         "nim": "00000133465",
@@ -7853,13 +8439,21 @@
         "nim": "00000114075",
         "prodi": "MANAJEMEN"
       },
-      { "name": "HANSEN .", "nim": "00000114538", "prodi": "MANAJEMEN" },
+      {
+        "name": "HANSEN .",
+        "nim": "00000114538",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "SULTHAN DZACKY RABBANI FIRMANSYAH",
         "nim": "00000136209",
         "prodi": "SISTEM INFORMASI"
       },
-      { "name": "CLAUDIA VIDYA", "nim": "00000106784", "prodi": "INFORMATIKA" },
+      {
+        "name": "CLAUDIA VIDYA",
+        "nim": "00000106784",
+        "prodi": "INFORMATIKA"
+      },
       {
         "name": "NICOLAS WANGJAYA",
         "nim": "00000131040",
@@ -8071,8 +8665,16 @@
         "nim": "00000116402",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "RONALD ANDRIAN", "nim": "00000110864", "prodi": "MANAJEMEN" },
-      { "name": "FERDY WILSON", "nim": "00000121226", "prodi": "MANAJEMEN" },
+      {
+        "name": "RONALD ANDRIAN",
+        "nim": "00000110864",
+        "prodi": "MANAJEMEN"
+      },
+      {
+        "name": "FERDY WILSON",
+        "nim": "00000121226",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "ALFONSUS HARYO UTOMO",
         "nim": "00000114798",
@@ -8309,7 +8911,11 @@
         "nim": "00000106075",
         "prodi": "SISTEM INFORMASI"
       },
-      { "name": "CERYNE .", "nim": "00000135652", "prodi": "INFORMATIKA" },
+      {
+        "name": "CERYNE .",
+        "nim": "00000135652",
+        "prodi": "INFORMATIKA"
+      },
       {
         "name": "ABIGAIL TRI ARIELLA",
         "nim": "00000110805",
@@ -8444,8 +9050,16 @@
         "nim": "00000112435",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "KAREN .", "nim": "00000111368", "prodi": "MANAJEMEN" },
-      { "name": "LOUIS HALIM", "nim": "00000114606", "prodi": "MANAJEMEN" },
+      {
+        "name": "KAREN .",
+        "nim": "00000111368",
+        "prodi": "MANAJEMEN"
+      },
+      {
+        "name": "LOUIS HALIM",
+        "nim": "00000114606",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "ARDIYAN FRONCESKO",
         "nim": "00000136795",
@@ -8483,7 +9097,11 @@
     "namamentor": "Jacques Farrell Dharma",
     "idline": "farrelldharma_",
     "members": [
-      { "name": "GIOVANNI NAOMI", "nim": "00000105017", "prodi": "ARSITEKTUR" },
+      {
+        "name": "GIOVANNI NAOMI",
+        "nim": "00000105017",
+        "prodi": "ARSITEKTUR"
+      },
       {
         "name": "FAYOLA VIRYANASYA SUNARTO",
         "nim": "00000105479",
@@ -8509,7 +9127,11 @@
         "nim": "00000111140",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "SALNIA SUDIRMAN", "nim": "00000138866", "prodi": "MANAJEMEN" },
+      {
+        "name": "SALNIA SUDIRMAN",
+        "nim": "00000138866",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "JESSLYN ARLIKA WIJAYA",
         "nim": "00000112741",
@@ -8520,7 +9142,11 @@
         "nim": "00000138893",
         "prodi": "SISTEM INFORMASI"
       },
-      { "name": "MICHAEL .", "nim": "00000106013", "prodi": "INFORMATIKA" },
+      {
+        "name": "MICHAEL .",
+        "nim": "00000106013",
+        "prodi": "INFORMATIKA"
+      },
       {
         "name": "CHEISYA NATHASIA EVANGELINE",
         "nim": "00000115475",
@@ -8608,7 +9234,11 @@
         "nim": "00000129529",
         "prodi": "JURNALISTIK"
       },
-      { "name": "RYAN FERNANDO", "nim": "00000112913", "prodi": "INFORMATIKA" },
+      {
+        "name": "RYAN FERNANDO",
+        "nim": "00000112913",
+        "prodi": "INFORMATIKA"
+      },
       {
         "name": "VARLY NOVRAELL",
         "nim": "00000110577",
@@ -8681,7 +9311,11 @@
         "nim": "00000105656",
         "prodi": "JURNALISTIK"
       },
-      { "name": "RIO RIVALDI", "nim": "00000130600", "prodi": "INFORMATIKA" },
+      {
+        "name": "RIO RIVALDI",
+        "nim": "00000130600",
+        "prodi": "INFORMATIKA"
+      },
       {
         "name": "BENEDICTUS BEVON DITYO NUGROHO ",
         "nim": "00000094427",
@@ -8848,7 +9482,11 @@
     "namamentor": "Roy Marcheel ",
     "idline": "roymarcheel",
     "members": [
-      { "name": "ANDY HALIM", "nim": "00000118249", "prodi": "ARSITEKTUR" },
+      {
+        "name": "ANDY HALIM",
+        "nim": "00000118249",
+        "prodi": "ARSITEKTUR"
+      },
       {
         "name": "BENEDICTA CHERYL SUHERLIM",
         "nim": "00000106126",
@@ -9058,7 +9696,11 @@
         "nim": "00000113244",
         "prodi": "JURNALISTIK"
       },
-      { "name": "FAUZI ANDRIAN", "nim": "00000135944", "prodi": "INFORMATIKA" },
+      {
+        "name": "FAUZI ANDRIAN",
+        "nim": "00000135944",
+        "prodi": "INFORMATIKA"
+      },
       {
         "name": "FEMI SAKTI MANDIRI",
         "nim": "00000134955",
@@ -9290,7 +9932,11 @@
         "nim": "00000112495",
         "prodi": "INFORMATIKA"
       },
-      { "name": "CAREN WONG", "nim": "00000113026", "prodi": "INFORMATIKA" }
+      {
+        "name": "CAREN WONG",
+        "nim": "00000113026",
+        "prodi": "INFORMATIKA"
+      }
     ],
     "sesi": "Sesi Siang"
   },
@@ -9328,14 +9974,26 @@
         "nim": "00000114968",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "NICKY .", "nim": "00000106776", "prodi": "MANAJEMEN" },
-      { "name": "RAIHAN FADILLAH", "nim": "00000132890", "prodi": "MANAJEMEN" },
+      {
+        "name": "NICKY .",
+        "nim": "00000106776",
+        "prodi": "MANAJEMEN"
+      },
+      {
+        "name": "RAIHAN FADILLAH",
+        "nim": "00000132890",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "YUKRIS CHANDRA",
         "nim": "00000129057",
         "prodi": "SISTEM INFORMASI"
       },
-      { "name": "DEVIS GERALDO", "nim": "00000121658", "prodi": "INFORMATIKA" },
+      {
+        "name": "DEVIS GERALDO",
+        "nim": "00000121658",
+        "prodi": "INFORMATIKA"
+      },
       {
         "name": "VALERIE AGATHA",
         "nim": "00000101671",
@@ -9393,7 +10051,11 @@
         "nim": "00000105356",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "JUSTIN LIU", "nim": "00000111171", "prodi": "MANAJEMEN" },
+      {
+        "name": "JUSTIN LIU",
+        "nim": "00000111171",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "KENT VALENTINO JOHN SANTIAGO",
         "nim": "00000114401",
@@ -9496,7 +10158,11 @@
         "nim": "00000116902",
         "prodi": "JURNALISTIK"
       },
-      { "name": "TITO SHAFY", "nim": "00000127746", "prodi": "INFORMATIKA" },
+      {
+        "name": "TITO SHAFY",
+        "nim": "00000127746",
+        "prodi": "INFORMATIKA"
+      },
       {
         "name": "AISYAH MAHARANI ZULIA PUTRI",
         "nim": "00000136325",
@@ -9785,7 +10451,11 @@
         "nim": "00000112908",
         "prodi": "SISTEM INFORMASI"
       },
-      { "name": "KEVIN ALIF", "nim": "00000111394", "prodi": "INFORMATIKA" },
+      {
+        "name": "KEVIN ALIF",
+        "nim": "00000111394",
+        "prodi": "INFORMATIKA"
+      },
       {
         "name": "HAZEL FARREL IENDRA",
         "nim": "00000116932",
@@ -9843,7 +10513,11 @@
         "nim": "00000106146",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "ANNISA NURAINI", "nim": "00000119491", "prodi": "MANAJEMEN" },
+      {
+        "name": "ANNISA NURAINI",
+        "nim": "00000119491",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "AZZAHRA CANTIKA IRAWAN",
         "nim": "00000130895",
@@ -9921,7 +10595,11 @@
         "nim": "00000135417",
         "prodi": "MANAJEMEN"
       },
-      { "name": "RAMA NANDA", "nim": "00000108722", "prodi": "MANAJEMEN" },
+      {
+        "name": "RAMA NANDA",
+        "nim": "00000108722",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "FLORENCIA PRISKILA BUDHI",
         "nim": "00000117400",
@@ -10225,8 +10903,16 @@
         "nim": "00000107408",
         "prodi": "MANAJEMEN"
       },
-      { "name": "NOVA SYARANI", "nim": "00000130315", "prodi": "MANAJEMEN" },
-      { "name": "BERTUS .", "nim": "00000114918", "prodi": "SISTEM INFORMASI" },
+      {
+        "name": "NOVA SYARANI",
+        "nim": "00000130315",
+        "prodi": "MANAJEMEN"
+      },
+      {
+        "name": "BERTUS .",
+        "nim": "00000114918",
+        "prodi": "SISTEM INFORMASI"
+      },
       {
         "name": "AMELLIN ZANS IQNACIO PURNAMA",
         "nim": "00000127399",
@@ -10294,7 +10980,11 @@
         "nim": "00000106623",
         "prodi": "MANAJEMEN"
       },
-      { "name": "MARCELL FEBRYAN", "nim": "00000111449", "prodi": "MANAJEMEN" },
+      {
+        "name": "MARCELL FEBRYAN",
+        "nim": "00000111449",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "HYDE TRISNAHADI",
         "nim": "00000132792",
@@ -10310,7 +11000,11 @@
         "nim": "00000131013",
         "prodi": "DESAIN KOMUNIKASI VISUAL"
       },
-      { "name": "JOVIAN PRAWIRA", "nim": "00000126316", "prodi": "MANAJEMEN" },
+      {
+        "name": "JOVIAN PRAWIRA",
+        "nim": "00000126316",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "GERRY FERTIAN",
         "nim": "00000074985",
@@ -10388,7 +11082,11 @@
         "nim": "00000130571",
         "prodi": "MANAJEMEN"
       },
-      { "name": "KENNYRO IRAWAN", "nim": "00000077467", "prodi": "MANAJEMEN" },
+      {
+        "name": "KENNYRO IRAWAN",
+        "nim": "00000077467",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "MICHELLIN PRICIA PALIT",
         "nim": "00000119504",
@@ -10411,7 +11109,11 @@
         "nim": "00000126757",
         "prodi": "DESAIN KOMUNIKASI VISUAL"
       },
-      { "name": "S A N D Y", "nim": "00000108941", "prodi": "FILM & ANIMASI" },
+      {
+        "name": "S A N D Y",
+        "nim": "00000108941",
+        "prodi": "FILM & ANIMASI"
+      },
       {
         "name": "TERRY JOHN ZACHARIE HARLAND",
         "nim": "00000114970",
@@ -10457,7 +11159,11 @@
         "nim": "00000105369",
         "prodi": "MANAJEMEN"
       },
-      { "name": "SILVI DIAN PRAMANA", "nim": "83585", "prodi": "INFORMATIKA" },
+      {
+        "name": "SILVI DIAN PRAMANA",
+        "nim": "83585",
+        "prodi": "INFORMATIKA"
+      },
       {
         "name": "FAUZI ADNAN SADEWA",
         "nim": "00000130972",
@@ -10500,7 +11206,11 @@
         "nim": "00000118170",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "CLINTON CHIN", "nim": "00000111237", "prodi": "MANAJEMEN" },
+      {
+        "name": "CLINTON CHIN",
+        "nim": "00000111237",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "ARDIAN DAFFA WIRANANDA",
         "nim": "00000129880",
@@ -10650,7 +11360,11 @@
         "nim": "00000132891",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "AXTON .", "nim": "00000116965", "prodi": "MANAJEMEN" },
+      {
+        "name": "AXTON .",
+        "nim": "00000116965",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "STEPHANIE SHIELA CYNTHIA SAPUTRA",
         "nim": "00000112937",
@@ -10887,7 +11601,11 @@
         "nim": "00000133703",
         "prodi": "MANAJEMEN"
       },
-      { "name": "CAITLYN LORENZA", "nim": "00000127253", "prodi": "MANAJEMEN" },
+      {
+        "name": "CAITLYN LORENZA",
+        "nim": "00000127253",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "STEFANUS ALBERTUS",
         "nim": "00000111434",
@@ -10903,7 +11621,11 @@
         "nim": "00000133765",
         "prodi": "FILM & ANIMASI"
       },
-      { "name": "FARIZAH AFIAH", "nim": "00000136755", "prodi": "MANAJEMEN" },
+      {
+        "name": "FARIZAH AFIAH",
+        "nim": "00000136755",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "SERVATIA AGNES JOVITA PEPE ",
         "nim": "00000095295",
@@ -10966,7 +11688,11 @@
         "nim": "00000116038",
         "prodi": "SISTEM INFORMASI"
       },
-      { "name": "VIENY EVELYN", "nim": "00000108031", "prodi": "INFORMATIKA" },
+      {
+        "name": "VIENY EVELYN",
+        "nim": "00000108031",
+        "prodi": "INFORMATIKA"
+      },
       {
         "name": "MATTHEW OWEN LIM",
         "nim": "00000137168",
@@ -11029,7 +11755,11 @@
         "nim": "00000127740",
         "prodi": "MANAJEMEN"
       },
-      { "name": "MICHAEL ROOY", "nim": "00000108802", "prodi": "MANAJEMEN" },
+      {
+        "name": "MICHAEL ROOY",
+        "nim": "00000108802",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "HIJURNALISTIKAH NIPNESESARY",
         "nim": "00000127943",
@@ -11045,7 +11775,11 @@
         "nim": "00000108948",
         "prodi": "FILM & ANIMASI"
       },
-      { "name": "JUAN ADRIANO", "nim": "00000125150", "prodi": "MANAJEMEN" },
+      {
+        "name": "JUAN ADRIANO",
+        "nim": "00000125150",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "KALEB AWERI ",
         "nim": "00000112510",
@@ -11118,7 +11852,11 @@
         "nim": "00000127527",
         "prodi": "FILM & ANIMASI"
       },
-      { "name": "EVA LAILA SARI", "nim": "00000135070", "prodi": "MANAJEMEN" },
+      {
+        "name": "EVA LAILA SARI",
+        "nim": "00000135070",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "MUHAMMAD MUSYAFFA FAQIH",
         "nim": "00000073632",
@@ -11186,7 +11924,11 @@
         "nim": "00000118198",
         "prodi": "SISTEM INFORMASI"
       },
-      { "name": "MICHAEL LILO", "nim": "00000118097", "prodi": "INFORMATIKA" },
+      {
+        "name": "MICHAEL LILO",
+        "nim": "00000118097",
+        "prodi": "INFORMATIKA"
+      },
       {
         "name": "GRISELDA KHARIS WONG",
         "nim": "00000126865",
@@ -11264,8 +12006,16 @@
         "nim": "00000105831",
         "prodi": "SISTEM INFORMASI"
       },
-      { "name": "VASSEL GOLEYU", "nim": "00000138850", "prodi": "INFORMATIKA" },
-      { "name": "KELLY .", "nim": "00000105423", "prodi": "FILM & ANIMASI" },
+      {
+        "name": "VASSEL GOLEYU",
+        "nim": "00000138850",
+        "prodi": "INFORMATIKA"
+      },
+      {
+        "name": "KELLY .",
+        "nim": "00000105423",
+        "prodi": "FILM & ANIMASI"
+      },
       {
         "name": "ALIF QAISA ALVINO",
         "nim": "00000127929",
@@ -11348,7 +12098,11 @@
         "nim": "00000115178",
         "prodi": "FILM & ANIMASI"
       },
-      { "name": "ABDILLAH FAJAR", "nim": "00000141032", "prodi": "MANAJEMEN" },
+      {
+        "name": "ABDILLAH FAJAR",
+        "nim": "00000141032",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "AGUS ADITYA SAPUTRA",
         "nim": "00000070108",
@@ -11406,7 +12160,11 @@
         "nim": "00000136661",
         "prodi": "MANAJEMEN"
       },
-      { "name": "MICHELLE WIJAYA", "nim": "00000115020", "prodi": "MANAJEMEN" },
+      {
+        "name": "MICHELLE WIJAYA",
+        "nim": "00000115020",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "ALVIS EVANDRA",
         "nim": "00000108879",
@@ -11422,13 +12180,21 @@
         "nim": "00000109069",
         "prodi": "FILM & ANIMASI"
       },
-      { "name": "REZA ABRAR", "nim": "00000129930", "prodi": "MANAJEMEN" },
+      {
+        "name": "REZA ABRAR",
+        "nim": "00000129930",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "SELINA SEPTIANI",
         "nim": "00000116633",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "LAUREN MAIDELIN", "nim": "00000111150", "prodi": "AKUNTANSI" },
+      {
+        "name": "LAUREN MAIDELIN",
+        "nim": "00000111150",
+        "prodi": "AKUNTANSI"
+      },
       {
         "name": "MARCHEL RAIKONNEN",
         "nim": "00000114880",
@@ -11573,7 +12339,11 @@
         "nim": "00000128386",
         "prodi": "FILM & ANIMASI"
       },
-      { "name": "CINDY CLAUDYA", "nim": "00000121958", "prodi": "MANAJEMEN" },
+      {
+        "name": "CINDY CLAUDYA",
+        "nim": "00000121958",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "RIZA MUHAMMAD ",
         "nim": "00000080949",
@@ -11698,8 +12468,16 @@
         "nim": "00000128440",
         "prodi": "KOMUNIKASI STRATEGIS"
       },
-      { "name": "JOHN ORLANDO L", "nim": "00000121069", "prodi": "MANAJEMEN" },
-      { "name": "MALVIN CHAYADI", "nim": "00000112160", "prodi": "MANAJEMEN" },
+      {
+        "name": "JOHN ORLANDO L",
+        "nim": "00000121069",
+        "prodi": "MANAJEMEN"
+      },
+      {
+        "name": "MALVIN CHAYADI",
+        "nim": "00000112160",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "NEO JEREMIA YANDRA KESUMA",
         "nim": "00000117488",
@@ -11869,7 +12647,11 @@
         "nim": "00000130949",
         "prodi": "SISTEM INFORMASI"
       },
-      { "name": "NANDA VALERI", "nim": "00000127234", "prodi": "INFORMATIKA" },
+      {
+        "name": "NANDA VALERI",
+        "nim": "00000127234",
+        "prodi": "INFORMATIKA"
+      },
       {
         "name": "EUGENIA AUDREY",
         "nim": "00000131734",
@@ -11932,13 +12714,21 @@
         "nim": "00000111157",
         "prodi": "MANAJEMEN"
       },
-      { "name": "VICKY ADITYA", "nim": "00000117447", "prodi": "MANAJEMEN" },
+      {
+        "name": "VICKY ADITYA",
+        "nim": "00000117447",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "NADINE FEBRIANTI",
         "nim": "00000136270",
         "prodi": "SISTEM INFORMASI"
       },
-      { "name": "GILBERT .", "nim": "00000125138", "prodi": "INFORMATIKA" },
+      {
+        "name": "GILBERT .",
+        "nim": "00000125138",
+        "prodi": "INFORMATIKA"
+      },
       {
         "name": "DOMINICUS SAVIO RANGGA PUTRA",
         "nim": "00000125922",
@@ -11954,7 +12744,11 @@
         "nim": "00000094128",
         "prodi": "DESAIN KOMUNIKASI VISUAL"
       },
-      { "name": "JONATHAN .", "nim": "00000115031", "prodi": "MANAJEMEN" },
+      {
+        "name": "JONATHAN .",
+        "nim": "00000115031",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "HIJRAH NIPNESESARY",
         "nim": "00000127943",
@@ -12002,7 +12796,11 @@
         "nim": "00000133480",
         "prodi": "MANAJEMEN"
       },
-      { "name": "FABIO .", "nim": "00000108854", "prodi": "MANAJEMEN" },
+      {
+        "name": "FABIO .",
+        "nim": "00000108854",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "FURQAN SAPUTRA CHANDRA",
         "nim": "00000135553",
@@ -12018,7 +12816,11 @@
         "nim": "00000116357",
         "prodi": "FILM & ANIMASI"
       },
-      { "name": "NOVA OCTARYANI", "nim": "00000141009", "prodi": "MANAJEMEN" },
+      {
+        "name": "NOVA OCTARYANI",
+        "nim": "00000141009",
+        "prodi": "MANAJEMEN"
+      },
       {
         "name": "LUYNA SETIAWAN",
         "nim": "00000093113",
