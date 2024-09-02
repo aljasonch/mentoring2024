@@ -69,6 +69,7 @@ export default function Groups() {
    *
    * */
   const [state, setState] = useImmer(new PageState());
+  const [showButton, setShowButton] = useState(false);
   useEffect(() => {
     if (state.renderingmethod == null) {
       const browser = detect();
@@ -216,6 +217,25 @@ export default function Groups() {
       }
     }
   }, [state, setState]);
+
+  useEffect(() => {
+      const handleScroll = () => {
+        if (window.scrollY > 300) {
+          setShowButton(true);
+        } else {
+          setShowButton(false);
+        }
+      };
+  
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+  
+    // Function to scroll back to the top
+    const scrollToTop = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+  
   return (
     <div>
       <div className="px-4 mb-12 sm:px-0 max-w-4xl mx-auto text-center xss:pt-32 xs:pt-40 md:pt-52 md:pb-15 ">
@@ -262,6 +282,16 @@ export default function Groups() {
           </div>
         </Globals.StateContext.Provider>
       </div>
+
+      {showButton && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-5 left-1/2 transform -translate-x-1/2 p-3 rounded-full bg-blue-600 text-white shadow-md hover:bg-blue-700 transition-opacity"
+          style={{ zIndex: 1000 }}
+          >
+          ↑ Back to Top
+        </button>
+      )}
     </div>
   );
 }
