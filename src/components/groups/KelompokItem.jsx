@@ -127,7 +127,10 @@ export default function KelompokItem({ kelompok, rendermethod }) {
       <table className="w-full border-separate mb-2 hyphens-auto">
         <thead className="rounded">
           <tr>
-            <th colSpan={3} className="text-center text-white border-b-0">
+            <th
+              colSpan={3}
+              className="text-center text-white border-b-0 rounded-t-lg"
+            >
               ID LINE: {kelompok.idline}
             </th>
           </tr>
