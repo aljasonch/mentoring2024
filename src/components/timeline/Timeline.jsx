@@ -52,7 +52,7 @@ const Timeline = () => {
             <div className="flex w-60 xs:w-72 md:w-[26rem] xl:w-[28rem] h-28 xs:h-32 xl:h-36 bg-white rounded-3xl p-4 items-center cardTl">
               <img
                 src={unlocked.T1 ? T1_2 : T1}
-                className="w-24 lg:w-[7.5rem] h-20 lg:h-[6.5rem] rounded-xl md:block lg:block hidden"
+                className="w-24 lg:w-[7.5rem] h-20 lg:h-[6.5rem] rounded-xl md:block lg:block hidden object-cover"
                 alt="Timeline 1"
               />
               <div className="flex-row w-full text-start ml-4">
@@ -85,7 +85,7 @@ const Timeline = () => {
             <div className="flex w-60 xs:w-72 md:w-[26rem] xl:w-[28rem] h-28 xs:h-32 xl:h-36 bg-white rounded-3xl p-4 items-center cardTl">
               <img
                 src={unlocked.T2 ? T2_2 : T2}
-                className="w-24 lg:w-[7.5rem] h-20 lg:h-[6.5rem] rounded-xl md:block lg:block hidden"
+                className="w-24 lg:w-[7.5rem] h-20 lg:h-[6.5rem] rounded-xl md:block lg:block hidden object-cover"
                 alt="Timeline 2"
               />
               <div className="flex-row text-start w-full ml-4">
@@ -118,7 +118,7 @@ const Timeline = () => {
             <div className="flex w-60 xs:w-72 md:w-[26rem] xl:w-[28rem] h-28 xs:h-32 xl:h-36 bg-white rounded-3xl p-4 items-center cardTl">
               <img
                 src={unlocked.T3 ? T3_2 : T3}
-                className="w-24 lg:w-[7.5rem] h-20 lg:h-[6.5rem] rounded-xl md:block lg:block hidden"
+                className="w-24 lg:w-[7.5rem] h-20 lg:h-[6.5rem] rounded-xl md:block lg:block hidden object-cover"
                 alt="Timeline 3"
               />
               <div className="flex-row w-full text-start ml-4">
@@ -151,7 +151,7 @@ const Timeline = () => {
             <div className="flex w-60 xs:w-72 md:w-[26rem] xl:w-[28rem] h-28 xs:h-32 xl:h-36 bg-white rounded-3xl p-4 items-center cardTl">
               <img
                 src={unlocked.T4 ? T4_2 : T4}
-                className="w-24 lg:w-[7.5rem] h-20 lg:h-[6.5rem] rounded-xl md:block lg:block hidden"
+                className="w-24 lg:w-[7.5rem] h-20 lg:h-[6.5rem] rounded-xl md:block lg:block hidden object-cover"
                 alt="Timeline 4"
               />
               <div className="flex-row w-full text-start ml-4">
@@ -185,7 +185,7 @@ const Timeline = () => {
             <div className="flex w-60 xs:w-72 md:w-[26rem] xl:w-[28rem] h-28 xs:h-32 xl:h-36 bg-white rounded-3xl p-4 items-center cardTl">
               <img
                 src={unlocked.T5 ? T5_2 : T5}
-                className="w-24 lg:w-[7.5rem] h-20 lg:h-[6.5rem] rounded-xl md:block lg:block hidden"
+                className="w-24 lg:w-[7.5rem] h-20 lg:h-[6.5rem] rounded-xl md:block lg:block hidden object-cover"
                 alt="Timeline 5"
               />
               <div className="flex-row w-full text-start ml-4">

@@ -231,7 +231,6 @@ export default function Groups() {
       return () => window.removeEventListener("scroll", handleScroll);
     }, []);
   
-    // Function to scroll back to the top
     const scrollToTop = () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     };
@@ -286,7 +285,7 @@ export default function Groups() {
       {showButton && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-5 left-1/2 transform -translate-x-1/2 p-3 rounded-full bg-blue-600 text-white shadow-md hover:bg-blue-700 transition-opacity"
+          className="fixed bottom-5 left-1/2 transform -translate-x-1/2 p-3 text-sm font-normal rounded-full bg-blue-600 text-white shadow-md hover:bg-blue-700 transition-opacity"
           style={{ zIndex: 1000 }}
           >
           ↑ Back to Top

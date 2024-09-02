@@ -64,7 +64,7 @@ const ScrollablePhotoSet = React.memo(({ localstate, setstate, data }) => {
             key={index}
             id={index === localstate.currentimage ? "currentimage" : ""}
             onClick={() => setstate({ currentimage: index })}
-            className={`border-4 ${
+            className={`border-2 md:border-4 ${
               localstate.currentimage === index
                 ? "border-white"
                 : "border-transparent"
