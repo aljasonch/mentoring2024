@@ -180,7 +180,7 @@ function Division() {
                   Tap to view
                 </div>
                 {/* Hover text for desktop */}
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none text-white opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+                <div className="sm:block hidden absolute inset-0 flex items-center justify-center pointer-events-none text-white opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
                   <p className="text-lg bg-opacity-50 p-2 rounded">
                     Click to view
                   </p>
