@@ -219,22 +219,22 @@ export default function Groups() {
   }, [state, setState]);
 
   useEffect(() => {
-      const handleScroll = () => {
-        if (window.scrollY > 300) {
-          setShowButton(true);
-        } else {
-          setShowButton(false);
-        }
-      };
-  
-      window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-  
-    // Function to scroll back to the top
-    const scrollToTop = () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
     };
+  
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  
+    
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   
   return (
     <div>
