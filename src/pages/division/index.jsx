@@ -78,13 +78,20 @@ function Division() {
   const handleImageClick = useCallback(() => {
     if (selectedData && Array.isArray(selectedData.picture)) {
       Fancybox.show(
-        selectedData.picture.map((src) => ({ src })),
+        selectedData.picture.map((src) => ({
+          src,
+          opts: {
+            preload: 2
+          }
+        })),
         {
-          // Customize Fancybox options here
+
+          Thumbs: false
         }
       );
     }
   }, [selectedData]);
+  
 
   const handleCloseCard = useCallback(() => {
     setAnimationClass("slide-down");
