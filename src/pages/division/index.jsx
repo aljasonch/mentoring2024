@@ -81,17 +81,15 @@ function Division() {
         selectedData.picture.map((src) => ({
           src,
           opts: {
-            preload: 2
-          }
+            preload: 2,
+          },
         })),
         {
-
-          Thumbs: false
+          Thumbs: false,
         }
       );
     }
   }, [selectedData]);
-  
 
   const handleCloseCard = useCallback(() => {
     setAnimationClass("slide-down");
@@ -170,13 +168,18 @@ function Division() {
             <div className="absolute md:w-[48%] xss:w-[87%] center md:top-[20%] lg:top-[20%] xss:top-[12%] md:left-[7%]">
               <div className="relative group">
                 <LazyLoadImage
-                  src={selectedData.picture[0]} // Display the first image or a thumbnail in the pop-up
+                  src={selectedData.picture[0]}
                   alt={selectedData.title}
                   effect="blur"
                   className="object-cover transition duration-300 ease-in-out group-hover:grayscale"
                   onClick={handleImageClick}
                   style={{ cursor: "pointer" }}
                 />
+                {/* Tooltip */}
+                <div className="block sm:hidden absolute bottom-2 left-1/2 transform -translate-x-1/2 text-white text-xs px-3 py-1 rounded-md opacity-90">
+                  Tap to view
+                </div>
+                {/* Hover text for desktop */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none text-white opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
                   <p className="text-lg bg-opacity-50 p-2 rounded">
                     Click to view
