@@ -882,6 +882,11 @@
         "name": "CLAUDIA STEPHANIE",
         "nim": "00000115911",
         "prodi": "MANAJEMEN"
+      },
+      {
+        "name": "ANASTASIA MEILINA NADYA",
+        "nim": "00000078450",
+        "prodi": "KOMUNIKASI STRATEGIS"
       }
     ],
     "sesi": "Sesi Pagi"
@@ -7959,6 +7964,11 @@
         "name": "FAJURNALISTIKIAL ARGO AMORA",
         "nim": "00000063745",
         "prodi": "KOMUNIKASI STRATEGIS"
+      },
+      {
+        "name": "ALEXANDER NURHASYA ZACHRIE",
+        "nim": "00000140887",
+        "prodi": "MANAJEMEN"
       }
     ],
     "sesi": "Sesi Siang"
@@ -8416,11 +8426,6 @@
         "name": "MOCHAMAD RIFKY FAUZAN",
         "nim": "00000126061",
         "prodi": "INFORMATIKA"
-      },
-      {
-        "name": "ANASTASIA MEILINA NADYA",
-        "nim": "00000078450",
-        "prodi": "KOMUNIKASI STRATEGIS"
       }
     ],
     "sesi": "Sesi Siang"
