@@ -1,7 +1,8 @@
 // @ts-check
 
 const SPREADHSHEETID = "1djMwAh9pZB8izWkCQca7P9yRp-rJxb7Q-Q7-VDy4Yuw";
-const APIKEY = "AIzaSyC5003RftoO-ljl_yBOT6BomvHKLUvICZQ";
+require('dotenv').config()
+const APIKEY = process.env.API_KEY;
 import { parse } from "jsonstream";
 import fs from "fs";
 import fetch from "node-fetch";
