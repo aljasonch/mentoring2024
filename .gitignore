@@ -1,0 +1,49 @@
+# Node.js / npm / pnpm / Yarn
+
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.pnpm-store/
+package-lock.json
+yarn.lock
+
+# Production build output
+dist/
+build/
+
+# Cache files and other IDE configuration
+.cache/
+.eslintcache
+.vscode/
+.idea/
+.DS_Store
+*.log
+
+# Environment Variables
+.env
+.env.local
+.env.development
+.env.development.local
+.env.production
+.env.production.local
+
+# Browser Specific Cache
+*.browserslistrc.js
+
+# OS generated files
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
+# Other
+coverage/
+
+# Jest coverage
+coverage/
+
+# Storybook
+storybook-static/
